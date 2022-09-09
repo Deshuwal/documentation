@@ -1,0 +1,2078 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  PresumptiveComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboad-default</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./presumptive.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./presumptive.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#companyTin" >companyTin</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#done" >done</a>
+                            </li>
+                            <li>
+                                <a href="#exceltoJson" >exceltoJson</a>
+                            </li>
+                            <li>
+                                <a href="#failed" >failed</a>
+                            </li>
+                            <li>
+                                <a href="#file" >file</a>
+                            </li>
+                            <li>
+                                <a href="#isExcelFile" >isExcelFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#keys" >keys</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#payeeForm" >payeeForm</a>
+                            </li>
+                            <li>
+                                <a href="#selectedCompanyData" >selectedCompanyData</a>
+                            </li>
+                            <li>
+                                <a href="#successful" >successful</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile" >userProfile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clickLink" >clickLink</a>
+                            </li>
+                            <li>
+                                <a href="#fileChanged" >fileChanged</a>
+                            </li>
+                            <li>
+                                <a href="#generateBulkName" >generateBulkName</a>
+                            </li>
+                            <li>
+                                <a href="#getCompanyData" >getCompanyData</a>
+                            </li>
+                            <li>
+                                <a href="#getTimeStamp" >getTimeStamp</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#handleDone" >handleDone</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#makeRandom" >makeRandom</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#prepareAssessmentToSave" >prepareAssessmentToSave</a>
+                            </li>
+                            <li>
+                                <a href="#processFile" >processFile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#saveAssessment" >saveAssessment</a>
+                            </li>
+                            <li>
+                                <a href="#saveBulkRecord" >saveBulkRecord</a>
+                            </li>
+                            <li>
+                                <a href="#submit" >submit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, toastrService: ToastrService, dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>, assessmentService: <a href="../injectables/AssessmentService.html" target="_self">AssessmentService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:42</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastrService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>assessmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AssessmentService.html" target="_self" >AssessmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clickLink"></a>
+                    <span class="name">
+                        <span ><b>clickLink</b></span>
+                        <a href="#clickLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clickLink(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="330"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:330</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fileChanged"></a>
+                    <span class="name">
+                        <span ><b>fileChanged</b></span>
+                        <a href="#fileChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fileChanged(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateBulkName"></a>
+                    <span class="name">
+                        <span ><b>generateBulkName</b></span>
+                        <a href="#generateBulkName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateBulkName(bulk_name: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, company_name: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="267"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:267</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bulk_name</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>company_name</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCompanyData"></a>
+                    <span class="name">
+                        <span ><b>getCompanyData</b></span>
+                        <a href="#getCompanyData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCompanyData(companyTin: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="108"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:108</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>companyTin</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTimeStamp"></a>
+                    <span class="name">
+                        <span ><b>getTimeStamp</b></span>
+                        <a href="#getTimeStamp"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTimeStamp()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="315"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:315</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleDone"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>handleDone</b></span>
+                        <a href="#handleDone"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleDone()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="250"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:250</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="makeRandom"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>makeRandom</b></span>
+                        <a href="#makeRandom"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>makeRandom(lengthOfCode: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="258"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:258</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>lengthOfCode</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="prepareAssessmentToSave"></a>
+                    <span class="name">
+                        <span ><b>prepareAssessmentToSave</b></span>
+                        <a href="#prepareAssessmentToSave"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>prepareAssessmentToSave(item: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="208"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:208</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{ mda_id: number; tax_item_id: number; user_id: any; payer_name: any; payer_tin: any; period_from: any; period_to: any; created_by: any; form_items: { tin: any; name: any; business_type: any; period: any; amount: any; }; rules: {}; }</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="processFile"></a>
+                    <span class="name">
+                        <span ><b>processFile</b></span>
+                        <a href="#processFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>processFile(bulkData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bulkData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveAssessment"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>saveAssessment</b></span>
+                        <a href="#saveAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>saveAssessment(assessment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, assessmentResult: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, assessmentType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, pc: <a href="../classes/PayeeCalculator.html" target="_self">PayeeCalculator</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="235"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:235</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>assessment</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>assessmentResult</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>assessmentType</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>&quot;paye&quot;</code>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>pc</td>
+                                    <td>
+                                                <code><a href="../classes/PayeeCalculator.html" target="_self" >PayeeCalculator</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveBulkRecord"></a>
+                    <span class="name">
+                        <span ><b>saveBulkRecord</b></span>
+                        <a href="#saveBulkRecord"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveBulkRecord()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="128"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:128</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submit"></a>
+                    <span class="name">
+                        <span ><b>submit</b></span>
+                        <a href="#submit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companyTin"></a>
+                    <span class="name">
+                        <span ><b>companyTin</b></span>
+                        <a href="#companyTin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="done"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>done</b></span>
+                        <a href="#done"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exceltoJson"></a>
+                    <span class="name">
+                        <span ><b>exceltoJson</b></span>
+                        <a href="#exceltoJson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="failed"></a>
+                    <span class="name">
+                        <span ><b>failed</b></span>
+                        <a href="#failed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="file"></a>
+                    <span class="name">
+                        <span ><b>file</b></span>
+                        <a href="#file"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isExcelFile"></a>
+                    <span class="name">
+                        <span ><b>isExcelFile</b></span>
+                        <a href="#isExcelFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="keys"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>keys</b></span>
+                        <a href="#keys"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    tin: &quot;TIN&quot;,
+    name: &quot;Name&quot;,
+    business_type: &quot;Business Type&quot;,
+    period: &quot;Period&quot;,
+    amount: &quot;Amount&quot;,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="payeeForm"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>payeeForm</b></span>
+                        <a href="#payeeForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedCompanyData"></a>
+                    <span class="name">
+                        <span ><b>selectedCompanyData</b></span>
+                        <a href="#selectedCompanyData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="successful"></a>
+                    <span class="name">
+                        <span ><b>successful</b></span>
+                        <a href="#successful"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <span ><b>userProfile</b></span>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/views/assessment/presumptive-tax-bulk/presumptive.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from &quot;@angular/forms&quot;;
+import * as XLSX from &quot;xlsx&quot;;
+import { Component, OnInit } from &quot;@angular/core&quot;;
+import { LocalStoreService } from &quot;../../../shared/services/local-store.service&quot;;
+import { ToastrService } from &quot;ngx-toastr&quot;;
+import { HttpService } from &quot;src/app/shared/services/http.service&quot;;
+import { SharedAnimations } from &quot;src/app/shared/animations/shared-animations&quot;;
+import { PayeeCalculator } from &quot;src/app/shared/models/payee_calculator&quot;;
+import { BreadcrumbService } from &quot;src/app/shared/services/breadcrumb.service&quot;;
+import { AssessmentService } from &quot;src/app/shared/services/assessment.service&quot;;
+import { currentId } from &quot;async_hooks&quot;;
+@Component({
+  selector: &quot;app-dashboad-default&quot;,
+  templateUrl: &quot;./presumptive.component.html&quot;,
+  styleUrls: [&quot;./presumptive.component.css&quot;],
+  animations: [SharedAnimations],
+})
+export class PresumptiveComponent implements OnInit {
+  file: any;
+  userProfile: any;
+  exceltoJson &#x3D; [];
+  isExcelFile: boolean;
+  failed: number &#x3D; 0;
+  successful: number &#x3D; 0;
+  public done: boolean &#x3D; false;
+  public payeeForm: FormGroup;
+  public loading: boolean &#x3D; false;
+  selectedCompanyData: any;
+  companyTin: any;
+
+  private keys &#x3D; {
+    tin: &quot;TIN&quot;,
+    name: &quot;Name&quot;,
+    business_type: &quot;Business Type&quot;,
+    period: &quot;Period&quot;,
+    amount: &quot;Amount&quot;,
+  };
+
+  constructor(
+    private localStore: LocalStoreService,
+    private toastrService: ToastrService,
+    private dl: HttpService,
+    private fb: FormBuilder,
+    private breadcrumb: BreadcrumbService,
+    private assessmentService: AssessmentService
+  ) {}
+
+  ngOnInit() {
+    this.userProfile &#x3D; this.localStore.getItem(&quot;user&quot;);
+    this.breadcrumb.setCrumbItem(&quot;presumptiveTax&quot;);
+
+    this.payeeForm &#x3D; this.fb.group({
+      mda_id: [&quot;&quot;],
+      tax_item_id: [&quot;&quot;],
+      bulk_name: [&quot;&quot;, Validators.required],
+      organisation_name: [&quot;&quot;, Validators.required],
+      organisation_tin: [&quot;&quot;, Validators.required],
+    });
+
+    this.payeeForm.patchValue({ mda_id: 3, tax_item_id: 13 });
+    // this.validateUserTinExist(2331058689);
+  }
+
+  fileChanged(e) {
+    this.file &#x3D; e.target.files[0];
+  }
+
+  submit() {
+    // let data, header;
+    if (!this.file) {
+      this.toastrService.error(&quot;You must select a file.&quot;);
+      return;
+    }
+
+    if (!this.file.name.match(/(.xls|.xlsx)/)) {
+      this.toastrService.error(
+        &quot;Invalid file format selected. Please select an excel file.&quot;
+      );
+      return;
+    }
+
+    this.loading &#x3D; true;
+    const reader: FileReader &#x3D; new FileReader();
+    reader.readAsBinaryString(this.file);
+    reader.onload &#x3D; (e: any) &#x3D;&gt; {
+      /* read workbook */
+      const bstr: string &#x3D; e.target.result;
+      const wb: XLSX.WorkBook &#x3D; XLSX.read(bstr, { type: &quot;binary&quot; });
+      /* grab first sheet */
+      const wsname: string &#x3D; wb.SheetNames[0];
+      const ws: XLSX.WorkSheet &#x3D; wb.Sheets[wsname];
+      /* save data */
+      this.exceltoJson &#x3D; XLSX.utils.sheet_to_json(ws);
+    };
+
+    reader.onloadend &#x3D; (e) &#x3D;&gt; {
+      this.loading &#x3D; false;
+      this.companyTin &#x3D; this.payeeForm.value.organisation_tin;
+      this.getCompanyData(this.companyTin);
+    };
+  }
+
+  getCompanyData(companyTin: any) {
+    this.loading &#x3D; true;
+    this.dl
+      // .doGet(&quot;users/get_user_by_tin/&quot; + companyTin)
+      .doGet(&quot;users/company_by_tin/&quot; + companyTin)
+      .subscribe(
+        (res: any) &#x3D;&gt; {
+          this.loading &#x3D; false;
+          this.selectedCompanyData &#x3D; res.data;
+          this.saveBulkRecord();
+        },
+        (err) &#x3D;&gt; {
+          this.loading &#x3D; false;
+          this.toastrService.error(
+            &quot;An error occured... Please verify that the company TIN is correct&quot;
+          );
+        }
+      );
+  }
+
+  saveBulkRecord() {
+    this.loading &#x3D; true;
+    let timeStamp &#x3D; this.getTimeStamp();
+    const total_amount &#x3D; this.exceltoJson.reduce((acc, cur) &#x3D;&gt; {
+      return acc + cur.Amount;
+    }, 0);
+
+    const record &#x3D; {
+      mda_id: 3,
+      tax_item_id: 13,
+      mda_name: &quot;PSIRS&quot;,
+      total_amount,
+      employee_no: this.exceltoJson.length,
+      bulk_name: &#x60;${this.selectedCompanyData.company_name.trim()}-${new Date()}&#x60;,
+      period: this.payeeForm.value.period,
+      organization_name: this.selectedCompanyData.company_name.trim(),
+      organization_tin: this.companyTin,
+      user_id: this.userProfile.id,
+      bulk_assessment_id: &quot;pt&quot; + this.makeRandom(8),
+      created_by:
+        this.userProfile.name !&#x3D; null
+          ? this.userProfile.name
+          : &#x60;${this.userProfile.first_name} ${this.userProfile.surname}&#x60;,
+    };
+
+    return this.dl.doPost(&quot;assessment/save_bulk_presumptive&quot;, record).subscribe(
+      (res: any) &#x3D;&gt; {
+        this.processFile(res.data);
+        console.log(&quot;emily&quot;, res.data);
+      },
+      (err) &#x3D;&gt; {
+        this.toastrService.error(&quot;An error occured... Please try again&quot;);
+        console.log(err);
+        this.loading &#x3D; false;
+      }
+    );
+  }
+
+  processFile(bulkData: any) {
+    this.toastrService.info(&#x60;${this.exceltoJson.length} record(s) found.&#x60;);
+    if (this.exceltoJson.length) {
+      let completed &#x3D; 0;
+      this.failed &#x3D; 0;
+      this.successful &#x3D; 0;
+      this.loading &#x3D; true;
+
+      let bulk_id &#x3D; bulkData.bulk_assessment_id;
+      let bulk_paye_id &#x3D; bulkData.id;
+      let bulk_name &#x3D; bulkData.bulk_name;
+
+      this.payeeForm.patchValue({ bulk_name: &quot;&quot; });
+      console.log({ idontknow: this.exceltoJson });
+
+      this.exceltoJson.forEach((item: any) &#x3D;&gt; {
+        let payeToSave: any &#x3D; this.prepareAssessmentToSave(item);
+        payeToSave &#x3D; { ...payeToSave, bulk_name, bulk_id, bulk_paye_id };
+
+        console.log(&quot;presumptiveToSave&quot;, payeToSave);
+        this.saveAssessment(payeToSave, -1, &quot;paye&quot;).subscribe(
+          (res) &#x3D;&gt; {
+            // add response to log
+            completed +&#x3D; 1;
+            this.successful +&#x3D; 1;
+            if (completed &#x3D;&#x3D; this.exceltoJson.length) {
+              this.handleDone();
+            }
+          },
+          (err) &#x3D;&gt; {
+            // add err to log
+            completed +&#x3D; 1;
+            this.failed +&#x3D; 1;
+            if (completed &#x3D;&#x3D; this.exceltoJson.length) {
+              this.handleDone();
+            }
+          }
+        );
+      });
+    }
+  }
+
+  prepareAssessmentToSave(item: any) {
+    // console.log({ excel: item });
+    const assess &#x3D; {
+      mda_id: 3,
+      tax_item_id: 13,
+      user_id: this.userProfile.id,
+      payer_name: this.selectedCompanyData.company_name.trim(),
+      payer_tin: item[this.keys.tin],
+      period_from: this.payeeForm.value.period_from,
+      period_to: this.payeeForm.value.period_to,
+      created_by:
+        this.userProfile.name !&#x3D; null
+          ? this.userProfile.name
+          : &#x60;${this.userProfile.first_name} ${this.userProfile.surname}&#x60;,
+      form_items: {
+        tin: item[this.keys.tin],
+        name: item[this.keys.name],
+        business_type: item[this.keys.business_type],
+        period: item[this.keys.period],
+        amount: item[this.keys.amount],
+      },
+      rules: {},
+    };
+
+    return assess;
+  }
+
+  private saveAssessment(
+    assessment: any,
+    assessmentResult: any,
+    assessmentType: string &#x3D; &quot;paye&quot;,
+    pc: PayeeCalculator &#x3D; null
+  ) {
+    this.loading &#x3D; true;
+    assessment.rules &#x3D;
+      pc &#x3D;&#x3D; null ? JSON.stringify(assessment.rules) : JSON.stringify(pc);
+    assessment.form_items &#x3D; JSON.stringify(assessment.form_items);
+    assessment.amount &#x3D; assessmentResult;
+    assessmentType &#x3D; assessmentType;
+    return this.dl.doPost(&quot;/assessment/save&quot;, assessment);
+  }
+
+  private handleDone() {
+    // this.registering &#x3D; false;
+    this.loading &#x3D; false;
+    this.toastrService.info(
+      &#x60;${this.successful} successfully. ${this.failed} failed.&#x60;
+    );
+  }
+
+  private makeRandom(lengthOfCode: number) {
+    let text &#x3D; &quot;&quot;;
+    const possible &#x3D; &quot;0123456789&quot;;
+    for (let i &#x3D; 0; i &lt; lengthOfCode; i++) {
+      text +&#x3D; possible.charAt(Math.floor(Math.random() * possible.length));
+    }
+    return text;
+  }
+
+  generateBulkName(bulk_name: any, company_name: any) {
+    let name &#x3D; bulk_name.split(&quot;-&quot;);
+    let month &#x3D; name[1];
+    var genName;
+    let timeStamp &#x3D; this.getTimeStamp();
+    switch (month) {
+      case &quot;01&quot;:
+        genName &#x3D; company_name + &quot;-january-&quot; + timeStamp;
+        break;
+      case &quot;02&quot;:
+        genName &#x3D; company_name + &quot;-febuary-&quot; + timeStamp;
+        break;
+      case &quot;03&quot;:
+        genName &#x3D; company_name + &quot;-march-&quot; + timeStamp;
+        break;
+      case &quot;04&quot;:
+        genName &#x3D; company_name + &quot;-april-&quot; + timeStamp;
+        break;
+      case &quot;05&quot;:
+        genName &#x3D; company_name + &quot;-may-&quot; + timeStamp;
+        break;
+      case &quot;06&quot;:
+        genName &#x3D; company_name + &quot;-june-&quot; + timeStamp;
+        break;
+      case &quot;07&quot;:
+        genName &#x3D; company_name + &quot;-july-&quot; + timeStamp;
+        break;
+      case &quot;08&quot;:
+        genName &#x3D; company_name + &quot;-august-&quot; + timeStamp;
+        break;
+      case &quot;09&quot;:
+        genName &#x3D; company_name + &quot;-september-&quot; + timeStamp;
+        break;
+      case &quot;10&quot;:
+        genName &#x3D; company_name + &quot;-october-&quot; + timeStamp;
+        break;
+      case &quot;11&quot;:
+        genName &#x3D; company_name + &quot;-november-&quot; + timeStamp;
+        break;
+      case &quot;12&quot;:
+        genName &#x3D; company_name + &quot;-december-&quot; + timeStamp;
+        break;
+      default:
+        genName &#x3D; company_name + bulk_name + &quot;-&quot; + timeStamp;
+    }
+    return genName;
+  }
+
+  getTimeStamp() {
+    var now &#x3D; new Date();
+    return (
+      now.getDate() +
+      &quot;-&quot; +
+      now.getFullYear() +
+      &quot;-&quot; +
+      now.getHours() +
+      &quot;:&quot; +
+      (now.getMinutes() &lt; 10 ? &quot;0&quot; + now.getMinutes() : now.getMinutes()) +
+      &quot;:&quot; +
+      (now.getSeconds() &lt; 10 ? &quot;0&quot; + now.getSeconds() : now.getSeconds())
+    );
+  }
+
+  clickLink(id: string) {}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;&quot;&gt;
+  &lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+
+  &lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-3&quot;&gt;&lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+      &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+      &lt;br /&gt;
+      &lt;span&gt;Processing Presumptive Tax...&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;div *ngIf&#x3D;&quot;done&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+      &lt;p&gt;Bulk Presumptive Tax processed successfully&lt;/p&gt;
+      &lt;a href&#x3D;&quot;assets/paye_sample.xlsx&quot; class&#x3D;&quot;btn btn-success&quot;&gt;
+        Download Result
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div
+      *ngIf&#x3D;&quot;!loading &amp;&amp; !done&quot;
+      class&#x3D;&quot;col-lg-6 col-sm-12&quot;
+      [@animate]&#x3D;&quot;{
+        value: &#x27;*&#x27;,
+        params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+      }&quot;
+    &gt;
+      &lt;div class&#x3D;&quot;card mb-4&quot;&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+          &lt;div class&#x3D;&quot;col-lg-12 col-md-12&quot;&gt;
+            &lt;h5 class&#x3D;&quot;card-title m-0 p-3&quot;&gt;
+              Upload Bulk Presumptive Tax data according to the excel template
+              below
+            &lt;/h5&gt;
+
+            &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;margin: 2%&quot;&gt;
+              &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+                &lt;div class&#x3D;&quot;mb-5&quot;&gt;
+                  &lt;div class&#x3D;&quot;&quot;&gt;
+                    &lt;div&gt;
+                      &lt;form [formGroup]&#x3D;&quot;payeeForm&quot; (ngSubmit)&#x3D;&quot;submit()&quot;&gt;
+                        &lt;div class&#x3D;&quot;row&quot;&gt;
+                          &lt;!-- &lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt; --&gt;
+                          &lt;div class&#x3D;&quot;col-sm-12 row&quot;&gt;
+                            &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                              &lt;a
+                                href&#x3D;&quot;assets/presumptive_tax.xlsx&quot;
+                                class&#x3D;&quot;btn btn-primary&quot;
+                              &gt;
+                                Download Template
+                              &lt;/a&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;col-md-6 form-group mb-3&quot;&gt;
+                              &lt;label for&#x3D;&quot;tax&quot;&gt;Organisation Name&lt;/label&gt;
+                              &lt;input
+                                class&#x3D;&quot;form-control&quot;
+                                formControlName&#x3D;&quot;organisation_name&quot;
+                                name&#x3D;&quot;period_from&quot;
+                                type&#x3D;&quot;text&quot;
+                              /&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;col-md-6 form-group mb-3&quot;&gt;
+                              &lt;label for&#x3D;&quot;tax&quot;&gt;Organisation TIN&lt;/label&gt;
+                              &lt;input
+                                class&#x3D;&quot;form-control&quot;
+                                formControlName&#x3D;&quot;organisation_tin&quot;
+                                name&#x3D;&quot;period_to&quot;
+                                type&#x3D;&quot;text&quot;
+                              /&gt;
+                            &lt;/div&gt;
+                            &lt;div class&#x3D;&quot;col-md-12 form-group mb-3&quot;&gt;
+                              &lt;label for&#x3D;&quot;input_select&quot;
+                                &gt;Select Bulk Presumptive Tax File (Excel Format)
+                              &lt;/label&gt;
+                              &lt;input
+                                type&#x3D;&quot;file&quot;
+                                id&#x3D;&quot;input_select&quot;
+                                accept&#x3D;&quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel&quot;
+                                class&#x3D;&quot;form-control&quot;
+                                (change)&#x3D;&quot;fileChanged($event)&quot;
+                              /&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                              &lt;button class&#x3D;&quot;btn btn-danger btn-submit&quot;&gt;
+                                Upload &amp; Process
+                              &lt;/button&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;!-- &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt; --&gt;
+                        &lt;/div&gt;
+                      &lt;/form&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./presumptive.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="">  <app-breadcrumb></app-breadcrumb>  <div class="separator-breadcrumb border-top"></div>  <div class="row">    <div class="col-lg-3"></div>    <div *ngIf="loading" class="col-md-12 text-center">      <div class="spinner spinner-primary mr-3"></div>      <br />      <span>Processing Presumptive Tax...</span>    </div>    <div *ngIf="done" class="col-md-12 text-center">      <p>Bulk Presumptive Tax processed successfully</p>      <a href="assets/paye_sample.xlsx" class="btn btn-success">        Download Result      </a>    </div>    <div      *ngIf="!loading && !done"      class="col-lg-6 col-sm-12"      [@animate]="{        value: \'*\',        params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }      }"    >      <div class="card mb-4">        <div class="card-body">          <div class="col-lg-12 col-md-12">            <h5 class="card-title m-0 p-3">              Upload Bulk Presumptive Tax data according to the excel template              below            </h5>            <div class="row" style="margin: 2%">              <div class="col-md-12">                <div class="mb-5">                  <div class="">                    <div>                      <form [formGroup]="payeeForm" (ngSubmit)="submit()">                        <div class="row">                          <!-- <div class="col-sm-3"></div> -->                          <div class="col-sm-12 row">                            <div class="col-md-9 form-group mb-3">                              <a                                href="assets/presumptive_tax.xlsx"                                class="btn btn-primary"                              >                                Download Template                              </a>                            </div>                            <div class="col-md-6 form-group mb-3">                              <label for="tax">Organisation Name</label>                              <input                                class="form-control"                                formControlName="organisation_name"                                name="period_from"                                type="text"                              />                            </div>                            <div class="col-md-6 form-group mb-3">                              <label for="tax">Organisation TIN</label>                              <input                                class="form-control"                                formControlName="organisation_tin"                                name="period_to"                                type="text"                              />                            </div>                            <div class="col-md-12 form-group mb-3">                              <label for="input_select"                                >Select Bulk Presumptive Tax File (Excel Format)                              </label>                              <input                                type="file"                                id="input_select"                                accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"                                class="form-control"                                (change)="fileChanged($event)"                              />                            </div>                            <div class="col-md-9 form-group mb-3">                              <button class="btn btn-danger btn-submit">                                Upload & Process                              </button>                            </div>                            <div class="col-sm-7"></div>                          </div>                          <!-- <div class="col-sm-1"></div> -->                        </div>                      </form>                    </div>                  </div>                </div>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'PresumptiveComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PresumptiveComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

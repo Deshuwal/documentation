@@ -1,0 +1,3414 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  Manage_usersComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/payments/manage_agents/manage_users.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboard-v2</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./manage_users.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./manage_users.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#activateAgentModal" >activateAgentModal</a>
+                            </li>
+                            <li>
+                                <a href="#activatingAgent" >activatingAgent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addFundsModal" >addFundsModal</a>
+                            </li>
+                            <li>
+                                <a href="#addingFunds" >addingFunds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#addingTags" >addingTags</a>
+                            </li>
+                            <li>
+                                <a href="#assessments" >assessments</a>
+                            </li>
+                            <li>
+                                <a href="#cache" >cache</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#deActivateAgentModal" >deActivateAgentModal</a>
+                            </li>
+                            <li>
+                                <a href="#deActivatingAgent" >deActivatingAgent</a>
+                            </li>
+                            <li>
+                                <a href="#editMode" >editMode</a>
+                            </li>
+                            <li>
+                                <a href="#editTitle" >editTitle</a>
+                            </li>
+                            <li>
+                                <a href="#filteredItems" >filteredItems</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#mdas" >mdas</a>
+                            </li>
+                            <li>
+                                <a href="#modal" >modal</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#modalContent" >modalContent</a>
+                            </li>
+                            <li>
+                                <a href="#next_page" >next_page</a>
+                            </li>
+                            <li>
+                                <a href="#page" >page</a>
+                            </li>
+                            <li>
+                                <a href="#page_count" >page_count</a>
+                            </li>
+                            <li>
+                                <a href="#pageNumber" >pageNumber</a>
+                            </li>
+                            <li>
+                                <a href="#per_page_count" >per_page_count</a>
+                            </li>
+                            <li>
+                                <a href="#persons" >persons</a>
+                            </li>
+                            <li>
+                                <a href="#previous_page" >previous_page</a>
+                            </li>
+                            <li>
+                                <a href="#result_count" >result_count</a>
+                            </li>
+                            <li>
+                                <a href="#SearchLoading" >SearchLoading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#selectedAgent" >selectedAgent</a>
+                            </li>
+                            <li>
+                                <a href="#status" >status</a>
+                            </li>
+                            <li>
+                                <a href="#table" >table</a>
+                            </li>
+                            <li>
+                                <a href="#taxItemForm" >taxItemForm</a>
+                            </li>
+                            <li>
+                                <a href="#taxItems" >taxItems</a>
+                            </li>
+                            <li>
+                                <a href="#total_count" >total_count</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile" >userProfile</a>
+                            </li>
+                            <li>
+                                <a href="#userRole" >userRole</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#userTags" >userTags</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#capitalise" >capitalise</a>
+                            </li>
+                            <li>
+                                <a href="#createVendor" >createVendor</a>
+                            </li>
+                            <li>
+                                <a href="#DateFromString" >DateFromString</a>
+                            </li>
+                            <li>
+                                <a href="#downloadUserTable" >downloadUserTable</a>
+                            </li>
+                            <li>
+                                <a href="#keyup" >keyup</a>
+                            </li>
+                            <li>
+                                <a href="#loadUsers" >loadUsers</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#numberWithCommas" >numberWithCommas</a>
+                            </li>
+                            <li>
+                                <a href="#onPageChange" >onPageChange</a>
+                            </li>
+                            <li>
+                                <a href="#openActivateAgentModal" >openActivateAgentModal</a>
+                            </li>
+                            <li>
+                                <a href="#openDeactivateAgentModal" >openDeactivateAgentModal</a>
+                            </li>
+                            <li>
+                                <a href="#openFundWalletModal" >openFundWalletModal</a>
+                            </li>
+                            <li>
+                                <a href="#submitActivateAgent" >submitActivateAgent</a>
+                            </li>
+                            <li>
+                                <a href="#submitDeactivateAgent" >submitDeactivateAgent</a>
+                            </li>
+                            <li>
+                                <a href="#submitFundWallet" >submitFundWallet</a>
+                            </li>
+                            <li>
+                                <a href="#timeAgo" >timeAgo</a>
+                            </li>
+                            <li>
+                                <a href="#toggleAdmin" >toggleAdmin</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, modalService: NgbModal, toastr: ToastrService, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, manageUserService: <a href="../injectables/ManageUserService.html" target="_self">ManageUserService</a>, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>, printpdfService: <a href="../injectables/PrintpdfService.html" target="_self">PrintpdfService</a>, http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:86</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>manageUserService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ManageUserService.html" target="_self" >ManageUserService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>printpdfService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PrintpdfService.html" target="_self" >PrintpdfService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="capitalise"></a>
+                    <span class="name">
+                        <span ><b>capitalise</b></span>
+                        <a href="#capitalise"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>capitalise(words)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="142"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:142</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>words</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="createVendor"></a>
+                    <span class="name">
+                        <span ><b>createVendor</b></span>
+                        <a href="#createVendor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>createVendor(userId, role)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="216"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:216</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>role</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="DateFromString"></a>
+                    <span class="name">
+                        <span ><b>DateFromString</b></span>
+                        <a href="#DateFromString"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>DateFromString(s)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="237"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:237</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>s</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadUserTable"></a>
+                    <span class="name">
+                        <span ><b>downloadUserTable</b></span>
+                        <a href="#downloadUserTable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>downloadUserTable(div, name)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>div</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>name</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="keyup"></a>
+                    <span class="name">
+                        <span ><b>keyup</b></span>
+                        <a href="#keyup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>keyup(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadUsers"></a>
+                    <span class="name">
+                        <span ><b>loadUsers</b></span>
+                        <a href="#loadUsers"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadUsers(pageInfo)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="259"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:259</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageInfo</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:125</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="numberWithCommas"></a>
+                    <span class="name">
+                        <span ><b>numberWithCommas</b></span>
+                        <a href="#numberWithCommas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>numberWithCommas(x)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="246"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:246</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>x</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onPageChange"></a>
+                    <span class="name">
+                        <span ><b>onPageChange</b></span>
+                        <a href="#onPageChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onPageChange(pageInfo)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="149"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:149</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>pageInfo</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openActivateAgentModal"></a>
+                    <span class="name">
+                        <span ><b>openActivateAgentModal</b></span>
+                        <a href="#openActivateAgentModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openActivateAgentModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="300"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:300</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openDeactivateAgentModal"></a>
+                    <span class="name">
+                        <span ><b>openDeactivateAgentModal</b></span>
+                        <a href="#openDeactivateAgentModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openDeactivateAgentModal(user: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="313"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:313</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openFundWalletModal"></a>
+                    <span class="name">
+                        <span ><b>openFundWalletModal</b></span>
+                        <a href="#openFundWalletModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openFundWalletModal(user: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="286"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:286</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitActivateAgent"></a>
+                    <span class="name">
+                        <span ><b>submitActivateAgent</b></span>
+                        <a href="#submitActivateAgent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitActivateAgent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="371"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:371</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitDeactivateAgent"></a>
+                    <span class="name">
+                        <span ><b>submitDeactivateAgent</b></span>
+                        <a href="#submitDeactivateAgent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitDeactivateAgent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="419"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:419</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitFundWallet"></a>
+                    <span class="name">
+                        <span ><b>submitFundWallet</b></span>
+                        <a href="#submitFundWallet"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitFundWallet()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="327"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:327</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="timeAgo"></a>
+                    <span class="name">
+                        <span ><b>timeAgo</b></span>
+                        <a href="#timeAgo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>timeAgo(timestamp: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="138"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:138</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>timestamp</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toggleAdmin"></a>
+                    <span class="name">
+                        <span ><b>toggleAdmin</b></span>
+                        <a href="#toggleAdmin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toggleAdmin(userId, role)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="196"
+                            class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:196</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userId</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>role</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activateAgentModal"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>activateAgentModal</b></span>
+                        <a href="#activateAgentModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;activateAgentModal&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activatingAgent"></a>
+                    <span class="name">
+                        <span ><b>activatingAgent</b></span>
+                        <a href="#activatingAgent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="370" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:370</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addFundsModal"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>addFundsModal</b></span>
+                        <a href="#addFundsModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;addFundsModal&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addingFunds"></a>
+                    <span class="name">
+                        <span ><b>addingFunds</b></span>
+                        <a href="#addingFunds"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="326" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:326</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addingTags"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>addingTags</b></span>
+                        <a href="#addingTags"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:84</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessments"></a>
+                    <span class="name">
+                        <span ><b>assessments</b></span>
+                        <a href="#assessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cache"></a>
+                    <span class="name">
+                        <span ><b>cache</b></span>
+                        <a href="#cache"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deActivateAgentModal"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>deActivateAgentModal</b></span>
+                        <a href="#deActivateAgentModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;deActivateAgentModal&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deActivatingAgent"></a>
+                    <span class="name">
+                        <span ><b>deActivatingAgent</b></span>
+                        <a href="#deActivatingAgent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="417" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:417</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editMode"></a>
+                    <span class="name">
+                        <span ><b>editMode</b></span>
+                        <a href="#editMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editTitle"></a>
+                    <span class="name">
+                        <span ><b>editTitle</b></span>
+                        <a href="#editTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredItems"></a>
+                    <span class="name">
+                        <span ><b>filteredItems</b></span>
+                        <a href="#filteredItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdas"></a>
+                    <span class="name">
+                        <span ><b>mdas</b></span>
+                        <a href="#mdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modal"></a>
+                    <span class="name">
+                        <span ><b>modal</b></span>
+                        <a href="#modal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>NgbModal</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modalContent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>modalContent</b></span>
+                        <a href="#modalContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;modalConfirm&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="next_page"></a>
+                    <span class="name">
+                        <span ><b>next_page</b></span>
+                        <a href="#next_page"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="page"></a>
+                    <span class="name">
+                        <span ><b>page</b></span>
+                        <a href="#page"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>1</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:70</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="page_count"></a>
+                    <span class="name">
+                        <span ><b>page_count</b></span>
+                        <a href="#page_count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:74</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pageNumber"></a>
+                    <span class="name">
+                        <span ><b>pageNumber</b></span>
+                        <a href="#pageNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:78</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="per_page_count"></a>
+                    <span class="name">
+                        <span ><b>per_page_count</b></span>
+                        <a href="#per_page_count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:75</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="persons"></a>
+                    <span class="name">
+                        <span ><b>persons</b></span>
+                        <a href="#persons"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="123" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:123</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="previous_page"></a>
+                    <span class="name">
+                        <span ><b>previous_page</b></span>
+                        <a href="#previous_page"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:76</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="result_count"></a>
+                    <span class="name">
+                        <span ><b>result_count</b></span>
+                        <a href="#result_count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SearchLoading"></a>
+                    <span class="name">
+                        <span ><b>SearchLoading</b></span>
+                        <a href="#SearchLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:54</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedAgent"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>selectedAgent</b></span>
+                        <a href="#selectedAgent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ISelectedAgent.html" target="_self" >ISelectedAgent</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{ id: null, name: null , new_fund:null}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="82" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:82</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="status"></a>
+                    <span class="name">
+                        <span ><b>status</b></span>
+                        <a href="#status"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="86" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:86</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="table"></a>
+                    <span class="name">
+                        <span ><b>table</b></span>
+                        <a href="#table"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>DatatableComponent</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(DatatableComponent, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItemForm"></a>
+                    <span class="name">
+                        <span ><b>taxItemForm</b></span>
+                        <a href="#taxItemForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItems"></a>
+                    <span class="name">
+                        <span ><b>taxItems</b></span>
+                        <a href="#taxItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="total_count"></a>
+                    <span class="name">
+                        <span ><b>total_count</b></span>
+                        <a href="#total_count"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:79</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <span ><b>userProfile</b></span>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userRole"></a>
+                    <span class="name">
+                        <span ><b>userRole</b></span>
+                        <a href="#userRole"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    &quot;Tax Payer (EndUsers)&quot;,
+    &quot;Super Admin&quot;,
+    &quot;Vendor&quot;,
+    &quot;Mda Admin&quot;,
+    &quot;Demand Notice Officer&quot;,
+    &quot;Reporting Oficer&quot;,
+    &quot;Accounts Officer&quot;,
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userTags"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>userTags</b></span>
+                        <a href="#userTags"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/views/payments/manage_agents/manage_users.component.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ElementRef, OnInit, ViewChild } from &quot;@angular/core&quot;;
+import { LocalStoreService } from &quot;src/app/shared/services/local-store.service&quot;;
+import { NgbModal } from &quot;@ng-bootstrap/ng-bootstrap&quot;;
+import { SharedAnimations } from &quot;src/app/shared/animations/shared-animations&quot;;
+import { FormGroup, FormBuilder } from &quot;@angular/forms&quot;;
+import { HttpService } from &quot;src/app/shared/services/http.service&quot;;
+import { ToastrService } from &quot;ngx-toastr&quot;;
+import { Utils } from &quot;src/app/shared/utils&quot;;
+import { ActivatedRoute } from &quot;@angular/router&quot;;
+import { ManageUserService } from &quot;./manage-user.service&quot;;
+import { BreadcrumbService } from &quot;src/app/shared/services/breadcrumb.service&quot;;
+import { PrintpdfService } from &quot;src/app/shared/services/printpdf.service&quot;;
+import { HttpClient } from &quot;@angular/common/http&quot;;
+import { DatatableComponent } from &quot;@swimlane/ngx-datatable&quot;;
+
+interface ISelectedAgent {
+  id?: number;
+  name?: string;
+  new_fund?:number;
+}
+
+class DataTablesResponse {
+  data: any[];
+  draw: number;
+  recordsFiltered: number;
+  recordsTotal: number;
+}
+
+export class Person {
+  id: number;
+  firstName: string;
+  lastName: string;
+}
+
+@Component({
+  selector: &quot;app-dashboard-v2&quot;,
+  templateUrl: &quot;./manage_users.component.html&quot;,
+  styleUrls: [&quot;./manage_users.component.scss&quot;],
+  animations: [SharedAnimations],
+})
+export class Manage_usersComponent implements OnInit {
+  @ViewChild(&quot;modalConfirm&quot;, { static: false }) private modalContent;
+  @ViewChild(&quot;addFundsModal&quot;, { static: false }) private addFundsModal;
+
+  @ViewChild(&quot;activateAgentModal&quot;, { static: false }) private activateAgentModal;
+
+  @ViewChild(&quot;deActivateAgentModal&quot;, { static: false }) private deActivateAgentModal;
+  @ViewChild(DatatableComponent, { static: false }) table: DatatableComponent;
+
+  mdas: any; 
+  taxItemForm: FormGroup;
+  editMode: boolean;
+  loading: boolean &#x3D; false;
+  SearchLoading &#x3D; false;
+  editTitle: string &#x3D; &quot;&quot;;
+  assessments &#x3D; [];
+  taxItems: any;
+  cache: any &#x3D; {};
+  userRole &#x3D; [
+    &quot;Tax Payer (EndUsers)&quot;,
+    &quot;Super Admin&quot;,
+    &quot;Vendor&quot;,
+    &quot;Mda Admin&quot;,
+    &quot;Demand Notice Officer&quot;,
+    &quot;Reporting Oficer&quot;,
+    &quot;Accounts Officer&quot;,
+  ];
+
+  userProfile: any;
+  page: number &#x3D; 1;
+
+  filteredItems: any[] &#x3D; [];
+  next_page: number;
+  page_count: number;
+  per_page_count: number;
+  previous_page: number;
+  result_count: number;
+  pageNumber: number;
+  total_count: number;
+
+  modal: NgbModal;
+  public selectedAgent: ISelectedAgent &#x3D; { id: null, name: null , new_fund:null};
+  public userTags: string &#x3D; &quot;&quot;;
+  public addingTags: boolean &#x3D; false;
+
+  status: any;
+  constructor(
+    private dl: HttpService,
+    private modalService: NgbModal,
+    private toastr: ToastrService,
+    private fb: FormBuilder,
+    private localStore: LocalStoreService,
+    private route: ActivatedRoute,
+    private manageUserService: ManageUserService,
+    private breadcrumb: BreadcrumbService,
+    private printpdfService: PrintpdfService,
+    private http: HttpClient
+  ) {}
+
+  keyup(e) {
+    console.log({ target: e.target.value });
+    const text: string &#x3D; e.target.value;
+    if (!text.trim()) return this.loadUsers({ offset: 0 });
+
+    if (text.length &lt; 3) return;
+    this.dl.doGet(&#x60;/users/search/${text}&#x60;).subscribe(
+      (res: any) &#x3D;&gt; {
+        this.assessments &#x3D; res.data.map((user, idx) &#x3D;&gt; ({
+          ...user,
+          sn: idx + 1,
+        }));
+        this.manageUserService.manageUserService.next(this.assessments);
+        console.log({ search: this.assessments });
+        this.table.offset &#x3D; 0;
+        this.loading &#x3D; false;
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+      }
+    );
+  }
+
+  persons;
+
+  ngOnInit() {
+    this.userProfile &#x3D; this.localStore.getItem(&quot;user&quot;);
+
+    this.route.params.forEach((e: any) &#x3D;&gt; {
+      if (e.status) this.status &#x3D; e.status;
+    });
+    this.route.params.subscribe((params) &#x3D;&gt; {
+      this.status &#x3D; params[&quot;status&quot;];
+    });
+    this.breadcrumb.setCrumbItem(&quot;manageAgents&quot;);
+    this.loadUsers({ offset: 0 });
+  }
+
+  timeAgo(timestamp: number) {
+    return Utils.getTimeIntervalPhpTimeStamp(timestamp);
+  }
+
+  capitalise(words) {
+    return words
+      .split(&quot; &quot;)
+      .map((word) &#x3D;&gt; word.charAt(0).toUpperCase() + word.slice(1))
+      .join(&quot; &quot;);
+  }
+
+  onPageChange(pageInfo) {
+    this.pageNumber &#x3D; pageInfo.offset;
+
+    // Calculate row offset in the UI using pageInfo
+    // This is the scroll position in rows
+    const rowOffset &#x3D; pageInfo.offset * pageInfo.pageSize;
+
+    // When calling the server, we keep page size fixed
+    // This should be the max UI pagesize or larger
+    // This is not necessary but helps simplify caching since the UI page size can change
+    const page &#x3D; { size: 10, pageNumber: pageInfo.offset + 1 };
+    page.size &#x3D; 10;
+    // page.pageNumber &#x3D; pageInfo.offset + 1;
+    this.pageNumber &#x3D; pageInfo.offset + 1;
+
+    console.log(&quot;page number&quot;, pageInfo, this.cache);
+    // We keep a index of server loaded pages so we don&#x27;t load same data twice
+    // This is based on the server page not the UI
+    if (this.cache[page.pageNumber]) return;
+    this.cache[page.pageNumber] &#x3D; true;
+
+    let url &#x3D; &quot;walletAdmin/list_agents&quot;;
+    this.loading &#x3D; true;
+
+    this.dl.doGet(url).subscribe(
+      (res: any) &#x3D;&gt; {
+        if (res.length &lt; 1) {
+          this.toastr.info(&quot;No payments found &quot;, &quot;Empty!&quot;, { timeOut: 3000 });
+        }
+
+        this.assessments &#x3D; res.agents;
+        console.log(&#x27;assessments is &#x27;, this.assessments);
+       // this.next_page &#x3D; res.data.next_page;
+         this.page_count &#x3D; res.agents.length;
+       // this.per_page_count &#x3D; res.data.per_page_count;
+       // this.previous_page &#x3D; res.data.next_page - 1;
+       // this.result_count &#x3D; res.data.per_page_count;
+       // this.total_count &#x3D; res.data.total_count;
+        this.loading &#x3D; false;
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        console.log(&quot;error fetching tax items&quot;, err);
+      }
+    );
+  }
+
+  toggleAdmin(userId, role) {
+    let url &#x3D; &#x60;users/toggle_role/${userId}/${role}&#x60;;
+
+    this.dl.doGet(url).subscribe(
+      (res: any) &#x3D;&gt; {
+        console.log(res.message);
+        this.toastr.success(res.message, &quot;Success!&quot;, { timeOut: 3000 });
+        this.assessments &#x3D; this.assessments.map((user) &#x3D;&gt; {
+          if (user.id &#x3D;&#x3D; userId) {
+            return { ...user, ...res.data };
+          }
+          return user;
+        });
+      },
+      (err) &#x3D;&gt; {
+        this.toastr.error(&quot;Please try again&quot;, &quot;Error!&quot;, { timeOut: 3000 });
+      }
+    );
+  }
+
+  createVendor(userId, role) {
+    let url &#x3D; &#x60;vendor/create/${userId}&#x60;;
+
+    this.dl.doPost(url, {}).subscribe(
+      (res: any) &#x3D;&gt; {
+        console.log(res.message);
+        this.toastr.success(res.message, &quot;Success!&quot;, { timeOut: 3000 });
+        this.assessments &#x3D; this.assessments.map((user) &#x3D;&gt; {
+          if (user.id &#x3D;&#x3D; userId) {
+            return { ...user, ...res.data };
+          }
+          return user;
+        });
+      },
+      (err) &#x3D;&gt; {
+        this.toastr.error(&quot;Please try again&quot;, &quot;Error!&quot;, { timeOut: 3000 });
+      }
+    );
+  }
+
+
+  DateFromString(s){ 
+    
+    if(!s) return &quot;Never&quot;;
+
+    let date &#x3D; new Date(s * 1000);
+    return (&#x27;0&#x27; + date.getDate()).slice(-2) + &#x27;/&#x27; + (&#x27;0&#x27; + (date.getMonth() + 1)).slice(-2) + &#x27;/&#x27; + date.getFullYear() + &#x27; &#x27; + (&#x27;0&#x27; + date.getHours()).slice(-2) + &#x27;:&#x27; + (&#x27;0&#x27; + date.getMinutes()).slice(-2);
+ 
+   }
+
+  numberWithCommas(x) {
+    if(!x) return &quot;0&quot;;
+    x &#x3D; x.toString();
+    var pattern &#x3D; /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x &#x3D; x.replace(pattern, &quot;$1,$2&quot;);
+    return x;
+}
+
+  downloadUserTable(div, name) {
+    this.printpdfService.exportAsPDF(div, name);
+  }
+
+  loadUsers(pageInfo) {
+    this.loading &#x3D; true;
+    this.pageNumber &#x3D; pageInfo.offset;
+
+    let url &#x3D; &quot;walletAdmin/list_agents&quot;;
+
+    this.dl.doGet(url).subscribe(
+      (res: any) &#x3D;&gt; {
+        
+        console.log(&quot;result &quot;, res);
+        if (res.length &lt; 1) {
+          this.toastr.info(&quot;No agents found &quot;, &quot;Empty!&quot;, { timeOut: 3000 });
+        }
+ 
+        this.assessments &#x3D; res.agents.map((user, idx) &#x3D;&gt; ({
+          ...user,
+          sn: idx + 1,
+        }));
+        this.loading &#x3D; false;
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        console.log(&quot;error fetching tax items&quot;, err);
+      }
+    );
+  }
+
+  openFundWalletModal(user: any) {
+    this.selectedAgent &#x3D; {
+      id: user.id,
+      new_fund: 0,
+    
+      name: user.first_name? &#x60;AGENT-${user.id} (${user.first_name} ${user.surname})&#x60; : &#x60;AGENT-${user.id} (${user.name})&#x60;
+    };
+
+    this.modalService
+      .open(this.addFundsModal, { ariaLabelledBy: &quot;Add Funds&quot;, centered: true })
+      .result.then((modal) &#x3D;&gt; (this.modal &#x3D; modal));
+  }
+
+
+  openActivateAgentModal() {
+    this.selectedAgent &#x3D; {
+      id: null,
+      new_fund: 0,
+      name: null,
+    };
+
+    this.modalService
+      .open(this.activateAgentModal, { ariaLabelledBy: &quot;Activate Agent&quot;, centered: true })
+      .result.then((modal) &#x3D;&gt; (this.modal &#x3D; modal));
+  }
+
+
+  openDeactivateAgentModal(user: any) {
+    this.selectedAgent &#x3D; {
+      id: user.id,
+      new_fund: 0,
+      name: user.first_name? &#x60;AGENT-${user.id} (${user.first_name} ${user.surname})&#x60; : &#x60;AGENT-${user.id} (${user.name})&#x60;,
+
+    };
+
+    this.modalService
+      .open(this.deActivateAgentModal, { ariaLabelledBy: &quot;deActivate Agent&quot;, centered: true })
+      .result.then((modal) &#x3D;&gt; (this.modal &#x3D; modal));
+  }
+
+  addingFunds:boolean &#x3D; false;
+  submitFundWallet() {
+    console.log(this.selectedAgent);
+    if (!this.selectedAgent.id) {
+      this.toastr.error(&quot;Select valid user account.&quot;, &quot;Invalid Selection.&quot;);
+      return;
+    }
+
+    if (this.selectedAgent.new_fund &lt; 10000) {
+      this.toastr.error(&quot;Funds must be upto 10,000 NGN&quot;, &quot;Invalid Input&quot;);
+      return;
+    }
+    if (this.selectedAgent.new_fund &gt; 500000) {
+      this.toastr.error(&quot;Funds must not be more than  500,000 NGN&quot;, &quot;Invalid Input&quot;);
+      return;
+    }
+    this.addingFunds &#x3D; true; 
+    this.dl
+      .doPost(&#x27;walletAdmin/credit_agent&#x27;, { amount: this.selectedAgent.new_fund, agent_id:this.selectedAgent.id })
+      .subscribe(
+        (res:any) &#x3D;&gt; {
+
+          if(res.status &#x3D;&#x3D; &quot;success&quot;){
+           this.toastr.success(&quot;Funded Wallet!&quot;, &quot;Request Completed!&quot;);
+           this.ngOnInit();
+
+          }
+          else{
+
+           this.toastr.error(&quot;Error Funding Wallet!&quot;, res.message);
+
+          }
+        },
+        (err) &#x3D;&gt; {
+          this.toastr.error(err.message, &quot;Request Error&quot;);
+        },
+        () &#x3D;&gt; {
+          this.addingFunds &#x3D; false;
+          this.modalService.dismissAll(&quot;dismiss&quot;);
+        }
+      );
+  }
+
+
+  activatingAgent:boolean &#x3D; false;
+  submitActivateAgent() {
+    console.log(this.selectedAgent);
+    if (!this.selectedAgent.name || this.selectedAgent.name.indexOf(&quot;-&quot;)&#x3D;&#x3D;-1) {
+      this.toastr.error(&quot;Enter a valid agent Id.&quot;, &quot;Invalid Agent Id.&quot;);
+      return;
+    }
+
+
+    this.selectedAgent.id &#x3D; Number(this.selectedAgent.name.split(&quot;-&quot;)[1]);
+
+    if (this.selectedAgent.id &lt; 1) {
+      this.toastr.error(&quot;Enter a valid agent id&quot;, &quot;Invalid Agent Id&quot;);
+      return;
+    }
+
+    this.activatingAgent &#x3D; true;
+
+    
+    this.dl
+      .doGet(&#x27;walletAdmin/make_agent/&#x27;+this.selectedAgent.id)
+      .subscribe(
+        (res:any) &#x3D;&gt; {
+
+          if(res.status &#x3D;&#x3D; &quot;success&quot;){
+           this.toastr.success(&quot;Activated Agent!&quot;, &quot;Request Completed!&quot;);
+           this.ngOnInit();
+
+          }
+          else{
+
+           this.toastr.error(&quot;Error Activating Agent!&quot;, res.message);
+
+          }
+        },
+        (err) &#x3D;&gt; {
+          this.toastr.error(err.message, &quot;Request Error&quot;);
+        },
+        () &#x3D;&gt; {
+          this.activatingAgent &#x3D; false;
+          this.modalService.dismissAll(&quot;dismiss&quot;);
+        }
+      );
+  }
+
+
+
+  deActivatingAgent:boolean &#x3D; false;
+
+  submitDeactivateAgent() {
+    console.log(this.selectedAgent); 
+
+    if (this.selectedAgent.id &lt; 1) {
+      this.toastr.error(&quot;Invalid agent id&quot;, &quot;Invalid Agent Id&quot;);
+      return;
+    }
+
+    this.deActivatingAgent &#x3D; true;
+
+    
+    this.dl
+      .doGet(&#x27;walletAdmin/unmake_agent/&#x27;+this.selectedAgent.id)
+      .subscribe(
+        (res:any) &#x3D;&gt; {
+
+          if(res.status &#x3D;&#x3D; &quot;success&quot;){
+           this.toastr.success( &quot;Request Completed!&quot;, &quot;Deactivated Agent!&quot;);
+           this.ngOnInit();
+
+          }
+          else{
+
+           this.toastr.error(res.message, &quot;Error Deactivating Agent!&quot;);
+
+          }
+        },
+        (err) &#x3D;&gt; {
+          this.toastr.error(err.message, &quot;Request Error&quot;);
+        },
+        () &#x3D;&gt; {
+          this.deActivatingAgent &#x3D; false;
+          this.modalService.dismissAll(&quot;dismiss&quot;);
+        }
+      );
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+
+&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+&lt;!-- &lt;table
+  style&#x3D;&quot;width: 100%&quot;
+  datatable
+  [dtOptions]&#x3D;&quot;dtOptions&quot;
+  class&#x3D;&quot;row-border hover&quot;
+&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;SN&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Phone Number&lt;/th&gt;
+      &lt;th&gt;Role&lt;/th&gt;
+      &lt;th&gt;Date Registered&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody *ngIf&#x3D;&quot;persons?.length !&#x3D; 0&quot; [attr.data-index]&#x3D;&quot;i&quot;&gt;
+    &lt;tr *ngFor&#x3D;&quot;let person of persons; index as i&quot;&gt;
+      &lt;td&gt;{{ i + 1 }}&lt;/td&gt;
+      &lt;td&gt;{{ person.first_name + &quot; &quot; + person.surname }}&lt;/td&gt;
+      &lt;td&gt;{{ person.phone }}&lt;/td&gt;
+      &lt;td&gt;{{ userRole[person.role] }}&lt;/td&gt;
+      &lt;td&gt;{{ person.create_date }}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tbody *ngIf&#x3D;&quot;persons?.length &#x3D;&#x3D; 0&quot;&gt;
+    &lt;tr&gt;
+      &lt;td colspan&#x3D;&quot;3&quot; class&#x3D;&quot;no-data-available&quot;&gt;No data!&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt; --&gt;
+
+&lt;div class&#x3D;&quot;row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+    &lt;div class&#x3D;&quot;form-group float-left&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;float-right&quot;&gt;
+      &lt;!--- 
+      &lt;button
+        style&#x3D;&quot;position: relative; z-index: 3&quot;
+        class&#x3D;&quot;btn btn-primary&quot;
+        (click)&#x3D;&quot;downloadUserTable(&#x27;pdfTable&#x27;, &#x27;user_table&#x27;)&quot;
+      &gt;
+        Export to Excel
+      &lt;/button&gt; --&gt;
+      &lt;button
+        style&#x3D;&quot;position: relative; z-index: 3&quot;
+        class&#x3D;&quot;btn btn-primary&quot;
+        (click)&#x3D;&quot;openActivateAgentModal()&quot;
+      &gt;
+        Activate an Agent
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;row mb-3&quot;&gt;
+  &lt;div class&#x3D;&quot;col-md-12 mb-3&quot;&gt;&lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+    &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    class&#x3D;&quot;col-md-12&quot;
+    *ngIf&#x3D;&quot;!loading&quot;
+    [@animate]&#x3D;&quot;{
+      value: &#x27;*&#x27;,
+      params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+    }&quot;
+  &gt;
+    &lt;div id&#x3D;&quot;pdfTable&quot; #pdfTable class&#x3D;&quot;card o-hidden&quot;&gt;
+      &lt;ngx-datatable
+        *ngIf&#x3D;&quot;assessments?.length&quot;
+        style&#x3D;&quot;height: calc(100vh - 270px); box-shadow: none&quot;
+        class&#x3D;&quot;material fullscreen&quot;
+        [columnMode]&#x3D;&quot;&#x27;force&#x27;&quot;
+        [headerHeight]&#x3D;&quot;50&quot;
+        [footerHeight]&#x3D;&quot;50&quot;
+        [rowHeight]&#x3D;&quot;60&quot;
+        [scrollbarH]&#x3D;&quot;true&quot;
+        [virtualization]&#x3D;&quot;false&quot;
+        [rows]&#x3D;&quot;assessments&quot;
+        #table
+      &gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Name &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{
+              (row.first_name !&#x3D;&#x3D; null &amp;&amp;
+                row.first_name.trim() + &quot; &quot; + row.surname) ||
+                capitalise(row.name)
+            }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Agent Id &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.agent_id }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;
+            Account Balance
+          &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ numberWithCommas(row.account_balance) || &quot;N/A&quot; }} NGN
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column [flexGrow]&#x3D;&quot;1&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;
+            Last Transaction
+          &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ DateFromString(row.last_updated) }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column [flexGrow]&#x3D;&quot;1&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Top Up &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            &lt;div&gt;
+              &lt;button
+                class&#x3D;&quot;btn btn-block btn-primary text-white&quot;
+                (click)&#x3D;&quot;openFundWalletModal(row)&quot;
+              &gt;
+                Fund Wallet
+              &lt;/button&gt;
+              &lt;br /&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+
+        &lt;ngx-datatable-column [flexGrow]&#x3D;&quot;1&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Deactivate &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            &lt;div&gt;
+              &lt;button
+                class&#x3D;&quot;btn btn-block btn-danger text-white&quot;
+                (click)&#x3D;&quot;openDeactivateAgentModal(row)&quot;
+              &gt;
+                Deactivate Agent
+              &lt;/button&gt;
+              &lt;br /&gt;
+            &lt;/div&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+      &lt;/ngx-datatable&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #addFundsModal let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;h4 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;addTagModalId&quot;&gt;Fund Wallet&lt;/h4&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;close&quot;
+      aria-label&#x3D;&quot;Close button&quot;
+      aria-describedby&#x3D;&quot;modal-title&quot;
+      (click)&#x3D;&quot;modal.dismiss()&quot;
+    &gt;
+      &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-sm-10 row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-12 form-group mb-3&quot;&gt;
+          &lt;label for&#x3D;&quot;tax&quot;&gt;Agent&lt;/label&gt;
+
+          &lt;input
+            class&#x3D;&quot;form-control&quot;
+            type&#x3D;&quot;text&quot;
+            [value]&#x3D;&quot;selectedAgent.name&quot;
+            disabled
+            placeholder&#x3D;&quot;Name of user&quot;
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;col-md-12 form-group mb-3&quot;&gt;
+          &lt;label for&#x3D;&quot;tax&quot;&gt;Amount (NGN)&lt;/label&gt;
+
+          &lt;input
+            class&#x3D;&quot;form-control&quot;
+            type&#x3D;&quot;number&quot;
+            [(ngModel)]&#x3D;&quot;selectedAgent.new_fund&quot;
+            placeholder&#x3D;&quot;Name of user&quot;
+          /&gt;
+        &lt;/div&gt;
+        &lt;!-- &lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt; --&gt;
+
+        &lt;!-- &lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt; --&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      [disabled]&#x3D;&quot;addingTags&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;submitFundWallet()&quot;
+    &gt;
+      {{ addingFunds ? &quot;Please Wait...&quot; : &quot;Continue&quot; }}
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #activateAgentModal let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;h4 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;addTagModalId&quot;&gt;Activate an Agent&lt;/h4&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;close&quot;
+      aria-label&#x3D;&quot;Close button&quot;
+      aria-describedby&#x3D;&quot;modal-title&quot;
+      (click)&#x3D;&quot;modal.dismiss()&quot;
+    &gt;
+      &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-sm-10 row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-12 form-group mb-3&quot;&gt;
+          &lt;label for&#x3D;&quot;tax&quot;&gt;Enter Agent ID&lt;/label&gt;
+
+          &lt;input
+            class&#x3D;&quot;form-control&quot;
+            type&#x3D;&quot;text&quot;
+            [(ngModel)]&#x3D;&quot;selectedAgent.name&quot;
+            placeholder&#x3D;&quot;AGENT-----&quot;
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      [disabled]&#x3D;&quot;addingTags&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;submitActivateAgent()&quot;
+    &gt;
+      {{ activatingAgent ? &quot;Please Wait...&quot; : &quot;Continue&quot; }}
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #deActivateAgentModal let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;h4 class&#x3D;&quot;modal-title text-danger&quot; id&#x3D;&quot;addTagModalId&quot;&gt;Deactivate Agent&lt;/h4&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;close&quot;
+      aria-label&#x3D;&quot;Close button&quot;
+      aria-describedby&#x3D;&quot;modal-title&quot;
+      (click)&#x3D;&quot;modal.dismiss()&quot;
+    &gt;
+      &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-sm-10 row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-12 form-group mb-3&quot;&gt;
+          &lt;label for&#x3D;&quot;tax&quot;&gt;Agent ID&lt;/label&gt;
+
+          &lt;input
+            class&#x3D;&quot;form-control&quot;
+            type&#x3D;&quot;text&quot;
+            disabled
+            [(ngModel)]&#x3D;&quot;selectedAgent.name&quot;
+            placeholder&#x3D;&quot;AGENT-----&quot;
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      [disabled]&#x3D;&quot;addingTags&quot;
+      class&#x3D;&quot;btn btn-danger&quot;
+      (click)&#x3D;&quot;submitDeactivateAgent()&quot;
+    &gt;
+      {{ deActivatingAgent ? &quot;Please Wait...&quot; : &quot;Continue&quot; }}
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./manage_users.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.custom-pagination .page-number {
+  display: inline-block;
+  /* padding: 5px 12px; */
+  background: #afffe6;
+  margin: 0px 4px;
+  border-radius: 25px;
+}
+
+.page-number.current {
+  background: #ffffff !important;
+  border: 2px solid #458873;
+}
+
+.page-number span {
+  display: block;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.pagination-previous,
+.pagination-next {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.outer {
+  position: relative;
+}
+.inner {
+  position: absolute;
+  z-index: 1010;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-breadcrumb></app-breadcrumb><div class="separator-breadcrumb border-top"></div><!-- <table  style="width: 100%"  datatable  [dtOptions]="dtOptions"  class="row-border hover">  <thead>    <tr>      <th>SN</th>      <th>Name</th>      <th>Phone Number</th>      <th>Role</th>      <th>Date Registered</th>    </tr>  </thead>  <tbody *ngIf="persons?.length != 0" [attr.data-index]="i">    <tr *ngFor="let person of persons; index as i">      <td>{{ i + 1 }}</td>      <td>{{ person.first_name + " " + person.surname }}</td>      <td>{{ person.phone }}</td>      <td>{{ userRole[person.role] }}</td>      <td>{{ person.create_date }}</td>    </tr>  </tbody>  <tbody *ngIf="persons?.length == 0">    <tr>      <td colspan="3" class="no-data-available">No data!</td>    </tr>  </tbody></table> --><div class="row">  <div class="col-md-12">    <div class="form-group float-left"></div>    <div class="float-right">      <!---       <button        style="position: relative; z-index: 3"        class="btn btn-primary"        (click)="downloadUserTable(\'pdfTable\', \'user_table\')"      >        Export to Excel      </button> -->      <button        style="position: relative; z-index: 3"        class="btn btn-primary"        (click)="openActivateAgentModal()"      >        Activate an Agent      </button>    </div>  </div></div><div class="row mb-3">  <div class="col-md-12 mb-3"></div>  <div *ngIf="loading" class="col-md-12 text-center">    <div class="spinner spinner-primary mr-3"></div>  </div>  <div    class="col-md-12"    *ngIf="!loading"    [@animate]="{      value: \'*\',      params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }    }"  >    <div id="pdfTable" #pdfTable class="card o-hidden">      <ngx-datatable        *ngIf="assessments?.length"        style="height: calc(100vh - 270px); box-shadow: none"        class="material fullscreen"        [columnMode]="\'force\'"        [headerHeight]="50"        [footerHeight]="50"        [rowHeight]="60"        [scrollbarH]="true"        [virtualization]="false"        [rows]="assessments"        #table      >        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Name </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{              (row.first_name !== null &&                row.first_name.trim() + " " + row.surname) ||                capitalise(row.name)            }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Agent Id </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.agent_id }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template>            Account Balance          </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ numberWithCommas(row.account_balance) || "N/A" }} NGN          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column [flexGrow]="1">          <ng-template ngx-datatable-header-template>            Last Transaction          </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ DateFromString(row.last_updated) }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column [flexGrow]="1">          <ng-template ngx-datatable-header-template> Top Up </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            <div>              <button                class="btn btn-block btn-primary text-white"                (click)="openFundWalletModal(row)"              >                Fund Wallet              </button>              <br />            </div>          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column [flexGrow]="1">          <ng-template ngx-datatable-header-template> Deactivate </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            <div>              <button                class="btn btn-block btn-danger text-white"                (click)="openDeactivateAgentModal(row)"              >                Deactivate Agent              </button>              <br />            </div>          </ng-template>        </ngx-datatable-column>      </ngx-datatable>    </div>  </div></div><ng-template #addFundsModal let-modal>  <div class="modal-header">    <h4 class="modal-title" id="addTagModalId">Fund Wallet</h4>    <button      type="button"      class="close"      aria-label="Close button"      aria-describedby="modal-title"      (click)="modal.dismiss()"    >      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="col-md-12">    <div class="row">      <div class="col-sm-1"></div>      <div class="col-sm-10 row">        <div class="col-md-12 form-group mb-3">          <label for="tax">Agent</label>          <input            class="form-control"            type="text"            [value]="selectedAgent.name"            disabled            placeholder="Name of user"          />        </div>        <div class="col-md-12 form-group mb-3">          <label for="tax">Amount (NGN)</label>          <input            class="form-control"            type="number"            [(ngModel)]="selectedAgent.new_fund"            placeholder="Name of user"          />        </div>        <!-- <div class="col-sm-7"></div> -->        <!-- <div class="col-sm-7"></div> -->      </div>      <div class="col-sm-1"></div>    </div>  </div>  <div class="modal-footer">    <button      type="button"      [disabled]="addingTags"      class="btn btn-outline-secondary btn-rounded"      (click)="submitFundWallet()"    >      {{ addingFunds ? "Please Wait..." : "Continue" }}    </button>  </div></ng-template><ng-template #activateAgentModal let-modal>  <div class="modal-header">    <h4 class="modal-title" id="addTagModalId">Activate an Agent</h4>    <button      type="button"      class="close"      aria-label="Close button"      aria-describedby="modal-title"      (click)="modal.dismiss()"    >      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="col-md-12">    <div class="row">      <div class="col-sm-1"></div>      <div class="col-sm-10 row">        <div class="col-md-12 form-group mb-3">          <label for="tax">Enter Agent ID</label>          <input            class="form-control"            type="text"            [(ngModel)]="selectedAgent.name"            placeholder="AGENT-----"          />        </div>      </div>      <div class="col-sm-1"></div>    </div>  </div>  <div class="modal-footer">    <button      type="button"      [disabled]="addingTags"      class="btn btn-outline-secondary btn-rounded"      (click)="submitActivateAgent()"    >      {{ activatingAgent ? "Please Wait..." : "Continue" }}    </button>  </div></ng-template><ng-template #deActivateAgentModal let-modal>  <div class="modal-header">    <h4 class="modal-title text-danger" id="addTagModalId">Deactivate Agent</h4>    <button      type="button"      class="close"      aria-label="Close button"      aria-describedby="modal-title"      (click)="modal.dismiss()"    >      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="col-md-12">    <div class="row">      <div class="col-sm-1"></div>      <div class="col-sm-10 row">        <div class="col-md-12 form-group mb-3">          <label for="tax">Agent ID</label>          <input            class="form-control"            type="text"            disabled            [(ngModel)]="selectedAgent.name"            placeholder="AGENT-----"          />        </div>      </div>      <div class="col-sm-1"></div>    </div>  </div>  <div class="modal-footer">    <button      type="button"      [disabled]="addingTags"      class="btn btn-danger"      (click)="submitDeactivateAgent()"    >      {{ deActivatingAgent ? "Please Wait..." : "Continue" }}    </button>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'Manage_usersComponent-1'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'Manage_usersComponent-1.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

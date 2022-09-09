@@ -1,0 +1,3339 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ViewIndividualRevenuReturnAssessmentComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboard-v2</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./view-individual-revenue-return-assessment.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./view-individual-revenue-return-assessment.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#assessmentForDisplay" >assessmentForDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#assessments" >assessments</a>
+                            </li>
+                            <li>
+                                <a href="#assessmentsCsv" >assessmentsCsv</a>
+                            </li>
+                            <li>
+                                <a href="#assessmentsCsvTotal" >assessmentsCsvTotal</a>
+                            </li>
+                            <li>
+                                <a href="#billing_ref" >billing_ref</a>
+                            </li>
+                            <li>
+                                <a href="#bulkPayeId" >bulkPayeId</a>
+                            </li>
+                            <li>
+                                <a href="#companyDetail" >companyDetail</a>
+                            </li>
+                            <li>
+                                <a href="#companyTin" >companyTin</a>
+                            </li>
+                            <li>
+                                <a href="#directAssessmentSummary" >directAssessmentSummary</a>
+                            </li>
+                            <li>
+                                <a href="#displayPayee" >displayPayee</a>
+                            </li>
+                            <li>
+                                <a href="#dynamicSummary" >dynamicSummary</a>
+                            </li>
+                            <li>
+                                <a href="#editMode" >editMode</a>
+                            </li>
+                            <li>
+                                <a href="#editTitle" >editTitle</a>
+                            </li>
+                            <li>
+                                <a href="#filteredItems" >filteredItems</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#mdas" >mdas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#modalContent" >modalContent</a>
+                            </li>
+                            <li>
+                                <a href="#payeeSummary" >payeeSummary</a>
+                            </li>
+                            <li>
+                                <a href="#searchControl" >searchControl</a>
+                            </li>
+                            <li>
+                                <a href="#searching" >searching</a>
+                            </li>
+                            <li>
+                                <a href="#status" >status</a>
+                            </li>
+                            <li>
+                                <a href="#taxItemForm" >taxItemForm</a>
+                            </li>
+                            <li>
+                                <a href="#taxItems" >taxItems</a>
+                            </li>
+                            <li>
+                                <a href="#updatedTotal" >updatedTotal</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile" >userProfile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteInvoice" >deleteInvoice</a>
+                            </li>
+                            <li>
+                                <a href="#downloadPDF" >downloadPDF</a>
+                            </li>
+                            <li>
+                                <a href="#editTaxItem" >editTaxItem</a>
+                            </li>
+                            <li>
+                                <a href="#formatNumber" >formatNumber</a>
+                            </li>
+                            <li>
+                                <a href="#getCustomTaxItem" >getCustomTaxItem</a>
+                            </li>
+                            <li>
+                                <a href="#loadAssessments" >loadAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#loadMdas" >loadMdas</a>
+                            </li>
+                            <li>
+                                <a href="#loadTaxItems" >loadTaxItems</a>
+                            </li>
+                            <li>
+                                <a href="#makePaymentForTaxItem" >makePaymentForTaxItem</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#parsePhpDate" >parsePhpDate</a>
+                            </li>
+                            <li>
+                                <a href="#paymentSucceeded" >paymentSucceeded</a>
+                            </li>
+                            <li>
+                                <a href="#print" >print</a>
+                            </li>
+                            <li>
+                                <a href="#submitTaxItem" >submitTaxItem</a>
+                            </li>
+                            <li>
+                                <a href="#viewAssessment" >viewAssessment</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, modalService: NgbModal, toastr: ToastrService, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, printpdfService: <a href="../injectables/PrintpdfService.html" target="_self">PrintpdfService</a>, assessmentService: <a href="../injectables/AssessmentService.html" target="_self">AssessmentService</a>, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:51</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>printpdfService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PrintpdfService.html" target="_self" >PrintpdfService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>assessmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AssessmentService.html" target="_self" >AssessmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteInvoice"></a>
+                    <span class="name">
+                        <span ><b>deleteInvoice</b></span>
+                        <a href="#deleteInvoice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteInvoice(id, modal)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="326"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:326</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>modal</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="downloadPDF"></a>
+                    <span class="name">
+                        <span ><b>downloadPDF</b></span>
+                        <a href="#downloadPDF"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>downloadPDF(div)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="186"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:186</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>div</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editTaxItem"></a>
+                    <span class="name">
+                        <span ><b>editTaxItem</b></span>
+                        <a href="#editTaxItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editTaxItem(taxItem: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="462"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:462</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>taxItem</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatNumber"></a>
+                    <span class="name">
+                        <span ><b>formatNumber</b></span>
+                        <a href="#formatNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatNumber(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="483"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:483</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>x</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCustomTaxItem"></a>
+                    <span class="name">
+                        <span ><b>getCustomTaxItem</b></span>
+                        <a href="#getCustomTaxItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCustomTaxItem(item)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadAssessments"></a>
+                    <span class="name">
+                        <span ><b>loadAssessments</b></span>
+                        <a href="#loadAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadAssessments()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="207"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:207</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadMdas"></a>
+                    <span class="name">
+                        <span ><b>loadMdas</b></span>
+                        <a href="#loadMdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadMdas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="311"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:311</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadTaxItems"></a>
+                    <span class="name">
+                        <span ><b>loadTaxItems</b></span>
+                        <a href="#loadTaxItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadTaxItems()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="167"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:167</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="makePaymentForTaxItem"></a>
+                    <span class="name">
+                        <span ><b>makePaymentForTaxItem</b></span>
+                        <a href="#makePaymentForTaxItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>makePaymentForTaxItem()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="422"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:422</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parsePhpDate"></a>
+                    <span class="name">
+                        <span ><b>parsePhpDate</b></span>
+                        <a href="#parsePhpDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>parsePhpDate(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="479"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:479</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paymentSucceeded"></a>
+                    <span class="name">
+                        <span ><b>paymentSucceeded</b></span>
+                        <a href="#paymentSucceeded"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>paymentSucceeded(res)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="435"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:435</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>res</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="print"></a>
+                    <span class="name">
+                        <span ><b>print</b></span>
+                        <a href="#print"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>print()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:182</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitTaxItem"></a>
+                    <span class="name">
+                        <span ><b>submitTaxItem</b></span>
+                        <a href="#submitTaxItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitTaxItem()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewAssessment"></a>
+                    <span class="name">
+                        <span ><b>viewAssessment</b></span>
+                        <a href="#viewAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>viewAssessment(assessment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="352"
+                            class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:352</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>assessment</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessmentForDisplay"></a>
+                    <span class="name">
+                        <span ><b>assessmentForDisplay</b></span>
+                        <a href="#assessmentForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="346" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:346</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessments"></a>
+                    <span class="name">
+                        <span ><b>assessments</b></span>
+                        <a href="#assessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessmentsCsv"></a>
+                    <span class="name">
+                        <span ><b>assessmentsCsv</b></span>
+                        <a href="#assessmentsCsv"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="190" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:190</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessmentsCsvTotal"></a>
+                    <span class="name">
+                        <span ><b>assessmentsCsvTotal</b></span>
+                        <a href="#assessmentsCsvTotal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    &quot;Annual Gross Pay&quot;: 0,
+    &quot;Life Insurance&quot;: 0,
+    Pension: 0,
+    NHIS: 0,
+    NHF: 0,
+    CRA: 0,
+    &quot;Taxable Income&quot;: 0,
+    &quot;Annual Tax Liability&quot;: 0,
+    &quot;Monthly Tax Liability&quot;: 0,
+    &quot;Development Levy&quot;: 0,
+    Total: 0,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="191" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:191</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="billing_ref"></a>
+                    <span class="name">
+                        <span ><b>billing_ref</b></span>
+                        <a href="#billing_ref"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bulkPayeId"></a>
+                    <span class="name">
+                        <span ><b>bulkPayeId</b></span>
+                        <a href="#bulkPayeId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companyDetail"></a>
+                    <span class="name">
+                        <span ><b>companyDetail</b></span>
+                        <a href="#companyDetail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="205" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:205</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companyTin"></a>
+                    <span class="name">
+                        <span ><b>companyTin</b></span>
+                        <a href="#companyTin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="directAssessmentSummary"></a>
+                    <span class="name">
+                        <span ><b>directAssessmentSummary</b></span>
+                        <a href="#directAssessmentSummary"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="350" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:350</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayPayee"></a>
+                    <span class="name">
+                        <span ><b>displayPayee</b></span>
+                        <a href="#displayPayee"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="347" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:347</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dynamicSummary"></a>
+                    <span class="name">
+                        <span ><b>dynamicSummary</b></span>
+                        <a href="#dynamicSummary"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="348" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:348</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editMode"></a>
+                    <span class="name">
+                        <span ><b>editMode</b></span>
+                        <a href="#editMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editTitle"></a>
+                    <span class="name">
+                        <span ><b>editTitle</b></span>
+                        <a href="#editTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredItems"></a>
+                    <span class="name">
+                        <span ><b>filteredItems</b></span>
+                        <a href="#filteredItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdas"></a>
+                    <span class="name">
+                        <span ><b>mdas</b></span>
+                        <a href="#mdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modalContent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>modalContent</b></span>
+                        <a href="#modalContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;modalConfirm&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="payeeSummary"></a>
+                    <span class="name">
+                        <span ><b>payeeSummary</b></span>
+                        <a href="#payeeSummary"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="349" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:349</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchControl"></a>
+                    <span class="name">
+                        <span ><b>searchControl</b></span>
+                        <a href="#searchControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormControl" target="_blank" >FormControl</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searching"></a>
+                    <span class="name">
+                        <span ><b>searching</b></span>
+                        <a href="#searching"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="status"></a>
+                    <span class="name">
+                        <span ><b>status</b></span>
+                        <a href="#status"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:49</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItemForm"></a>
+                    <span class="name">
+                        <span ><b>taxItemForm</b></span>
+                        <a href="#taxItemForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItems"></a>
+                    <span class="name">
+                        <span ><b>taxItems</b></span>
+                        <a href="#taxItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updatedTotal"></a>
+                    <span class="name">
+                        <span ><b>updatedTotal</b></span>
+                        <a href="#updatedTotal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="206" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:206</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <span ><b>userProfile</b></span>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/views/revenue-return/corporate-revenue-return/view-individual-revenue-return-assessment/view-individual-revenue-return-assessment.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &quot;@angular/core&quot;;
+import { LocalStoreService } from &quot;src/app/shared/services/local-store.service&quot;;
+import { NgbModal } from &quot;@ng-bootstrap/ng-bootstrap&quot;;
+import { SharedAnimations } from &quot;src/app/shared/animations/shared-animations&quot;;
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from &quot;@angular/forms&quot;;
+import { HttpService } from &quot;src/app/shared/services/http.service&quot;;
+import { ToastrService } from &quot;ngx-toastr&quot;;
+import { AssessmentService } from &quot;src/app/shared/services/assessment.service&quot;;
+import { Utils } from &quot;src/app/shared/utils&quot;;
+
+import { ActivatedRoute } from &quot;@angular/router&quot;;
+import { BreadcrumbService } from &quot;src/app/shared/services/breadcrumb.service&quot;;
+import { PrintpdfService } from &quot;src/app/shared/services/printpdf.service&quot;;
+import jsPDF from &quot;jspdf&quot;;
+import html2canvas from &quot;html2canvas&quot;;
+import { Observable, forkJoin } from &quot;rxjs&quot;;
+
+@Component({
+  selector: &quot;app-dashboard-v2&quot;,
+  templateUrl: &quot;./view-individual-revenue-return-assessment.component.html&quot;,
+  styleUrls: [&quot;./view-individual-revenue-return-assessment.component.scss&quot;],
+  animations: [SharedAnimations],
+})
+export class ViewIndividualRevenuReturnAssessmentComponent implements OnInit {
+  mdas: any;
+  taxItemForm: FormGroup;
+  editMode: boolean;
+  loading: boolean &#x3D; false;
+  editTitle: string &#x3D; &quot;&quot;;
+  assessments: any;
+  taxItems: any;
+
+  filteredItems: any[] &#x3D; [];
+
+  searchControl: FormControl &#x3D; new FormControl();
+
+  @ViewChild(&quot;modalConfirm&quot;, { static: false }) private modalContent;
+
+  userProfile: any;
+  companyTin: any;
+
+  searching: boolean &#x3D; false;
+
+  status: any;
+  bulkPayeId: any;
+  billing_ref: any;
+
+  constructor(
+    private dl: HttpService,
+    private modalService: NgbModal,
+    private toastr: ToastrService,
+    private fb: FormBuilder,
+    private localStore: LocalStoreService,
+    private route: ActivatedRoute,
+    private printpdfService: PrintpdfService,
+    private assessmentService: AssessmentService,
+    private breadcrumb: BreadcrumbService
+  ) {}
+
+  ngOnInit() {
+    this.userProfile &#x3D; this.localStore.getItem(&quot;user&quot;);
+
+    this.breadcrumb.setCrumbItem(&quot;assessmentHistory&quot;);
+
+    this.route.params.forEach((e: any) &#x3D;&gt; {
+      if (e.bulkPayeId) this.bulkPayeId &#x3D; e.bulkPayeId;
+    });
+
+    this.route.params.subscribe((params) &#x3D;&gt; {
+      // this.status &#x3D; params[&quot;status&quot;];
+      this.bulkPayeId &#x3D; params[&quot;bulk_paye_id&quot;];
+      this.companyTin &#x3D; params[&quot;tin&quot;];
+      this.billing_ref &#x3D; params[&quot;billing_ref&quot;];
+      this.loadAssessments(); // reset and set based on new parameter this time
+    });
+
+    console.log(&quot;param is &quot;, this.bulkPayeId);
+
+    //this.loadTaxItems();
+    //this.loadMdas()
+    this.loadAssessments();
+
+    this.taxItemForm &#x3D; this.fb.group({
+      id: [&quot;&quot;],
+      title: [&quot;&quot;, Validators.required],
+      mda_id: [&quot;&quot;, Validators.required],
+      rules: [&quot;&quot;],
+    });
+
+    this.searchControl.valueChanges.subscribe((value: string) &#x3D;&gt; {
+      console.log(&quot;Value changed &quot;, value);
+
+      //	if(this.searching) return;
+
+      this.searching &#x3D; true;
+
+      setTimeout(() &#x3D;&gt; {
+        this.searching &#x3D; false;
+      }, 1000);
+
+      if (value.length &lt; 1) {
+        this.filteredItems &#x3D; [...this.assessments];
+      } else {
+        this.filteredItems &#x3D; [];
+        this.filteredItems &#x3D; [...this.taxItems];
+      }
+
+      let newList: any[] &#x3D; [];
+
+      value &#x3D; value.toLowerCase();
+
+      this.filteredItems.forEach((e) &#x3D;&gt; {
+        console.log(&quot;E is &quot;, e);
+        if (
+          (e.tax_item &amp;&amp; e.tax_item.toLowerCase().indexOf(value) &gt; -1) ||
+          (e.mda &amp;&amp; e.mda.toLowerCase().indexOf(value) &gt; -1) ||
+          (e.billing_ref &amp;&amp; e.billing_ref.toLowerCase().indexOf(value) &gt; -1)
+        ) {
+          newList.push(e);
+        }
+      });
+
+      this.filteredItems &#x3D; newList;
+    });
+  }
+
+  submitTaxItem() {
+    if (
+      this.taxItemForm.value.mda_id &#x3D;&#x3D; null ||
+      parseInt(this.taxItemForm.value.mda_id) &lt; 1
+    ) {
+      return;
+    }
+
+    this.loading &#x3D; true;
+
+    console.log(&quot;submitting tax item &quot;, this.taxItemForm.value);
+
+    this.dl.doPost(&quot;/tax_items/save&quot;, this.taxItemForm.value).subscribe(
+      (res) &#x3D;&gt; {
+        console.log(&quot;result saving&quot;, res);
+        this.editMode &#x3D; false;
+        this.loading &#x3D; false;
+        this.loadTaxItems();
+      },
+      (error) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        console.log(&quot;error saving tax item&quot;, error);
+      }
+    );
+  }
+
+  getCustomTaxItem(item) {
+    let desc &#x3D; JSON.parse(item.rules);
+
+    if (desc &amp;&amp; desc.description) {
+      return desc.description;
+    }
+    return &quot;Unspecified&quot;;
+  }
+
+  loadTaxItems() {
+    this.loading &#x3D; true;
+    this.dl.doGet(&quot;/tax_items/list&quot;).subscribe(
+      (res) &#x3D;&gt; {
+        console.log(&quot;fetched taxitems &quot;, res);
+        this.taxItems &#x3D; res;
+        this.loading &#x3D; false;
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        console.log(&quot;error fetching tax items&quot;, err);
+      }
+    );
+  }
+
+  print() {
+    window.print();
+  }
+
+  downloadPDF(div) {
+    this.printpdfService.downloadAssessment(div);
+  }
+
+  assessmentsCsv: any &#x3D; [];
+  assessmentsCsvTotal &#x3D; {
+    &quot;Annual Gross Pay&quot;: 0,
+    &quot;Life Insurance&quot;: 0,
+    Pension: 0,
+    NHIS: 0,
+    NHF: 0,
+    CRA: 0,
+    &quot;Taxable Income&quot;: 0,
+    &quot;Annual Tax Liability&quot;: 0,
+    &quot;Monthly Tax Liability&quot;: 0,
+    &quot;Development Levy&quot;: 0,
+    Total: 0,
+  };
+
+  companyDetail: any &#x3D; {};
+  updatedTotal &#x3D; false;
+  loadAssessments() {
+    this.loading &#x3D; true;
+
+    let url: any &#x3D; &quot;/assessment/list_bulk_paye_assessments&quot;;
+    if (this.bulkPayeId !&#x3D; undefined) {
+      url &#x3D; url + &quot;/&quot; + this.bulkPayeId;
+    }
+
+    url &#x3D; this.dl.doGet(url);
+    let companyDetails &#x3D; this.dl.doGet(
+      &quot;/users/company_details/&quot; + this.companyTin
+    );
+
+    // if (this.userProfile.role &#x3D;&#x3D; &quot;1&quot;) {
+    //   url &#x3D; &quot;/assessment/list_bulk_paye_assessments&quot;;
+    // }
+
+    forkJoin([url, companyDetails]).subscribe(
+      (res: any) &#x3D;&gt; {
+        if (res.length &lt; 1) {
+          this.toastr.info(&quot;No Assessments yet!&quot;, &quot;Empty!&quot;, { timeOut: 3000 });
+        }
+
+        this.assessments &#x3D; res[0];
+        this.companyDetail &#x3D; res[1] &amp;&amp; res[1].data[0];
+        this.filteredItems &#x3D; [...this.assessments];
+        let mL &#x3D; [
+          &quot;&quot;,
+          &quot;January&quot;,
+          &quot;February&quot;,
+          &quot;March&quot;,
+          &quot;April&quot;,
+          &quot;May&quot;,
+          &quot;June&quot;,
+          &quot;July&quot;,
+          &quot;August&quot;,
+          &quot;September&quot;,
+          &quot;October&quot;,
+          &quot;November&quot;,
+          &quot;December&quot;,
+        ];
+
+        this.assessmentsCsv &#x3D; this.filteredItems
+          .map((el) &#x3D;&gt; {
+            let jsonParseObj &#x3D; {
+              ...el,
+              name: JSON.parse(el.form_items).name,
+              ...JSON.parse(el.rules),
+            };
+
+            let date &#x3D; jsonParseObj.period_from.split(&quot;-&quot;);
+            let month &#x3D; parseFloat(date[1]);
+
+            if (!this.updatedTotal) {
+              this.assessmentsCsvTotal[&quot;Annual Gross Pay&quot;] +&#x3D;
+                jsonParseObj.gross_income;
+              this.assessmentsCsvTotal[&quot;Life Insurance&quot;] +&#x3D; jsonParseObj.li;
+              this.assessmentsCsvTotal.Pension +&#x3D; jsonParseObj.pe;
+              this.assessmentsCsvTotal.NHIS +&#x3D; jsonParseObj.nhis;
+              this.assessmentsCsvTotal.NHF +&#x3D; jsonParseObj.nhs;
+              this.assessmentsCsvTotal.CRA +&#x3D; jsonParseObj.cra;
+              this.assessmentsCsvTotal[&quot;Taxable Income&quot;] +&#x3D;
+                jsonParseObj.taxable_income;
+              this.assessmentsCsvTotal[&quot;Annual Tax Liability&quot;] +&#x3D;
+                jsonParseObj.tax;
+              this.assessmentsCsvTotal[&quot;Monthly Tax Liability&quot;] +&#x3D;
+                jsonParseObj.tax / 12;
+              this.assessmentsCsvTotal[&quot;Development Levy&quot;] +&#x3D;
+                jsonParseObj.dev_levy ? 300 : 0;
+              this.assessmentsCsvTotal.Total +&#x3D;
+                jsonParseObj.tax + jsonParseObj.dev_levy;
+            }
+
+            return {
+              // &quot;company name&quot;: jsonParseObj.payer_name,
+              &quot;individual name&quot;: jsonParseObj.name,
+              &quot;Payer Tin&quot;: jsonParseObj.tin,
+              // Period: &#x60;${mL[month]}, ${date[0]}&#x60;,
+              &quot;Annual Gross Pay&quot;: jsonParseObj.gross_income,
+              &quot;Life Insurance&quot;: jsonParseObj.li,
+              Pension: jsonParseObj.pe,
+              NHIS: jsonParseObj.nhis,
+              NHF: jsonParseObj.nhs,
+              CRA: jsonParseObj.cra,
+              &quot;Taxable Income&quot;: jsonParseObj.taxable_income,
+              &quot;Annual Tax Liability&quot;: jsonParseObj.tax,
+              &quot;Monthly Tax Liability&quot;: jsonParseObj.tax / 12,
+              &quot;Development Levy&quot;: jsonParseObj.dev_levy,
+              Total: jsonParseObj.tax + jsonParseObj.dev_levy,
+            };
+          })
+          .reverse();
+        this.updatedTotal &#x3D; true;
+
+        this.loading &#x3D; false;
+      },
+      (err) &#x3D;&gt; {
+        this.updatedTotal &#x3D; false;
+        this.loading &#x3D; false;
+        console.log(&quot;error fetching tax items&quot;, err);
+      }
+    );
+  }
+
+  loadMdas() {
+    this.loading &#x3D; true;
+    this.dl.doGet(&quot;/mdas/list&quot;).subscribe(
+      (res) &#x3D;&gt; {
+        // console.log(&quot;fetched mda &quot;, res);
+        this.mdas &#x3D; res;
+        this.loading &#x3D; false;
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        // console.log(&quot;error fetching mda&quot;, err);
+      }
+    );
+  }
+
+  deleteInvoice(id, modal) {
+    this.loading &#x3D; true;
+    this.modalService
+      .open(modal, { ariaLabelledBy: &quot;modal-basic-title&quot;, centered: true })
+      .result.then(
+        (result) &#x3D;&gt; {
+          this.dl.doGet(&quot;/tax_items/delete/&quot; + id).subscribe((res) &#x3D;&gt; {
+            this.loading &#x3D; false;
+            this.toastr.success(&quot;Tax Item Deleted!&quot;, &quot;Success!&quot;, {
+              timeOut: 3000,
+            });
+            this.loadTaxItems();
+          });
+        },
+        (reason) &#x3D;&gt; {
+          this.loading &#x3D; false;
+        }
+      );
+  }
+
+  assessmentForDisplay: any &#x3D; {};
+  displayPayee: any;
+  dynamicSummary: boolean &#x3D; false;
+  payeeSummary: boolean &#x3D; false;
+  directAssessmentSummary: boolean &#x3D; false;
+
+  viewAssessment(assessment: any) {
+    this.payeeSummary &#x3D; false;
+    this.directAssessmentSummary &#x3D; false;
+
+    this.assessmentForDisplay &#x3D; Object.assign({}, assessment);
+    this.assessmentForDisplay.status &#x3D; assessment.status;
+    this.assessmentForDisplay.tin &#x3D; assessment.payer_tin || assessment.tin;
+    this.assessmentForDisplay.name &#x3D; assessment.payer_name || assessment.name;
+
+    if (assessment.rules) {
+      this.assessmentForDisplay.rules &#x3D; JSON.parse(assessment.rules);
+    }
+
+    if (assessment.form_items) {
+      this.assessmentForDisplay.form_items &#x3D; JSON.parse(assessment.form_items);
+    }
+
+    //if assessment is payee or licence
+    if (assessment.tax_item_id &#x3D;&#x3D; 13) {
+      this.dynamicSummary &#x3D; true;
+      this.payeeSummary &#x3D; true;
+
+      this.displayPayee &#x3D; this.assessmentService.arrangePayeeFormDataForDisplay(
+        this.assessmentForDisplay.form_items,
+        this.assessmentForDisplay.rules
+      );
+
+      this.modalService.open(this.modalContent, {
+        ariaLabelledBy: &quot;modal-basic-title&quot;,
+        centered: true,
+      });
+
+      console.log(&quot;Display Payee&quot;, this.displayPayee);
+      return;
+    } else if (assessment.rules.length &lt; 3 &amp;&amp; assessment.tax_item_id &#x3D;&#x3D; 14) {
+      this.displayPayee &#x3D;
+        this.assessmentService.arrangeDirectAssessmentFormDataForDisplay(
+          this.assessmentForDisplay.form_items
+        );
+
+      this.dynamicSummary &#x3D; true;
+      this.directAssessmentSummary &#x3D; true;
+
+      this.modalService.open(this.modalContent, {
+        ariaLabelledBy: &quot;modal-basic-title&quot;,
+        centered: true,
+      });
+
+      // console.log(&#x27;Display direct assessment&#x27;, this.displayPayee);
+
+      return;
+    }
+
+    this.dynamicSummary &#x3D; false;
+
+    this.assessmentForDisplay.tax_item &#x3D; assessment.display
+      ? JSON.parse(assessment.display).tax_item
+      : assessment.tax_item
+      ? assessment.tax_item
+      : this.getCustomTaxItem(assessment);
+    this.assessmentForDisplay.amount &#x3D; assessment.amount;
+
+    this.modalService.open(this.modalContent, {
+      ariaLabelledBy: &quot;modal-basic-title&quot;,
+      centered: true,
+    });
+
+    console.log(&quot;Assessment for display&quot;, this.assessmentForDisplay);
+  }
+
+  makePaymentForTaxItem() {
+    const item &#x3D; this.assessmentForDisplay;
+
+    let amount &#x3D; item.amount;
+
+    if (item.mda_id &#x3D;&#x3D; 3 &amp;&amp; item.tax_item_id &#x3D;&#x3D; 13) {
+      amount &#x3D; item.rules.tax;
+    }
+
+    let win: any &#x3D; window;
+    win.payWithPaystack(Math.ceil(amount), this);
+  }
+
+  paymentSucceeded(res) {
+    this.loading &#x3D; true;
+    let url: string &#x3D; &#x60;assessment/update_assessment/${this.assessmentForDisplay.id}/1&#x60;;
+
+    this.dl.doGet(url).subscribe(
+      (res) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        this.toastr.success(&quot;Success&quot;, &quot;Payment Successful!&quot;, {
+          timeOut: 10000,
+          closeButton: true,
+          progressBar: true,
+        });
+        this.modalService.dismissAll(&quot;dismiss&quot;);
+        this.loadAssessments();
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        this.toastr.error(&quot;Failed!&quot;, &quot;Payment Failed&quot;, {
+          timeOut: 10000,
+          closeButton: true,
+          progressBar: true,
+        });
+        this.modalService.dismissAll(&quot;dismiss&quot;);
+      }
+    );
+  }
+
+  editTaxItem(taxItem: any &#x3D; null) {
+    if (taxItem) {
+      this.editTitle &#x3D; &quot;Edit TaxItem&quot;;
+      this.taxItemForm.setValue({
+        id: taxItem.id,
+        rules: taxItem.rules,
+        title: taxItem.title,
+        mda_id: taxItem.mda_id,
+      });
+    } else {
+      this.editTitle &#x3D; &quot;Create TaxItem&quot;;
+      this.taxItemForm.setValue({ title: &quot;&quot;, mda_id: &quot;&quot;, id: &quot;&quot;, rules: &quot;&quot; });
+    }
+
+    this.editMode &#x3D; true;
+  }
+
+  parsePhpDate(date: string) {
+    return new Date(+date * 1000).toLocaleDateString();
+  }
+
+  formatNumber(x: number) {
+    return x
+      ? x
+          .toFixed(2)
+          .toString()
+          .replace(/\B(?&#x3D;(\d{3})+(?!\d))/g, &quot;,&quot;)
+      : x;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;div class&#x3D;&quot;breadcrumb&quot;&gt;
+  &lt;h1&gt;Assessment&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;TaxItems&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt; --&gt;
+&lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+
+&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;row mb-3&quot;&gt;
+  &lt;div class&#x3D;&quot;col-md-12 mb-3&quot;&gt;
+    &lt;div class&#x3D;&quot;form-group float-left&quot;&gt;
+      &lt;input
+        id&#x3D;&quot;email&quot;
+        placeholder&#x3D;&quot;Search&quot;
+        [formControl]&#x3D;&quot;searchControl&quot;
+        class&#x3D;&quot;form-control form-control-rounded&quot;
+        type&#x3D;&quot;email&quot;
+      /&gt;
+    &lt;/div&gt;
+    &lt;button
+      style&#x3D;&quot;margin-left: 10px&quot;
+      class&#x3D;&quot;btn btn-primary float-right&quot;
+      (click)&#x3D;&quot;downloadPDF(&#x27;customers&#x27;)&quot;
+    &gt;
+      PDF
+    &lt;/button&gt;
+
+    &lt;a
+      style&#x3D;&quot;color: azure; margin-left: 10px&quot;
+      csvLink
+      class&#x3D;&quot;btn btn-primary float-right&quot;
+      [data]&#x3D;&quot;assessmentsCsv&quot;
+      download&#x3D;&quot;bulk-paye.csv&quot;
+      [class.disabled]&#x3D;&quot;assessmentsCsv.length &#x3D;&#x3D; 0 ? true : false&quot;
+    &gt;
+      CSV&lt;/a
+    &gt;
+
+    &lt;a class&#x3D;&quot;btn btn-primary float-right&quot; href&#x3D;&quot;#/assessment/perform&quot;&gt;
+      New Assessment&lt;/a
+    &gt;
+  &lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+    &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div
+    id&#x3D;&quot;customers&quot;
+    style&#x3D;&quot;position: absolute; z-index: -20; padding: 1rem 2rem&quot;
+  &gt;
+    &lt;div style&#x3D;&quot;display: flex; justify-content: space-between&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../../assets/images/logo.png&quot; style&#x3D;&quot;height: 30px&quot; /&gt;
+      &lt;span&gt;Smart Tax&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+    &lt;div style&#x3D;&quot;margin-bottom: 1rem&quot;&gt;
+      &lt;span style&#x3D;&quot;display: block&quot;&gt;Plateau State Internal&lt;/span&gt;
+      &lt;span style&#x3D;&quot;display: block&quot;&gt;Revenue Service&lt;/span&gt;
+      &lt;span style&#x3D;&quot;display: block&quot;&gt;Bank Road, Jos&lt;/span&gt;
+      &lt;div
+        style&#x3D;&quot;display: inline-block; width: 140px; border: 0.1px solid #000&quot;
+      &gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;p&gt;
+        Company:
+        &lt;span style&#x3D;&quot;font-weight: bold&quot;&gt;{{ companyDetail.company_name }}&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        TIN: &lt;span style&#x3D;&quot;font-weight: bold&quot;&gt; {{ companyDetail.tin }}&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        Address:
+        &lt;span style&#x3D;&quot;font-weight: bold&quot;&gt;{{ companyDetail.address }}&lt;/span&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        Bill Reference Number:
+        &lt;span style&#x3D;&quot;font-weight: bold&quot;&gt; {{ billing_ref }} &lt;/span&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        Summary of PAYE assessment of :
+        &lt;span style&#x3D;&quot;font-weight: bold&quot;&gt;{{ companyDetail.company_name }}&lt;/span&gt;
+        for 2021 assessment year
+      &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;th&gt;S/N&lt;/th&gt;
+        &lt;th&gt;Employee&lt;/th&gt;
+        &lt;th&gt;Gross&lt;/th&gt;
+        &lt;th&gt;NHIS&lt;/th&gt;
+        &lt;th&gt;NHF&lt;/th&gt;
+        &lt;th&gt;Life Assur.&lt;/th&gt;
+        &lt;th&gt;Pension Fund&lt;/th&gt;
+        &lt;th&gt;CRA&lt;/th&gt;
+        &lt;th&gt;Annual Tax&lt;/th&gt;
+        &lt;th&gt;Monthly Tax&lt;/th&gt;
+        &lt;th&gt;Dev. Levy&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr *ngFor&#x3D;&quot;let item of assessmentsCsv; let myIndex &#x3D; index&quot;&gt;
+        &lt;td&gt;{{ myIndex + 1 }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;individual name&quot;] }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;Annual Gross Pay&quot;] | number: &quot;1.2-2&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;NHIS&quot;] | number: &quot;1.2-2&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;NHF&quot;] | number: &quot;1.2-2&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;Life Insurance&quot;] | number: &quot;1.2-2&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;Pension&quot;] | number: &quot;1.2-2&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;CRA&quot;] | number: &quot;1.2-2&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;Annual Tax Liability&quot;] | number: &quot;1.2-2&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;Monthly Tax Liability&quot;] | number: &quot;1.2-2&quot; }}&lt;/td&gt;
+        &lt;td&gt;{{ item[&quot;Development Levy&quot;] ? 300 : 0 }}&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;TOTAL&lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;Annual Gross Pay&quot;] | number: &quot;1.2-2&quot; }}
+        &lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;NHIS&quot;] | number: &quot;1.2-2&quot; }}
+        &lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;NHF&quot;] | number: &quot;1.2-2&quot; }}
+        &lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;Life Insurance&quot;] | number: &quot;1.2-2&quot; }}
+        &lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;Pension&quot;] | number: &quot;1.2-2&quot; }}
+        &lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;CRA&quot;] | number: &quot;1.2-2&quot; }}
+        &lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;Annual Tax Liability&quot;] | number: &quot;1.2-2&quot; }}
+        &lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;Monthly Tax Liability&quot;] | number: &quot;1.2-2&quot; }}
+        &lt;/td&gt;
+        &lt;td style&#x3D;&quot;font-weight: bold&quot;&gt;
+          {{ assessmentsCsvTotal[&quot;Development Levy&quot;] }}
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    class&#x3D;&quot;col-md-12&quot;
+    *ngIf&#x3D;&quot;!loading&quot;
+    [@animate]&#x3D;&quot;{
+      value: &#x27;*&#x27;,
+      params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+    }&quot;
+  &gt;
+    &lt;div class&#x3D;&quot;card o-hidden&quot;&gt;
+      &lt;ngx-datatable
+        *ngIf&#x3D;&quot;assessments?.length&quot;
+        style&#x3D;&quot;height: calc(100vh - 270px); box-shadow: none&quot;
+        class&#x3D;&quot;material fullscreen&quot;
+        [columnMode]&#x3D;&quot;&#x27;force&#x27;&quot;
+        [headerHeight]&#x3D;&quot;50&quot;
+        [footerHeight]&#x3D;&quot;50&quot;
+        [rowHeight]&#x3D;&quot;60&quot;
+        [scrollbarV]&#x3D;&quot;true&quot;
+        [scrollbarH]&#x3D;&quot;true&quot;
+        [limit]&#x3D;&quot;10&quot;
+        [rows]&#x3D;&quot;filteredItems&quot;
+      &gt;
+        &lt;ngx-datatable-column name&#x3D;&quot;photo&quot; [maxWidth]&#x3D;&quot;100&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;
+            Registraton Number
+          &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.id }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Tax Item &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.tax_item ? row.tax_item : getCustomTaxItem(row) }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; MDA &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.mda }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;
+            Date Created
+          &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ parsePhpDate(row.created_at) }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Status &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            &lt;span class&#x3D;&quot;text-success&quot;&gt;{{
+              row.status &#x3D;&#x3D; &quot;1&quot; ? &quot;Paid&quot; : &quot;Pending&quot;
+            }}&lt;/span&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column [flexGrow]&#x3D;&quot;1&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;
+            Last Updated
+          &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ parsePhpDate(row.created_at) }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Created By &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.created_by &#x3D;&#x3D; null ? &quot;N/A&quot; : row.created_by }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column [width]&#x3D;&quot;120&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Actions &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            &lt;button
+              class&#x3D;&quot;btn btn-wide btn-outline-secondary mr-3&quot;
+              (click)&#x3D;&quot;viewAssessment(row)&quot;
+            &gt;
+              View
+            &lt;/button&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+      &lt;/ngx-datatable&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #deleteConfirmModal let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;h4 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;modal-title&quot;&gt;Delete Tax Item&lt;/h4&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;close&quot;
+      aria-label&#x3D;&quot;Close button&quot;
+      aria-describedby&#x3D;&quot;modal-title&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;Cross click&#x27;)&quot;
+    &gt;
+      &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+    &lt;p&gt;&lt;strong&gt;Are you sure?&lt;/strong&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;cancel&#x27;)&quot;
+    &gt;
+      Cancel
+    &lt;/button&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      ngbAutofocus
+      class&#x3D;&quot;btn btn-wide btn-danger btn-rounded&quot;
+      (click)&#x3D;&quot;modal.close(&#x27;Ok&#x27;)&quot;
+    &gt;
+      Ok
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #modalConfirm let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+      &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;!loading &amp;&amp; !dynamicSummary&quot; class&#x3D;&quot;card-body&quot;&gt;
+      &lt;div style&#x3D;&quot;display: flex; justify-content: space-between&quot;&gt;
+        &lt;img src&#x3D;&quot;../../../../assets/images/logo.png&quot; style&#x3D;&quot;height: 30px&quot; /&gt;
+        &lt;span&gt;Smart Tax&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+      &lt;p
+        style&#x3D;&quot;
+          text-align: end;
+          font-size: 27px;
+          color: #000;
+          font-family: serif;
+        &quot;
+      &gt;
+        Bill Reference:
+        {{ assessmentForDisplay.billing_ref || &quot;Unconfirmed&quot; }}
+      &lt;/p&gt;
+
+      &lt;div&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Plateau State Internal&lt;/span&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Revenue Service&lt;/span&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Bank Road, Jos&lt;/span&gt;
+        &lt;div
+          style&#x3D;&quot;display: inline-block; width: 140px; border: 0.1px solid #000&quot;
+        &gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;text-center&quot;&gt;
+        &lt;img
+          src&#x3D;&quot;../../../../assets/images/logo-.png&quot;
+          class&#x3D;&quot;my-1&quot;
+          style&#x3D;&quot;height: 45px&quot;
+        /&gt;
+      &lt;/div&gt;
+      &lt;p
+        style&#x3D;&quot;
+          color: green;
+          font-size: 33px;
+          font-weight: bold;
+          text-align: center;
+        &quot;
+      &gt;
+        PLATEAU STATE GOVERNMENT
+      &lt;/p&gt;
+      &lt;div style&#x3D;&quot;text-align: center&quot;&gt;
+        &lt;span
+          style&#x3D;&quot;
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 25px;
+          &quot;
+          class&#x3D;&quot;text-center mb-3 text-white&quot;
+          &gt;TAX ASSESSMENT&lt;/span
+        &gt;
+      &lt;/div&gt;
+      &lt;table class&#x3D;&quot;table&quot;&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;MDA&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{ assessmentForDisplay.mda }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;PAYER NAME&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{ assessmentForDisplay.payer_name || assessmentForDisplay.name }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;PAYER TIN&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.tin }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;AMOUNT&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.amount }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Tax Item&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.tax_item }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Bulk ID&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.bulk_id }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Signature:&lt;/td&gt;
+            &lt;td style&#x3D;&quot;padding-top: 20p&quot; colspan&#x3D;&quot;1&quot;&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Created by:&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{
+                assessmentForDisplay.created_by &#x3D;&#x3D; null
+                  ? &quot;N/A&quot;
+                  : assessmentForDisplay.created_by
+              }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Demand Notice Officer&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{
+                assessmentForDisplay.approved_by &#x3D;&#x3D; null
+                  ? &quot;N/A&quot;
+                  : assessmentForDisplay.approved_by
+              }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Date Confirmed&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{
+                assessmentForDisplay.date_approved &#x3D;&#x3D; null
+                  ? &quot;N/A&quot;
+                  : parsePhpDate(assessmentForDisplay.date_approved)
+              }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;col-md-12&quot; *ngIf&#x3D;&quot;!loading &amp;&amp; dynamicSummary &amp;&amp; payeeSummary&quot;&gt;
+      &lt;div style&#x3D;&quot;display: flex; justify-content: space-between&quot;&gt;
+        &lt;img src&#x3D;&quot;../../../../assets/images/logo.png&quot; style&#x3D;&quot;height: 30px&quot; /&gt;
+        &lt;span&gt;Smart Tax&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+      &lt;p
+        style&#x3D;&quot;
+          text-align: end;
+          font-size: 27px;
+          color: #000;
+          font-family: serif;
+        &quot;
+      &gt;
+        &lt;!-- Bill Reference: {{ assessmentForDisplay.billing_ref }} --&gt;
+        Bill Reference:
+        {{
+          assessmentForDisplay.billing_ref &#x3D;&#x3D; null
+            ? &quot;Unconfirmed&quot;
+            : assessmentForDisplay.billing_ref
+        }}
+      &lt;/p&gt;
+
+      &lt;div&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Plateau State Internal&lt;/span&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Revenue Service&lt;/span&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Bank Road, Jos&lt;/span&gt;
+        &lt;div
+          style&#x3D;&quot;display: inline-block; width: 140px; border: 0.1px solid #000&quot;
+        &gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;text-center&quot;&gt;
+        &lt;img
+          src&#x3D;&quot;../../../../assets/images/logo-.png&quot;
+          class&#x3D;&quot;my-1&quot;
+          style&#x3D;&quot;height: 45px&quot;
+        /&gt;
+      &lt;/div&gt;
+      &lt;p
+        style&#x3D;&quot;
+          color: green;
+          font-size: 33px;
+          font-weight: bold;
+          text-align: center;
+        &quot;
+      &gt;
+        PLATEAU STATE GOVERNMENT
+      &lt;/p&gt;
+      &lt;div style&#x3D;&quot;text-align: center&quot;&gt;
+        &lt;span
+          style&#x3D;&quot;
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 25px;
+          &quot;
+          class&#x3D;&quot;text-center mb-3 text-white&quot;
+          &gt;TAX ASSESSMENT&lt;/span
+        &gt;
+      &lt;/div&gt;
+      &lt;table class&#x3D;&quot;table&quot;&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;MDA&lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;{{ displayPayee.mda }}&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Tax Item&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold text-success&quot;&gt;
+              {{ displayPayee.tax_item }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Employee Name&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ displayPayee.name }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Gross Income&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.gi) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Deductions&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.deductions) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Taxable Income&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.ti) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Annual Tax Liability&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.paye) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Monthly Tax Liability&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.paye / 12) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;TIN&lt;/td&gt;
+            &lt;td class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;
+              {{ assessmentForDisplay.tin }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Billing Ref&lt;/td&gt;
+            &lt;td class&#x3D;&quot;text-warning font-weight-bold&quot;&gt;
+              {{ assessmentForDisplay.billing_ref }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Demand Notice Officer&lt;/td&gt;
+            &lt;td&gt;
+              {{
+                assessmentForDisplay.approved_by &#x3D;&#x3D; null
+                  ? &quot;N/A&quot;
+                  : assessmentForDisplay.approved_by
+              }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Date Generated&lt;/td&gt;
+            &lt;td&gt;
+              {{
+                assessmentForDisplay.created_at &#x3D;&#x3D; null
+                  ? &quot;N/A&quot;
+                  : parsePhpDate(assessmentForDisplay.created_at)
+              }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Date Confirmed&lt;/td&gt;
+            &lt;td&gt;
+              {{
+                assessmentForDisplay.date_approved &#x3D;&#x3D; null
+                  ? &quot;N/A&quot;
+                  : parsePhpDate(assessmentForDisplay.date_approved)
+              }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Date Paid&lt;/td&gt;
+            &lt;td&gt;
+              {{
+                assessmentForDisplay.payment_date &#x3D;&#x3D; null
+                  ? &quot;N/A&quot;
+                  : parsePhpDate(assessmentForDisplay.payment_date)
+              }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div
+      class&#x3D;&quot;col-md-12&quot;
+      *ngIf&#x3D;&quot;!loading &amp;&amp; dynamicSummary &amp;&amp; directAssessmentSummary&quot;
+    &gt;
+      &lt;div style&#x3D;&quot;&quot;&gt;
+        &lt;div style&#x3D;&quot;display: flex; justify-content: space-between&quot;&gt;
+          &lt;img src&#x3D;&quot;../../../../assets/images/logo.png&quot; style&#x3D;&quot;height: 30px&quot; /&gt;
+          &lt;span&gt;Smart Tax&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+        &lt;p
+          style&#x3D;&quot;
+            text-align: end;
+            font-size: 27px;
+            color: #000;
+            font-family: serif;
+          &quot;
+        &gt;
+          &lt;!-- Bill Reference: {{ assessmentForDisplay.billing_ref }} --&gt;
+          Bill Reference:
+          {{ assessmentForDisplay.demand_notice_ref || &quot;Unconfirmed&quot; }}
+        &lt;/p&gt;
+
+        &lt;div&gt;
+          &lt;span style&#x3D;&quot;display: block&quot;&gt;Plateau State Internal&lt;/span&gt;
+          &lt;span style&#x3D;&quot;display: block&quot;&gt;Revenue Service&lt;/span&gt;
+          &lt;span style&#x3D;&quot;display: block&quot;&gt;Bank Road, Jos&lt;/span&gt;
+          &lt;div
+            style&#x3D;&quot;
+              display: inline-block;
+              width: 140px;
+              border: 0.1px solid #000;
+            &quot;
+          &gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;text-center&quot;&gt;
+          &lt;img
+            src&#x3D;&quot;../../../../assets/images/logo-.png&quot;
+            class&#x3D;&quot;my-1&quot;
+            style&#x3D;&quot;height: 45px&quot;
+          /&gt;
+        &lt;/div&gt;
+        &lt;p
+          style&#x3D;&quot;
+            color: green;
+            font-size: 33px;
+            font-weight: bold;
+            text-align: center;
+          &quot;
+        &gt;
+          PLATEAU STATE GOVERNMENT
+        &lt;/p&gt;
+        &lt;div style&#x3D;&quot;text-align: center&quot;&gt;
+          &lt;span
+            style&#x3D;&quot;
+              font-weight: bold;
+              padding: 9px 16px;
+              background-color: green;
+              display: inline-block;
+              font-size: 25px;
+            &quot;
+            class&#x3D;&quot;text-center mb-3 text-white&quot;
+            &gt;TAX ASSESSMENT&lt;/span
+          &gt;
+        &lt;/div&gt;
+        &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&quot;displayPayee.length &gt; 0&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;Direct Assessment&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;MDA&lt;/td&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;{{ assessmentForDisplay.mda }}&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;TAX ITEM&lt;/td&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;{{ assessmentForDisplay.tax_item }}&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;PAYER&lt;/td&gt;
+
+              &lt;td scope&#x3D;&quot;col&quot;&gt;
+                {{
+                  assessmentForDisplay.payer_name || assessmentForDisplay.name
+                }}
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;TIN&lt;/td&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;
+                {{ assessmentForDisplay.payer_tin || assessmentForDisplay.tin }}
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr *ngFor&#x3D;&quot;let item of displayPayee&quot;&gt;
+              &lt;td *ngIf&#x3D;&quot;item.label&quot; scope&#x3D;&quot;col&quot;&gt;
+                {{ item.label.toUpperCase() }}
+              &lt;/td&gt;
+              &lt;td *ngIf&#x3D;&quot;item.label&quot; scope&#x3D;&quot;col&quot;&gt;{{ item.value }}&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+        &lt;table class&#x3D;&quot;table&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;Total&lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;
+              {{ displayPayee[displayPayee.length - 1].total }}
+            &lt;/th&gt;
+          &lt;/thead&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;Cross click&#x27;)&quot;
+    &gt;
+      Cancel
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./view-individual-revenue-return-assessment.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:last-child {
+  background-color: #f2f2f2;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
+  color: white;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- <div class="breadcrumb">  <h1>Assessment</h1>  <ul>    <li><a href="">Configuration</a></li>    <li>TaxItems</li>  </ul></div> --><app-breadcrumb></app-breadcrumb><div class="separator-breadcrumb border-top"></div><div class="row mb-3">  <div class="col-md-12 mb-3">    <div class="form-group float-left">      <input        id="email"        placeholder="Search"        [formControl]="searchControl"        class="form-control form-control-rounded"        type="email"      />    </div>    <button      style="margin-left: 10px"      class="btn btn-primary float-right"      (click)="downloadPDF(\'customers\')"    >      PDF    </button>    <a      style="color: azure; margin-left: 10px"      csvLink      class="btn btn-primary float-right"      [data]="assessmentsCsv"      download="bulk-paye.csv"      [class.disabled]="assessmentsCsv.length == 0 ? true : false"    >      CSV</a    >    <a class="btn btn-primary float-right" href="#/assessment/perform">      New Assessment</a    >  </div>  <div *ngIf="loading" class="col-md-12 text-center">    <div class="spinner spinner-primary mr-3"></div>  </div>  <div    id="customers"    style="position: absolute; z-index: -20; padding: 1rem 2rem"  >    <div style="display: flex; justify-content: space-between">      <img src="../../../../assets/images/logo.png" style="height: 30px" />      <span>Smart Tax</span>    </div>    <div class="separator-breadcrumb border-top"></div>    <div style="margin-bottom: 1rem">      <span style="display: block">Plateau State Internal</span>      <span style="display: block">Revenue Service</span>      <span style="display: block">Bank Road, Jos</span>      <div        style="display: inline-block; width: 140px; border: 0.1px solid #000"      ></div>    </div>    <div>      <p>        Company:        <span style="font-weight: bold">{{ companyDetail.company_name }}</span>      </p>      <p>        TIN: <span style="font-weight: bold"> {{ companyDetail.tin }}</span>      </p>      <p>        Address:        <span style="font-weight: bold">{{ companyDetail.address }}</span>      </p>      <p>        Bill Reference Number:        <span style="font-weight: bold"> {{ billing_ref }} </span>      </p>      <p>        Summary of PAYE assessment of :        <span style="font-weight: bold">{{ companyDetail.company_name }}</span>        for 2021 assessment year      </p>    </div>    <table>      <tr>        <th>S/N</th>        <th>Employee</th>        <th>Gross</th>        <th>NHIS</th>        <th>NHF</th>        <th>Life Assur.</th>        <th>Pension Fund</th>        <th>CRA</th>        <th>Annual Tax</th>        <th>Monthly Tax</th>        <th>Dev. Levy</th>      </tr>      <tr *ngFor="let item of assessmentsCsv; let myIndex = index">        <td>{{ myIndex + 1 }}</td>        <td>{{ item["individual name"] }}</td>        <td>{{ item["Annual Gross Pay"] | number: "1.2-2" }}</td>        <td>{{ item["NHIS"] | number: "1.2-2" }}</td>        <td>{{ item["NHF"] | number: "1.2-2" }}</td>        <td>{{ item["Life Insurance"] | number: "1.2-2" }}</td>        <td>{{ item["Pension"] | number: "1.2-2" }}</td>        <td>{{ item["CRA"] | number: "1.2-2" }}</td>        <td>{{ item["Annual Tax Liability"] | number: "1.2-2" }}</td>        <td>{{ item["Monthly Tax Liability"] | number: "1.2-2" }}</td>        <td>{{ item["Development Levy"] ? 300 : 0 }}</td>      </tr>      <tr>        <td></td>        <td style="font-weight: bold">TOTAL</td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["Annual Gross Pay"] | number: "1.2-2" }}        </td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["NHIS"] | number: "1.2-2" }}        </td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["NHF"] | number: "1.2-2" }}        </td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["Life Insurance"] | number: "1.2-2" }}        </td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["Pension"] | number: "1.2-2" }}        </td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["CRA"] | number: "1.2-2" }}        </td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["Annual Tax Liability"] | number: "1.2-2" }}        </td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["Monthly Tax Liability"] | number: "1.2-2" }}        </td>        <td style="font-weight: bold">          {{ assessmentsCsvTotal["Development Levy"] }}        </td>      </tr>    </table>  </div>  <div    class="col-md-12"    *ngIf="!loading"    [@animate]="{      value: \'*\',      params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }    }"  >    <div class="card o-hidden">      <ngx-datatable        *ngIf="assessments?.length"        style="height: calc(100vh - 270px); box-shadow: none"        class="material fullscreen"        [columnMode]="\'force\'"        [headerHeight]="50"        [footerHeight]="50"        [rowHeight]="60"        [scrollbarV]="true"        [scrollbarH]="true"        [limit]="10"        [rows]="filteredItems"      >        <ngx-datatable-column name="photo" [maxWidth]="100">          <ng-template ngx-datatable-header-template>            Registraton Number          </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.id }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Tax Item </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.tax_item ? row.tax_item : getCustomTaxItem(row) }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> MDA </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.mda }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template>            Date Created          </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ parsePhpDate(row.created_at) }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Status </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            <span class="text-success">{{              row.status == "1" ? "Paid" : "Pending"            }}</span>          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column [flexGrow]="1">          <ng-template ngx-datatable-header-template>            Last Updated          </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ parsePhpDate(row.created_at) }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Created By </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.created_by == null ? "N/A" : row.created_by }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column [width]="120">          <ng-template ngx-datatable-header-template> Actions </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            <button              class="btn btn-wide btn-outline-secondary mr-3"              (click)="viewAssessment(row)"            >              View            </button>          </ng-template>        </ngx-datatable-column>      </ngx-datatable>    </div>  </div></div><ng-template #deleteConfirmModal let-modal>  <div class="modal-header">    <h4 class="modal-title" id="modal-title">Delete Tax Item</h4>    <button      type="button"      class="close"      aria-label="Close button"      aria-describedby="modal-title"      (click)="modal.dismiss(\'Cross click\')"    >      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="modal-body">    <p><strong>Are you sure?</strong></p>  </div>  <div class="modal-footer">    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="modal.dismiss(\'cancel\')"    >      Cancel    </button>    <button      type="button"      ngbAutofocus      class="btn btn-wide btn-danger btn-rounded"      (click)="modal.close(\'Ok\')"    >      Ok    </button>  </div></ng-template><ng-template #modalConfirm let-modal>  <div class="modal-body">    <div *ngIf="loading" class="col-md-12 text-center">      <div class="spinner spinner-primary mr-3"></div>    </div>    <div *ngIf="!loading && !dynamicSummary" class="card-body">      <div style="display: flex; justify-content: space-between">        <img src="../../../../assets/images/logo.png" style="height: 30px" />        <span>Smart Tax</span>      </div>      <div class="separator-breadcrumb border-top"></div>      <p        style="          text-align: end;          font-size: 27px;          color: #000;          font-family: serif;        "      >        Bill Reference:        {{ assessmentForDisplay.billing_ref || "Unconfirmed" }}      </p>      <div>        <span style="display: block">Plateau State Internal</span>        <span style="display: block">Revenue Service</span>        <span style="display: block">Bank Road, Jos</span>        <div          style="display: inline-block; width: 140px; border: 0.1px solid #000"        ></div>      </div>      <div class="text-center">        <img          src="../../../../assets/images/logo-.png"          class="my-1"          style="height: 45px"        />      </div>      <p        style="          color: green;          font-size: 33px;          font-weight: bold;          text-align: center;        "      >        PLATEAU STATE GOVERNMENT      </p>      <div style="text-align: center">        <span          style="            font-weight: bold;            padding: 9px 16px;            background-color: green;            display: inline-block;            font-size: 25px;          "          class="text-center mb-3 text-white"          >TAX ASSESSMENT</span        >      </div>      <table class="table">        <tbody>          <tr>            <td colspan="3" style="font-weight: 700">MDA</td>            <td colspan="1">              {{ assessmentForDisplay.mda }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">PAYER NAME</td>            <td colspan="1">              {{ assessmentForDisplay.payer_name || assessmentForDisplay.name }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">PAYER TIN</td>            <td colspan="1">{{ assessmentForDisplay.tin }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">AMOUNT</td>            <td colspan="1">{{ assessmentForDisplay.amount }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Tax Item</td>            <td colspan="1">{{ assessmentForDisplay.tax_item }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Bulk ID</td>            <td colspan="1">{{ assessmentForDisplay.bulk_id }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Signature:</td>            <td style="padding-top: 20p" colspan="1"></td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Created by:</td>            <td colspan="1">              {{                assessmentForDisplay.created_by == null                  ? "N/A"                  : assessmentForDisplay.created_by              }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Demand Notice Officer</td>            <td colspan="1">              {{                assessmentForDisplay.approved_by == null                  ? "N/A"                  : assessmentForDisplay.approved_by              }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Date Confirmed</td>            <td colspan="1">              {{                assessmentForDisplay.date_approved == null                  ? "N/A"                  : parsePhpDate(assessmentForDisplay.date_approved)              }}            </td>          </tr>        </tbody>      </table>    </div>    <div class="col-md-12" *ngIf="!loading && dynamicSummary && payeeSummary">      <div style="display: flex; justify-content: space-between">        <img src="../../../../assets/images/logo.png" style="height: 30px" />        <span>Smart Tax</span>      </div>      <div class="separator-breadcrumb border-top"></div>      <p        style="          text-align: end;          font-size: 27px;          color: #000;          font-family: serif;        "      >        <!-- Bill Reference: {{ assessmentForDisplay.billing_ref }} -->        Bill Reference:        {{          assessmentForDisplay.billing_ref == null            ? "Unconfirmed"            : assessmentForDisplay.billing_ref        }}      </p>      <div>        <span style="display: block">Plateau State Internal</span>        <span style="display: block">Revenue Service</span>        <span style="display: block">Bank Road, Jos</span>        <div          style="display: inline-block; width: 140px; border: 0.1px solid #000"        ></div>      </div>      <div class="text-center">        <img          src="../../../../assets/images/logo-.png"          class="my-1"          style="height: 45px"        />      </div>      <p        style="          color: green;          font-size: 33px;          font-weight: bold;          text-align: center;        "      >        PLATEAU STATE GOVERNMENT      </p>      <div style="text-align: center">        <span          style="            font-weight: bold;            padding: 9px 16px;            background-color: green;            display: inline-block;            font-size: 25px;          "          class="text-center mb-3 text-white"          >TAX ASSESSMENT</span        >      </div>      <table class="table">        <tbody>          <tr>            <th colspan="3" style="font-weight: 700">MDA</th>            <th scope="col">{{ displayPayee.mda }}</th>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Tax Item</td>            <td class="font-weight-bold text-success">              {{ displayPayee.tax_item }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Employee Name</td>            <td class="font-weight-bold">              {{ displayPayee.name }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Gross Income</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.gi) }} NGN            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Deductions</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.deductions) }} NGN            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Taxable Income</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.ti) }} NGN            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Annual Tax Liability</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.paye) }} NGN            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Monthly Tax Liability</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.paye / 12) }} NGN            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">TIN</td>            <td class="text-danger font-weight-bold">              {{ assessmentForDisplay.tin }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Billing Ref</td>            <td class="text-warning font-weight-bold">              {{ assessmentForDisplay.billing_ref }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Demand Notice Officer</td>            <td>              {{                assessmentForDisplay.approved_by == null                  ? "N/A"                  : assessmentForDisplay.approved_by              }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Date Generated</td>            <td>              {{                assessmentForDisplay.created_at == null                  ? "N/A"                  : parsePhpDate(assessmentForDisplay.created_at)              }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Date Confirmed</td>            <td>              {{                assessmentForDisplay.date_approved == null                  ? "N/A"                  : parsePhpDate(assessmentForDisplay.date_approved)              }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">Date Paid</td>            <td>              {{                assessmentForDisplay.payment_date == null                  ? "N/A"                  : parsePhpDate(assessmentForDisplay.payment_date)              }}            </td>          </tr>        </tbody>      </table>    </div>    <div      class="col-md-12"      *ngIf="!loading && dynamicSummary && directAssessmentSummary"    >      <div style="">        <div style="display: flex; justify-content: space-between">          <img src="../../../../assets/images/logo.png" style="height: 30px" />          <span>Smart Tax</span>        </div>        <div class="separator-breadcrumb border-top"></div>        <p          style="            text-align: end;            font-size: 27px;            color: #000;            font-family: serif;          "        >          <!-- Bill Reference: {{ assessmentForDisplay.billing_ref }} -->          Bill Reference:          {{ assessmentForDisplay.demand_notice_ref || "Unconfirmed" }}        </p>        <div>          <span style="display: block">Plateau State Internal</span>          <span style="display: block">Revenue Service</span>          <span style="display: block">Bank Road, Jos</span>          <div            style="              display: inline-block;              width: 140px;              border: 0.1px solid #000;            "          ></div>        </div>        <div class="text-center">          <img            src="../../../../assets/images/logo-.png"            class="my-1"            style="height: 45px"          />        </div>        <p          style="            color: green;            font-size: 33px;            font-weight: bold;            text-align: center;          "        >          PLATEAU STATE GOVERNMENT        </p>        <div style="text-align: center">          <span            style="              font-weight: bold;              padding: 9px 16px;              background-color: green;              display: inline-block;              font-size: 25px;            "            class="text-center mb-3 text-white"            >TAX ASSESSMENT</span          >        </div>        <table class="table" *ngIf="displayPayee.length > 0">          <thead class="thead-light">            <th colspan="2">Direct Assessment</th>          </thead>          <tbody>            <tr>              <td scope="col">MDA</td>              <td scope="col">{{ assessmentForDisplay.mda }}</td>            </tr>            <tr>              <td scope="col">TAX ITEM</td>              <td scope="col">{{ assessmentForDisplay.tax_item }}</td>            </tr>            <tr>              <td scope="col">PAYER</td>              <td scope="col">                {{                  assessmentForDisplay.payer_name || assessmentForDisplay.name                }}              </td>            </tr>            <tr>              <td scope="col">TIN</td>              <td scope="col">                {{ assessmentForDisplay.payer_tin || assessmentForDisplay.tin }}              </td>            </tr>            <tr *ngFor="let item of displayPayee">              <td *ngIf="item.label" scope="col">                {{ item.label.toUpperCase() }}              </td>              <td *ngIf="item.label" scope="col">{{ item.value }}</td>            </tr>          </tbody>        </table>      </div>      <div class="col-md-12">        <table class="table">          <thead class="thead-light">            <th colspan="2">Total</th>            <th scope="col">              {{ displayPayee[displayPayee.length - 1].total }}            </th>          </thead>        </table>      </div>    </div>  </div>  <div class="modal-footer">    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="modal.dismiss(\'Cross click\')"    >      Cancel    </button>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'ViewIndividualRevenuReturnAssessmentComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ViewIndividualRevenuReturnAssessmentComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row justify-content-between">
+  <div class="col-lg-4 col-md-8 col-sm-12">
+    <div class="form-group">
+      <input
+        #input
+        placeholder="Search comma seperated tags..."
+        class="form-control"
+        type="text"
+      />
+    </div>
+  </div>
+  <div *ngIf="filteredItems.length" class="col-lg-2 col-md-4 col-sm-12">
+    <ngx-select-dropdown
+      [multiple]="false"
+      [config]="actionDropdownConfig"
+      [options]="actionSelectOptions"
+      (change)="insightActionSelected($event)"
+    ></ngx-select-dropdown>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3"></div>
+  <div *ngIf="loading || nextLoading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="card o-hidden">
+      <ngx-datatable
+        *ngIf="insights?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [scrollbarH]="true"
+        [virtualization]="false"
+        [externalPaging]="true"
+        [count]="totalCount"
+        [rows]="insights"
+        [offset]="offset"
+        [limit]="perPageCount"
+        (page)="onPageChange($event)"
+      >
+        <ngx-datatable-column [maxWidth]="100">
+          <ng-template ngx-datatable-header-template> S/N </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.sn }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [maxWidth]="250">
+          <ng-template ngx-datatable-header-template>Name</ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ capitalise(row.name || "N/A") }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [maxWidth]="150">
+          <ng-template ngx-datatable-header-template> Reg. Source </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.source || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Tags</ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.tags || "" }}
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>

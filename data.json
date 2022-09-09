@@ -1,0 +1,596 @@
+{
+	"Sheet1": [
+		{
+			"S/N ": "1",
+			"REVENUE HEAD ": "SHOP RATE ",
+			"URBAN (₦) ": "30,000.00",
+			"SEMI URBAN  ": "21,000.00",
+			"RURAL ": "15,000.00"
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Large Shops (10sqm and above) ",
+			"URBAN (₦) ": "15,000.00",
+			"SEMI URBAN  ": "10,500.00",
+			"RURAL ": "7,500.00"
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Medium Shops (6sqm - 9.99sqm) ",
+			"URBAN (₦) ": "7,500.00",
+			"SEMI URBAN  ": "5,250.00",
+			"RURAL ": "3,750.00"
+		},
+		{
+			"S/N ": "C ",
+			"REVENUE HEAD ": "Small Shops (5.99sqm and below ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00",
+			"RURAL ": "2,500.00"
+		},
+		{
+			"S/N ": "D ",
+			"REVENUE HEAD ": "Kiosk Rate ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00",
+			"RURAL ": "2,500.00"
+		},
+		{
+			"S/N ": "E ",
+			"REVENUE HEAD ": "Container/Temporary Shop ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00",
+			"RURAL ": "2,500.00"
+		},
+		{
+			"S/N ": "F ",
+			"REVENUE HEAD ": "Workshop Permit for Artisans (Carpenters, Mechanic, Vulcanizers) ",
+			"URBAN (₦) ": "5,000.00 ",
+			"SEMI URBAN  ": "3,500.00 ",
+			"RURAL ": "2,500.00 "
+		},
+		{
+			"S/N ": "2",
+			"REVENUE HEAD ": "TENEMENT RATES/GROUND RENT PRIVATE AND COMMERCIAL PROPERTY "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Private: - Residential ",
+			"URBAN (₦) ": "(₦) ",
+			"SEMI URBAN  ": "(₦) ",
+			"RURAL ": "(₦) "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Big ",
+			"URBAN (₦) ": "10,000.00",
+			"SEMI URBAN  ": "7,000.00",
+			"RURAL ": "5,000.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Medium   ",
+			"URBAN (₦) ": "7,500.00",
+			"SEMI URBAN  ": "5,250.00",
+			"RURAL ": "3,750.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Small   ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00",
+			"RURAL ": "2,500.00"
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Commercial ",
+			"URBAN (₦) ": " ",
+			"SEMI URBAN  ": " ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Big ",
+			"URBAN (₦) ": "500,000.00",
+			"SEMI URBAN  ": "350,000.00",
+			"RURAL ": "250,000.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Medium   ",
+			"URBAN (₦) ": "300,000.00",
+			"SEMI URBAN  ": "210,000.00",
+			"RURAL ": "150,000.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Small   ",
+			"URBAN (₦) ": "150,000.00",
+			"SEMI URBAN  ": "105,000.00",
+			"RURAL ": "75,000.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": " ",
+			"URBAN (₦) ": " ",
+			"SEMI URBAN  ": " ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": " ",
+			"URBAN (₦) ": " ",
+			"SEMI URBAN  ": " ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "3",
+			"REVENUE HEAD ": "SLAUGHTER SLAB FEE "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Abattoir License Fees ",
+			"URBAN (₦) ": "3,000.00",
+			"SEMI URBAN  ": "2,100.00 ",
+			"RURAL ": "1,500.00 "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Cow/Camel Slaughter Per Head ",
+			"URBAN (₦) ": "500",
+			"SEMI URBAN  ": "350.00 ",
+			"RURAL ": "250.00 "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Goat/Sheep Slaughter Per Head ",
+			"URBAN (₦) ": "200",
+			"SEMI URBAN  ": "140.00 ",
+			"RURAL ": "100.00 "
+		},
+		{
+			"S/N ": "4",
+			"REVENUE HEAD ": "MERRIMENT AND ROAD CLOSURE LEVIES "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Entertainment Fees ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00",
+			"RURAL ": "2,500.00"
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Noise Control ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00",
+			"RURAL ": "2,500.00"
+		},
+		{
+			"S/N ": "5",
+			"REVENUE HEAD ": "FOOD LICENSES PERMIT (FOR RESTAURANTS, BAKERIES AND OTHER PLACE WHERE FOOD IS SOLD "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Large   ",
+			"URBAN (₦) ": "20,000.00",
+			"SEMI URBAN  ": "14,000.00",
+			"RURAL ": "10,000.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Renewal Fee ",
+			"URBAN (₦) ": "10,000.00",
+			"SEMI URBAN  ": "7,000.00",
+			"RURAL ": "5,000.00"
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Medium ",
+			"URBAN (₦) ": "15,000.00",
+			"SEMI URBAN  ": "10,500.00",
+			"RURAL ": "7,500.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Renewal ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00",
+			"RURAL ": "2,500.00"
+		},
+		{
+			"S/N ": "C ",
+			"REVENUE HEAD ": "Small ",
+			"URBAN (₦) ": "10,000.00",
+			"SEMI URBAN  ": "7,000.00",
+			"RURAL ": "5,000.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Revenue ",
+			"URBAN (₦) ": "2,000.00",
+			"SEMI URBAN  ": "1,400.00",
+			"RURAL ": "1,000.00"
+		},
+		{
+			"S/N ": "6",
+			"REVENUE HEAD ": "MARRIAGE, BIRTH AND DEATH REGISTRATION FEES "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Marriage Registration Fees  ",
+			"URBAN (₦) ": "5,000",
+			"SEMI URBAN  ": "3,500.00 ",
+			"RURAL ": "2,500.00 "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Customary Marriage Fees ",
+			"URBAN (₦) ": "5,000",
+			"SEMI URBAN  ": "3,500.00 ",
+			"RURAL ": "2,500.00 "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Marriage Certificates Fees ",
+			"URBAN (₦) ": "5,000",
+			"SEMI URBAN  ": "3,500.00 ",
+			"RURAL ": "2,500.00 "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Birth Registration Fees  ",
+			"URBAN (₦) ": "1,000",
+			"SEMI URBAN  ": "700.00 ",
+			"RURAL ": "500.00 "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Death Registration Certification Fees ",
+			"URBAN (₦) ": "500",
+			"SEMI URBAN  ": "350.00 ",
+			"RURAL ": "250.00 "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Indigene Letter ",
+			"URBAN (₦) ": "500",
+			"SEMI URBAN  ": "350.00 ",
+			"RURAL ": "250.00 "
+		},
+		{
+			"S/N ": "7",
+			"REVENUE HEAD ": "CUSTOMARY RIGHT OF OCCUPANCY "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Commercial ",
+			"URBAN (₦) ": "20,000.00",
+			"SEMI URBAN  ": "14,000.00",
+			"RURAL ": "10,000.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Residential ",
+			"URBAN (₦) ": "15,000.00",
+			"SEMI URBAN  ": "10,500.00",
+			"RURAL ": "7,500.00"
+		},
+		{
+			"S/N ": "8",
+			"REVENUE HEAD ": "MARKET RATES &LEVIES "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Permanent Stalls (Per annum) ",
+			"URBAN (₦) ": "15,000.00",
+			"SEMI URBAN  ": "10,500.00",
+			"RURAL ": "7,500.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Block Stalls and Lock - up Shops (Per annum) ",
+			"URBAN (₦) ": "30,000.00",
+			"SEMI URBAN  ": "21,000.00",
+			"RURAL ": "15,000.00"
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Seasonal Markets (Per bag/Heap by all LGCs ",
+			"URBAN (₦) ": "100",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Market Hawkers (daily) all LGCs ",
+			"URBAN (₦) ": "50",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Market Hawkers (weekly) all LGCs ",
+			"URBAN (₦) ": "50",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "9",
+			"REVENUE HEAD ": "MOTOR PARK LEVIES "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Entrance Fees (Gate): Trucks, Lorries, Tankers, Buses, Pick Up Vans, Center all LGCs ",
+			"URBAN (₦) ": "300",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Loading Fees(per trip) ",
+			"URBAN (₦) ": "6,000.00",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "C ",
+			"REVENUE HEAD ": "Tricycle ",
+			"URBAN (₦) ": "100",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "D ",
+			"REVENUE HEAD ": "Motorcycle ",
+			"URBAN (₦) ": "50",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "E ",
+			"REVENUE HEAD ": "J5 & P/UP ",
+			"URBAN (₦) ": "1,500.00",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "10",
+			"REVENUE HEAD ": "Bicycle, Truck, Canoe, Wheelbarrow and Cart Fees "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Bicycle License ",
+			"URBAN (₦) ": "300",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Canoe License ",
+			"URBAN (₦) ": "500",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "C ",
+			"REVENUE HEAD ": "Wheelbarrow/Cart Fee ",
+			"URBAN (₦) ": "300",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "11",
+			"REVENUE HEAD ": "DOMESTIC ANIMAL LICENSE FEES "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Dog License ",
+			"URBAN (₦) ": "500",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": "Loading Fee ",
+			"URBAN (₦) ": "6,000.00",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "12",
+			"REVENUE HEAD ": " CATTLE LEVY "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Cow/Cattle (Jangali) ",
+			"URBAN (₦) ": "100",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"REVENUE HEAD ": "                    (Kara) ",
+			"URBAN (₦) ": "500"
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Goat/Sheet (Jangali) ",
+			"URBAN (₦) ": "50",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"REVENUE HEAD ": " (Kara) ",
+			"URBAN (₦) ": "300"
+		},
+		{
+			"S/N ": "C ",
+			"REVENUE HEAD ": "Others(Jangali) ",
+			"URBAN (₦) ": "300",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"REVENUE HEAD ": " (Kara) ",
+			"URBAN (₦) ": "50"
+		},
+		{
+			"S/N ": "D ",
+			"REVENUE HEAD ": "Impounding/Dislodging of Animals Fine ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "13",
+			"REVENUE HEAD ": "RELIGIOUS PLACES ESTABLISHMENT PERMIT FEES "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Establishment of Religious Centers Fees all LGCs ",
+			"URBAN (₦) ": "10,000.00",
+			"SEMI URBAN  ": "7,000.00",
+			"RURAL ": "5,000.00 "
+		},
+		{
+			"S/N ": "14",
+			"REVENUE HEAD ": "SIGN BOARD (SIGNAGE) AND ADVERT PERMIT FEES "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Mobile Sale Promotion Fees ",
+			"URBAN (₦) ": "1,000.00",
+			"SEMI URBAN  ": "700.00 ",
+			"RURAL ": "500.00 "
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Directional Signboard Fees ",
+			"URBAN (₦) ": "2,000.00",
+			"SEMI URBAN  ": "1,400.00 ",
+			"RURAL ": "1,000.00 "
+		},
+		{
+			"S/N ": "C ",
+			"REVENUE HEAD ": "Electric Design Advert Per Face ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00",
+			"RURAL ": "2,500.00 "
+		},
+		{
+			"S/N ": "D ",
+			"REVENUE HEAD ": "Wall Print Advert Per Side Fee ",
+			"URBAN (₦) ": "4,000.00",
+			"SEMI URBAN  ": "2,800.00 ",
+			"RURAL ": "2,000.00 "
+		},
+		{
+			"S/N ": "E ",
+			"REVENUE HEAD ": "Billboards Unipoles/Eye ",
+			"URBAN (₦) ": "150,000.00",
+			"SEMI URBAN  ": "105,000.00 ",
+			"RURAL ": "75,000.00 "
+		},
+		{
+			"S/N ": "F ",
+			"REVENUE HEAD ": "Market Road Show Permit ",
+			"URBAN (₦) ": "10,000.00",
+			"SEMI URBAN  ": "7,000.00 ",
+			"RURAL ": "5,000.00 "
+		},
+		{
+			"S/N ": "G ",
+			"REVENUE HEAD ": "Digital Boards ",
+			"URBAN (₦) ": "10,000.00",
+			"SEMI URBAN  ": "7,000.00 ",
+			"RURAL ": "5,000.00 "
+		},
+		{
+			"S/N ": " ",
+			"REVENUE HEAD ": " ",
+			"URBAN (₦) ": " ",
+			"SEMI URBAN  ": " ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "S/N ",
+			"REVENUE HEAD ": "REVENUE HEAD ",
+			"URBAN (₦) ": "URBAN ",
+			"SEMI URBAN  ": "SEMI URBAN ",
+			"RURAL ": "RURAL "
+		},
+		{
+			"S/N ": "15",
+			"REVENUE HEAD ": "PUBLIC CONVENIENCE, SEWAGE AND REFUSE DISPOSAL FEES AND BATHING HOUSE LICENSE "
+		},
+		{
+			"S/N ": "A ",
+			"REVENUE HEAD ": "Registration of Septic Tanks Operators (Annually) ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00 ",
+			"RURAL ": "2,500.00 "
+		},
+		{
+			"S/N ": "B ",
+			"REVENUE HEAD ": "Refuse Disposal (Residential) ",
+			"URBAN (₦) ": "3,000.00",
+			"SEMI URBAN  ": "2,100.00 ",
+			"RURAL ": "1,500.00 "
+		},
+		{
+			"S/N ": "C ",
+			"REVENUE HEAD ": "Refuse Disposal (Commercial) ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00 ",
+			"RURAL ": "2,500.00 "
+		},
+		{
+			"S/N ": "16",
+			"REVENUE HEAD ": "Naming of Streets ",
+			"URBAN (₦) ": "100,000.00",
+			"SEMI URBAN  ": "70,000.00 ",
+			"RURAL ": "50,000.00 "
+		},
+		{
+			"REVENUE HEAD ": " Renewal after two years ",
+			"URBAN (₦) ": "10000",
+			"SEMI URBAN  ": "7000",
+			"RURAL ": "5000"
+		},
+		{
+			"S/N ": "17",
+			"REVENUE HEAD ": "Wrong Parking Charges/Towing of Vehicle Fees ",
+			"URBAN (₦) ": "5,000.00",
+			"SEMI URBAN  ": "3,500.00 ",
+			"RURAL ": "2,500.00 "
+		},
+		{
+			"S/N ": "18",
+			"REVENUE HEAD ": "Forestry Per Tree all LGC Exploitation/Trimming of Trees ",
+			"URBAN (₦) ": "500",
+			"SEMI URBAN  ": "All LGCs ",
+			"RURAL ": " "
+		},
+		{
+			"S/N ": "19",
+			"REVENUE HEAD ": "Off & On Liquor License Fee ",
+			"URBAN (₦) ": "10,000.00",
+			"SEMI URBAN  ": "7,500.00",
+			"RURAL ": "5,000.00"
+		},
+		{
+			"S/N ": "20",
+			"REVENUE HEAD ": "Radio and Television License Fee ",
+			"URBAN (₦) ": "1,000.00",
+			"SEMI URBAN  ": "700",
+			"RURAL ": "500"
+		},
+		{
+			"S/N ": "21",
+			"REVENUE HEAD ": "Vehicle/Equipment Hiring Service Per Day ",
+			"URBAN (₦) ": "25,000.00",
+			"SEMI URBAN  ": " ",
+			"RURAL ": " "
+		}
+	]
+}

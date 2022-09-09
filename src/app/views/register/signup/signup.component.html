@@ -1,0 +1,175 @@
+<div
+  class="card o-hidden"
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+ 
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="p-4">
+        <div class="auth-logo text-center mt-4">
+          <img
+            style="height: 70px; object-fit: contain; margin-bottom: 10px"
+            src="assets/images/logo.png"
+            alt=""
+          />
+        </div>
+
+        <h1 class="mb-3 text-18 text-center" name="pageTitle">{{ page_title }}</h1>
+        <div class="mt-3 text-right">
+          <a href="" class="text-muted" routerLink="/auth/signin"
+            ><u>Already have an account? Sign In</u></a>
+          >
+        </div>
+
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()" *ngIf="!finished_registration">
+          <div class="form-group" *ngIf="NIN_registration">
+            <label for="password">NIN Number *</label>
+            <input formControlName="nin" name="nin" class="form-control" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="password">Full Name *</label>
+            <input
+              formControlName="first_name"
+              class="form-control"
+              type="text"
+              name="first_name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Surname * </label>
+            <input formControlName="surname"  name = "surname" class="form-control" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Phone Number *</label>
+            <input formControlName="phone" name="phone" class="form-control" type="text" />
+          </div>
+
+          <div class="form-group">
+            <label for="basic-url" class="form-label"
+              >State of Residence*</label
+            >
+            <select
+              class="form-control"
+              formControlName="state" name="state"
+              (ngModelChange)="getSelectedState()"
+            >
+              <option value="">Choose State</option>
+              <option *ngFor="let state of states" value="{{ state.state }}">
+                {{ state.state }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="basic-url" class="form-label">LGA of Reg *</label>
+            <select formControlName="lga" name="lga" class="form-control">
+              <option value="">Choose LGAs</option>
+              <option *ngFor="let lga of lgas" value="{{ lga }}">
+                {{ lga }}
+              </option>
+            </select>
+          </div>
+          <!-- 
+          <div class="form-group">
+            <label for="password">Password *</label>
+            <input
+              (click)="setupPasteWatch()"
+              formControlName="password"
+              class="form-control"
+              id="password"
+              type="password"
+            />
+
+            <div *ngIf="beginPasswordCheck" style="margin-top: 5px">
+              <span> Password Strength:</span>
+              <progress id="progress" value="0" max="100">70</progress>
+              <span id="progresslabel"></span>
+            </div>
+          </div> -->
+          <label style="color: #186018" for="password">Password *</label>
+          <div style="margin-bottom: 0.3rem" class="input-group">
+            <input
+              (click)="setupPasteWatch()"
+              formControlName="password" name="password"
+              class="form-control"
+              id="password"
+              [type]="fieldTextType ? 'text' : 'password'"
+              class="form-control"
+              formControlName="password"
+            />
+            <div class="input-group-append">
+              <span
+                style="background-color: #0063ff14"
+                (click)="toggleFieldTextType()"
+                class="input-group-text"
+              >
+                <i class="bi bi-eye-fill"></i>
+              </span>
+            </div>
+          </div>
+          <div *ngIf="beginPasswordCheck" style="margin: 5px 0x">
+            <span> Password Strength:</span>
+            <progress id="progress" value="0" max="100">70</progress>
+            <span id="progresslabel"></span>
+          </div>
+
+          <label style="color: #186018" for="password"
+            >Confirm Password *</label
+          >
+          <div class="input-group">
+            <input
+              formControlName="confirm_password"
+              name="confirm_password"
+              class="form-control"
+              id="password"
+              [type]="fieldTextType ? 'text' : 'password'"
+              class="form-control"
+            />
+            <div class="input-group-append">
+              <span
+                style="background-color: #0063ff14"
+                (click)="toggleFieldTextType()"
+                class="input-group-text"
+              >
+                <i class="bi bi-eye-fill"></i>
+              </span>
+            </div>
+          </div>
+
+          <btn-loading
+            id="btnLog"
+            name="saveUser"
+            *ngIf="!finished_registration"
+            btnClass="btn-primary btn-rounded btn-block mt-3"
+            [loadingText]="loadingText"
+            [loading]="loading"
+          >
+            Register
+          </btn-loading>
+
+
+         
+
+        </form>
+      <div *ngIf='finished_registration' style='text-align: center; width:100%; padding:5%;'>
+        <span class='signup-response text-center'>{{registration_response}}</span>
+        <btn-loading
+        id="btnLog"
+        name="goToLogin" 
+        (click)="openLogin()"
+        btnClass="btn-primary btn-rounded btn-block mt-3"
+       
+      >
+        Proceed to Login
+      </btn-loading>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</div>

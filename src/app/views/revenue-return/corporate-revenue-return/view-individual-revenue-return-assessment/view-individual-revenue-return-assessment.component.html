@@ -1,0 +1,727 @@
+<!-- <div class="breadcrumb">
+  <h1>Assessment</h1>
+  <ul>
+    <li><a href="">Configuration</a></li>
+    <li>TaxItems</li>
+  </ul>
+</div> -->
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3">
+    <div class="form-group float-left">
+      <input
+        id="email"
+        placeholder="Search"
+        [formControl]="searchControl"
+        class="form-control form-control-rounded"
+        type="email"
+      />
+    </div>
+    <button
+      style="margin-left: 10px"
+      class="btn btn-primary float-right"
+      (click)="downloadPDF('customers')"
+    >
+      PDF
+    </button>
+
+    <a
+      style="color: azure; margin-left: 10px"
+      csvLink
+      class="btn btn-primary float-right"
+      [data]="assessmentsCsv"
+      download="bulk-paye.csv"
+      [class.disabled]="assessmentsCsv.length == 0 ? true : false"
+    >
+      CSV</a
+    >
+
+    <a class="btn btn-primary float-right" href="#/assessment/perform">
+      New Assessment</a
+    >
+  </div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+  <div
+    id="customers"
+    style="position: absolute; z-index: -20; padding: 1rem 2rem"
+  >
+    <div style="display: flex; justify-content: space-between">
+      <img src="../../../../assets/images/logo.png" style="height: 30px" />
+      <span>Smart Tax</span>
+    </div>
+    <div class="separator-breadcrumb border-top"></div>
+    <div style="margin-bottom: 1rem">
+      <span style="display: block">Plateau State Internal</span>
+      <span style="display: block">Revenue Service</span>
+      <span style="display: block">Bank Road, Jos</span>
+      <div
+        style="display: inline-block; width: 140px; border: 0.1px solid #000"
+      ></div>
+    </div>
+    <div>
+      <p>
+        Company:
+        <span style="font-weight: bold">{{ companyDetail.company_name }}</span>
+      </p>
+      <p>
+        TIN: <span style="font-weight: bold"> {{ companyDetail.tin }}</span>
+      </p>
+      <p>
+        Address:
+        <span style="font-weight: bold">{{ companyDetail.address }}</span>
+      </p>
+      <p>
+        Bill Reference Number:
+        <span style="font-weight: bold"> {{ billing_ref }} </span>
+      </p>
+      <p>
+        Summary of PAYE assessment of :
+        <span style="font-weight: bold">{{ companyDetail.company_name }}</span>
+        for 2021 assessment year
+      </p>
+    </div>
+    <table>
+      <tr>
+        <th>S/N</th>
+        <th>Employee</th>
+        <th>Gross</th>
+        <th>NHIS</th>
+        <th>NHF</th>
+        <th>Life Assur.</th>
+        <th>Pension Fund</th>
+        <th>CRA</th>
+        <th>Annual Tax</th>
+        <th>Monthly Tax</th>
+        <th>Dev. Levy</th>
+      </tr>
+      <tr *ngFor="let item of assessmentsCsv; let myIndex = index">
+        <td>{{ myIndex + 1 }}</td>
+        <td>{{ item["individual name"] }}</td>
+        <td>{{ item["Annual Gross Pay"] | number: "1.2-2" }}</td>
+        <td>{{ item["NHIS"] | number: "1.2-2" }}</td>
+        <td>{{ item["NHF"] | number: "1.2-2" }}</td>
+        <td>{{ item["Life Insurance"] | number: "1.2-2" }}</td>
+        <td>{{ item["Pension"] | number: "1.2-2" }}</td>
+        <td>{{ item["CRA"] | number: "1.2-2" }}</td>
+        <td>{{ item["Annual Tax Liability"] | number: "1.2-2" }}</td>
+        <td>{{ item["Monthly Tax Liability"] | number: "1.2-2" }}</td>
+        <td>{{ item["Development Levy"] ? 300 : 0 }}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="font-weight: bold">TOTAL</td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["Annual Gross Pay"] | number: "1.2-2" }}
+        </td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["NHIS"] | number: "1.2-2" }}
+        </td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["NHF"] | number: "1.2-2" }}
+        </td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["Life Insurance"] | number: "1.2-2" }}
+        </td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["Pension"] | number: "1.2-2" }}
+        </td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["CRA"] | number: "1.2-2" }}
+        </td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["Annual Tax Liability"] | number: "1.2-2" }}
+        </td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["Monthly Tax Liability"] | number: "1.2-2" }}
+        </td>
+        <td style="font-weight: bold">
+          {{ assessmentsCsvTotal["Development Levy"] }}
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="card o-hidden">
+      <ngx-datatable
+        *ngIf="assessments?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [scrollbarV]="true"
+        [scrollbarH]="true"
+        [limit]="10"
+        [rows]="filteredItems"
+      >
+        <ngx-datatable-column name="photo" [maxWidth]="100">
+          <ng-template ngx-datatable-header-template>
+            Registraton Number
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.id }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Tax Item </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.tax_item ? row.tax_item : getCustomTaxItem(row) }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> MDA </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.mda }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Date Created
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ parsePhpDate(row.created_at) }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Status </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <span class="text-success">{{
+              row.status == "1" ? "Paid" : "Pending"
+            }}</span>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template>
+            Last Updated
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ parsePhpDate(row.created_at) }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Created By </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.created_by == null ? "N/A" : row.created_by }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [width]="120">
+          <ng-template ngx-datatable-header-template> Actions </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <button
+              class="btn btn-wide btn-outline-secondary mr-3"
+              (click)="viewAssessment(row)"
+            >
+              View
+            </button>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<ng-template #deleteConfirmModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Delete Tax Item</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p><strong>Are you sure?</strong></p>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('cancel')"
+    >
+      Cancel
+    </button>
+    <button
+      type="button"
+      ngbAutofocus
+      class="btn btn-wide btn-danger btn-rounded"
+      (click)="modal.close('Ok')"
+    >
+      Ok
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #modalConfirm let-modal>
+  <div class="modal-body">
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+    </div>
+    <div *ngIf="!loading && !dynamicSummary" class="card-body">
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+      <p
+        style="
+          text-align: end;
+          font-size: 27px;
+          color: #000;
+          font-family: serif;
+        "
+      >
+        Bill Reference:
+        {{ assessmentForDisplay.billing_ref || "Unconfirmed" }}
+      </p>
+
+      <div>
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+      </div>
+
+      <div class="text-center">
+        <img
+          src="../../../../assets/images/logo-.png"
+          class="my-1"
+          style="height: 45px"
+        />
+      </div>
+      <p
+        style="
+          color: green;
+          font-size: 33px;
+          font-weight: bold;
+          text-align: center;
+        "
+      >
+        PLATEAU STATE GOVERNMENT
+      </p>
+      <div style="text-align: center">
+        <span
+          style="
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 25px;
+          "
+          class="text-center mb-3 text-white"
+          >TAX ASSESSMENT</span
+        >
+      </div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td colspan="3" style="font-weight: 700">MDA</td>
+            <td colspan="1">
+              {{ assessmentForDisplay.mda }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">PAYER NAME</td>
+            <td colspan="1">
+              {{ assessmentForDisplay.payer_name || assessmentForDisplay.name }}
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="3" style="font-weight: 700">PAYER TIN</td>
+            <td colspan="1">{{ assessmentForDisplay.tin }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">AMOUNT</td>
+            <td colspan="1">{{ assessmentForDisplay.amount }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Tax Item</td>
+            <td colspan="1">{{ assessmentForDisplay.tax_item }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Bulk ID</td>
+            <td colspan="1">{{ assessmentForDisplay.bulk_id }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Signature:</td>
+            <td style="padding-top: 20p" colspan="1"></td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Created by:</td>
+            <td colspan="1">
+              {{
+                assessmentForDisplay.created_by == null
+                  ? "N/A"
+                  : assessmentForDisplay.created_by
+              }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Demand Notice Officer</td>
+            <td colspan="1">
+              {{
+                assessmentForDisplay.approved_by == null
+                  ? "N/A"
+                  : assessmentForDisplay.approved_by
+              }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Date Confirmed</td>
+            <td colspan="1">
+              {{
+                assessmentForDisplay.date_approved == null
+                  ? "N/A"
+                  : parsePhpDate(assessmentForDisplay.date_approved)
+              }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-12" *ngIf="!loading && dynamicSummary && payeeSummary">
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+      <p
+        style="
+          text-align: end;
+          font-size: 27px;
+          color: #000;
+          font-family: serif;
+        "
+      >
+        <!-- Bill Reference: {{ assessmentForDisplay.billing_ref }} -->
+        Bill Reference:
+        {{
+          assessmentForDisplay.billing_ref == null
+            ? "Unconfirmed"
+            : assessmentForDisplay.billing_ref
+        }}
+      </p>
+
+      <div>
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+      </div>
+
+      <div class="text-center">
+        <img
+          src="../../../../assets/images/logo-.png"
+          class="my-1"
+          style="height: 45px"
+        />
+      </div>
+      <p
+        style="
+          color: green;
+          font-size: 33px;
+          font-weight: bold;
+          text-align: center;
+        "
+      >
+        PLATEAU STATE GOVERNMENT
+      </p>
+      <div style="text-align: center">
+        <span
+          style="
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 25px;
+          "
+          class="text-center mb-3 text-white"
+          >TAX ASSESSMENT</span
+        >
+      </div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th colspan="3" style="font-weight: 700">MDA</th>
+            <th scope="col">{{ displayPayee.mda }}</th>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Tax Item</td>
+            <td class="font-weight-bold text-success">
+              {{ displayPayee.tax_item }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Employee Name</td>
+            <td class="font-weight-bold">
+              {{ displayPayee.name }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Gross Income</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.gi) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Deductions</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.deductions) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Taxable Income</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.ti) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Annual Tax Liability</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.paye) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Monthly Tax Liability</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.paye / 12) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">TIN</td>
+            <td class="text-danger font-weight-bold">
+              {{ assessmentForDisplay.tin }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Billing Ref</td>
+            <td class="text-warning font-weight-bold">
+              {{ assessmentForDisplay.billing_ref }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Demand Notice Officer</td>
+            <td>
+              {{
+                assessmentForDisplay.approved_by == null
+                  ? "N/A"
+                  : assessmentForDisplay.approved_by
+              }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Date Generated</td>
+            <td>
+              {{
+                assessmentForDisplay.created_at == null
+                  ? "N/A"
+                  : parsePhpDate(assessmentForDisplay.created_at)
+              }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Date Confirmed</td>
+            <td>
+              {{
+                assessmentForDisplay.date_approved == null
+                  ? "N/A"
+                  : parsePhpDate(assessmentForDisplay.date_approved)
+              }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">Date Paid</td>
+            <td>
+              {{
+                assessmentForDisplay.payment_date == null
+                  ? "N/A"
+                  : parsePhpDate(assessmentForDisplay.payment_date)
+              }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div
+      class="col-md-12"
+      *ngIf="!loading && dynamicSummary && directAssessmentSummary"
+    >
+      <div style="">
+        <div style="display: flex; justify-content: space-between">
+          <img src="../../../../assets/images/logo.png" style="height: 30px" />
+          <span>Smart Tax</span>
+        </div>
+        <div class="separator-breadcrumb border-top"></div>
+        <p
+          style="
+            text-align: end;
+            font-size: 27px;
+            color: #000;
+            font-family: serif;
+          "
+        >
+          <!-- Bill Reference: {{ assessmentForDisplay.billing_ref }} -->
+          Bill Reference:
+          {{ assessmentForDisplay.demand_notice_ref || "Unconfirmed" }}
+        </p>
+
+        <div>
+          <span style="display: block">Plateau State Internal</span>
+          <span style="display: block">Revenue Service</span>
+          <span style="display: block">Bank Road, Jos</span>
+          <div
+            style="
+              display: inline-block;
+              width: 140px;
+              border: 0.1px solid #000;
+            "
+          ></div>
+        </div>
+
+        <div class="text-center">
+          <img
+            src="../../../../assets/images/logo-.png"
+            class="my-1"
+            style="height: 45px"
+          />
+        </div>
+        <p
+          style="
+            color: green;
+            font-size: 33px;
+            font-weight: bold;
+            text-align: center;
+          "
+        >
+          PLATEAU STATE GOVERNMENT
+        </p>
+        <div style="text-align: center">
+          <span
+            style="
+              font-weight: bold;
+              padding: 9px 16px;
+              background-color: green;
+              display: inline-block;
+              font-size: 25px;
+            "
+            class="text-center mb-3 text-white"
+            >TAX ASSESSMENT</span
+          >
+        </div>
+        <table class="table" *ngIf="displayPayee.length > 0">
+          <thead class="thead-light">
+            <th colspan="2">Direct Assessment</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="col">MDA</td>
+              <td scope="col">{{ assessmentForDisplay.mda }}</td>
+            </tr>
+            <tr>
+              <td scope="col">TAX ITEM</td>
+              <td scope="col">{{ assessmentForDisplay.tax_item }}</td>
+            </tr>
+            <tr>
+              <td scope="col">PAYER</td>
+
+              <td scope="col">
+                {{
+                  assessmentForDisplay.payer_name || assessmentForDisplay.name
+                }}
+              </td>
+            </tr>
+            <tr>
+              <td scope="col">TIN</td>
+              <td scope="col">
+                {{ assessmentForDisplay.payer_tin || assessmentForDisplay.tin }}
+              </td>
+            </tr>
+            <tr *ngFor="let item of displayPayee">
+              <td *ngIf="item.label" scope="col">
+                {{ item.label.toUpperCase() }}
+              </td>
+              <td *ngIf="item.label" scope="col">{{ item.value }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12">
+        <table class="table">
+          <thead class="thead-light">
+            <th colspan="2">Total</th>
+            <th scope="col">
+              {{ displayPayee[displayPayee.length - 1].total }}
+            </th>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('Cross click')"
+    >
+      Cancel
+    </button>
+  </div>
+</ng-template>

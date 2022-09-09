@@ -1,0 +1,496 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3">
+    <div class="form-group float-left">
+      <input
+        id="email"
+        placeholder="Search"
+        [formControl]="searchControl"
+        class="form-control form-control-rounded"
+        type="email"
+      />
+    </div>
+  </div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="card o-hidden">
+      <ngx-datatable
+        *ngIf="assessments?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [scrollbarV]="true"
+        [scrollbarH]="true"
+        [limit]="10"
+        [rows]="filteredItems"
+      >
+        <ngx-datatable-column name="photo" [maxWidth]="100">
+          <ng-template ngx-datatable-header-template>
+            Registraton Number
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.id }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Bulk Name </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.bulk_name.toUpperCase() }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>Company TIN </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.organization_tin }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>Company Name </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.organization_name }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Tax Item </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.tax_item ? row.tax_item : getCustomTaxItem(row) }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> MDA </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.mda_name }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Status </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <span
+              *ngIf="row.billing_ref !== null && row.status == '1'"
+              class="text-success"
+              >Completed</span
+            >
+
+            <span
+              *ngIf="row.billing_ref !== null && row.status == '-2'"
+              class="text-danger"
+              >Disputed</span
+            >
+
+            <span
+              *ngIf="row.billing_ref !== null && !row.status"
+              class="text-info"
+              >Pending</span
+            >
+            <span
+              *ngIf="row.billing_ref !== null && row.status == '-1'"
+              class="textdanger"
+              >Cancelled</span
+            >
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Period </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.period_from }} - {{ row.period_to }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Created By </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.created_by }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Date Created
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ parsePhpDate(row.created_at) }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [width]="120">
+          <ng-template ngx-datatable-header-template> Actions </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <button
+              class="btn btn-wide btn-outline-secondary mr-3"
+              (click)="viewAssessment(row)"
+            >
+              View
+            </button>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalConfirm let-modal>
+  <div
+    id="noticeofAssessment"
+    #noticeofAssessment
+    class="modal-body modal-lg px-2"
+    style="font-size: 0.4rem; position: relative"
+  >
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+    </div>
+    <div
+      *ngIf="!loading && !dynamicSummary"
+      style="padding: 2px !important"
+      class="card-body"
+    >
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 20px" />
+        <span>Smart Tax</span>
+      </div>
+      <p
+        style="
+          text-align: end;
+          font-size: 0.9rem;
+          color: #000;
+          font-family: serif;
+          margin-bottom: 0px;
+          font-weight: bold;
+        "
+      >
+        Bill Reference:
+        {{ assessmentForDisplay.billing_ref || "Unconfirmed" }}
+      </p>
+
+      <div style="font-size: 0.7rem">
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+      </div>
+
+      <div style="position: absolute; top: 5%; left: 40%" class="text-center">
+        <img
+          src="../../../../assets/images/logo-.png"
+          class="my-1"
+          style="height: 58px"
+        />
+      </div>
+
+      <div style="text-align: center">
+        <span
+          style="
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 0.7rem;
+          "
+          class="text-center mb-3 text-white"
+          >NOTICE OF ASSESSMENT</span
+        >
+      </div>
+      <p style="font-size: 0.4rem">
+        In pursuance to 81(2) of Personal Income Tax Act Cap. P8 LFN, 2004 as
+        amended in Personal Income Tax Act (Amendment), 2011, I forward herewith
+        computed taxes payable monthly by your employees as per new Tax Mandate
+        Summary Schedule for the month of
+        {{ getDate(assessmentForDisplay.period_from) }}.
+      </p>
+      <h3 style="font-size: 0.4rem">Tax Mandate Summary</h3>
+
+      <table style="margin-bottom: 0px" class="table table-bordered">
+        <tbody>
+          <tr>
+            <td style="font-size: 0.6rem">Company Name</td>
+            <td style="font-size: 0.6rem">
+              {{ assessmentForDisplay.payer_name || assessmentForDisplay.name }}
+            </td>
+            <td style="font-size: 0.6rem">Company TIN</td>
+            <td style="font-size: 0.6rem">{{ assessmentForDisplay.tin }}</td>
+          </tr>
+          <tr>
+            <td style="font-size: 0.6rem">Address</td>
+            <td style="font-size: 0.5rem" colspan="3">
+              {{ assessmentForDisplay.address }}
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 0.6rem">Email</td>
+            <td style="font-size: 0.6rem">
+              {{ assessmentForDisplay.office_email || "N/A" }}
+            </td>
+            <td style="font-size: 0.6rem">Number of Employees</td>
+            <td style="font-size: 0.6rem">
+              {{ assessmentForDisplay.employee_no || "" }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td style="font-size: 0.6rem">Month</td>
+            <td style="font-size: 0.6rem">Development Levy</td>
+            <td style="font-size: 0.6rem">Tax Liability</td>
+            <td style="font-size: 0.6rem">Amount Due</td>
+          </tr>
+          <tr>
+            <td style="font-size: 0.6rem">
+              {{ getDate(assessmentForDisplay.period_from) }}
+            </td>
+            <td style="font-size: 0.6rem">
+              {{
+                formatNumber(
+                  window.parseInt(assessmentForDisplay.total_dev_levy)
+                )
+              }}
+            </td>
+            <td style="font-size: 0.6rem">
+              {{ formatNumber(bulkAssessmentTotal / 12) }}
+            </td>
+            <td style="font-size: 0.6rem"></td>
+          </tr>
+          <tr>
+            <td style="font-size: 0.6rem">
+              <span style="font-weight: bold">Total</span>
+            </td>
+            <td style="font-size: 0.6rem"></td>
+            <td style="font-size: 0.6rem"></td>
+            <td style="font-weight: bold">
+              NGN
+              {{
+                formatNumber(
+                  bulkAssessmentTotal / 12 +
+                    window.parseInt(assessmentForDisplay.total_dev_levy)
+                )
+              }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-bottom: 0px">
+        The total amount payable for monthly
+        <span style="font-weight: bold"
+          >PAYE is NGN {{ formatNumber(bulkAssessmentTotal / 12) }}
+        </span>
+        . The amount should be remitterd to Plateau State Government using this
+        bill reference number through any commercial bank on NIBBS ebill
+        Platform. The taxes therein were computed from the annual emoluments
+        payrollsheet the employer had submitted to the revenue office.
+      </p>
+      <p style="margin-top: 3px">
+        <span style="font-weight: bold"> TAX MANDATE DETAILS:</span> Find
+        attached detailed assessment infomation of all employees
+      </p>
+      <p style="margin-top: 2px">
+        Please, note that failure to make deductions or properly account for the
+        money thereof is punishable under section 82 of the same Act which
+        stipulates a penalty of 10 percent per month of the amount plus interest
+        at the prevailing commercial rate in Nigeria.
+      </p>
+      <p style="margin-bottom: 0px">
+        if an employee leaves employment, (resignation or retirement) dies,
+        takes new employment or is transferred to another branch office outside
+        the tax juridiction during the year of assessment, you are required to
+        inform the service in writing stating the employee's salary/allowances,
+        the monthly tax due and the date pf such occurrence to enable us make
+        adjustment of the assessment raised accordingly.
+      </p>
+      <div
+        style="
+          text-align: end;
+          padding-top: 2px;
+          margin-top: 2rem;
+          margin-right: 1rem;
+        "
+      >
+        <p style="margin-bottom: 0px">DASHE ARLAT DASOGOT</p>
+        <P style="margin-bottom: 0px; font-weight: bold">Chairman</P>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="
+        goToViewAssessments(
+          assessmentForDisplay.id,
+          assessmentForDisplay.tin,
+          assessmentForDisplay.billing_ref
+        )
+      "
+    >
+      View Asssessments
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="printDoc('noticeofAssessment')"
+    >
+      Print
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="downloadDoc('noticeofAssessment')"
+    >
+      Download
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('Cross click')"
+    >
+      Cancel
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #modalPaymentGateways let-modal>
+  <form
+    (ngSubmit)="addGateway(assessmentForDisplay.id)"
+    [formGroup]="gatewayForm"
+  >
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-title">
+        Choose payment gateway of your choice
+      </h4>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close button"
+        aria-describedby="modal-title"
+        (click)="modal.dismiss('Cross click')"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ngx-select-dropdown
+        tabindex="0"
+        formControlName="gateway"
+        [config]="config"
+        [options]="['OPAY']"
+      >
+      </ngx-select-dropdown>
+      <br />
+      <button
+        class="btn btn-primary"
+        aria-label="Close button"
+        aria-describedby="Select gateway"
+      >
+        <span>Proceed</span>
+      </button>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #modalBillingRef let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Enter Billing Ref</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-8 row">
+          <div class="col-md-9 form-group mb-3">
+            <label for="tax">Enter billing ref </label>
+            <input
+              class="form-control"
+              type="number"
+              placeholder="Amount in NGN"
+              [(ngModel)]="billing_ref"
+            />
+          </div>
+          <div class="col-sm-7"></div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="payWithBillingRef()"
+    >
+      Pay
+    </button>
+  </div>
+</ng-template>

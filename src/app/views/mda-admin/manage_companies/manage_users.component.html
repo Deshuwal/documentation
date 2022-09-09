@@ -1,0 +1,520 @@
+<app-breadcrumb></app-breadcrumb>
+<div style="display: flex; flex-direction: column">
+  <div class="mb-3">
+    <a
+      target="_blank"
+      style="margin-left: 5px; color: bisque"
+      class="btn btn-primary float-right"
+      csvLink
+      [data]="assessments"
+      >Download CSV</a
+    >
+  </div>
+
+  <div style="padding: 1rem" class="card card-mediaQuery" *ngIf="!loading">
+    <div
+      style="display: flex; justify-content: space-between; align-items: center"
+    >
+      <!-- <p>From:</p>
+    <input type="date" [(ngModel)]="from" required />
+    <p>To:</p>
+    <input type="date" [(ngModel)]="to" required /> -->
+
+      <div style="width: 20%; margin-right: 10px">
+        <!-- <p>Search By:</p> -->
+        <!-- <label>Pension</label> -->
+        <select class="form-control" (change)="onChange($event.target.value)">
+          <option value="" hidden selected>Search by Phone or TIN</option>
+          <option value="phone">Phone</option>
+          <option value="tin">TIN</option>
+        </select>
+      </div>
+
+      <input
+        placeholder="Search by Phone"
+        (change)="tinOrPhoneNumber($event)"
+        class="form-control"
+        type="text"
+        style="width: 50%"
+        *ngIf="showPhoneInput"
+      />
+      <input
+        placeholder="Search by TIN"
+        (change)="tinOrPhoneNumber($event)"
+        class="form-control"
+        type="text"
+        style="width: 50%"
+        *ngIf="showTinInput"
+      />
+      <button
+        class="btn btn-primary"
+        (click)="filterRecord()"
+        *ngIf="!searching"
+        style="margin-left: 10px"
+      >
+        Submit
+      </button>
+      <button
+        class="btn btn-primary"
+        *ngIf="searching"
+        style="margin-left: 10px"
+      >
+        Please wait...
+      </button>
+
+      <div style="margin-left: auto">
+        <p style="font-size: 19px; color: green; font-weight: bold">
+          Total No: {{ totalUsers }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+<div class="row mb-3">
+  <div class="col-md-12 mb-3"></div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div id="pdfTable" #pdfTable class="card o-hidden">
+      <ngx-datatable
+        *ngIf="assessments?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [scrollbarH]="true"
+        [scrollbarH]="true"
+        [virtualization]="false"
+        [externalPaging]="true"
+        [count]="total_count"
+        [rows]="assessments"
+        [offset]="0"
+        [limit]="per_page_count"
+        (page)="onPageChange($event)"
+        #table
+      >
+        <ngx-datatable-column name="photo" [maxWidth]="100">
+          <ng-template ngx-datatable-header-template> S/N </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.sn }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Name </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{
+              (row.name !== null && row.name.trim()) ||
+                capitalise(row.first_name + " " + row.surname)
+            }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column *ngIf="userProfile.role != 5" [flexGrow]="1">
+          <ng-template ngx-datatable-header-template> TIN No. </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.tin || row.pltin }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Phone Number
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.phone }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column *ngIf="userProfile.role != 5">
+          <ng-template ngx-datatable-header-template>
+            Registration Area
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.area || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column *ngIf="userProfile.role == 5">
+          <ng-template ngx-datatable-header-template> Role </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ userRole[row.role] || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template>
+            Date Registered
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.create_date }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column *ngIf="userProfile.role != 5" [flexGrow]="1">
+          <ng-template ngx-datatable-header-template> </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <div container="body">
+              <div
+                style="position: absolute"
+                ngbDropdown
+                placement="left"
+                class="d-inline-block"
+              >
+                <button
+                  class="btn btn-outline-primary"
+                  id="dropdownBasic2"
+                  ngbDropdownToggle
+                >
+                  Manage Role
+                </button>
+                <div
+                  style="z-index: 99999"
+                  class="ml-2"
+                  ngbDropdownMenu
+                  aria-labelledby="dropdownBasic2"
+                >
+                  <button
+                    class="btn btn-block btn-primary text-white"
+                    ngbDropdownItem
+                    (click)="toggleAdmin(row.id, 1)"
+                  >
+                    Make Super Admin
+                  </button>
+                  <button
+                    class="btn btn-block btn-primary text-white"
+                    ngbDropdownItem
+                    (click)="toggleAdmin(row.id, 2)"
+                  >
+                    Make Vendor
+                  </button>
+                  <button
+                    class="btn btn-block btn-primary text-white"
+                    ngbDropdownItem
+                    (click)="toggleAdmin(row.id, 3)"
+                  >
+                    Make MDA Admin
+                  </button>
+                  <button
+                    class="btn btn-block btn-primary text-white"
+                    ngbDropdownItem
+                    (click)="toggleAdmin(row.id, 0)"
+                  >
+                    Make User
+                  </button>
+                  <button
+                    class="btn btn-block btn-primary text-white"
+                    ngbDropdownItem
+                    (click)="toggleAdmin(row.id, 6)"
+                  >
+                    Make Accounts Officer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column *ngIf="userProfile.role != 5" [flexGrow]="1">
+          <ng-template ngx-datatable-header-template> </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <button
+              class="btn btn-primary text-white"
+              style="color: #000"
+              (click)="openAddTagModal(row)"
+            >
+              Add Tag
+            </button>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column
+          [flexGrow]="1"
+          *ngIf="userProfile.role != 5"
+          [flexGrow]="1"
+        >
+          <ng-template ngx-datatable-header-template> </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <button
+              class="btn btn-primary text-white"
+              [routerLink]="['/taxpayer', 'update-user', row.id]"
+              style="color: #000"
+            >
+              Update Profile
+            </button>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column
+          [flexGrow]="1"
+          *ngIf="userProfile.role != 5"
+          [flexGrow]="1"
+        >
+          <ng-template ngx-datatable-header-template> </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <button
+              class="btn btn-primary text-white"
+              [routerLink]="['/taxpayer', 'preview-user', row.id]"
+              style="color: #000"
+            >
+              Print
+            </button>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+<ng-template #addTagModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="addTagModalId">Add Tags</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10 row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="tax">User</label>
+
+          <input
+            class="form-control"
+            type="text"
+            [value]="tagUser.name"
+            disabled
+            placeholder="Name of user"
+          />
+        </div>
+        <!-- <div class="col-sm-7"></div> -->
+
+        <div class="col-md-12 form-group mb-3">
+          <label for="tax">Enter comma seperated tag(s)</label>
+
+          <input
+            class="form-control"
+            type="text"
+            placeholder="tag1, tag2, ..."
+            [(ngModel)]="userTags"
+          />
+        </div>
+        <!-- <div class="col-sm-7"></div> -->
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      [disabled]="addingTags"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="submitUserTags()"
+    >
+      {{ addingTags ? "Please Wait..." : "Continue" }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #modalConfirm let-modal>
+  <div
+    *ngIf="!loading"
+    class="card bg-img"
+    style="padding: 2px; font-size: 0.3rem"
+  >
+    <div>
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          aria-label="Close"
+          (click)="closeModal()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div id="pdfTable" #pdfTable class="card-body">
+        <div style="display: flex; justify-content: space-between">
+          <img src="../../../../assets/images/logo.png" style="height: 30px" />
+          <span>Smart Tax</span>
+        </div>
+        <div class="separator-breadcrumb border-top"></div>
+
+        <div>
+          <span style="display: block">Plateau State Internal</span>
+          <span style="display: block">Revenue Service</span>
+          <span style="display: block">Bank Road, Jos</span>
+          <div
+            style="
+              display: inline-block;
+              width: 140px;
+              border: 0.1px solid #000;
+            "
+          ></div>
+          <div style="font-size: 1.1rem; font-weight: 800" class="text-center">
+            SEARCH RESULT
+          </div>
+          <img
+            src="../../../../assets/images/blank.png"
+            class="my-1"
+            style="height: 58px"
+          />
+          <h2 style="font-size: 0.5rem" class="text-center mb-3">
+            Tax Identification Number :
+            {{ filteredUser.tin || filteredUser.stin }}
+          </h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>FULL Name</th>
+                <th style="font-weight: normal">
+                  {{ negotiator.getUserFullName() | uppercase }}
+                </th>
+                <th>TIN NO</th>
+                <th style="font-weight: normal">
+                  {{ filteredUser.tin || filteredUser.pltin }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight: bold"><p>Address</p></td>
+                <td colspan="3">
+                  <p>{{ filteredUser.payer_address || "" }}</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold">Marital Status</td>
+                <td>
+                  {{ filteredUser.marital_status }}
+                </td>
+                <td style="font-weight: bold">Gender</td>
+                <td>
+                  {{ filteredUser.gender }}
+                </td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold">Home Town</td>
+                <td>
+                  {{ filteredUser.home_town }}
+                </td>
+                <td style="font-weight: bold">Date of Birth</td>
+                <td>
+                  {{ filteredUser.dob | date: "dd-MM-yyyy" }}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold">Local Government</td>
+                <td>
+                  {{ filteredUser.lga }}
+                </td>
+                <td style="font-weight: bold">State of Origin</td>
+                <td>
+                  {{ filteredUser.soo }}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold">Occupation</td>
+                <td>
+                  {{ filteredUser.occupation | uppercase }}
+                </td>
+                <td style="font-weight: bold">Phone</td>
+                <td>{{ filteredUser.phone || "" }}</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold">Mode of Identification</td>
+                <td></td>
+                <td style="font-weight: bold">Identification No.</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <br />
+          Date Issued:
+          {{ filteredUser.create_date }}
+        </div>
+        <div class="separator-breadcrumb border-top"></div>
+        <p class="text-center">
+          Email: info@psirs.gov.ng . Website:https:www.psirs.gov.ng
+        </p>
+        <br /><br />
+        <p class="text-center">Page: 1/1</p>
+      </div>
+    </div>
+    <div style="text-align: end">
+      <button
+        style="position: relative; z-index: 3"
+        class="btn btn-primary"
+        (click)="exportAsPDF('pdfTable')"
+      >
+        Download
+      </button>
+      <button
+        style="position: relative; z-index: 3; margin-left: 10px"
+        class="btn btn-primary"
+        (click)="printPDFS('pdfTable')"
+      >
+        Print
+      </button>
+    </div>
+  </div>
+</ng-template>

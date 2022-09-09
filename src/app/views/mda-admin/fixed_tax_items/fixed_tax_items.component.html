@@ -1,0 +1,235 @@
+<!-- <div class="breadcrumb">
+  <h1>Setup</h1>
+  <ul>
+    <li><a href="">Gender</a></li>
+  </ul>
+</div> -->
+
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+
+<div class="row mb-3">
+	<div *ngIf="loading" class="col-md-12 text-center">
+		<div class="spinner spinner-primary mr-3"></div>
+	</div>
+
+
+	<div class="row mb-3">
+		<div class="col-md-12 mb-3">
+	 
+	
+			<a
+				class="btn btn-primary float-right"
+				style="color: white !important"
+				(click)="newTaxItem()"
+				><i class="i-Add-User"></i> Add Tax Item</a
+			>
+		</div>
+	</div>
+	
+
+	<div
+		class="col-md-12"
+		*ngIf="!loading"
+		[@animate]="{
+			value: '*',
+			params: {
+				y: '120px',
+				opacity: '0',
+				delay: '100ms',
+				duration: '400ms'
+			}
+		}"
+	>
+		<div class="card o-hidden">
+			<ngx-datatable
+				*ngIf="taxItems?.length"
+				style="box-shadow: none"
+				class="material fullscreen"
+				[columnMode]="'force'"
+				[headerHeight]="50"
+				[rowHeight]="60"
+				[scrollbarH]="true"
+				[rows]="taxItems"
+			>
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> S/N </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.id }}
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> MDA </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.mda }}
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> Name </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.title }}
+					</ng-template> </ngx-datatable-column
+				><ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> Amount </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.expected_amount_monthly | number }}
+					</ng-template> </ngx-datatable-column
+				><ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> Action </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						<button disabled
+							*ngIf="!row.isOpen"
+							type="button"
+							btnClass="btn-primary btn-rounded btn-block mt-3"
+							aria-label="Close button"
+							aria-describedby="modal-title"
+							(click)="add(row.expected_amount_monthly, row.id)"
+						>
+							Edit</button
+						><button disabled
+							style="margin-left: 2px"
+							*ngIf="!row.isOpen"
+							type="button"
+							btnClass="btn-primary btn-rounded btn-block mt-3"
+							aria-label="Close button"
+							aria-describedby="modal-title"
+							(click)="add(row.expected_amount_monthly, row.id)"
+						>
+							Delete
+						</button>
+					</ng-template>
+				</ngx-datatable-column>
+			</ngx-datatable>
+		</div>
+	</div>
+</div>
+
+
+<ng-template #addTaxItemModal let-modal>
+ 
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-title">New Tax Item</h4>
+		<button
+			type="button"
+			class="close"
+			aria-label="Close button"
+			aria-describedby="modal-title"
+			(click)="modalService.dismissAll('dismiss');"
+		>
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div *ngIf="loading" class="col-md-12 text-center">
+			<div class="spinner spinner-primary mr-3"></div>
+		</div>
+		<div  *ngIf="!loading" 	class="card">
+			<div class="card-body">
+				<h5 *ngIf="activeStage == 0" class="card-title">
+					Local Government Council Revenues
+				</h5>
+				<form action="" [formGroup]="taxItemForm" (ngSubmit)="addTaxItem()">
+					<div class="row">
+					 
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="payer_name">Tax Item Title</label>
+								<input
+									formControlName="title"
+									class="form-control"
+									type="text"
+								/>
+							</div>
+							 
+						</div>
+
+						<div class="col-md-12">
+							 
+							 
+							<ng-select
+							[items]="mdas"
+							bindLabel="title"
+							bindValue="slug" 
+							[trackByFn]="trackByFn"
+							labelForId="id"
+							formControlName="mda_id"
+							class="payer-tin"
+							[minTermLength]="minLengthTerm"
+							[loading]="companiesLoading"
+							placeholder="Select MDA"
+							typeToSearchText="Please enter {{
+							  minLengthTerm
+							}} or more characters" 
+							[typeahead]="mdaInput" 
+						  >
+						  </ng-select>
+
+					   
+						</div>
+
+						<div class="col-md-12" >
+							<div class="form-group">
+								<label for="payer_name" style="margin-right:10px;">Is Tax Item Amount Fixed? </label>
+								<select
+									(change)="toggleFixedAmount()"
+									formControlName="isFixed"
+									class="form-select"
+									type="text"
+								> 
+									<option value="false">No</option>
+
+									<option value="true">Yes</option>
+									</select>
+							</div>
+							 
+						</div>
+
+						<div class="col-md-12" *ngIf="isTaxItemFixed">
+							<div class="form-group">
+								<label for="payer_name">Enter Amount</label>
+								<input
+									formControlName="amount"
+									class="form-control"
+									type="text"
+								/>
+							</div>
+							 
+						</div>
+
+						<div class="col-md-12">
+							<button [disabled]="!taxItemForm.valid" class="btn btn-primary">Submit </button>
+							 
+						</div>
+
+ 
+ 
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	 
+</ng-template>

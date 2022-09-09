@@ -1,0 +1,206 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="psirs-platform-frontend-documentation">PSIRS PLATFORM FRONTEND DOCUMENTATION</h1>
+<h2 id="psirs-frontend-design">PSIRS FRONTEND DESIGN:</h2>
+<p>is built with angular framework theme (gull here is the documentation url <a href="http://demos.ui-lib.com/gull-doc/">http://demos.ui-lib.com/gull-doc/</a>) which as sass as its formatting style sheet and has some files and folders structure as a normal angular framework, thus; 
+let take a look at some of the files and folders structures and their important to the project implementation:</p>
+<h1 id="at-the-root-of-our-project-we-have-this-important-files-and-folders">At the root of our project we have this important files and folders:</h1>
+<p>this files and folder help in the smooth execution of our angular application, hence below are some this files and folders:</p>
+<h2 id="1-node_modules">1) node_modules:</h2>
+<p>this is an npm packages installed in the project with the npm install command. thus is houses all the  requirement needed for the project to run smoothly</p>
+<h2 id="2-e2e-end-to-end">2) e2e (end to end):</h2>
+<p>This folder is where our end to end tests will live. if which the project uses it to conduction e2e test. </p>
+<h2 id="3-src-source">3) src (source):</h2>
+<p>The most important folder. Here we have all the files that make our Angular app and is the location where we will spend most of our time coding.</p>
+<h2 id="4-angularjson">4) angular.json:</h2>
+<p>It provides workspace-wide and project-specific configuration defaults for build and development tools provided by the Angular CLI. </p>
+<h2 id="5-gitignore">5) .gitignore:</h2>
+<p>Specifies intentionally untracked files that Git should ignore.</p>
+<h2 id="6-packagejson">6) package.json:</h2>
+<p>As every modern web application, we need a package system and package manager to handle all the third-party libraries and modules used by our app. Inside this file you will find all the dependencies and some other handy stuff like the npm scripts that will help us a lot to orchestrate the development (bundling/compiling) workflow.</p>
+<h2 id="7-package-lockjson">7) package-lock.json:</h2>
+<p>Provides version information for all packages installed into node_modules by the npm client.</p>
+<h2 id="8-tsconfigjson">8) tsconfig.json:</h2>
+<p>Default Typescript configuration file. It needs to be in the root path as it’s where the typescript compiler will look for it.</p>
+<h1 id="so-let-take-a-look-at-the-src-sources-folder-in-detail-where-our-code-base-is">So let take a look at the SRC (sources) folder in detail where our code base is:</h1>
+<h2 id="src-source-folder">/src (source folder):</h2>
+<p>Inside of the /src directory we find our raw, uncompiled code. This is where most of the work for your Angular app will take place.
+When we start the scripts that handle the bundling/compilation workflow, our code inside of /src gets bundled and transpiled into the correct Javascript version that the browser understands (currently, ES5). That means we can work at a higher level using TypeScript, but compile down to the older form of Javascript the browser needs. Under this folder, you will find the following important folders and files:</p>
+<h3 id="1-app">1) /app:</h3>
+<p>Has all the components, modules, pages, services and styles you will use to build your app.</p>
+<h3 id="2-assets">2) /assets:</h3>
+<p>In this folder you will find images, sample-data json’s, and any other asset you may require in your app.</p>
+<h3 id="3-environments">3) /environments:</h3>
+<p>Under this folder are configuration files used by the Angular CLI to manage the different environment variables. For example we could have a local database for our development environment and a product database for production environment.
+When we run ng serve it will use by default the dev environment.</p>
+<h3 id="4-main">4) /main:</h3>
+<p>Has the files needed to bootstrap the app. which is the entrypoint into the application via bootstraping (more so i will like to called it the entrypoint for the .ts scripted which is the main angular logic)</p>
+<h3 id="5-indexhtml">5) index.html:</h3>
+<p>this is the entrypoint of the template, which get displayed on your browser; so you won’t be modifying this file often, as in our case it only serves as a placeholder. All the scripts and styles needed to make the app work are injected automatically by the webpack bundling process, so you don’t have to do this manually.</p>
+<h3 id="6-tsconfigappjson">6) tsconfig.app.json:</h3>
+<p>This file extends tsconfig.json main file and adds some specific configuration for the app. It’s then used in angular.json</p>
+<h3 id="7-tsconfigserverjson">7) tsconfig.server.json:</h3>
+<p>This file extends tsconfig.json main file and adds some specific configuration for the server. It’s then used in angular.json</p>
+<h1 id="looking-at-the-sources-app-srcapp-folder">Looking at the sources app (/src/app) folder:</h1>
+<h2 id="srcapp">/src/app:</h2>
+<p>This is the core of the project. Let’s have a look at the structure of this folder so you get an idea where to find things and where to add your own modules to adapt this project to your particular needs.
+We designed this project with a modular approach. We strive to showcase an advanced app module architecture so you get a better idea on how to structure and scale your project. Again, modules are great to achieve scalability.</p>
+<ol>
+<li><p>app.component.html: </p>
+<p> • This serves as the skeleton of the app. Typically has a <router-outlet> to render the routes and their content. It can also be wrapped with content that you want to be in every page (for example a footer).</p>
+</li>
+<li><p>app.component.ts:</p>
+<p> • It’s the Angular component that provides functionality to the html file I just mentioned about.</p>
+</li>
+<li><p>app.module.ts:</p>
+<p> • This is the main module of the project.</p>
+</li>
+<li><p>app.routes.ts:</p>
+<p> • Here we define the main routes. Child routes of other lazy modules are defined inside those modules. These routes are registered to the Angular RouterModule in the AppModule.</p>
+</li>
+</ol>
+<h2 id="srcappviews">/src/app/views</h2>
+<p>This folder contains the CoreModule.This module gather all single-use classes and components their details inside a CoreModule.In the /views folder of this project you will find these components folders:</p>
+<ol>
+<li>asssessment</li>
+<li>audit</li>
+<li>auth</li>
+<li>calender</li>
+<li>intelligence</li>
+<li>mda-admin</li>
+<li>others</li>
+<li>payments</li>
+<li>register</li>
+<li>reporting</li>
+<li>revenue-return</li>
+<li>risk-based-audit</li>
+<li>taxpayer</li>
+<li>tcc</li>
+</ol>
+<h2 id="srcappshared">/src/app/shared</h2>
+<p>The SharedModule that lives in this folder exists to hold the common components, directives, and pipes and share them with the modules that need them. It imports the Angular CommonModule because the components inside this folder use common Angular directives. You will notice that it also re-exports other modules.
+If you review the application structure, you may notice that many components requiring SharedModule directives also use NgIf and NgFor from Angular&#39;sCommonModule and bind to component properties with [(ngModel)], a directive in the Angular&#39;s FormsModule. 
+In the /shared folder of this Angular project you will find these components and directives:</p>
+<ol>
+<li>animations</li>
+<li>components</li>
+<li>constants</li>
+<li>directives</li>
+<li>inmemory-db</li>
+<li>interceptors</li>
+<li>models</li>
+<li>pipes</li>
+<li>services</li>
+<li>types</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

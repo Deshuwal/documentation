@@ -1,0 +1,117 @@
+<div
+	style="max-width: 700px; font-size: 0.4rem"
+	class="p-2"
+	id="pdfAssessment"
+	#pdfAssessment
+>
+	<div class="p-2">
+		<!-- <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div> -->
+		<p
+			style="
+				text-align: end;
+				font-size: 1.2rem;
+				color: #000;
+				font-family: serif;
+			"
+		>
+			Bill Reference:
+			{{
+				assessmentForDisplay.billing_ref == null
+					? "Unconfirmed"
+					: assessmentForDisplay.billing_ref
+			}}
+		</p>
+		<div style="font-size: 0.5rem">
+			<span style="display: block">Plateau State Internal Revenue Service</span>
+			<span style="display: block">Bank Road, Jos</span>
+			<div
+				style="display: inline-block; width: 140px; border: 0.1px solid #000"
+			></div>
+		</div>
+	</div>
+	<div style="height: 7rem"></div>
+	<div class="modal-body">
+		<div class="col-md-12">
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>MDA</td>
+						<td>PLATEAU STATE INTERNAL REVENUE SERVICE</td>
+					</tr>
+					<tr>
+						<td>Tax Item</td>
+						<td class="font-weight-bold text-success">PAYE</td>
+					</tr>
+					<tr>
+						<td>Period</td>
+						<td class="font-weight-bold text-success">
+							{{ assessmentForDisplay.period_from }} -
+							{{ assessmentForDisplay.period_to || "Not Available" }}
+						</td>
+					</tr>
+					<tr>
+						<td>Payer Name</td>
+						<td>
+							{{
+								assessmentForDisplay.payer_name ||
+									assessmentForDisplay.organization_name
+							}}
+						</td>
+					</tr>
+					<tr>
+						<td>Payment Channel</td>
+						<td>
+							{{ assessmentForDisplay.payment_channel }}
+						</td>
+					</tr>
+
+					<!-- <tr>
+              <td>PAYE Payable</td>
+              <td>NGN{{ formatNumber(bulkAssessmentTotal) }}</td>
+            </tr> -->
+
+					<tr>
+						<td>TIN</td>
+						<td>
+							{{ assessmentForDisplay.payer_tin }}
+						</td>
+					</tr>
+					<tr>
+						<td>Amount</td>
+						<td>{{ formatNumber(getTotalTax()) }}</td>
+					</tr>
+					<tr>
+						<td>Billing Ref</td>
+						<td>
+							{{ assessmentForDisplay.billing_ref }}
+						</td>
+					</tr>
+
+					<tr>
+						<td>Date Paid</td>
+						<td>
+							{{
+								assessmentForDisplay.payment_date == null
+									? "N/A"
+									: parsePhpDate(assessmentForDisplay.payment_date)
+							}}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<qrcode
+				style="text-align: right"
+				[qrdata]="myAngularxQrCode"
+				[width]="90"
+				[errorCorrectionLevel]="'M'"
+			></qrcode>
+			<p style="font-size: 0.7rem">
+				Valid till 31st Dec, {{ assessmentForDisplay.yearOfExpiry }}
+			</p>
+		</div>
+	</div>
+</div>

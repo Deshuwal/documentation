@@ -1,0 +1,1668 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  MdaBulkComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboad-default</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./mda-bulk.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./mda-bulk.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#chartLineOption1" >chartLineOption1</a>
+                            </li>
+                            <li>
+                                <a href="#chartLineOption2" >chartLineOption2</a>
+                            </li>
+                            <li>
+                                <a href="#chartLineOption3" >chartLineOption3</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#done" >done</a>
+                            </li>
+                            <li>
+                                <a href="#exceltoJson" >exceltoJson</a>
+                            </li>
+                            <li>
+                                <a href="#file" >file</a>
+                            </li>
+                            <li>
+                                <a href="#isExcelFile" >isExcelFile</a>
+                            </li>
+                            <li>
+                                <a href="#keys" >keys</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#mdaForm" >mdaForm</a>
+                            </li>
+                            <li>
+                                <a href="#mdas" >mdas</a>
+                            </li>
+                            <li>
+                                <a href="#salesChartBar" >salesChartBar</a>
+                            </li>
+                            <li>
+                                <a href="#salesChartPie" >salesChartPie</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile" >userProfile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#checkfile" >checkfile</a>
+                            </li>
+                            <li>
+                                <a href="#clickLink" >clickLink</a>
+                            </li>
+                            <li>
+                                <a href="#convertToSlug" >convertToSlug</a>
+                            </li>
+                            <li>
+                                <a href="#fileChanged" >fileChanged</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#submit" >submit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, toastrService: ToastrService, dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastrService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="checkfile"></a>
+                    <span class="name">
+                        <span ><b>checkfile</b></span>
+                        <a href="#checkfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>checkfile(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="347"
+                            class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:347</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clickLink"></a>
+                    <span class="name">
+                        <span ><b>clickLink</b></span>
+                        <a href="#clickLink"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clickLink(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="361"
+                            class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:361</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="convertToSlug"></a>
+                    <span class="name">
+                        <span ><b>convertToSlug</b></span>
+                        <a href="#convertToSlug"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>convertToSlug(slug)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="254"
+                            class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:254</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>slug</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fileChanged"></a>
+                    <span class="name">
+                        <span ><b>fileChanged</b></span>
+                        <a href="#fileChanged"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fileChanged(e)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="250"
+                            class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:250</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>e</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submit"></a>
+                    <span class="name">
+                        <span ><b>submit</b></span>
+                        <a href="#submit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submit(file)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="273"
+                            class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:273</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>file</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="chartLineOption1"></a>
+                    <span class="name">
+                        <span ><b>chartLineOption1</b></span>
+                        <a href="#chartLineOption1"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EChartOption</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:20</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="chartLineOption2"></a>
+                    <span class="name">
+                        <span ><b>chartLineOption2</b></span>
+                        <a href="#chartLineOption2"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EChartOption</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:21</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="chartLineOption3"></a>
+                    <span class="name">
+                        <span ><b>chartLineOption3</b></span>
+                        <a href="#chartLineOption3"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EChartOption</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="done"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>done</b></span>
+                        <a href="#done"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exceltoJson"></a>
+                    <span class="name">
+                        <span ><b>exceltoJson</b></span>
+                        <a href="#exceltoJson"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="268" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:268</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="file"></a>
+                    <span class="name">
+                        <span ><b>file</b></span>
+                        <a href="#file"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="248" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:248</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isExcelFile"></a>
+                    <span class="name">
+                        <span ><b>isExcelFile</b></span>
+                        <a href="#isExcelFile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="269" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:269</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="keys"></a>
+                    <span class="name">
+                        <span ><b>keys</b></span>
+                        <a href="#keys"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="270" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:270</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdaForm"></a>
+                    <span class="name">
+                        <span ><b>mdaForm</b></span>
+                        <a href="#mdaForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdas"></a>
+                    <span class="name">
+                        <span ><b>mdas</b></span>
+                        <a href="#mdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="salesChartBar"></a>
+                    <span class="name">
+                        <span ><b>salesChartBar</b></span>
+                        <a href="#salesChartBar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EChartOption</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="salesChartPie"></a>
+                    <span class="name">
+                        <span ><b>salesChartPie</b></span>
+                        <a href="#salesChartPie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EChartOption</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <span ><b>userProfile</b></span>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/views/mda-admin/mda-bulk/mda-bulk.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { EChartOption } from &#x27;echarts&#x27;;
+import { echartStyles } from &#x27;../../../shared/echart-styles&#x27;;
+
+import { LocalStoreService } from &quot;../../../shared/services/local-store.service&quot;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+
+import { SharedAnimations } from &#x27;src/app/shared/animations/shared-animations&#x27;;
+import * as XLSX from &#x27;xlsx&#x27;;
+import { FormGroup, FormBuilder, Validators, FormControl } from &#x27;@angular/forms&#x27;;
+import { HttpService } from &#x27;src/app/shared/services/http.service&#x27;; 
+import { BreadcrumbService } from &#x27;src/app/shared/services/breadcrumb.service&#x27;;
+@Component({
+	selector: &#x27;app-dashboad-default&#x27;,
+	templateUrl: &#x27;./mda-bulk.component.html&#x27;,
+    styleUrls: [&#x27;./mda-bulk.component.scss&#x27;], 
+     animations: [SharedAnimations]
+})
+export class MdaBulkComponent implements OnInit {
+	chartLineOption1: EChartOption;
+	chartLineOption2: EChartOption;
+	chartLineOption3: EChartOption;
+    salesChartBar: EChartOption;
+
+    public done:boolean &#x3D; false;
+
+    public loading:boolean &#x3D; false;
+    salesChartPie: EChartOption;
+
+    userProfile:any;
+    mdas: any;
+    mdaForm: FormGroup;
+
+	constructor(
+        private localStore:LocalStoreService, 
+        private toastrService: ToastrService,
+        private dl: HttpService,
+        private fb: FormBuilder,
+        private breadcrumb: BreadcrumbService
+    ) { }
+
+	ngOnInit() {
+
+        let profile &#x3D; this.localStore.getItem(&quot;user&quot;);
+        this.userProfile &#x3D; profile;
+
+        console.log(&quot;retrievied profile&quot;, profile);
+
+        this.breadcrumb.setCrumbItem(&#x27;setupMdaBulk&#x27;);
+
+
+		this.chartLineOption1 &#x3D; {
+			...echartStyles.lineFullWidth, ...{
+				series: [{
+					data: [30, 40, 20, 50, 40, 80, 90],
+					...echartStyles.smoothLine,
+					markArea: {
+						label: {
+							show: true
+						}
+					},
+					areaStyle: {
+						color: &#x27;rgba(102, 51, 153, .2)&#x27;,
+						origin: &#x27;start&#x27;
+					},
+					lineStyle: {
+						color: &#x27;#663399&#x27;,
+					},
+					itemStyle: {
+						color: &#x27;#663399&#x27;
+					}
+				}]
+			}
+		};
+		this.chartLineOption2 &#x3D; {
+			...echartStyles.lineFullWidth, ...{
+				series: [{
+					data: [30, 10, 40, 10, 40, 20, 90],
+					...echartStyles.smoothLine,
+					markArea: {
+						label: {
+							show: true
+						}
+					},
+					areaStyle: {
+						color: &#x27;rgba(255, 193, 7, 0.2)&#x27;,
+						origin: &#x27;start&#x27;
+					},
+					lineStyle: {
+						color: &#x27;#FFC107&#x27;
+					},
+					itemStyle: {
+						color: &#x27;#FFC107&#x27;
+					}
+				}]
+			}
+		};
+		this.chartLineOption2.xAxis.data &#x3D; [&#x27;Mon&#x27;, &#x27;Tue&#x27;, &#x27;Wed&#x27;, &#x27;Thu&#x27;, &#x27;Fri&#x27;, &#x27;Sat&#x27;, &#x27;Sun&#x27;];
+
+		this.chartLineOption3 &#x3D; {
+			...echartStyles.lineNoAxis, ...{
+				series: [{
+					data: [40, 80, 20, 90, 30, 80, 40, 90, 20, 80, 30, 45, 50, 110, 90, 145, 120, 135, 120, 140],
+					lineStyle: {
+						color: &#x27;rgba(102, 51, 153, 0.86)&#x27;,
+						width: 3,
+						...echartStyles.lineShadow
+					},
+					label: { show: true, color: &#x27;#212121&#x27; },
+					type: &#x27;line&#x27;,
+					smooth: true,
+					itemStyle: {
+						borderColor: &#x27;rgba(102, 51, 153, 1)&#x27;
+					}
+				}]
+			}
+		};
+		// this.chartLineOption3.xAxis.data &#x3D; [&#x27;1&#x27;, &#x27;2&#x27;, &#x27;3&#x27;, &#x27;Thu&#x27;, &#x27;Fri&#x27;, &#x27;Sat&#x27;, &#x27;Sun&#x27;];
+        this.salesChartBar &#x3D; {
+            legend: {
+                borderRadius: 0,
+                orient: &#x27;horizontal&#x27;,
+                x: &#x27;right&#x27;,
+                data: [&#x27;Online&#x27;, &#x27;Offline&#x27;]
+            },
+            grid: {
+                left: &#x27;8px&#x27;,
+                right: &#x27;8px&#x27;,
+                bottom: &#x27;0&#x27;,
+                containLabel: true
+            },
+            tooltip: {
+                show: true,
+                backgroundColor: &#x27;rgba(0, 0, 0, .8)&#x27;
+            },
+            xAxis: [{
+                type: &#x27;category&#x27;,
+                data: [&#x27;Jan&#x27;, &#x27;Feb&#x27;, &#x27;Mar&#x27;, &#x27;Apr&#x27;, &#x27;May&#x27;, &#x27;Jun&#x27;, &#x27;Jul&#x27;, &#x27;Aug&#x27;, &#x27;Sept&#x27;, &#x27;Oct&#x27;, &#x27;Nov&#x27;, &#x27;Dec&#x27;],
+                axisTick: {
+                    alignWithLabel: true
+                },
+                splitLine: {
+                    show: false
+                },
+                axisLine: {
+                    show: true
+                }
+            }],
+            yAxis: [{
+                    type: &#x27;value&#x27;,
+                    axisLabel: {
+                        formatter: &#x27;${value}&#x27;
+                    },
+                    min: 0,
+                    max: 100000,
+                    interval: 25000,
+                    axisLine: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: true,
+                        interval: &#x27;auto&#x27;
+                    }
+                }
+
+            ],
+
+            series: [{
+                    name: &#x27;Online&#x27;,
+                    data: [35000, 69000, 22500, 60000, 50000, 50000, 30000, 80000, 70000, 60000, 20000, 30005],
+                    label: { show: false, color: &#x27;#0168c1&#x27; },
+                    type: &#x27;bar&#x27;,
+                    barGap: 0,
+                    color: &#x27;#bcbbdd&#x27;,
+                    smooth: true,
+
+                },
+                {
+                    name: &#x27;Offline&#x27;,
+                    data: [45000, 82000, 35000, 93000, 71000, 89000, 49000, 91000, 80200, 86000, 35000, 40050],
+                    label: { show: false, color: &#x27;#639&#x27; },
+                    type: &#x27;bar&#x27;,
+                    color: &#x27;#7569b3&#x27;,
+                    smooth: true
+                }
+
+            ]
+        };
+
+        this.salesChartPie &#x3D; {
+            color: [&#x27;#62549c&#x27;, &#x27;#7566b5&#x27;, &#x27;#7d6cbb&#x27;, &#x27;#8877bd&#x27;, &#x27;#9181bd&#x27;, &#x27;#6957af&#x27;],
+            tooltip: {
+                show: true,
+                backgroundColor: &#x27;rgba(0, 0, 0, .8)&#x27;
+            },
+
+            xAxis: [{
+                    axisLine: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: false
+                    }
+                }
+
+            ],
+            yAxis: [{
+                    axisLine: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: false
+                    }
+                }
+            ],
+            series: [{
+                    name: &#x27;Sales by Country&#x27;,
+                    type: &#x27;pie&#x27;,
+                    radius: &#x27;75%&#x27;,
+                    center: [&#x27;50%&#x27;, &#x27;50%&#x27;],
+                    data: [
+                        { value: 535, name: &#x27;USA&#x27; },
+                        { value: 310, name: &#x27;Brazil&#x27; },
+                        { value: 234, name: &#x27;France&#x27; },
+                        { value: 155, name: &#x27;Germany&#x27; },
+                        { value: 130, name: &#x27;UK&#x27; },
+                        { value: 348, name: &#x27;India&#x27; }
+                    ],
+                    itemStyle: {
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowOffsetX: 0,
+                            shadowColor: &#x27;rgba(0, 0, 0, 0.5)&#x27;
+                        }
+                    }
+                }
+            ]
+        };
+
+        this.mdaForm &#x3D; this.fb.group({
+			id: [&#x27;&#x27;],
+			title: [&#x27;&#x27;, Validators.required],
+			reg_number: [&#x27;&#x27;],
+			slug: [&#x27;&#x27;]
+		});
+    }
+
+    file:any;
+
+    fileChanged(e) {
+        this.file &#x3D; e.target.files[0];
+    }
+
+    convertToSlug(slug){
+        if(slug) {
+            return slug.trim()                      // remove whitespaces at the start and end of string
+                .toLowerCase()              // COnvert to lower case
+                .replace(/^-+/g, &quot;&quot;)         // remove one or more dash at the start of the string
+                .replace(/[^\w-]+/g, &quot;-&quot;)    // convert any on-alphanumeric character to a dash
+                .replace(/-+/g, &quot;-&quot;)         // convert consecutive dashes to singular one
+                .replace(/-+$/g, &quot;&quot;);
+        } else {
+            return null;
+        }
+        
+    }
+
+    exceltoJson &#x3D; {};
+    isExcelFile: boolean;
+    keys: string[];
+    
+
+    submit(file){
+
+        let data;
+
+        this.isExcelFile &#x3D; !!this.file.name.match(/(.xls|.xlsx)/);
+
+        var select:any &#x3D; document.getElementById(&quot;input_select&quot;);
+        if(select.files.length &lt; 1){
+            this.toastrService.error(&quot;File not selected&quot;, &quot;Please select a file!&quot;, { timeOut: 5000, closeButton: true, progressBar: true }); 
+            return;
+        }
+
+        if(!this.checkfile(&quot;input_select&quot;)){
+            this.toastrService.error(&quot;Invalid file&quot;, &quot;Please select an excel file!&quot;, { timeOut: 5000, closeButton: true, progressBar: true }); 
+            return;
+        }
+
+        this.loading &#x3D; true;
+
+        if (this.isExcelFile) {
+            
+            const reader: FileReader &#x3D; new FileReader();
+            reader.onload &#x3D; (e: any) &#x3D;&gt; {
+                /* read workbook */
+                const bstr: string &#x3D; e.target.result;
+                const wb: XLSX.WorkBook &#x3D; XLSX.read(bstr, { type: &#x27;binary&#x27; });
+      
+                /* grab first sheet */
+                const wsname: string &#x3D; wb.SheetNames[0];
+                const ws: XLSX.WorkSheet &#x3D; wb.Sheets[wsname];
+      
+                /* save data */
+                data &#x3D; XLSX.utils.sheet_to_json(ws);
+                let title &#x3D; &quot;NAME&quot;;
+                let slug &#x3D; &quot;SLUG&quot;;            
+
+                for (let item of data) {
+                    let mdasToSave &#x3D;         {
+                        &#x27;title&#x27; : item[title],
+                        &#x27;slug&#x27; : this.convertToSlug(item[slug])
+                    }
+                    
+                    console.log(&#x27;Rules to Save&#x27;, mdasToSave);
+                    this.dl.doPost(&quot;mdas/save&quot;, mdasToSave).subscribe((res)&#x3D;&gt;{ 
+                        console.log(&quot;result saving&quot;, res);
+                    }, error &#x3D;&gt; {
+                        this.loading &#x3D; false;
+                        console.log(&quot;error saving tax item&quot;, error);
+                    });                    
+                }
+                console.log(&#x27;loadef file&#x27;, data);
+            };
+      
+            reader.readAsBinaryString(this.file);
+      
+            reader.onloadend &#x3D; (e) &#x3D;&gt; {
+                this.loading &#x3D; false;
+            }
+            
+        } else {
+            this.toastrService.error(&quot;Invalid file&quot;, &quot;Please select an excel file!&quot;, { timeOut: 5000, closeButton: true, progressBar: true }); 
+        }
+
+        setInterval(()&#x3D;&gt;{
+
+               // you have a file
+                this.loading &#x3D; false; 
+                this.done &#x3D; true;   
+                this.toastrService.success(&quot;Successful&quot;, &quot;Please download result&quot;, { timeOut: 5000, closeButton: true, progressBar: true }); 
+                return;
+
+        }, 20000);
+    }
+
+    checkfile(id:any) {
+
+       let sender:any &#x3D; document.getElementById(id);
+
+        var validExts &#x3D; new Array(&quot;.xlsx&quot;, &quot;.xls&quot;);
+        var fileExt &#x3D; sender.value;
+        fileExt &#x3D; fileExt.substring(fileExt.lastIndexOf(&#x27;.&#x27;));
+        if (validExts.indexOf(fileExt) &lt; 0) { 
+            return false;
+        }
+        else return true;
+    }
+
+
+    clickLink(id:string) { 
+        
+    }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;&quot;&gt;
+  &lt;!-- &lt;div class&#x3D;&quot;breadcrumb&quot;&gt;
+    &lt;h1&gt;
+      Welcome, {{ userProfile.title }} {{ userProfile.first_name }}
+      {{ userProfile.surname }}
+    &lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Bulk MDA Upload&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;PSIRS Online Platform&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt; --&gt;
+  &lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+
+  &lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+  &lt;div class&#x3D;&quot;row&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-3&quot;&gt;&lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+      &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+      &lt;br /&gt;
+      &lt;span&gt;Processing Sheets...&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;done&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+      &lt;p&gt;Bulk MDA processed successfully&lt;/p&gt;
+      &lt;a href&#x3D;&quot;assets/sample_bulk_mda.xlsx&quot; class&#x3D;&quot;btn btn-success&quot;&gt;
+        Download Result
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div
+      *ngIf&#x3D;&quot;!loading &amp;&amp; !done&quot;
+      class&#x3D;&quot;col-lg-6 col-sm-12&quot;
+      [@animate]&#x3D;&quot;{
+        value: &#x27;*&#x27;,
+        params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+      }&quot;
+    &gt;
+      &lt;div class&#x3D;&quot;card mb-4&quot;&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+          &lt;div class&#x3D;&quot;col-lg-12 col-md-12&quot;&gt;
+            &lt;h5 class&#x3D;&quot;card-title m-0 p-3&quot;&gt;
+              Upload Bulk MDA data according to the excel template below
+            &lt;/h5&gt;
+            &lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;margin: 2%&quot;&gt;
+              &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+                &lt;div class&#x3D;&quot;mb-5&quot;&gt;
+                  &lt;div class&#x3D;&quot;&quot;&gt;
+                    &lt;div&gt;
+                      &lt;div class&#x3D;&quot;row&quot;&gt;
+                        &lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+                          &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                            &lt;a
+                              href&#x3D;&quot;assets/sample_bulk_mda.xlsx&quot;
+                              class&#x3D;&quot;btn btn-primary&quot;
+                            &gt;
+                              Download Template
+                            &lt;/a&gt;
+                          &lt;/div&gt;
+                          &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                            &lt;label for&#x3D;&quot;input_select&quot;
+                              &gt;Select Bulk MDA File (Excel Format)
+                            &lt;/label&gt;
+                            &lt;input
+                              type&#x3D;&quot;file&quot;
+                              id&#x3D;&quot;input_select&quot;
+                              accept&#x3D;&quot;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel&quot;
+                              class&#x3D;&quot;form-control&quot;
+                              (change)&#x3D;&quot;fileChanged($event)&quot;
+                            /&gt;
+                          &lt;/div&gt;
+                          &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                            &lt;button
+                              class&#x3D;&quot;btn btn-danger btn-submit&quot;
+                              (click)&#x3D;&quot;submit()&quot;
+                            &gt;
+                              Upload &amp; Process
+                            &lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./mda-bulk.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="">  <!-- <div class="breadcrumb">    <h1>      Welcome, {{ userProfile.title }} {{ userProfile.first_name }}      {{ userProfile.surname }}    </h1>    <ul>      <li><a href="">Bulk MDA Upload</a></li>      <li>PSIRS Online Platform</li>    </ul>  </div> -->  <app-breadcrumb></app-breadcrumb>  <div class="separator-breadcrumb border-top"></div>  <div class="row">    <div class="col-lg-3"></div>    <div *ngIf="loading" class="col-md-12 text-center">      <div class="spinner spinner-primary mr-3"></div>      <br />      <span>Processing Sheets...</span>    </div>    <div *ngIf="done" class="col-md-12 text-center">      <p>Bulk MDA processed successfully</p>      <a href="assets/sample_bulk_mda.xlsx" class="btn btn-success">        Download Result      </a>    </div>    <div      *ngIf="!loading && !done"      class="col-lg-6 col-sm-12"      [@animate]="{        value: \'*\',        params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }      }"    >      <div class="card mb-4">        <div class="card-body">          <div class="col-lg-12 col-md-12">            <h5 class="card-title m-0 p-3">              Upload Bulk MDA data according to the excel template below            </h5>            <div class="row" style="margin: 2%">              <div class="col-md-12">                <div class="mb-5">                  <div class="">                    <div>                      <div class="row">                        <div class="col-sm-3"></div>                        <div class="col-sm-8 row">                          <div class="col-md-9 form-group mb-3">                            <a                              href="assets/sample_bulk_mda.xlsx"                              class="btn btn-primary"                            >                              Download Template                            </a>                          </div>                          <div class="col-md-9 form-group mb-3">                            <label for="input_select"                              >Select Bulk MDA File (Excel Format)                            </label>                            <input                              type="file"                              id="input_select"                              accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"                              class="form-control"                              (change)="fileChanged($event)"                            />                          </div>                          <div class="col-md-9 form-group mb-3">                            <button                              class="btn btn-danger btn-submit"                              (click)="submit()"                            >                              Upload & Process                            </button>                          </div>                          <div class="col-sm-7"></div>                        </div>                        <div class="col-sm-1"></div>                      </div>                    </div>                  </div>                </div>              </div>            </div>          </div>        </div>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'MdaBulkComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MdaBulkComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

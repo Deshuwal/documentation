@@ -1,0 +1,35 @@
+version: 0.2
+phases:
+  install:
+    commands: 
+    -   rm /usr/local/bin/node 
+    -   apt install ca-certificates
+    -   touch /etc/apt/apt.conf.d/99verify-peer.conf && echo >>/etc/apt/apt.conf.d/99verify-peer.conf "Acquire { https::Verify-Peer false }"
+    -   apt-get -y purge --auto-remove nodejs  
+    -   echo Installing node version 14
+    -   curl http://deb.nodesource.com/setup_14.x | bash -
+    #-  curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+    -   apt install -y nodejs 
+    -   node -v
+
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install dotenv --save-dev
+      - npm install
+      - npm install -g @angular/cli
+
+  build:
+    commands:
+      - echo Build started on `date`
+      # - npm run build 
+      - node node_modules/@angular/cli/bin/ng build --prod
+      
+  post_build:
+    commands:  
+
+artifacts:
+    files:
+        - '**/*'
+    discard-paths: no
+    base-directory: dist

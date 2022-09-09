@@ -1,0 +1,142 @@
+<!-- <div class="breadcrumb">
+  <h1>Setup</h1>
+  <ul>
+    <li><a href="">Titles</a></li>
+  </ul>
+</div> -->
+
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row" *ngIf="editMode">
+	<div class="col-lg-6 col-md-6"></div>
+</div>
+
+<div class="row mb-3">
+	<div class="col-md-12 mb-3">
+		<a
+			class="btn btn-primary float-right"
+			style="color: white !important"
+			(click)="add()"
+			>Add Occupation</a
+		>
+	</div>
+	<div *ngIf="loading" class="col-md-12 text-center">
+		<div class="spinner spinner-primary mr-3"></div>
+	</div>
+
+	<div
+		class="col-md-12"
+		*ngIf="!loading"
+		[@animate]="{
+			value: '*',
+			params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+		}"
+	>
+		<div class="card o-hidden">
+			<ngx-datatable
+				*ngIf="occupations?.length"
+				style="box-shadow: none"
+				class="material fullscreen"
+				[style.height]="60 * occupations.length + 60 + 'px'"
+				[columnMode]="'force'"
+				[headerHeight]="50"
+				[footerHeight]="0"
+				[rowHeight]="60"
+				[scrollbarH]="true"
+				[rows]="occupations"
+			>
+				<ngx-datatable-column name="photo">
+					<ng-template ngx-datatable-header-template> Id </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.id }}
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column name="photo">
+					<ng-template ngx-datatable-header-template> Name </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.name }}
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column name="photo">
+					<ng-template ngx-datatable-header-template> Action </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						<div>
+							<a
+								style="
+									color: white !important;
+									margin-right: 6px;
+									display: inline-block;
+								"
+								class="btn btn-primary"
+								>Edit</a
+							>
+							<a class="btn btn-primary" style="color: white !important"
+								>Delete</a
+							>
+						</div>
+					</ng-template>
+				</ngx-datatable-column>
+			</ngx-datatable>
+		</div>
+	</div>
+</div>
+
+<ng-template #modalCreate let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-title">Create Title</h4>
+		<button
+			type="button"
+			class="close"
+			aria-label="Close button"
+			aria-describedby="modal-title"
+			(click)="modal.dismiss('Cross click')"
+		>
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<form [formGroup]="taxItemForm" (ngSubmit)="save()" *ngIf="!loading">
+		<div class="modal-body">
+			<div *ngIf="loading" class="col-md-12 text-center">
+				<div class="spinner spinner-primary mr-3"></div>
+			</div>
+
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-8 row">
+						<div class="col-md-9 form-group mb-3">
+							<label for="name">Name</label>
+
+							<input
+								class="form-control"
+								formControlName="name"
+								placeholder="title"
+							/>
+						</div>
+						<div class="col-sm-7"></div>
+					</div>
+					<div class="col-sm-1"></div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="submit" class="btn btn-outline-secondary btn-rounded">
+				Save
+			</button>
+		</div>
+	</form>
+</ng-template>

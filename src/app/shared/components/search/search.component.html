@@ -1,0 +1,22 @@
+<div class="search-ui rtl-ps-none" perfectScrollbar [@animate]="{value:'*',params:{y:'120px',opacity:'0',delay:'100ms', duration: '400ms'}}">
+	<div class="search-header">
+		<img src="./assets/images/logo.png" alt="" class="logo">
+		<button class="btn btn-icon bg-transparent float-right mt-2" (click)="searchService.searchOpen = false">
+			<i class="i-Close-Window text-22 text-muted"></i>
+		</button>
+	</div>
+
+	<input type="text" placeholder="Type here" class="search-input" [formControl]="searchCtrl" autofocus>
+
+	<div class="search-title">
+		<span class="text-muted">Search results</span>
+	</div>
+
+	<div class="search-results list-horizontal">
+		 
+	</div>
+	<!-- PAGINATION CONTROL -->
+	<div class="col-md-12 mt-3" *ngIf="results$ | async">
+		<pagination-controls (pageChange)="page = $event" previousLabel="" nextLabel=""></pagination-controls>
+	</div>
+</div>

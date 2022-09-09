@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "http://localhost/psirs-portal-original/index.php/",
+    "secure": false
+  }
+}

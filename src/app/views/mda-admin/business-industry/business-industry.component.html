@@ -1,0 +1,31 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="card" style="padding: 20px 30px">
+  <form [formGroup]="addBusinessIndustryForm">
+    <div class="row">
+      
+      <div class="mb-2 col-md-12 form-group mb-3">
+        <label for="basic-url" class="form-label">Name of Business Industry *</label>
+        <input
+          formControlName="name"
+          type="text"
+          class="form-control"
+          placeholder="Enter Name of Industry"
+          name="name"
+          aria-label="name"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="saveBusinessIndustry()"
+  >
+    {{ addUserLoading ? "Saving Industry ..." : "Save Business Industry" }}
+  </button>
+</div>

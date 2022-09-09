@@ -1,0 +1,164 @@
+<app-breadcrumb></app-breadcrumb>
+<div *ngIf="loading" class="col-md-12 text-center">
+	<div class="spinner spinner-primary mr-3"></div>
+</div>
+
+<h1 *ngIf="tcc.payments == null || tcc.payments.length < 1">
+	TCC is not available as payment was not made!
+</h1>
+
+<div
+	*ngIf="!loading && tcc.payments != null && tcc.payments.length > 0"
+	class="card bg-img"
+	style="padding: 20px 30px"
+>
+	<div style="max-width: 700px; height: 1450px" id="pdfTable" #pdfTable>
+		<div class="card-body">
+			<div style="display: flex; justify-content: space-between; float:right;">
+				<div style="text-align:right" >
+					<p>Certificate Number</p>
+					<div style="border: 0.6px solid black; padding: 2px 33px">
+						<p>{{ tcc.id }}</p>
+					</div>
+				</div>
+			</div>
+			<div style="text-align: center" style="margin-bottom:35%;">
+				<h2 style="font-weight: bold; color: #307f96; font-size: 33px"></h2>
+				<p style="font-weight: bold; color: #307f96; font-size: 23px"></p>
+				<p style="font-weight: bold; padding: 9px 16px; background-color: #fff; display: inline-block; font-size: 25px; color: #fff;">
+					INCOME TAX CLEARANCE CERTIFICATE
+				</p>
+			</div> 
+			<div class="separator-breadcrumb border-top"></div>
+			<div class="tccHeaders">
+				<p class="textRight">Name</p>
+				<p class="textLeft">{{ tcc.rank }} {{ " " + tcc.full_name }}</p>
+			</div>
+			<div class="tccHeaders">
+				<p class="textRight">Email</p>
+				<p class="textLeft">{{ tcc.email }}</p>
+			</div>
+			<div class="tccHeaders">
+				<p class="textRight">Address</p>
+				<p class="textLeft">{{ tcc.address }}</p>
+			</div>
+			<div class="tccHeaders">
+				<p class="textRight">TIN</p>
+				<p class="textLeft">{{ tcc.tin }}</p>
+			</div>
+			<div class="tccHeaders">
+				<p class="textRight">Sector</p>
+				<p class="textLeft">{{ tcc.sector }}</p>
+			</div>
+			<p>
+				This is to certify that {{ tcc.name }} with Tax Identification Nunmber
+				{{ tcc.tin }} has settled his/her tax assessment for the following
+				{{ tcc.payments.length }}
+				year(s) for the specified source of income
+			</p>
+			<h3>Details of Assessment</h3>
+			<table
+				class="table"
+				*ngIf="tcc.payments != null && tcc.payments.length > 0"
+			>
+				<tr>
+					<th>Year</th>
+					<th>Total Income</th>
+					<th>Taxable Income</th>
+					<th>Tax Paid</th>
+					<th>Receipt</th>
+				</tr>
+				<tbody>
+					<tr *ngFor="let payment of tcc.payments">
+						<td class="font-weight-bold">{{ payment.year }}</td>
+						<td class="font-weight-bold">
+							{{ payment.total_income | configureCurrency }}
+						</td>
+						<td class="font-weight-bold">
+							{{ payment.chargeable_income | configureCurrency }}
+						</td>
+						
+						<td class="font-weight-bold">
+							{{ payment.tax_paid | configureCurrency }}
+						</td>
+						<td class="font-weight-bold">
+							{{ payment.receipt_no }}
+						</td>
+					</tr>
+					<tr>
+						<td class="font-weight-bold">Source of Income</td>
+						<td colspan="4" class="font-weight-bold">
+							{{ tcc.income_source }}
+						</td>
+					</tr>
+					<tr>
+						<td class="font-weight-bold">Expiry Date</td>
+						<td colspan="4" class="font-weight-bold">{{ tcc.expiry_date | date }}</td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+			<br />
+
+			<p style="font-weight: bold">Offical date and stamp</p>
+
+			<div class="tccHeaders">
+				
+				<p>Sign............... Date: ...............</p>
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				&nbsp;
+				<p>Sign............... Date: ...............</p>
+				
+			</div>
+
+			<p>
+				<span class="capitalise">{{ inWords(tcc.payments.length) }}</span>
+				year(s) copies of Offical receipts
+				<span style="font-weight: bold">MUST</span> be attached to this
+				cerificate to make it valid <br>
+
+				
+			</p>
+
+			
+			
+		</div>
+		
+	</div>
+	<div style="text-align: end">
+		<button
+			style="position: relative; z-index: 3"
+			class="btn btn-primary"
+			(click)="exportAsPDF('pdfTable')"
+		>
+			Download
+		</button>
+		<button
+			style="margin-left: 5px"
+			type="button"
+			class="btn btn-outline-secondary btn-rounded"
+			(click)="printPDFS('pdfTable')"
+		>
+			Print
+		</button>
+	</div>
+</div>

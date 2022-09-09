@@ -1,0 +1,1610 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#BusinessCategories" title="src/app/shared/constants/businesses.ts" ><b>BusinessCategories</b>&nbsp;&nbsp;&nbsp;(src/.../businesses.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#BusinessTypes" title="src/app/shared/constants/businesses.ts" ><b>BusinessTypes</b>&nbsp;&nbsp;&nbsp;(src/.../businesses.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#components" title="src/app/shared/components/shared-components.module.ts" ><b>components</b>&nbsp;&nbsp;&nbsp;(src/.../shared-components.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#components" title="src/app/shared/components/layouts/layouts.module.ts" ><b>components</b>&nbsp;&nbsp;&nbsp;(src/.../layouts.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#directives" title="src/app/shared/directives/shared-directives.module.ts" ><b>directives</b>&nbsp;&nbsp;&nbsp;(src/.../shared-directives.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.prod.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.prod.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#environment" title="src/environments/environment.ts" ><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#feather" title="src/app/shared/components/feather-icon/feather-icon.component.ts" ><b>feather</b>&nbsp;&nbsp;&nbsp;(src/.../feather-icon.component.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#pipes" title="src/app/shared/pipes/shared-pipes.module.ts" ><b>pipes</b>&nbsp;&nbsp;&nbsp;(src/.../shared-pipes.module.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#reusable" title="src/app/shared/animations/shared-animations.ts" ><b>reusable</b>&nbsp;&nbsp;&nbsp;(src/.../shared-animations.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RevenueHead" title="src/app/shared/constants/lgc-revenue.ts" ><b>RevenueHead</b>&nbsp;&nbsp;&nbsp;(src/.../lgc-revenue.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RevenueHeadSUB" title="src/app/shared/constants/lgc-revenue.ts" ><b>RevenueHeadSUB</b>&nbsp;&nbsp;&nbsp;(src/.../lgc-revenue.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#RoleHome" title="src/app/shared/models/role-home.ts" ><b>RoleHome</b>&nbsp;&nbsp;&nbsp;(src/.../role-home.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#SharedAnimations" title="src/app/shared/animations/shared-animations.ts" ><b>SharedAnimations</b>&nbsp;&nbsp;&nbsp;(src/.../shared-animations.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#UserPortal" title="src/app/shared/models/portal.ts" ><b>UserPortal</b>&nbsp;&nbsp;&nbsp;(src/.../portal.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/app/shared/constants/businesses.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="BusinessCategories"></a>
+                    <span class="name">
+                        <span ><b>BusinessCategories</b></span>
+                        <a href="#BusinessCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/IBusiness.html" target="_self" >IBusiness[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  {
+    type: BusinessCategory.MICRO,
+    description: &#x27;Micro (1-2 employees)&#x27;,
+  },
+  {
+    type: BusinessCategory.SMALL,
+    description: &#x27;Small (2-10 employees)&#x27;,
+  },
+  {
+    type: BusinessCategory.MEDIUM,
+    description: &#x27;Medium (10 employees and above)&#x27;,
+  },
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="BusinessTypes"></a>
+                    <span class="name">
+                        <span ><b>BusinessTypes</b></span>
+                        <a href="#BusinessTypes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>IBusinessType[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  {
+    key: 1,
+    description: &#x27;Boutiques and other cloth sellers- Adult and Children wear&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 25000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 2,
+    description: &#x27;Fabricating, Welding, Bench Milling, Black Smith, Gold Smith&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 30000
+    }
+  },
+  { 
+    key: 3,
+    description: &#x27;Confectioneries and Bakeries&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 30000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 4,
+    description: &#x27;Barbers and Hair Dressing Saloon&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 12000,
+      [BusinessCategory.MEDIUM]: 25000
+    }
+  },
+  {
+    key: 5,
+    description: &#x27;Service Providers - Business Centres and Typing Studio, Printers, Thrift Collector, Video Clubs, Car Wash and Owners, Casino Operators, Cyber Café Operators&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 6,
+    description: &#x27;Video Clubs, Car Wash and Owners, Casino Operators, Cyber Café Operators&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 5000,
+      [BusinessCategory.SMALL]: 25000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 7,
+    description: &#x27;Drama Group, Laundries, Dry Cleaners, Commercial Mobile Calls&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  {
+    key: 8,
+    description: &#x27;Photographers/Photo Developers, Recreational Centre, Refuse, Rentals, Travel Agency&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 20000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  {
+    key: 9,
+    description: &#x27;Artisans - Masons, Vulcanizers, Iron Benders, Carpenters, Cobblers, Painters and Decorators, Plumbers&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 10,
+    description: &#x27;Petrol, Kerosene and Lubricant Sellers&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 30000,
+      [BusinessCategory.MEDIUM]: 85000
+    }
+  },
+  { 
+    key: 11,
+    description: &#x27;Tailoring, Interior Decoration, Fashion  Designers and Garment Makers, Curtain Makers, Seamstress&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 12,
+    description: &#x27;Transport Workers- Taxi, Bus, lorry, etc.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 12000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 13,
+    description: &#x27;General Trading/Enterprises- Retail and Wholesale, Raw Food&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 10000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 14,
+    description: &#x27;Bookshops/Stationery Stores, Building Materials, Cement, Cooking  Gas, Air-conditioners, Mattress/Foams, Doors, Electrical Parts and Fittings.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 20000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 15,
+    description: &#x27;Furniture/Furnishing Material, Gas Refilling, General Contractor, General Merchants and Distributors. Gift Shop, Spare Parts, Patent Medicine, Photographic Materials, Plank, Plastic Rubbers, Plumbing Materials, Poultry Feeds, Raw Food, Rugs and Carpets, Sewing Machine.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 20000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 16,
+    description: &#x27;Spare Parts, Patent Medicine, Photographic Materials, Plank, Plastic Rubbers.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 17,
+    description: &#x27;Plumbing Materials, Poultry Feeds, Raw Food, Rugs andCarpets, Sewing Machine.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 18,
+    description: &#x27;Timber Dealers, Tire, Wine and Beer License Operators, Yoghurt.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 19,
+    description: &#x27;Financial Services - Bureau De Change, Pool Agents and Promoters, Money Lenders.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 10000,
+      [BusinessCategory.SMALL]: 50000,
+      [BusinessCategory.MEDIUM]: 100000
+    }
+  },
+  { 
+    key: 20,
+    description: &#x27;Furniture and Cabinet Makers.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 35000,
+      [BusinessCategory.MEDIUM]: 100000
+    }
+  },
+  { 
+    key: 21,
+    description: &#x27;Restaurant and Food Sellers.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 35000,
+      [BusinessCategory.MEDIUM]: 100000
+    }
+  },
+  { 
+    key: 22,
+    description: &#x27;Property-Guesthouse, Lodging, face to Face Building with not more than ten (10) rooms.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 50000,
+      [BusinessCategory.MEDIUM]: 90000
+    }
+  },
+  {
+    key: 23,
+    description: &#x27;Mechanics, Technicians, Electricians, Panel Beaters, Motorcycle, Bicycle, Keke NAPEP, Clock and Watch Repairers, and other Machine Repairers, Re-wires, Battery Chargers.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 24,
+    description: &#x27;Artisans, Design and Sign Writers, Hand Craft Makers Graphic, Arts.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 12000,
+      [BusinessCategory.MEDIUM]: 90000
+    }
+  },
+  {
+    key: 25,
+    description: &#x27;Professional Services - Opticians, Photo lab, Auctioneers. Draughtsman, Maternity Owners, Patent Medicine Store.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 30000,
+      [BusinessCategory.MEDIUM]: 85000
+    }
+  },
+  {
+    key: 26,
+    description: &#x27;Entertainment Service, Musicians.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 10000,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  { 
+    key: 27,
+    description: &#x27;Agriculture, Forestry, Fishing, Hunting, Butchers/Meat Sellers, Horticulture/Florist, Farm Settlers, Poultry, Piggery.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 15000,
+      [BusinessCategory.MEDIUM]: 50000
+    }
+  },
+  {
+    key: 28,
+    description: &#x27;Aluminum Fabrication and Products.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 30000,
+      [BusinessCategory.MEDIUM]: 75000
+    }
+  },
+  {
+    key: 29,
+    description: &#x27;Processors, Producers and Manufacturers - Blocks, Culvert. Well Ring, Pure Water, Welders, Shoe Makers, Cold Rooms, Palm Oil Miller, Grind Mills, Saw mill Proprietors.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 25000,
+      [BusinessCategory.MEDIUM]: 100000
+    }
+  },
+  {
+    key: 30,
+    description: &#x27;Transport Owners.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 30000,
+      [BusinessCategory.MEDIUM]: 85000
+    }
+  },
+  {
+    key: 31,
+    description: &#x27;All other trades/services covered by the Law but not listed above.&#x27;,
+    taxes: {
+      [BusinessCategory.MICRO]: 2500,
+      [BusinessCategory.SMALL]: 30000,
+      [BusinessCategory.MEDIUM]: 100000
+    }
+  }
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/components/shared-components.module.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="components"></a>
+                    <span class="name">
+                        <span ><b>components</b></span>
+                        <a href="#components"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+	BtnLoadingComponent,
+	FeatherIconComponent,
+	BreadcrumbComponent,
+	SearchIconComponent,
+	RecaptchaComponent,
+	TaxEnumerationCardComponent,
+	CreateDataCategoryCardComponent,
+	TestPaymentComponent,
+	PayeReceiptComponent,
+	DatatableScrollComponent
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/components/layouts/layouts.module.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="components"></a>
+                    <span class="name">
+                        <span ><b>components</b></span>
+                        <a href="#components"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  HeaderSidebarCompactComponent,
+  HeaderSidebarLargeComponent,
+  SidebarLargeComponent,
+  SidebarCompactComponent,
+  FooterComponent,
+  CustomizerComponent,
+  AdminLayoutSidebarLargeComponent,
+  AdminLayoutSidebarCompactComponent,
+  AuthLayoutComponent,
+  BlankLayoutComponent,
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/directives/shared-directives.module.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="directives"></a>
+                    <span class="name">
+                        <span ><b>directives</b></span>
+                        <a href="#directives"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  DropdownAnchorDirective,
+  DropdownLinkDirective,
+  AppDropdownDirective,
+  ScrollToDirective,
+  SidebarDirective,
+  SidebarContainerDirective,
+  SidebarContentDirective,
+  SidebarTogglerDirective,
+  HighlightjsDirective,
+  FullScreenWindowDirective
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/environments/environment.prod.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+   production: true,
+   API_BASE_URL_LOCAL: &quot;http://psirs-portal-original.test/&quot;,
+   API_BASE_URL_PROD: &quot;https://stagingbackend.psirs.gov.ng/&quot;,
+   API_BASE_URL_STAGING: &quot;http://test-psirs-backend-server.eu-west-2.elasticbeanstalk.com/&quot;,
+   API_BASE_URL_DEV: &quot;http://psirs-dev-server.eu-west-2.elasticbeanstalk.com/&quot;,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/environments/environment.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="environment"></a>
+                    <span class="name">
+                        <span ><b>environment</b></span>
+                        <a href="#environment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+   production: false,
+   API_BASE_URL_LOCAL: &quot;http://localhost:5001/&quot;,
+   API_BASE_URL_PROD: &quot;https://stagingbackend.psirs.gov.ng/&quot;,
+   API_BASE_URL_DEV: &quot;http://test-psirs-backend-server.eu-west-2.elasticbeanstalk.com/&quot;
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/components/feather-icon/feather-icon.component.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="feather"></a>
+                    <span class="name">
+                        <span ><b>feather</b></span>
+                        <a href="#feather"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/pipes/shared-pipes.module.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pipes"></a>
+                    <span class="name">
+                        <span ><b>pipes</b></span>
+                        <a href="#pipes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+  ExcerptPipe,
+  GetValueByKeyPipe,
+  RelativeTimePipe,
+  EmailAsteriskPipe,
+  ConvertDatePipe,
+  ConfigureCurrency,
+  ToNumberPipe,
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/animations/shared-animations.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reusable"></a>
+                    <span class="name">
+                        <span ><b>reusable</b></span>
+                        <a href="#reusable"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>animation([
+	style({
+		opacity: &#x27;{{opacity}}&#x27;,
+		transform: &#x27;scale({{scale}}) translate3d({{x}}, {{y}}, {{z}})&#x27;
+	}),
+	animate(&#x27;{{duration}} {{delay}} cubic-bezier(0.0, 0.0, 0.2, 1)&#x27;, style(&#x27;*&#x27;))
+], {
+		params: {
+			duration: &#x27;200ms&#x27;,
+			delay: &#x27;0ms&#x27;,
+			opacity: &#x27;0&#x27;,
+			scale: &#x27;1&#x27;,
+			x: &#x27;0&#x27;,
+			y: &#x27;0&#x27;,
+			z: &#x27;0&#x27;
+		}
+	})</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="SharedAnimations"></a>
+                    <span class="name">
+                        <span ><b>SharedAnimations</b></span>
+                        <a href="#SharedAnimations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+	trigger(&#x27;animate&#x27;, [transition(&#x27;void &#x3D;&gt; *&#x27;, [useAnimation(reusable)])]),
+
+trigger(&#x27;fadeInOut&#x27;, [
+	state(&#x27;0&#x27;, style({
+			opacity: 0,
+			display  : &#x27;none&#x27;
+	})),
+	state(&#x27;1&#x27;, style({
+			opacity: 1,
+			display  : &#x27;block&#x27;
+	})),
+	transition(&#x27;0 &#x3D;&gt; 1&#x27;, animate(&#x27;300ms&#x27;)),
+	transition(&#x27;1 &#x3D;&gt; 0&#x27;, animate(&#x27;300ms&#x27;))
+]),
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/constants/lgc-revenue.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="RevenueHead"></a>
+                    <span class="name">
+                        <span ><b>RevenueHead</b></span>
+                        <a href="#RevenueHead"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/ILGRevenueHeadC.html" target="_self" >ILGRevenueHeadC[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+	{
+		key: 10,
+
+		type: LGCRevenueHeadCategory.BICYCLE_RATE,
+		description: &quot;BICYCLE, TRUCK, CANOE, WHEELBARROW AND CART FEES&quot;,
+	},
+	{
+		key: 12,
+
+		type: LGCRevenueHeadCategory.CATTLE_LEVY,
+		description: &quot;CATTLE LEVY&quot;,
+	},
+	{
+		key: 15,
+
+		type: LGCRevenueHeadCategory.CONVENIENCE,
+		description:
+			&quot;PUBLIC CONVENIENCE, SEWAGE AND REFUSE DISPOSAL FEES AND BATHING HOUSE LICENSE&quot;,
+	},
+	{
+		key: 7,
+
+		type: LGCRevenueHeadCategory.CUSTOMARY_RITE,
+		description: &quot;CUSTOMARY RIGHT OF OCCUPANCY &quot;,
+	},
+	{
+		key: 11,
+
+		type: LGCRevenueHeadCategory.DOMESTIC_ANIMAL,
+		description: &quot;DOMESTIC ANIMAL LICENSE FEES &quot;,
+	},
+	{
+		key: 5,
+
+		type: LGCRevenueHeadCategory.FOOD_RATE,
+		description:
+			&quot;FOOD LICENSES PERMIT (FOR RESTAURANTS, BAKERIES AND OTHER PLACE WHERE FOOD IS SOLD&quot;,
+	},
+	{
+		key: 8,
+
+		type: LGCRevenueHeadCategory.MARKET,
+		description: &quot;MARKET RATES &amp;LEVIES &quot;,
+	},
+	{
+		key: 6,
+
+		type: LGCRevenueHeadCategory.MARRIAGE_RATE,
+		description: &quot;MARRIAGE, BIRTH AND DEATH REGISTRATION FEES&quot;,
+	},
+	{
+		key: 4,
+
+		type: LGCRevenueHeadCategory.MERRIMENT_RATE,
+		description: &quot;MERRIMENT AND ROAD CLOSURE LEVIES&quot;,
+	},
+	{
+		key: 9,
+
+		type: LGCRevenueHeadCategory.MOTOR_PARK,
+		description: &quot;MOTOR PARK LEVIES&quot;,
+	},
+
+	{
+		key: 13,
+
+		type: LGCRevenueHeadCategory.RELIGIOUS_PERMIT,
+		description: &quot;RELIGIOUS PLACES ESTABLISHMENT PERMIT FEES&quot;,
+	},
+	{
+		key: 1,
+
+		type: LGCRevenueHeadCategory.SHOP_RATE,
+		description: &quot;SHOP RATE &quot;,
+	},
+
+	{
+		key: 14,
+
+		type: LGCRevenueHeadCategory.SIGN_BORAD,
+		description: &quot;SIGN BOARD (SIGNAGE) AND ADVERT PERMIT FEES&quot;,
+	},
+	{
+		key: 3,
+
+		type: LGCRevenueHeadCategory.SLAUGHTER_RATE,
+		description: &quot;SLAUGHTER SLAB FEE&quot;,
+	},
+	{
+		key: 2,
+
+		type: LGCRevenueHeadCategory.TENEMENT_RATE,
+		description: &quot;TENEMENT RATES/GROUND RENT PRIVATE AND COMMERCIAL PROPERTY&quot;,
+	},
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="RevenueHeadSUB"></a>
+                    <span class="name">
+                        <span ><b>RevenueHeadSUB</b></span>
+                        <a href="#RevenueHeadSUB"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+	{
+		key: 1,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Shops - Large  (10sqm and above) &quot;,
+				type: {
+					urban: &quot;15000.00&quot;,
+					semi: &quot;10500.00&quot;,
+					rural: &quot;7500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Shops - Medium  (6sqm - 9.99sqm) &quot;,
+				type: {
+					urban: &quot;7500.00&quot;,
+					semi: &quot;5250.00&quot;,
+					rural: &quot;3750.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Shops Small  (5.99sqm and below) &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00&quot;,
+					rural: &quot;2500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Kiosk Rate &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00&quot;,
+					rural: &quot;2500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Container/Temporary Shop &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00&quot;,
+					rural: &quot;2500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD:
+					&quot;Workshop Permit for Artisans (Carpenters, Mechanic, Vulcanizers) &quot;,
+				type: {
+					urban: &quot;5000.00 &quot;,
+					semi: &quot;3500.00 &quot;,
+					rural: &quot;2500.00 &quot;,
+				},
+			},
+		],
+	},
+	{
+		key: 2,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Private - Big &quot;,
+				type: {
+					urban: &quot;10000.00&quot;,
+					semi: &quot;7000.00&quot;,
+					rural: &quot;5000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Private -  Medium   &quot;,
+				type: {
+					urban: &quot;7500.00&quot;,
+					semi: &quot;5250.00&quot;,
+					rural: &quot;3750.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Private -  Small   &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00&quot;,
+					rural: &quot;2500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Commercial - Big &quot;,
+				type: {
+					urban: &quot;500000.00&quot;,
+					semi: &quot;350000.00&quot;,
+					rural: &quot;250000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Commercial - Medium   &quot;,
+				type: {
+					urban: &quot;300000.00&quot;,
+					semi: &quot;210000.00&quot;,
+					rural: &quot;150000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Commercial - Small   &quot;,
+				type: {
+					urban: &quot;150000.00&quot;,
+					semi: &quot;105000.00&quot;,
+					rural: &quot;75000.00&quot;,
+				},
+			},
+		],
+	},
+	{
+		key: 3,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Abattoir License Fees &quot;,
+				type: {
+					urban: &quot;3000.00&quot;,
+					semi: &quot;2100.00 &quot;,
+					rural: &quot;1500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Cow/Camel Slaughter Per Head &quot;,
+				type: { urban: &quot;500&quot;, semi: &quot;350.00 &quot;, rural: &quot;250.00 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Goat/Sheep Slaughter Per Head &quot;,
+				type: { urban: &quot;200&quot;, semi: &quot;140.00 &quot;, rural: &quot;100.00 &quot; },
+			},
+		],
+	},
+	{
+		key: 4,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Entertainment Fees &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00&quot;,
+					rural: &quot;2500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Noise Control &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00&quot;,
+					rural: &quot;2500.00&quot;,
+				},
+			},
+		],
+	},
+	{
+		key: 5,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Large   &quot;,
+				type: {
+					urban: &quot;20000.00&quot;,
+					semi: &quot;14000.00&quot;,
+					rural: &quot;10000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Renewal Fee &quot;,
+				type: {
+					urban: &quot;10000.00&quot;,
+					semi: &quot;7000.00&quot;,
+					rural: &quot;5000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Medium &quot;,
+				type: {
+					urban: &quot;15000.00&quot;,
+					semi: &quot;10500.00&quot;,
+					rural: &quot;7500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Renewal Fee &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00&quot;,
+					rural: &quot;2500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Small &quot;,
+				type: {
+					urban: &quot;10000.00&quot;,
+					semi: &quot;7000.00&quot;,
+					rural: &quot;5000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Renewal Fee&quot;,
+				type: {
+					urban: &quot;2000.00&quot;,
+					semi: &quot;1400.00&quot;,
+					rural: &quot;1000.00&quot;,
+				},
+			},
+		],
+	},
+	{
+		key: 6,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Marriage Registration Fees  &quot;,
+				type: {
+					urban: &quot;5000&quot;,
+					semi: &quot;3500.00 &quot;,
+					rural: &quot;2500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Customary Marriage Fees &quot;,
+				type: {
+					urban: &quot;5000&quot;,
+					semi: &quot;3500.00 &quot;,
+					rural: &quot;2500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Marriage Certificates Fees &quot;,
+				type: {
+					urban: &quot;5000&quot;,
+					semi: &quot;3500.00 &quot;,
+					rural: &quot;2500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Birth Registration Fees  &quot;,
+				type: { urban: &quot;1000&quot;, semi: &quot;700.00 &quot;, rural: &quot;500.00 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Death Registration Certification Fees &quot;,
+				type: { urban: &quot;500&quot;, semi: &quot;350.00 &quot;, rural: &quot;250.00 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Indigene Letter &quot;,
+				type: { urban: &quot;500&quot;, semi: &quot;350.00 &quot;, rural: &quot;250.00 &quot; },
+			},
+		],
+	},
+	{
+		key: 7,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Commercial &quot;,
+				type: {
+					urban: &quot;20000.00&quot;,
+					semi: &quot;14000.00&quot;,
+					rural: &quot;10000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Residential &quot;,
+				type: {
+					urban: &quot;15000.00&quot;,
+					semi: &quot;10500.00&quot;,
+					rural: &quot;7500.00&quot;,
+				},
+			},
+		],
+	},
+
+	{
+		key: 8,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Permanent Stalls (Per annum) &quot;,
+				type: {
+					urban: &quot;15000.00&quot;,
+					semi: &quot;10500.00&quot;,
+					rural: &quot;7500.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Block Stalls and Lock - up Shops (Per annum) &quot;,
+				type: {
+					urban: &quot;30000.00&quot;,
+					semi: &quot;21000.00&quot;,
+					rural: &quot;15000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Seasonal Markets (Per bag/Heap by  &quot;,
+				type: { urban: &quot;100&quot;, semi: &quot;100&quot;, rural: &quot;100 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Market Hawkers (daily)  &quot;,
+				type: { urban: &quot;50&quot;, semi: &quot;50&quot;, rural: &quot;50&quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Market Hawkers (weekly)  &quot;,
+				type: { urban: &quot;50&quot;, semi: &quot;50&quot;, rural: &quot;50&quot; },
+			},
+		],
+	},
+	{
+		key: 9,
+		taxes: [
+			{
+				REVENUE_HEAD:
+					&quot;Entrance Fees (Gate): Trucks, Lorries, Tankers, Buses, Pick Up Vans, Center  &quot;,
+				type: { urban: &quot;300&quot;, semi: &quot;300&quot;, rural: &quot; 300&quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Loading Fees(per trip) &quot;,
+				type: {
+					urban: &quot;6000.00&quot;,
+					semi: &quot;6000.00 &quot;,
+					rural: &quot;6000.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Tricycle &quot;,
+				type: { urban: &quot;100&quot;, semi: &quot;100&quot;, rural: &quot;100 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Motorcycle &quot;,
+				type: { urban: &quot;50&quot;, semi: &quot;50 &quot;, rural: &quot;50 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;J5 &amp; P/UP &quot;,
+				type: { urban: &quot;1500.00&quot;, semi: &quot;1500&quot;, rural: &quot;1500.00 &quot; },
+			},
+		],
+	},
+	{
+		key: 10,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Bicycle License &quot;,
+				type: { urban: &quot;300&quot;, semi: &quot;300 &quot;, rural: &quot;300 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Canoe License &quot;,
+				type: { urban: &quot;500&quot;, semi: &quot;500 &quot;, rural: &quot;500 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Wheelbarrow/Cart Fee &quot;,
+				type: { urban: &quot;300&quot;, semi: &quot;300&quot;, rural: &quot;300 &quot; },
+			},
+		],
+	},
+	{
+		key: 11,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Dog License &quot;,
+				type: { urban: &quot;500&quot;, semi: &quot;500 &quot;, rural: &quot;500 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Loading Fee &quot;,
+				type: { urban: &quot;6000.00&quot;, semi: &quot;6000&quot;, rural: &quot; 6000&quot; },
+			},
+		],
+	},
+	{
+		key: 12,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Cow/Cattle (Jangali) &quot;,
+				type: { urban: &quot;100&quot;, semi: &quot;100&quot;, rural: &quot; 100&quot; },
+			},
+			{
+				REVENUE_HEAD: &quot; (Kara) &quot;,
+				type: { urban: &quot;500&quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Goat/Sheet (Jangali) &quot;,
+				type: { urban: &quot;50&quot;, semi: &quot;50 &quot;, rural: &quot;50 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot; (Kara) &quot;,
+				type: { urban: &quot;300&quot;, semi: &quot;300 &quot;, rural: &quot;300 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Others(Jangali) &quot;,
+				type: { urban: &quot;300&quot;, semi: &quot;300 &quot;, rural: &quot;300&quot; },
+			},
+			{
+				REVENUE_HEAD: &quot; (Kara) &quot;,
+				type: { urban: &quot;50&quot;, semi: &quot;50 &quot;, rural: &quot;50 &quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Impounding/Dislodging of Animals Fine &quot;,
+				type: { urban: &quot;5000.00&quot;, semi: &quot;5000 &quot;, rural: &quot;5000 &quot; },
+			},
+		],
+	},
+	{
+		key: 13,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Establishment of Religious Centers Fees  &quot;,
+				type: {
+					urban: &quot;10000.00&quot;,
+					semi: &quot;7000.00&quot;,
+					rural: &quot;5000.00 &quot;,
+				},
+			},
+		],
+	},
+	{
+		key: 14,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Mobile Sale Promotion Fees &quot;,
+				type: {
+					urban: &quot;1000.00&quot;,
+					semi: &quot;700.00 &quot;,
+					rural: &quot;500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Directional Signboard Fees &quot;,
+				type: {
+					urban: &quot;2000.00&quot;,
+					semi: &quot;1400.00 &quot;,
+					rural: &quot;1000.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Electric Design Advert Per Face &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00&quot;,
+					rural: &quot;2500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Wall Print Advert Per Side Fee &quot;,
+				type: {
+					urban: &quot;4000.00&quot;,
+					semi: &quot;2800.00 &quot;,
+					rural: &quot;2000.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Billboards Unipoles/Eye &quot;,
+				type: {
+					urban: &quot;150000.00&quot;,
+					semi: &quot;105000.00 &quot;,
+					rural: &quot;75000.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Market Road Show Permit &quot;,
+				type: {
+					urban: &quot;10000.00&quot;,
+					semi: &quot;7000.00 &quot;,
+					rural: &quot;5000.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Digital Boards &quot;,
+				type: {
+					urban: &quot;10000.00&quot;,
+					semi: &quot;7000.00 &quot;,
+					rural: &quot;5000.00 &quot;,
+				},
+			},
+		],
+	},
+	{
+		key: 15,
+		taxes: [
+			{
+				REVENUE_HEAD: &quot;Registration of Septic Tanks Operators (Annually) &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00 &quot;,
+					rural: &quot;2500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Refuse Disposal (Residential) &quot;,
+				type: {
+					urban: &quot;3000.00&quot;,
+					semi: &quot;2,100.00 &quot;,
+					rural: &quot;1500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Refuse Disposal (Commercial) &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00 &quot;,
+					rural: &quot;2500.00 &quot;,
+				},
+			},
+
+			{
+				REVENUE_HEAD: &quot;Naming of Streets &quot;,
+				type: {
+					urban: &quot;100000.00&quot;,
+					semi: &quot;70000.00 &quot;,
+					rural: &quot;50000.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot; Renewal after two years &quot;,
+				type: { urban: &quot;10000&quot;, semi: &quot;7000&quot;, rural: &quot;5000&quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Wrong Parking Charges/Towing of Vehicle Fees &quot;,
+				type: {
+					urban: &quot;5000.00&quot;,
+					semi: &quot;3500.00 &quot;,
+					rural: &quot;2500.00 &quot;,
+				},
+			},
+			{
+				REVENUE_HEAD:
+					&quot;Forestry Per Tree all LGC Exploitation/Trimming of Trees &quot;,
+				type: { urban: &quot;500&quot;, semi: &quot;500 &quot;, rural: &quot; 500&quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Off &amp; On Liquor License Fee &quot;,
+				type: {
+					urban: &quot;10000.00&quot;,
+					semi: &quot;7500.00&quot;,
+					rural: &quot;5000.00&quot;,
+				},
+			},
+			{
+				REVENUE_HEAD: &quot;Radio and Television License Fee &quot;,
+				type: { urban: &quot;1000.00&quot;, semi: &quot;700&quot;, rural: &quot;500&quot; },
+			},
+			{
+				REVENUE_HEAD: &quot;Vehicle/Equipment Hiring Service Per Day &quot;,
+				type: { urban: &quot;25000.00&quot;, semi: &quot;25000 &quot;, rural: &quot;25000 &quot; },
+			},
+		],
+	},
+]</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/models/role-home.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="RoleHome"></a>
+                    <span class="name">
+                        <span ><b>RoleHome</b></span>
+                        <a href="#RoleHome"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#Role" target="_self" >Record&lt;Role | string, string&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  default: &quot;/taxpayer/home&quot;,
+  [Role.User]: &quot;/taxpayer/home&quot;,
+  [Role.SuperAdmin]: &quot;/taxpayer/home&quot;,
+  [Role.Vendor]: &quot;/taxpayer/home&quot;,
+  [Role.MdaAdmin]: &quot;/taxpayer/home&quot;,
+  [Role.DemandNotice]: &quot;/taxpayer/home&quot;,
+  [Role.Reporting]: &quot;/taxpayer/home&quot;,
+  [Role.accountsOfficer]: &quot;/taxpayer/home&quot;,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+    <h3>src/app/shared/models/portal.ts</h3>
+    <section>
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UserPortal"></a>
+                    <span class="name">
+                        <span ><b>UserPortal</b></span>
+                        <a href="#UserPortal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../miscellaneous/enumerations.html#Role" target="_self" >Record&lt;Role, string&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  [Role.User]: &quot;taxPayer&quot;,
+  [Role.SuperAdmin]: &quot;admin&quot;,
+  [Role.Vendor]: &quot;vendor&quot;,
+  [Role.MdaAdmin]: &quot;mdaAdmin&quot;,
+  [Role.DemandNotice]: &quot;demand-notice&quot;,
+  [Role.Reporting]: &quot;reporting&quot;,
+  [Role.accountsOfficer]: &quot;accountsOfficer&quot;,
+}</code>
+                    </td>
+                </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

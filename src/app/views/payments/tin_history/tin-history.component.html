@@ -1,0 +1,196 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+<div
+	class="row"
+	[@animate]="{
+		value: '*',
+		params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+	}"
+>
+	<div class="col-lg-12 col-md-12">
+		<div class="card mb-4">
+			<div class="card-body p-0">
+				<!-- <h5 class="text-center card-title m-0 p-3">TIN History</h5> -->
+
+				<div class="row" style="margin: 2%">
+					<div class="col-md-12">
+						<div class="mb-5">
+							<form [formGroup]="tinForm" (ngSubmit)="loadAssessments()">
+								<div class="row">
+									<div class="col-sm-3"></div>
+									<div class="col-sm-8 row">
+										<div class="col-md-9 form-group mb-3">
+											<label for="tax">ENTER TIN *</label>
+											<input class="form-control" formControlName="tin" />
+										</div>
+										<div class="col-sm-7"></div>
+									</div>
+									<div class="col-sm-1"></div>
+								</div>
+								<div class="row">
+									<div class="col-sm-3"></div>
+									<div class="col-sm-8 row">
+										<div class="col-md-9 form-group mb-3">
+											<button
+												style="background-color: green; color: white"
+												class="form-control btn btn-primary pd-x-20"
+											>
+												Get TIN History
+											</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row mb-3">
+			<div class="col-md-12 mb-3"></div>
+			<div *ngIf="loading" class="col-md-12 text-center">
+				<div class="spinner spinner-primary mr-3"></div>
+			</div>
+
+			<div
+				class="col-md-12"
+				*ngIf="!loading"
+				[@animate]="{
+					value: '*',
+					params: {
+						y: '120px',
+						opacity: '0',
+						delay: '100ms',
+						duration: '400ms'
+					}
+				}"
+			>
+				<div class="card o-hidden">
+					<ngx-datatable
+						*ngIf="assessments?.length"
+						style="height: calc(100vh - 270px); box-shadow: none"
+						class="material fullscreen"
+						[columnMode]="'force'"
+						[headerHeight]="50"
+						[footerHeight]="50"
+						[rowHeight]="60"
+						[scrollbarH]="true"
+						[limit]="10"
+						[rows]="filteredItems"
+					>
+						<ngx-datatable-column>
+							<ng-template ngx-datatable-header-template>
+								Registraton Number
+							</ng-template>
+							<ng-template
+								ngx-datatable-cell-template
+								let-value="value"
+								let-row="row"
+							>
+								{{ row.id }}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column>
+							<ng-template ngx-datatable-header-template>
+								Tax Item
+							</ng-template>
+							<ng-template
+								ngx-datatable-cell-template
+								let-value="value"
+								let-row="row"
+							>
+								{{ row.tax_item ? row.tax_item : getCustomTaxItem(row) }}
+							</ng-template>
+						</ngx-datatable-column>
+
+						<ngx-datatable-column>
+							<ng-template ngx-datatable-header-template> MDA </ng-template>
+							<ng-template
+								ngx-datatable-cell-template
+								let-value="value"
+								let-row="row"
+							>
+								{{ row.mda }}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column>
+							<ng-template ngx-datatable-header-template>
+								Date Generated
+							</ng-template>
+							<ng-template
+								ngx-datatable-cell-template
+								let-value="value"
+								let-row="row"
+							>
+								{{ parsePhpDate(row.created_at) }}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column>
+							<ng-template ngx-datatable-header-template> Status </ng-template>
+							<ng-template
+								ngx-datatable-cell-template
+								let-value="value"
+								let-row="row"
+							>
+								<span *ngIf="row.status == '1'" class="text-success"
+									>Completed</span
+								>
+								<span *ngIf="row.status == '-2'" class="text-danger"
+									>Disputed</span
+								>
+								<span *ngIf="!row.status" class="text-danger">UNPAID</span>
+								<span *ngIf="row.status == '-1'" class="textdanger"
+									>Cancelled</span
+								>
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column>
+							<ng-template ngx-datatable-header-template>
+								Payment Channel
+							</ng-template>
+							<ng-template
+								ngx-datatable-cell-template
+								let-value="value"
+								let-row="row"
+							>
+								{{ row.payment_channel || "N/A" }}
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column [width]="120">
+							<ng-template ngx-datatable-header-template>Actions </ng-template>
+							<ng-template
+								ngx-datatable-cell-template
+								let-value="value"
+								let-row="row"
+							>
+								<button
+									class="btn btn-wide btn-outline-secondary mr-3"
+									(click)="viewAssessment(row)"
+								>
+									View Receipt
+								</button>
+							</ng-template>
+						</ngx-datatable-column>
+						<ngx-datatable-column>
+							<ng-template ngx-datatable-header-template>
+								Created By
+							</ng-template>
+							<ng-template
+								ngx-datatable-cell-template
+								let-value="value"
+								let-row="row"
+							>
+								{{ row.created_by == null ? "N/A" : row.created_by }}
+							</ng-template>
+						</ngx-datatable-column>
+					</ngx-datatable>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<app-payment-receipt></app-payment-receipt>
+	
+</div>

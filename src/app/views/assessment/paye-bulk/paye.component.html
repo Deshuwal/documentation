@@ -1,0 +1,104 @@
+<div class="">
+	<app-breadcrumb></app-breadcrumb>
+
+	<div class="separator-breadcrumb border-top"></div>
+
+	<div class="row">
+		<div class="col-lg-3"></div>
+		<div *ngIf="loading" class="col-md-12 text-center">
+			<div class="spinner spinner-primary mr-3"></div>
+			<br />
+			<span>Processing PAYE...</span>
+		</div>
+
+		<div *ngIf="done" class="col-md-12 text-center">
+			<p>Bulk PAYE processed successfully</p>
+			<a href="assets/paye_sample.xlsx" class="btn btn-success">
+				Download Result
+			</a>
+		</div>
+		<div
+			*ngIf="!loading && !done"
+			class="col-lg-6 col-sm-12"
+			[@animate]="{
+				value: '*',
+				params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+			}"
+		>
+			<div class="card mb-4">
+				<div class="card-body">
+					<div class="col-lg-12 col-md-12">
+						<h5 class="card-title m-0 p-3">
+							Upload Bulk PAYE data according to the excel template below
+						</h5>
+
+						<div class="row" style="margin: 2%">
+							<div class="col-md-12">
+								<div class="mb-5">
+									<div class="">
+										<div>
+											<form [formGroup]="payeeForm" (ngSubmit)="submit()">
+												<div class="row">
+													<!-- <div class="col-sm-3"></div> -->
+													<div class="col-sm-12 row">
+														<div class="col-md-9 form-group mb-3">
+															<a
+																href="assets/paye_sample.xlsx"
+																class="btn btn-primary"
+															>
+																Download Template
+															</a>
+														</div>
+														<div class="col-md-6 form-group mb-3">
+															<label for="tax">Period From</label>
+															<input
+																class="form-control"
+																formControlName="period_from"
+																name="period_from"
+																type="month"
+															/>
+														</div>
+														<div class="col-md-6 form-group mb-3">
+															<label for="tax">Period To</label>
+															<input
+																class="form-control"
+																formControlName="period_to"
+																name="period_to"
+																type="month"
+															/>
+														</div>
+														<div class="col-md-12 form-group mb-3">
+															<label for="input_select"
+																>Select Bulk PAYE File (Excel Format)
+															</label>
+															<input
+																type="file"
+																id="input_select"
+																accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+																class="form-control"
+																(change)="fileChanged($event)"
+															/>
+														</div>
+
+														<div class="col-md-9 form-group mb-3">
+															<button class="btn btn-danger btn-submit">
+																Upload & Process
+															</button>
+														</div>
+
+														<div class="col-sm-7"></div>
+													</div>
+													<!-- <div class="col-sm-1"></div> -->
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

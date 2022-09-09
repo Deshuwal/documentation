@@ -1,0 +1,90 @@
+<div
+  class="card o-hidden"
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="p-4">
+        <div class="auth-logo text-center mb-4">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <h1 class="mb-3 text-18">Enter your  PSIRS issued TIN</h1>
+        <span> <strong>*Note: </strong> This is for taxpayers registered on the old platform that are using the new PIRAS platform for the first time. If you cannot recall your old TIN; <a routerLink="/register/signup">CLICK HERE TO GENERATE A NEW TIN. </a> </span>
+        <form action="" [formGroup]="signupwtForm">
+          <div *ngIf="stage == 1">
+            <div class="form-group">
+              <label for="email">TIN Number</label>
+              <input
+                formControlName="tnumber"
+                class="form-control form-control-rounded"
+                type="number"
+              />
+            </div>
+            <btn-loading
+              id="btnLog"
+              btnClass="btn-primary btn-rounded btn-block mt-3"
+              (click)="submitTin()"
+              [loadingText]="loadingText"
+              [loading]="loading"
+            >
+              Submit
+            </btn-loading>
+          </div>
+        </form>
+        <form action="" [formGroup]="signupwtpassForm">
+          <div *ngIf="stage == 2">
+            <p> Complete Signup ({{profile.name}}) </p>
+            <div class="form-group" *ngIf="stage == 2">
+              <label for="email">Password </label>
+              <input
+                formControlName="password"
+                class="form-control form-control-rounded"
+                type="password"
+              />
+              <label for="email">Confirm password </label>
+              <input
+                formControlName="confirm_password"
+                class="form-control form-control-rounded"
+                type="password"
+              />
+            </div>
+            <btn-loading
+              id="btnLog"
+              btnClass="btn-primary btn-rounded btn-block mt-3"
+              (click)="submitTin()"
+              [loadingText]="loadingText"
+              [loading]="loading"
+            >
+              Submit
+            </btn-loading>
+          </div>
+        </form>
+        <div class="mt-3 text-center">
+          <a href="" class="text-muted" routerLink="/auth/signin"
+            ><u>Sign in</u></a
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-md-6 text-center"
+      style="
+        background-size: cover;
+        background-image: url(./assets/images/photo-long-3.jpg);
+      "
+    >
+      <div class="pr-3 auth-right">
+        <button
+          class="btn btn-outline-primary btn-outline-email btn-block btn-icon-text btn-rounded"
+          routerLink="/auth/signin"
+        >
+          <i class="i-Mail-with-At-Sign"></i>
+          Go Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

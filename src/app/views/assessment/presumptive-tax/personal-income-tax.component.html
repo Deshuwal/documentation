@@ -1,0 +1,235 @@
+<div
+  class=""
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <app-breadcrumb></app-breadcrumb>
+  <div class="separator-breadcrumb border-top"></div>
+
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div *ngIf="!loading" class="">
+    <div class="card">
+      <div class="card-body">
+        <h5 *ngIf="activeStage == 0" class="card-title">
+          Choose Business Category And Type
+        </h5>
+        <form action="" [formGroup]="preForm" (ngSubmit)="generateAssessment()">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="mda">MDA</label>
+                <input
+                  formControlName="mda"
+                  class="form-control"
+                  type="text"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="tax_item">Tax Item</label>
+                <input
+                  formControlName="tax_item"
+                  class="form-control"
+                  type="text"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="payer_tin">Tax Payer TIN</label>
+                <ng-select
+                  [items]="foundTIN$ | async"
+                  bindLabel="tin"
+                  bindValue="tin"
+                  [trackByFn]="trackByFn"
+                  labelForId="tin"
+                  [minTermLength]="minLengthTerm"
+                  [loading]="companiesLoading"
+                  placeholder="Search for a user or company by TIN"
+                  typeToSearchText="Please enter {{
+                    minLengthTerm
+                  }} or more TIN  length"
+                  [typeahead]="companiesInput$"
+                  (change)="onDropdownClick(selectedTIN)"
+                  formControlName="payer_tin"
+                >
+                </ng-select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="payer_name">Tax Payer Name</label>
+                <input
+                  formControlName="payer_name"
+                  class="form-control"
+                  type="text"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="account_officer_tin"
+                  >Transaction Period (Start Month and Year)</label
+                >
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control datepicker-only-month-select"
+                    [ngClass]="{
+                      'is-invalid': submitted && taxf.start_tax_period.errors
+                    }"
+                    ngbDatepicker
+                    #starttaxPeriod="ngbDatepicker"
+                    placeholder="Transaction Period"
+                    formControlName="start_tax_period"
+                    [showWeekdays]="false"
+                    readonly
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-secondary btn-rounded"
+                      (click)="starttaxPeriod.toggle()"
+                      type="button"
+                    >
+                      <i class="icon-regular i-Calendar-4"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="account_officer_tin"
+                  >Transaction Period (End Month and Year)</label
+                >
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control datepicker-only-month-select"
+                    [ngClass]="{
+                      'is-invalid': submitted && taxf.end_tax_period.errors
+                    }"
+                    ngbDatepicker
+                    #endtaxPeriod="ngbDatepicker"
+                    placeholder="Transaction Period"
+                    formControlName="end_tax_period"
+                    [showWeekdays]="false"
+                    readonly
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-secondary btn-rounded"
+                      (click)="endtaxPeriod.toggle()"
+                      type="button"
+                    >
+                      <i class="icon-regular i-Calendar-4"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="payer_tin">Association Name</label>
+                <input
+                  formControlName="association"
+                  class="form-control"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="business_category">Business Category</label>
+                <ngx-select-dropdown
+                  *ngIf="activeStage == 0"
+                  tabindex="0"
+                  [multiple]="false"
+                  formControlName="business_category"
+                  [config]="businessCategoryConfig"
+                  [options]="businesscategories"
+                  [ngClass]="{
+                    'border-danger':
+                      submitted && preform.business_category.errors
+                  }"
+                >
+                </ngx-select-dropdown>
+                <input
+                  *ngIf="activeStage != 0"
+                  class="form-control"
+                  type="text"
+                  [value]="preForm.value.business_category.description || ''"
+                  readonly
+                />
+                <div *ngIf="submitted && preform.business_category.errors">
+                  <div
+                    *ngIf="preform.business_category.errors.required"
+                    class="text-danger"
+                  >
+                    Select Business Category
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="business_type">Business Type</label>
+                <ngx-select-dropdown
+                  *ngIf="activeStage == 0"
+                  tabindex="0"
+                  [multiple]="false"
+                  formControlName="business_type"
+                  [config]="businessTypeConfig"
+                  [options]="businesstypes"
+                  [ngClass]="{
+                    'border-danger': submitted && preform.business_type.errors
+                  }"
+                >
+                </ngx-select-dropdown>
+                <input
+                  *ngIf="activeStage != 0"
+                  class="form-control"
+                  type="text"
+                  [value]="preForm.value.business_type.description || ''"
+                  readonly
+                />
+                <div *ngIf="submitted && preform.business_type.errors">
+                  <div
+                    *ngIf="preform.business_type.errors.required"
+                    class="text-danger"
+                  >
+                    Select Business Type
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="activeStage == 0" class="col-md-12">
+              <div class="float-right">
+                <btn-loading
+                  type="submit"
+                  btnClass="btn-primary  btn-block mt-3"
+                >
+                  Generate Assessment
+                </btn-loading>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

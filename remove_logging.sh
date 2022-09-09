@@ -1,0 +1,1 @@
+find ./src/app -type f | xargs sed -i   's/console.(log|debug|info|...|count)\((.*)\);?///console.log/g'

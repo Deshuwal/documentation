@@ -1,0 +1,368 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div
+	class=""
+	[@animate]="{
+		value: '*',
+		params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+	}"
+>
+	<app-breadcrumb></app-breadcrumb>
+	<div class="separator-breadcrumb border-top"></div>
+
+	<div *ngIf="loading" class="col-md-12 text-center">
+		<div class="spinner spinner-primary mr-3"></div>
+	</div>
+
+	<form [formGroup]="TCCForm" (ngSubmit)="OnTccSubmit()">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="card mb-4">
+					<div class="card-body p-0">
+						<h2
+							style="color: #7b7baf; font-weight: bold"
+							class="text-center card-title m-0 p-3"
+						>
+							Tax Clearance Certificate Details
+						</h2>
+						<div class="row" style="margin: 2%">
+							<div class="col-md-12">
+								<div class="mb-5">
+									<div class="">
+										<div>
+											<div class="row">
+												<div class="col-sm-3"></div>
+												<div class="col-sm-8 row">
+													<div class="col-md-9 form-group mb-3">
+														<label for="tax">TIN</label>
+														<input
+															type="number"
+															class="form-control"
+															formControlName="tin"
+														/>
+														<span
+															style="color: red"
+															*ngIf="
+																submitted &&
+																TCCForm.controls.tin.errors?.required
+															"
+															>TIN is required</span
+														>
+													</div>
+													<div class="col-sm-7"></div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3"></div>
+												<div class="col-sm-8 row">
+													<div class="col-md-9 form-group mb-3">
+														<label for="tax">Sector</label>
+														<select type="sector" class="form-control" formControlName="sector">
+															<option value="Formal">Formal</option>
+															<option value="InFormal">InFormal</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3"></div>
+												<div class="col-sm-8 row">
+													<div class="col-md-9 form-group mb-3">
+														<label for="tax">Status</label>
+														<input
+															type="text"
+															class="form-control"
+															formControlName="rank"
+															placeholder="Mr./ Mrs./Miss"
+														/>
+														<span
+															style="color: red"
+															*ngIf="
+																submitted &&
+																TCCForm.controls.rank.errors?.required
+															"
+															>Status is required</span
+														>
+													</div>
+													<div class="col-sm-7"></div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3"></div>
+												<div class="col-sm-8 row">
+													<div class="col-md-9 form-group mb-3">
+														<label for="tax">Full Name</label>
+														<input
+															readonly
+															type="text"
+															class="form-control"
+															formControlName="full_name"
+														/>
+														<p>
+															<span
+																style="color: red"
+																*ngIf="
+																	submitted &&
+																	TCCForm.controls.full_name.errors?.required
+																"
+																>Full name is required</span
+															>
+														</p>
+													</div>
+													<div class="col-sm-7"></div>
+												</div>
+												<div class="col-sm-1"></div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3"></div>
+												<div class="col-sm-8 row">
+													<div class="col-md-9 form-group mb-3">
+														<label for="tax">Email Address</label>
+														<input
+															type="text"
+															class="form-control"
+															formControlName="email"
+														/>
+														<!-- <span
+															style="color: red"
+															*ngIf="
+																submitted &&
+																TCCForm.controls.email.errors?.required
+															"
+															>Email is required</span
+														> -->
+													</div>
+													<div class="col-sm-7"></div>
+												</div>
+												<div class="col-sm-1"></div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3"></div>
+												<div class="col-sm-8 row">
+													<div class="col-md-9 form-group mb-3">
+														<label for="tax">Address</label>
+														<input
+															readonly
+															type="text"
+															formControlName="address"
+															class="form-control"
+														/>
+														<span
+															style="color: red"
+															*ngIf="
+																submitted &&
+																TCCForm.controls.address.errors?.required
+															"
+															>Address is required</span
+														>
+													</div>
+													<div class="col-sm-7"></div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3"></div>
+												<div class="col-sm-8 row">
+													<div class="col-md-9 form-group mb-3">
+														<label for="tax">Major Sources of income</label>
+														<input
+															type="text"
+															class="form-control"
+															formControlName="income_source"
+														/>
+														<span
+															style="color: red"
+															*ngIf="
+																submitted &&
+																TCCForm.controls.income_source.errors?.required
+															"
+															>Income source is required</span
+														>
+													</div>
+													<div class="col-sm-7"></div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-sm-3"></div>
+												<div class="col-sm-8 row">
+													<div class="col-md-9 form-group mb-3">
+														<label for="tax">Expiry Date</label>
+														<input
+															type="date"
+															id="dob"
+															class="form-control"
+															placeholder="YYYY-MM-DD"
+															name="dp"
+															ngbDatepicker
+															#dp="ngbDatepicker"
+															formControlName="expiry_date"
+														/>
+														<span
+															style="color: red"
+															*ngIf="
+																submitted &&
+																TCCForm.controls.expiry_date.errors?.required
+															"
+															>Expiry date is required</span
+														>
+													</div>
+													<div class="col-sm-7"></div>
+												</div>
+											</div>
+										</div>
+										<h2
+											style="
+												text-align: center;
+												color: #7b7baf;
+												font-weight: bold;
+											"
+										>
+											Payment Details (All fields are required!)
+										</h2>
+										<div class="separator-breadcrumb border-top"></div>
+
+										<div class="row">
+											<div
+												style="border-left: 0.8px solid black"
+												class="col-lg-6 col-sm-10"
+												*ngFor="let ticket of t.controls; let i = index"
+											>
+												<h4>YEAR{{ i + 1 }}</h4>
+												<div [formGroup]="ticket">
+													<div class="row">
+														<div class="col-sm-3"></div>
+														<div class="col-sm-12 row">
+															<div class="col-md-9 form-group mb-3">
+																<label for="tax">Year</label>
+																<input
+																	type="text"
+																	class="form-control"
+																	formControlName="year"
+																/>
+															</div>
+															<div class="col-sm-7"></div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-3"></div>
+														<div class="col-sm-12 row">
+															<div class="col-md-9 form-group mb-3">
+																<label for="tax">Total Annual Income</label>
+																<input
+																	type="number"
+																	class="form-control"
+																	formControlName="total_income"
+																/>
+															</div>
+															<div class="col-sm-7"></div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-3"></div>
+														<div class="col-sm-12 row">
+															<div class="col-md-9 form-group mb-3">
+																<label for="tax">Chargeable Income</label>
+																<input
+																	type="number"
+																	class="form-control"
+																	formControlName="chargeable_income"
+																/>
+															</div>
+															<div class="col-sm-7"></div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-3"></div>
+														<div class="col-sm-12 row">
+															<div class="col-md-9 form-group mb-3">
+																<label for="tax">Tax Payable</label>
+																<input
+																	type="number"
+																	class="form-control"
+																	formControlName="tax_payabe"
+																/>
+															</div>
+															<div class="col-sm-7"></div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-3"></div>
+														<div class="col-sm-12 row">
+															<div class="col-md-9 form-group mb-3">
+																<label for="tax">Tax Paid</label>
+																<input
+																	type="number"
+																	class="form-control"
+																	formControlName="tax_paid"
+																/>
+															</div>
+															<div class="col-sm-7"></div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-sm-3"></div>
+														<div class="col-sm-12 row">
+															<div class="col-md-9 form-group mb-3">
+																<label for="tax">BRN No</label>
+																<input
+																	type="text"
+																	class="form-control"
+																	formControlName="receipt_no"
+																/>
+															</div>
+															<div class="col-sm-7"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div
+												style="
+													border-left: 0.8px solid black;
+													display: flex;
+													justify-content: center;
+													align-items: center;
+													flex-direction: column;
+												"
+												class="col-lg-6 col-sm-12"
+											>
+												<p style="font-size: 13px; font-weight: bold">
+													Add New Payment Details
+												</p>
+												<div
+													style="
+														display: inline-block;
+														background: #58454f;
+														padding: 5px 37px;
+														border-radius: 2px;
+													"
+													(click)="onAddPaymentForm()"
+												>
+													<img src="../../../../assets/images/add.png" />
+												</div>
+											</div>
+										</div>
+
+										<div class="row mt-3">
+											<div class="col-sm-3"></div>
+											<div class="col-sm-8 row">
+												<div class="col-md-9 form-group mb-3">
+													<button
+														style="background-color: green; color: white"
+														type="submit"
+														class="btn pd-x-20 form-control"
+													>
+														Apply for TCC
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

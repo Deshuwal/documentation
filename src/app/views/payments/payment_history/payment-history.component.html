@@ -1,0 +1,304 @@
+
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+	<div class="col-md-5 col-md-offset-3">
+		<p style="font-size: 19px; color: green; font-weight: bold">
+			Total: NGN {{ formatNumber(paymentTotal) }}
+		</p>
+	</div>
+
+	<div class="col-md-6">
+		<a
+			class="btn btn-primary float-right"
+			style="color: white !important; align-self: right"
+			(click)="exportToExcel()"
+			>{{ export_button_label }}</a
+		>
+		<a id="downloadAnchorElem" style="display: none"></a>
+	</div>
+</div>
+
+
+
+<div class="row mb-3">
+
+	<datatable-scroll></datatable-scroll>
+</div>
+
+
+
+<div style="padding: 1rem" class="top-scroll card card-mediaQuery">
+	<div
+		style="
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+		"
+	>
+		<div style="display: flex; flex: 1">
+			<p>From:</p>
+			<input
+				class="form-control"
+				style="width: 20%"
+				type="date"
+				[(ngModel)]="from"
+				required
+			/>
+			<p>To:</p>
+			<input
+				style="width: 20%"
+				class="form-control"
+				type="date"
+				[(ngModel)]="to"
+				required
+			/>
+			<div style="width: 20%; margin-right: 10px">
+				<ngx-select-dropdown
+					tabindex="0"
+					(change)="onMDASelect($event)"
+					[disabled] = "mdaSelectState"
+					[(ngModel)]="selectedMda"
+					[config]="config"
+					[options]="mda"
+				></ngx-select-dropdown>
+			</div>
+			<div style="width: 20%; margin-right: 10px">
+				<ngx-select-dropdown
+					tabindex="0"
+					(change)="onTaxItemSelect($event)"
+					[config]="configsTaxItem"
+					[options]="taxItemsSelected"
+				></ngx-select-dropdown>
+			</div>
+			<input
+				placeholder="Search"
+				(change)="onSearch($event)"
+				class="form-control search-brn"
+				type="email"
+				style="width: 30%;"
+			/>
+		</div>
+		<button
+			class="btn btn-primary"
+			(click)="filterByDate()"
+			style="margin-right: 20px"
+		>
+			Submit
+		</button>
+	</div>
+</div>
+
+
+
+<div class="row mb-3">
+	<div class="col-md-12 mb-3"></div>
+	<div *ngIf="loading" class="col-md-12 text-center">
+		<div class="spinner spinner-primary mr-3"></div>
+	</div>
+
+	<div
+		id="data-table-view"
+		class="col-md-12"
+		*ngIf="!loading"
+		[@animate]="{
+			value: '*',
+			params: { y: '58px', opacity: '0', delay: '100ms', duration: '400ms' }
+		}"
+	>
+		<div class="card o-hidden">
+			<ngx-datatable
+				class="material"
+				[rows]="filteredItems"
+				[headerHeight]="50"
+				[scrollbarH]="true"
+				[footerHeight]="50"
+				[columnMode]="force"
+				rowHeight="auto"
+				[externalPaging]="true"
+				[count]="pagination.totalItemCount"
+				[offset]="pagination.currentPage"
+				[limit]="pagination.displayPerPageCount"
+				(page)="setPage($event)"
+			>
+			<ngx-datatable-column>
+				<ng-template ngx-datatable-header-template>
+					Registraton Number
+				</ng-template>
+				<ng-template
+					ngx-datatable-cell-template
+					let-value="value"
+					let-row="row"
+				>
+					{{ row.id }}
+				</ng-template>
+			</ngx-datatable-column>
+			<ngx-datatable-column>
+				<ng-template ngx-datatable-header-template> Tax Item </ng-template>
+				<ng-template
+					ngx-datatable-cell-template
+					let-value="value"
+					let-row="row"
+				>
+					{{ (row.tax_item && row.tax_item.toLowerCase() == "others") ?  getCustomTaxItem(row): row.tax_item }} 
+					{{ ((!row.tax_item) && row.tax_item_id && row.tax_item_id ==-1) ?  getCustomTaxItem(row): ""}} 
+				</ng-template>
+			</ngx-datatable-column>
+
+		 
+
+			<ngx-datatable-column>
+				<ng-template ngx-datatable-header-template> MDA </ng-template>
+				<ng-template
+					ngx-datatable-cell-template
+					let-value="value"
+					let-row="row"
+				>
+					{{ row.mda }}
+				</ng-template>
+			</ngx-datatable-column>
+			<ngx-datatable-column>
+				<ng-template ngx-datatable-header-template> Date Paid </ng-template>
+				<ng-template
+					ngx-datatable-cell-template
+					let-value="value"
+					let-row="row"
+				>
+					{{ dateFromString(row.payment_date) }}
+				</ng-template>
+			</ngx-datatable-column>
+			<ngx-datatable-column>
+				<ng-template ngx-datatable-header-template> Status </ng-template>
+				<ng-template
+					ngx-datatable-cell-template
+					let-value="value"
+					let-row="row"
+				>
+					<span
+						*ngIf="row.status == '1'"
+						class="text-success text-payment-status"
+						>Completed</span
+					>
+					<span *ngIf="row.status == '-2'" class="text-danger">Disputed</span>
+					<span *ngIf="!row.status" class="text-danger">UNPAID</span>
+					<span *ngIf="row.status == '-1'" class="textdanger">Cancelled</span>
+				</ng-template>
+			</ngx-datatable-column>
+			<ngx-datatable-column>
+				<ng-template ngx-datatable-header-template>
+					Payment Channel
+				</ng-template>
+				<ng-template
+					ngx-datatable-cell-template
+					let-value="value"
+					let-row="row"
+				>
+					{{ row.payment_channel || "" }}
+				</ng-template>
+			</ngx-datatable-column>
+			<ngx-datatable-column [flexGrow]="1">
+				<ng-template ngx-datatable-header-template>Actions </ng-template>
+				<ng-template
+					ngx-datatable-cell-template
+					let-value="value"
+					let-row="row"
+				>
+					<button
+						class="btn btn-wide btn-outline-secondary mr-3 receipt-button"
+						(click)="viewAssessment(row)"
+					>
+						View Receipt
+					</button>
+				</ng-template>
+			</ngx-datatable-column>
+			<ngx-datatable-column [width]="200">
+				<ng-template ngx-datatable-header-template> Created By </ng-template>
+				<ng-template
+					ngx-datatable-cell-template
+					let-value="value"
+					let-row="row"
+				>
+					{{ row.created_by == null ? "N/A" : row.created_by }}
+				</ng-template>
+			</ngx-datatable-column>
+		</ngx-datatable>
+	</div>
+</div>
+</div>
+
+<ng-template #deleteConfirmModal let-modal>
+<div class="modal-header">
+	<h4 class="modal-title" id="modal-title">Delete Tax Item</h4>
+	<button
+		type="button"
+		class="close"
+		aria-label="Close button"
+		aria-describedby="modal-title"
+		(click)="modal.dismiss('Cross click')"
+	>
+		<span aria-hidden="true">&times;</span>
+	</button>
+</div>
+<div class="modal-body">
+	<p><strong>Are you sure?</strong></p>
+</div>
+<div class="modal-footer">
+	<button
+		type="button"
+		class="btn btn-outline-secondary btn-rounded"
+		(click)="modal.dismiss('cancel')"
+	>
+		Cancel
+	</button>
+	<button
+		type="button"
+		ngbAutofocus
+		class="btn btn-wide btn-danger btn-rounded"
+		(click)="modal.close('Ok')"
+	>
+		Ok
+	</button>
+</div>
+</ng-template>
+
+<ng-template #modalPaye let-modal>
+<div *ngIf="loading" class="col-md-12 text-center">
+  <div class="spinner spinner-primary mr-3"></div>
+  <p class="text-center">Loading Receipt....</p>
+</div>
+
+
+<paye-receipt [assessmentForDisplay]="assessmentForDisplay" [bulkAssessmentTotal]="assessmentForDisplay.amount" amount="bulkAssessmentTotal">
+</paye-receipt>
+<div class="modal-footer">
+  <button
+	style="position: relative; z-index: 3"
+	class="btn btn-primary"
+	(click)="downloadPDF('pdfAssessment')"
+  >
+	Download
+  </button>
+  <button
+	style="margin-left: 5px"
+	type="button"
+	class="btn btn-outline-secondary btn-rounded"
+	(click)="printPDFS('pdfAssessment')"
+  >
+	Print
+  </button>
+
+  <button
+	type="button"
+	class="btn btn-outline-secondary btn-rounded"
+	(click)="modal.dismiss('Cross click')"
+  >
+	Cancel
+  </button>
+</div>
+
+</ng-template>
+
+<app-payment-receipt></app-payment-receipt>

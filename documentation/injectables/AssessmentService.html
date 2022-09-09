@@ -1,0 +1,3524 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >AssessmentService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/services/assessment.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#authenticated" >authenticated</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#bulkDemandNotice" >bulkDemandNotice</a>
+                            </li>
+                            <li>
+                                <a href="#changeOfOwnershipCategories" >changeOfOwnershipCategories</a>
+                            </li>
+                            <li>
+                                <a href="#changeOfOwnershipRules" >changeOfOwnershipRules</a>
+                            </li>
+                            <li>
+                                <a href="#commercialVehicleCategories" >commercialVehicleCategories</a>
+                            </li>
+                            <li>
+                                <a href="#driverLicenceCategories" >driverLicenceCategories</a>
+                            </li>
+                            <li>
+                                <a href="#driverLicenseRules" >driverLicenseRules</a>
+                            </li>
+                            <li>
+                                <a href="#fancyPlateNumberRules" >fancyPlateNumberRules</a>
+                            </li>
+                            <li>
+                                <a href="#governmentFancyNumberPlateCategories" >governmentFancyNumberPlateCategories</a>
+                            </li>
+                            <li>
+                                <a href="#governmentFancyPlateRules" >governmentFancyPlateRules</a>
+                            </li>
+                            <li>
+                                <a href="#governmentOfficialNumberPlateCategories" >governmentOfficialNumberPlateCategories</a>
+                            </li>
+                            <li>
+                                <a href="#governmentOfficialPlateNumberRules" >governmentOfficialPlateNumberRules</a>
+                            </li>
+                            <li>
+                                <a href="#learnersPermitRules" >learnersPermitRules</a>
+                            </li>
+                            <li>
+                                <a href="#learnersPermits" >learnersPermits</a>
+                            </li>
+                            <li>
+                                <a href="#missingNumberPlatesCategories" >missingNumberPlatesCategories</a>
+                            </li>
+                            <li>
+                                <a href="#missingPlateNumberRules" >missingPlateNumberRules</a>
+                            </li>
+                            <li>
+                                <a href="#mortorDealersPlateRules" >mortorDealersPlateRules</a>
+                            </li>
+                            <li>
+                                <a href="#motorCycleCategories" >motorCycleCategories</a>
+                            </li>
+                            <li>
+                                <a href="#motorDealersPlateCategories" >motorDealersPlateCategories</a>
+                            </li>
+                            <li>
+                                <a href="#outOfSeriesNumberPlatesCategories" >outOfSeriesNumberPlatesCategories</a>
+                            </li>
+                            <li>
+                                <a href="#outOfSeriesPlateNumberRules" >outOfSeriesPlateNumberRules</a>
+                            </li>
+                            <li>
+                                <a href="#privateMotorCycleRules" >privateMotorCycleRules</a>
+                            </li>
+                            <li>
+                                <a href="#privateVehicleRules" >privateVehicleRules</a>
+                            </li>
+                            <li>
+                                <a href="#priVehicleCategories" >priVehicleCategories</a>
+                            </li>
+                            <li>
+                                <a href="#revalidationOldNumberPlateCommercialRules" >revalidationOldNumberPlateCommercialRules</a>
+                            </li>
+                            <li>
+                                <a href="#revalidationOldNumberPlatePrivateRules" >revalidationOldNumberPlatePrivateRules</a>
+                            </li>
+                            <li>
+                                <a href="#roadSideParkingFeesCategories" >roadSideParkingFeesCategories</a>
+                            </li>
+                            <li>
+                                <a href="#roadSideParkingRules" >roadSideParkingRules</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#arrangeBulkPayeeFormDataForDisplay" >arrangeBulkPayeeFormDataForDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#arrangeDirectAssessmentFormDataForDisplay" >arrangeDirectAssessmentFormDataForDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#arrangeDirectAssessmentHighNetWorthFormDataForDisplay" >arrangeDirectAssessmentHighNetWorthFormDataForDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#arrangePayeeFormDataForDisplay" >arrangePayeeFormDataForDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#arrangePresumptiveDataFormDataForDisplay" >arrangePresumptiveDataFormDataForDisplay</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#doAssessment" >doAssessment</a>
+                            </li>
+                            <li>
+                                <a href="#getElementValue" >getElementValue</a>
+                            </li>
+                            <li>
+                                <a href="#isDigit" >isDigit</a>
+                            </li>
+                            <li>
+                                <a href="#isKey" >isKey</a>
+                            </li>
+                            <li>
+                                <a href="#isOperator" >isOperator</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(store: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, httpService: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/services/assessment.service.ts:17</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>httpService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="arrangeBulkPayeeFormDataForDisplay"></a>
+                    <span class="name">
+                        <span ><b>arrangeBulkPayeeFormDataForDisplay</b></span>
+                        <a href="#arrangeBulkPayeeFormDataForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>arrangeBulkPayeeFormDataForDisplay(formData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, payee_calculator: <a href="../classes/PayeeCalculator.html" target="_self">PayeeCalculator</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="132"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:132</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>formData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>payee_calculator</td>
+                                    <td>
+                                                <code><a href="../classes/PayeeCalculator.html" target="_self" >PayeeCalculator</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="arrangeDirectAssessmentFormDataForDisplay"></a>
+                    <span class="name">
+                        <span ><b>arrangeDirectAssessmentFormDataForDisplay</b></span>
+                        <a href="#arrangeDirectAssessmentFormDataForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>arrangeDirectAssessmentFormDataForDisplay(formData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="158"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:158</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>formData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="arrangeDirectAssessmentHighNetWorthFormDataForDisplay"></a>
+                    <span class="name">
+                        <span ><b>arrangeDirectAssessmentHighNetWorthFormDataForDisplay</b></span>
+                        <a href="#arrangeDirectAssessmentHighNetWorthFormDataForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>arrangeDirectAssessmentHighNetWorthFormDataForDisplay(formData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="148"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:148</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>formData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="arrangePayeeFormDataForDisplay"></a>
+                    <span class="name">
+                        <span ><b>arrangePayeeFormDataForDisplay</b></span>
+                        <a href="#arrangePayeeFormDataForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>arrangePayeeFormDataForDisplay(formData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, payee_calculator: <a href="../classes/PayeeCalculator.html" target="_self">PayeeCalculator</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="109"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:109</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>formData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>payee_calculator</td>
+                                    <td>
+                                                <code><a href="../classes/PayeeCalculator.html" target="_self" >PayeeCalculator</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="arrangePresumptiveDataFormDataForDisplay"></a>
+                    <span class="name">
+                        <span ><b>arrangePresumptiveDataFormDataForDisplay</b></span>
+                        <a href="#arrangePresumptiveDataFormDataForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>arrangePresumptiveDataFormDataForDisplay(formData: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:173</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>formData</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="doAssessment"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>doAssessment</b></span>
+                        <a href="#doAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>doAssessment(rules: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:25</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rules</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getElementValue"></a>
+                    <span class="name">
+                        <span ><b>getElementValue</b></span>
+                        <a href="#getElementValue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getElementValue(rules: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, key: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="180"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:180</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rules</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>key</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isDigit"></a>
+                    <span class="name">
+                        <span ><b>isDigit</b></span>
+                        <a href="#isDigit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isDigit(item: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="213"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:213</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isKey"></a>
+                    <span class="name">
+                        <span ><b>isKey</b></span>
+                        <a href="#isKey"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isKey(rules: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, item: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rules</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isOperator"></a>
+                    <span class="name">
+                        <span ><b>isOperator</b></span>
+                        <a href="#isOperator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isOperator(item: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="190"
+                            class="link-to-prism">src/app/shared/services/assessment.service.ts:190</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="authenticated"></a>
+                    <span class="name">
+                        <span ><b>authenticated</b></span>
+                        <a href="#authenticated"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/services/assessment.service.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="bulkDemandNotice"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>bulkDemandNotice</b></span>
+                        <a href="#bulkDemandNotice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/shared/services/assessment.service.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeOfOwnershipCategories"></a>
+                    <span class="name">
+                        <span ><b>changeOfOwnershipCategories</b></span>
+                        <a href="#changeOfOwnershipCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;motorvehicle&quot;, label: &quot;Motor Vehicle&quot; },
+    { tag: &quot;motorcycle_tricycle&quot;, label: &quot;Motorcycle/Tricycle&quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="246" class="link-to-prism">src/app/shared/services/assessment.service.ts:246</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeOfOwnershipRules"></a>
+                    <span class="name">
+                        <span ><b>changeOfOwnershipRules</b></span>
+                        <a href="#changeOfOwnershipRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;motorvehicle&quot;,
+      fees: [
+        {
+          tag: &quot;change_of_ownership&quot;,
+          label: &quot;Change of Ownership&quot;,
+          amount: 2500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;motorcycle_tricycle&quot;,
+      fees: [
+        { tag: &quot;change_of_ownership&quot;, label: &quot;Plate Number&quot;, amount: 625 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="578" class="link-to-prism">src/app/shared/services/assessment.service.ts:578</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="commercialVehicleCategories"></a>
+                    <span class="name">
+                        <span ><b>commercialVehicleCategories</b></span>
+                        <a href="#commercialVehicleCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;a&quot;, label: &quot;Category A (Trailer)&quot; },
+    { tag: &quot;b&quot;, label: &quot;Category B (Tanker &amp; Truck)&quot; },
+    { tag: &quot;c&quot;, label: &quot;Category C (Tipper and Lorry) &quot; },
+    { tag: &quot;d&quot;, label: &quot;Category D (Canter) &quot; },
+
+    { tag: &quot;e&quot;, label: &quot;Category E (Bus) &quot; },
+
+    { tag: &quot;f&quot;, label: &quot;Category F (Pickup) &quot; },
+
+    { tag: &quot;g&quot;, label: &quot;Category G (Painted Taxi) &quot; },
+
+    { tag: &quot;c&quot;, label: &quot;Category C (Unpainted Taxi) &quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="268" class="link-to-prism">src/app/shared/services/assessment.service.ts:268</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="driverLicenceCategories"></a>
+                    <span class="name">
+                        <span ><b>driverLicenceCategories</b></span>
+                        <a href="#driverLicenceCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;motorvehicle&quot;, label: &quot;Motor Vehicle&quot; },
+    { tag: &quot;motorcycle_tricycle&quot;, label: &quot;Motorcycle/Tricycle&quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="251" class="link-to-prism">src/app/shared/services/assessment.service.ts:251</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="driverLicenseRules"></a>
+                    <span class="name">
+                        <span ><b>driverLicenseRules</b></span>
+                        <a href="#driverLicenseRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;motorvehicle&quot;,
+      fees: [
+        { tag: &quot;drivers_license&quot;, label: &quot;Driver&#x27;s License&quot;, amount: 6350 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;motorcycle_tricycle&quot;,
+      fees: [
+        { tag: &quot;drivers_license&quot;, label: &quot;Driver&#x27;s License&quot;, amount: 625 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="627" class="link-to-prism">src/app/shared/services/assessment.service.ts:627</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fancyPlateNumberRules"></a>
+                    <span class="name">
+                        <span ><b>fancyPlateNumberRules</b></span>
+                        <a href="#fancyPlateNumberRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Get Fancy Plate Number&quot;,
+          amount: 80000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Get Fancy Plate Number&quot;,
+          amount: 80000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Fancy Palte Number&quot;,
+          amount: 80000,
+        },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="679" class="link-to-prism">src/app/shared/services/assessment.service.ts:679</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="governmentFancyNumberPlateCategories"></a>
+                    <span class="name">
+                        <span ><b>governmentFancyNumberPlateCategories</b></span>
+                        <a href="#governmentFancyNumberPlateCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;bus&quot;, label: &quot;Bus&quot; },
+    { tag: &quot;car&quot;, label: &quot;Car&quot; },
+    { tag: &quot;car&quot;, label: &quot;Car&quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="228" class="link-to-prism">src/app/shared/services/assessment.service.ts:228</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="governmentFancyPlateRules"></a>
+                    <span class="name">
+                        <span ><b>governmentFancyPlateRules</b></span>
+                        <a href="#governmentFancyPlateRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;bus&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 0,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;car&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 0,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;car&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 0,
+        },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="775" class="link-to-prism">src/app/shared/services/assessment.service.ts:775</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="governmentOfficialNumberPlateCategories"></a>
+                    <span class="name">
+                        <span ><b>governmentOfficialNumberPlateCategories</b></span>
+                        <a href="#governmentOfficialNumberPlateCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;a&quot;, label: &quot;Category A&quot; },
+    { tag: &quot;b&quot;, label: &quot;Category B&quot; },
+    { tag: &quot;bus&quot;, label: &quot;Bus&quot; },
+    { tag: &quot;motorcycle&quot;, label: &quot;Motorcycle&quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="239" class="link-to-prism">src/app/shared/services/assessment.service.ts:239</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="governmentOfficialPlateNumberRules"></a>
+                    <span class="name">
+                        <span ><b>governmentOfficialPlateNumberRules</b></span>
+                        <a href="#governmentOfficialPlateNumberRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 15000 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 15000 },
+      ],
+    },
+
+    {
+      label: &quot;Bus&quot;,
+      tag: &quot;bus&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 15000 },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="653" class="link-to-prism">src/app/shared/services/assessment.service.ts:653</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="learnersPermitRules"></a>
+                    <span class="name">
+                        <span ><b>learnersPermitRules</b></span>
+                        <a href="#learnersPermitRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;With L Symbol&quot;,
+      tag: &quot;with_l_symbol&quot;,
+      fees: [
+        {tag: &quot;with_l_symbol&quot;, label: &quot;With L Symbol (N750)&quot;, amount: 750},
+      ],
+    },
+
+    {
+      label: &quot;Without L Symbol&quot;,
+      tag: &quot;without_l_symbol&quot;,
+      fees: [
+        { tag: &quot;without_l_symbol&quot;, label: &quot;Without L Symbol (N500)&quot;, amount: 500 },
+      ],
+    }
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="609" class="link-to-prism">src/app/shared/services/assessment.service.ts:609</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="learnersPermits"></a>
+                    <span class="name">
+                        <span ><b>learnersPermits</b></span>
+                        <a href="#learnersPermits"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;with_l_symbol&quot;, label: &quot;With L Symbol&quot; },
+    { tag: &quot;without_l_symbol&quot;, label: &quot;Without L Symbol&quot; }
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="263" class="link-to-prism">src/app/shared/services/assessment.service.ts:263</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="missingNumberPlatesCategories"></a>
+                    <span class="name">
+                        <span ><b>missingNumberPlatesCategories</b></span>
+                        <a href="#missingNumberPlatesCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;fancy&quot;, label: &quot;Fancy&quot; },
+    { tag: &quot;out_of_series&quot;, label: &quot;Out of Series &quot; },
+    { tag: &quot;private&quot;, label: &quot;Private &quot; },
+    { tag: &quot;commercial&quot;, label: &quot;Commercial&quot; },
+    { tag: &quot;motorcycle_tricycle&quot;, label: &quot;Motorcycle/Tricycle&quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="289" class="link-to-prism">src/app/shared/services/assessment.service.ts:289</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="missingPlateNumberRules"></a>
+                    <span class="name">
+                        <span ><b>missingPlateNumberRules</b></span>
+                        <a href="#missingPlateNumberRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;fancy&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 80000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;out_of_series&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 40000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;private&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;commercial&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;motorcycle_tricycle&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 2500,
+        },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="316" class="link-to-prism">src/app/shared/services/assessment.service.ts:316</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mortorDealersPlateRules"></a>
+                    <span class="name">
+                        <span ><b>mortorDealersPlateRules</b></span>
+                        <a href="#mortorDealersPlateRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;all&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 30000 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 5000,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 12000 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="299" class="link-to-prism">src/app/shared/services/assessment.service.ts:299</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="motorCycleCategories"></a>
+                    <span class="name">
+                        <span ><b>motorCycleCategories</b></span>
+                        <a href="#motorCycleCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;private&quot;, label: &quot;Private&quot; },
+    { tag: &quot;commercial&quot;, label: &quot;Commercial&quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="234" class="link-to-prism">src/app/shared/services/assessment.service.ts:234</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="motorDealersPlateCategories"></a>
+                    <span class="name">
+                        <span ><b>motorDealersPlateCategories</b></span>
+                        <a href="#motorDealersPlateCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[{ tag: &quot;all&quot;, label: &quot;All Categories&quot; }]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="297" class="link-to-prism">src/app/shared/services/assessment.service.ts:297</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="outOfSeriesNumberPlatesCategories"></a>
+                    <span class="name">
+                        <span ><b>outOfSeriesNumberPlatesCategories</b></span>
+                        <a href="#outOfSeriesNumberPlatesCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;a&quot;, label: &quot;Category A (Above 3.0cc)&quot; },
+    { tag: &quot;b&quot;, label: &quot;Category B (2.1 - 3.0cc) &quot; },
+    { tag: &quot;c&quot;, label: &quot;Category C (1.7 - 2.00c) &quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="283" class="link-to-prism">src/app/shared/services/assessment.service.ts:283</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="outOfSeriesPlateNumberRules"></a>
+                    <span class="name">
+                        <span ><b>outOfSeriesPlateNumberRules</b></span>
+                        <a href="#outOfSeriesPlateNumberRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="508" class="link-to-prism">src/app/shared/services/assessment.service.ts:508</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="privateMotorCycleRules"></a>
+                    <span class="name">
+                        <span ><b>privateMotorCycleRules</b></span>
+                        <a href="#privateMotorCycleRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Private&quot;,
+      tag: &quot;private&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 3000 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 1250,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 625 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+        { tag: &quot;learners_permit&quot;, label: &quot; Learner&#x27;s Permit&quot;, amount: 250 },
+        { tag: &quot;reflective_jacket&quot;, label: &quot;Reflective Jacket&quot;, amount: 0 },
+      ],
+    },
+
+    {
+      label: &quot;Commercial&quot;,
+      tag: &quot;commercial&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 2500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 1250,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1250 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+
+        { tag: &quot;sticker&quot;, label: &quot; Sticker &quot;, amount: 550 },
+        { tag: &quot;learners_permit&quot;, label: &quot; Learner&#x27;s Permit&quot;, amount: 1250 },
+        { tag: &quot;reflective_jacket&quot;, label: &quot; Regt Book&quot;, amount: 750 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 3125,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1875 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 3125,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1250 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="440" class="link-to-prism">src/app/shared/services/assessment.service.ts:440</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="privateVehicleRules"></a>
+                    <span class="name">
+                        <span ><b>privateVehicleRules</b></span>
+                        <a href="#privateVehicleRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 6250,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 3125 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 6250,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 2500 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 3125,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1875 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 3125,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1250 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="378" class="link-to-prism">src/app/shared/services/assessment.service.ts:378</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="priVehicleCategories"></a>
+                    <span class="name">
+                        <span ><b>priVehicleCategories</b></span>
+                        <a href="#priVehicleCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;a&quot;, label: &quot;Category A (Above 3.0cc)&quot; },
+    { tag: &quot;b&quot;, label: &quot;Category B (2.1 - 3.0cc) &quot; },
+    { tag: &quot;c&quot;, label: &quot;Category C (1.7 - 2.00c) &quot; },
+    { tag: &quot;d&quot;, label: &quot;Category D (1.2 - 1.6cc) &quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="221" class="link-to-prism">src/app/shared/services/assessment.service.ts:221</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="revalidationOldNumberPlateCommercialRules"></a>
+                    <span class="name">
+                        <span ><b>revalidationOldNumberPlateCommercialRules</b></span>
+                        <a href="#revalidationOldNumberPlateCommercialRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category E&quot;,
+      tag: &quot;e&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+    {
+      label: &quot;Category f&quot;,
+      tag: &quot;f&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+    {
+      label: &quot;Category G&quot;,
+      tag: &quot;g&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category H&quot;,
+      tag: &quot;h&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="813" class="link-to-prism">src/app/shared/services/assessment.service.ts:813</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="revalidationOldNumberPlatePrivateRules"></a>
+                    <span class="name">
+                        <span ><b>revalidationOldNumberPlatePrivateRules</b></span>
+                        <a href="#revalidationOldNumberPlatePrivateRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 10000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 10000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 10000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 10000,
+        },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="725" class="link-to-prism">src/app/shared/services/assessment.service.ts:725</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roadSideParkingFeesCategories"></a>
+                    <span class="name">
+                        <span ><b>roadSideParkingFeesCategories</b></span>
+                        <a href="#roadSideParkingFeesCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { tag: &quot;one_hour&quot;, label: &quot;1st Hour&quot; },
+    { tag: &quot;two_four_hours&quot;, label: &quot;2 - 4 Hours&quot; },
+    { tag: &quot;over_four_hours&quot;, label: &quot;More than 4 hours&quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="256" class="link-to-prism">src/app/shared/services/assessment.service.ts:256</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roadSideParkingRules"></a>
+                    <span class="name">
+                        <span ><b>roadSideParkingRules</b></span>
+                        <a href="#roadSideParkingRules"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;one_hour&quot;,
+      fees: [
+        { tag: &quot;urban&quot;, label: &quot;Urban Road Side Parking&quot;, amount: 50 },
+        {
+          tag: &quot;semi_urban&quot;,
+          label: &quot;Semi-Urban Road Side Parking&quot;,
+          amount: 20,
+        },
+        { tag: &quot;rural&quot;, label: &quot;Rural Road Side Parking&quot;, amount: 0 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;two_four_hours&quot;,
+      fees: [
+        { tag: &quot;urban&quot;, label: &quot;Urban Road Side Parking&quot;, amount: 100 },
+        {
+          tag: &quot;semi_urban&quot;,
+          label: &quot;Semi-Urban Road Side Parking&quot;,
+          amount: 50,
+        },
+        { tag: &quot;rural&quot;, label: &quot;Rural Road Side Parking&quot;, amount: 20 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;over_four_hours&quot;,
+      fees: [
+        { tag: &quot;urban&quot;, label: &quot;Urban Road Side Parking&quot;, amount: 200 },
+        {
+          tag: &quot;semi_urban&quot;,
+          label: &quot;Semi-Urban Road Side Parking&quot;,
+          amount: 100,
+        },
+        { tag: &quot;rural&quot;, label: &quot;Rural Road Side Parking&quot;, amount: 50 },
+      ],
+    },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="534" class="link-to-prism">src/app/shared/services/assessment.service.ts:534</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { LocalStoreService } from &quot;./local-store.service&quot;;
+import { Router } from &quot;@angular/router&quot;;
+import { of, Subject, throwError } from &quot;rxjs&quot;;
+import { delay } from &quot;rxjs/operators&quot;;
+import { HttpService } from &quot;./http.service&quot;;
+import { parse } from &quot;querystring&quot;;
+import { PayeeCalculator } from &quot;../models/payee_calculator&quot;;
+
+@Injectable({
+  providedIn: &quot;root&quot;,
+})
+export class AssessmentService {
+  //Only for demo purpose
+  authenticated &#x3D; true;
+
+  public bulkDemandNotice &#x3D; new Subject();
+
+  constructor(
+    private store: LocalStoreService,
+    private httpService: HttpService,
+    private router: Router
+  ) {}
+
+  public doAssessment(rules: any) {
+    let res: number &#x3D; 0;
+
+    /* [&quot;10&quot;, &quot;%&quot;, &quot;no_of_people&quot;, &quot;-&quot;, &quot;incidental_cost_of_sales
+    engine:[
+            [&quot;100&quot;,&quot;*&quot;, &quot;no_of_people&quot;]
+            [&quot;10&quot;, &quot;%&quot;, &quot;no_of_people&quot;, &quot;-&quot;, &quot;incidental_cost_of_sales&quot;]
+]
+
+  */
+
+    // if(this.isDigit())
+
+    let i: number &#x3D; 0;
+    while (i &lt; rules.engine.length) {
+      let side1 &#x3D; &quot;&quot;;
+      let operator &#x3D; &quot;&quot;;
+      let side2 &#x3D; &quot;&quot;;
+
+      if (this.isDigit(rules.engine[i])) {
+        side1 &#x3D; rules.engine[i];
+        i++;
+      } else if (this.isKey(rules, rules.engine[i])) {
+        side1 &#x3D; this.getElementValue(rules, rules.engine[i]);
+        i++;
+      }
+
+      if (this.isOperator(rules.engine[i])) {
+        operator &#x3D; rules.engine[i];
+        i++;
+      }
+
+      if (this.isDigit(rules.engine[i])) {
+        side2 &#x3D; rules.engine[i];
+        i++;
+      } else if (this.isKey(rules, rules.engine[i])) {
+        side2 &#x3D; this.getElementValue(rules, rules.engine[i]);
+        i++;
+      }
+
+      console.log(&quot;side1&quot;, side1, &quot;side2&quot;, side2, &quot;res&quot;, res, i);
+
+      if (side1.length &lt; 0 &amp;&amp; side2.length &lt; 0) {
+        console.log(&quot;ERROR EMPTY &quot;);
+        return null;
+      }
+
+      let number1 &#x3D; Object.is(parseInt(side1), NaN)
+        ? res
+        : parseInt(side1) + res;
+
+      let number2 &#x3D; parseInt(side2);
+
+      console.log(
+        &quot;number 1&quot;,
+        parseInt(side1) &#x3D;&#x3D; NaN,
+        number1,
+        &quot; number 2&quot;,
+        number2
+      );
+
+      switch (operator) {
+        case &quot;*&quot;:
+          res &#x3D; number1 * number2;
+
+          break;
+
+        case &quot;+&quot;:
+          res &#x3D; number1 + number2;
+          break;
+
+        case &quot;%&quot;:
+          res &#x3D; (number2 / 100) * number1;
+          break;
+
+        case &quot;-&quot;:
+          res &#x3D; number1 - number2;
+          break;
+      }
+    }
+
+    return res;
+  }
+
+  arrangePayeeFormDataForDisplay(
+    formData: any,
+    payee_calculator: PayeeCalculator
+  ) {
+ 
+    let result: any &#x3D; {};
+    result.cra &#x3D; payee_calculator.cra;
+    result.gi &#x3D; payee_calculator.gross_income;
+    result.ti &#x3D; payee_calculator.taxable_income;
+    result.nhis &#x3D; payee_calculator.nhis;
+    result.pe &#x3D; payee_calculator.pe;
+    result.nhs &#x3D; payee_calculator.nhs;
+    result.li &#x3D; payee_calculator.li;
+    result.paye &#x3D; payee_calculator.tax;
+    result.period &#x3D; &#x60;${formData.period_from} - ${formData.period_to}&#x60;;
+    result.dev_levy &#x3D; payee_calculator.dev_levy;
+    result.mda &#x3D; &quot;PSIRS&quot;;
+    result.tax_item &#x3D; &quot;PAYE&quot;;
+    result.deductions &#x3D; payee_calculator.total_deductions;
+    result.name &#x3D; formData.name;
+    return result;
+  }
+
+  arrangeBulkPayeeFormDataForDisplay(
+    formData: any,
+    payee_calculator: PayeeCalculator
+  ) {
+    console.log(&quot;ruuuuuuuuuuuuuuuuuu&quot;, formData);
+    let result: any &#x3D; [];
+    // result.cra &#x3D; payee_calculator.cra;
+    // result.gi &#x3D; payee_calculator.gross_income;
+    // result.ti &#x3D; payee_calculator.taxable_income;
+    // result.paye &#x3D; payee_calculator.tax;
+    // result.mda &#x3D; &quot;PSIRS&quot;;
+    // result.tax_item &#x3D; &quot;PAYE&quot;;
+    // result.deductions &#x3D; payee_calculator.total_deductions;
+    return result;
+  }
+
+  arrangeDirectAssessmentHighNetWorthFormDataForDisplay(formData: any) {
+    let result: any &#x3D; {};
+    formData.forEach((element) &#x3D;&gt; {
+      result &#x3D; { ...result, [element.label]: element[&quot;value&quot;] };
+    });
+    result.mda &#x3D; &quot;PSIRS&quot;;
+    result.tax_item &#x3D; &quot;PAYE&quot;;
+    return result;
+  }
+
+  arrangeDirectAssessmentFormDataForDisplay(formData: any) {
+    let allTotal: number &#x3D; 0;
+    let keys: any &#x3D; [];
+
+    formData.forEach((item) &#x3D;&gt; {
+      if (!isNaN(item.value) &amp;&amp; item.label !&#x3D; &quot;bvn&quot;) {
+        allTotal +&#x3D; parseInt(item.value);
+        keys.push({ label: item.label, value: item.value });
+      }
+    });
+
+    keys.push({ total: allTotal });
+    return keys;
+  }
+
+  arrangePresumptiveDataFormDataForDisplay(formData: any) {
+    const parsedDta &#x3D; JSON.parse(formData.display);
+    formData.business_category &#x3D; parsedDta.business_category;
+    formData.business_type &#x3D; parsedDta.business_type;
+    formData.association &#x3D; parsedDta.association;
+    return formData;
+  }
+  getElementValue(rules: any, key: any) {
+    for (let i &#x3D; 0; i &lt; rules.elements.length; i++) {
+      if (rules.elements[i].name &#x3D;&#x3D; key) {
+        return rules.elements[i].value;
+      }
+    }
+
+    return null;
+  }
+
+  isOperator(item: any) {
+    let operators &#x3D; &quot;*+-%/&quot;;
+    let result &#x3D; false;
+
+    result &#x3D; operators.indexOf(item) &gt; -1;
+
+    console.log(&quot;is operator &quot;, item, result);
+    return result;
+  }
+
+  isKey(rules: any, item: any) {
+    let result &#x3D; false;
+
+    for (let i &#x3D; 0; i &lt; rules.elements.length; i++) {
+      if (rules.elements[i].name &#x3D;&#x3D; item) {
+        result &#x3D; true;
+      }
+    }
+
+    console.log(&quot;is key &quot;, rules, item, result);
+    return result;
+  }
+
+  isDigit(item: any) {
+    let result &#x3D; isNaN(item) ? false : true;
+
+    console.log(&quot;is digit &quot;, item, result);
+
+    return result;
+  }
+
+  priVehicleCategories: any &#x3D; [
+    { tag: &quot;a&quot;, label: &quot;Category A (Above 3.0cc)&quot; },
+    { tag: &quot;b&quot;, label: &quot;Category B (2.1 - 3.0cc) &quot; },
+    { tag: &quot;c&quot;, label: &quot;Category C (1.7 - 2.00c) &quot; },
+    { tag: &quot;d&quot;, label: &quot;Category D (1.2 - 1.6cc) &quot; },
+  ];
+
+  governmentFancyNumberPlateCategories: any &#x3D; [
+    { tag: &quot;bus&quot;, label: &quot;Bus&quot; },
+    { tag: &quot;car&quot;, label: &quot;Car&quot; },
+    { tag: &quot;car&quot;, label: &quot;Car&quot; },
+  ];
+
+  motorCycleCategories: any &#x3D; [
+    { tag: &quot;private&quot;, label: &quot;Private&quot; },
+    { tag: &quot;commercial&quot;, label: &quot;Commercial&quot; },
+  ];
+
+  governmentOfficialNumberPlateCategories: any &#x3D; [
+    { tag: &quot;a&quot;, label: &quot;Category A&quot; },
+    { tag: &quot;b&quot;, label: &quot;Category B&quot; },
+    { tag: &quot;bus&quot;, label: &quot;Bus&quot; },
+    { tag: &quot;motorcycle&quot;, label: &quot;Motorcycle&quot; },
+  ];
+
+  changeOfOwnershipCategories: any &#x3D; [
+    { tag: &quot;motorvehicle&quot;, label: &quot;Motor Vehicle&quot; },
+    { tag: &quot;motorcycle_tricycle&quot;, label: &quot;Motorcycle/Tricycle&quot; },
+  ];
+
+  driverLicenceCategories: any &#x3D; [
+    { tag: &quot;motorvehicle&quot;, label: &quot;Motor Vehicle&quot; },
+    { tag: &quot;motorcycle_tricycle&quot;, label: &quot;Motorcycle/Tricycle&quot; },
+  ];
+
+  roadSideParkingFeesCategories: any &#x3D; [
+    { tag: &quot;one_hour&quot;, label: &quot;1st Hour&quot; },
+    { tag: &quot;two_four_hours&quot;, label: &quot;2 - 4 Hours&quot; },
+    { tag: &quot;over_four_hours&quot;, label: &quot;More than 4 hours&quot; },
+  ];
+  
+  // Learners Permit
+  learnersPermits: any &#x3D; [
+    { tag: &quot;with_l_symbol&quot;, label: &quot;With L Symbol&quot; },
+    { tag: &quot;without_l_symbol&quot;, label: &quot;Without L Symbol&quot; }
+  ];
+
+  commercialVehicleCategories: any &#x3D; [
+    { tag: &quot;a&quot;, label: &quot;Category A (Trailer)&quot; },
+    { tag: &quot;b&quot;, label: &quot;Category B (Tanker &amp; Truck)&quot; },
+    { tag: &quot;c&quot;, label: &quot;Category C (Tipper and Lorry) &quot; },
+    { tag: &quot;d&quot;, label: &quot;Category D (Canter) &quot; },
+
+    { tag: &quot;e&quot;, label: &quot;Category E (Bus) &quot; },
+
+    { tag: &quot;f&quot;, label: &quot;Category F (Pickup) &quot; },
+
+    { tag: &quot;g&quot;, label: &quot;Category G (Painted Taxi) &quot; },
+
+    { tag: &quot;c&quot;, label: &quot;Category C (Unpainted Taxi) &quot; },
+  ];
+
+  outOfSeriesNumberPlatesCategories: any &#x3D; [
+    { tag: &quot;a&quot;, label: &quot;Category A (Above 3.0cc)&quot; },
+    { tag: &quot;b&quot;, label: &quot;Category B (2.1 - 3.0cc) &quot; },
+    { tag: &quot;c&quot;, label: &quot;Category C (1.7 - 2.00c) &quot; },
+  ];
+
+  missingNumberPlatesCategories: any &#x3D; [
+    { tag: &quot;fancy&quot;, label: &quot;Fancy&quot; },
+    { tag: &quot;out_of_series&quot;, label: &quot;Out of Series &quot; },
+    { tag: &quot;private&quot;, label: &quot;Private &quot; },
+    { tag: &quot;commercial&quot;, label: &quot;Commercial&quot; },
+    { tag: &quot;motorcycle_tricycle&quot;, label: &quot;Motorcycle/Tricycle&quot; },
+  ];
+
+  motorDealersPlateCategories: any &#x3D; [{ tag: &quot;all&quot;, label: &quot;All Categories&quot; }];
+
+  mortorDealersPlateRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;all&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 30000 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 5000,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 12000 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+  ];
+
+  missingPlateNumberRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;fancy&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 80000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;out_of_series&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 40000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;private&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;commercial&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;motorcycle_tricycle&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Plate Number Replacement&quot;,
+          amount: 2500,
+        },
+      ],
+    },
+  ];
+
+  privateVehicleRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 6250,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 3125 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 6250,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 2500 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 3125,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1875 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 3125,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1250 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+  ];
+
+  privateMotorCycleRules: any &#x3D; [
+    {
+      label: &quot;Private&quot;,
+      tag: &quot;private&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 3000 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 1250,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 625 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+        { tag: &quot;learners_permit&quot;, label: &quot; Learner&#x27;s Permit&quot;, amount: 250 },
+        { tag: &quot;reflective_jacket&quot;, label: &quot;Reflective Jacket&quot;, amount: 0 },
+      ],
+    },
+
+    {
+      label: &quot;Commercial&quot;,
+      tag: &quot;commercial&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 2500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 1250,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1250 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+
+        { tag: &quot;sticker&quot;, label: &quot; Sticker &quot;, amount: 550 },
+        { tag: &quot;learners_permit&quot;, label: &quot; Learner&#x27;s Permit&quot;, amount: 1250 },
+        { tag: &quot;reflective_jacket&quot;, label: &quot; Regt Book&quot;, amount: 750 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 3125,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1875 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+        {
+          tag: &quot;vehicle_registration&quot;,
+          label: &quot;Vehicle Registration&quot;,
+          amount: 3125,
+        },
+        { tag: &quot;vehicle_licence&quot;, label: &quot;Vehicle Licence&quot;, amount: 1250 },
+        { tag: &quot;cost_of_registration_book&quot;, label: &quot; Regt Book&quot;, amount: 1250 },
+      ],
+    },
+  ];
+
+  outOfSeriesPlateNumberRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+  ];
+
+  roadSideParkingRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;one_hour&quot;,
+      fees: [
+        { tag: &quot;urban&quot;, label: &quot;Urban Road Side Parking&quot;, amount: 50 },
+        {
+          tag: &quot;semi_urban&quot;,
+          label: &quot;Semi-Urban Road Side Parking&quot;,
+          amount: 20,
+        },
+        { tag: &quot;rural&quot;, label: &quot;Rural Road Side Parking&quot;, amount: 0 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;two_four_hours&quot;,
+      fees: [
+        { tag: &quot;urban&quot;, label: &quot;Urban Road Side Parking&quot;, amount: 100 },
+        {
+          tag: &quot;semi_urban&quot;,
+          label: &quot;Semi-Urban Road Side Parking&quot;,
+          amount: 50,
+        },
+        { tag: &quot;rural&quot;, label: &quot;Rural Road Side Parking&quot;, amount: 20 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;over_four_hours&quot;,
+      fees: [
+        { tag: &quot;urban&quot;, label: &quot;Urban Road Side Parking&quot;, amount: 200 },
+        {
+          tag: &quot;semi_urban&quot;,
+          label: &quot;Semi-Urban Road Side Parking&quot;,
+          amount: 100,
+        },
+        { tag: &quot;rural&quot;, label: &quot;Rural Road Side Parking&quot;, amount: 50 },
+      ],
+    },
+  ];
+
+  changeOfOwnershipRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;motorvehicle&quot;,
+      fees: [
+        {
+          tag: &quot;change_of_ownership&quot;,
+          label: &quot;Change of Ownership&quot;,
+          amount: 2500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;motorcycle_tricycle&quot;,
+      fees: [
+        { tag: &quot;change_of_ownership&quot;, label: &quot;Plate Number&quot;, amount: 625 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+  ];
+  
+
+  learnersPermitRules: any &#x3D; [
+    {
+      label: &quot;With L Symbol&quot;,
+      tag: &quot;with_l_symbol&quot;,
+      fees: [
+        {tag: &quot;with_l_symbol&quot;, label: &quot;With L Symbol (N750)&quot;, amount: 750},
+      ],
+    },
+
+    {
+      label: &quot;Without L Symbol&quot;,
+      tag: &quot;without_l_symbol&quot;,
+      fees: [
+        { tag: &quot;without_l_symbol&quot;, label: &quot;Without L Symbol (N500)&quot;, amount: 500 },
+      ],
+    }
+  ];
+
+  driverLicenseRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;motorvehicle&quot;,
+      fees: [
+        { tag: &quot;drivers_license&quot;, label: &quot;Driver&#x27;s License&quot;, amount: 6350 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;motorcycle_tricycle&quot;,
+      fees: [
+        { tag: &quot;drivers_license&quot;, label: &quot;Driver&#x27;s License&quot;, amount: 625 },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 40000 },
+      ],
+    },
+  ];
+
+  governmentOfficialPlateNumberRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 15000 },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 15000 },
+      ],
+    },
+
+    {
+      label: &quot;Bus&quot;,
+      tag: &quot;bus&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 15000 },
+      ],
+    },
+  ];
+
+  fancyPlateNumberRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Get Fancy Plate Number&quot;,
+          amount: 80000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Get Fancy Plate Number&quot;,
+          amount: 80000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        { tag: &quot;cost_of_plate_number&quot;, label: &quot;Plate Number&quot;, amount: 12500 },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Fancy Palte Number&quot;,
+          amount: 80000,
+        },
+      ],
+    },
+  ];
+
+  revalidationOldNumberPlatePrivateRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 10000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 10000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 10000,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 10000,
+        },
+      ],
+    },
+  ];
+
+  governmentFancyPlateRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;bus&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 0,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;car&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 0,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;car&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 0,
+        },
+      ],
+    },
+  ];
+
+  revalidationOldNumberPlateCommercialRules: any &#x3D; [
+    {
+      label: &quot;Category A&quot;,
+      tag: &quot;a&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category B&quot;,
+      tag: &quot;b&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category C&quot;,
+      tag: &quot;c&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category D&quot;,
+      tag: &quot;d&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category E&quot;,
+      tag: &quot;e&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+    {
+      label: &quot;Category f&quot;,
+      tag: &quot;f&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+    {
+      label: &quot;Category G&quot;,
+      tag: &quot;g&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+
+    {
+      label: &quot;Category H&quot;,
+      tag: &quot;h&quot;,
+      fees: [
+        {
+          tag: &quot;cost_of_plate_number&quot;,
+          label: &quot;Revalidate Plate Number&quot;,
+          amount: 12500,
+        },
+      ],
+    },
+  ];
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AssessmentService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

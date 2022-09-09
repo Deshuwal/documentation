@@ -1,0 +1,18 @@
+<div class="breadcrumb" *ngIf="breadItem">
+  <h1 class="text" *ngIf="breadItem.title">
+    {{ breadItem.title }}
+  </h1>
+  <h1 class="text page-title" *ngIf="!breadItem.title">
+    {{ breadItem.page.title || breadItem.page.name }}
+  </h1>
+  <ul>
+    <li *ngIf="breadItem.role" name="userRole">
+      <span>{{ breadItem.role }}</span>
+    </li>
+    <li *ngIf="breadItem.module">
+      <a [routerLink]="breadItem.module.state" *ngIf="breadItem.module.type == 'LINK'">{{ breadItem.module.name }}</a>
+      <span *ngIf="breadItem.module.type == 'TEXT'">{{ breadItem.module.name }}</span>
+    </li>
+    <li *ngIf="breadItem.page">{{ breadItem.page.name }}</li>
+  </ul>
+</div>

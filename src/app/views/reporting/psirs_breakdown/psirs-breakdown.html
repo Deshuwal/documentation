@@ -1,0 +1,240 @@
+
+<div class="">
+	<app-breadcrumb></app-breadcrumb>
+
+	<div class="separator-breadcrumb border-top"></div>
+
+	<div *ngIf="loading" class="col-md-12 text-center">
+		<div class="spinner spinner-primary mr-3"></div>
+	</div>
+
+	<div *ngIf="!loading">
+	 
+		<div style="padding: 1rem" class="top-scroll card card-mediaQuery">
+			<div class="row ">
+				<div class="col-md-4 col-sm-12">
+					<p>From:</p>
+					<input
+						class="form-control"
+						type="date"
+						[(ngModel)]="from"
+						required
+					/>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<p>To:</p>
+					<input
+						class="form-control"
+						type="date"
+						[(ngModel)]="to"
+						required
+					/>	
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="row">
+						<div class="col-md-8">
+							<p>&nbsp;</p>
+							<button
+								class="btn btn-primary btn-block pull-right"
+								(click)="filterByDate()"
+								*ngIf="!isSearching"
+							>
+								Filter Records
+							</button>
+							<button
+								class="btn btn-primary btn-block pull-right"
+								*ngIf="isSearching"
+								disabled
+							>
+								Filtering...
+							</button>
+						</div>
+						<div class="col-md-4">
+							<p>&nbsp;</p>
+							<button
+								class="btn btn-outline-info btn-block"
+								*ngIf="isReset"
+								(click)="reloadCurrentPage()"
+							>
+								Reset
+							</button>
+						</div>
+					</div>
+					
+					<!-- <button
+						class="btn btn-default btn-block"
+					>
+						Reset
+					</button> -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="separator-breadcrumb border-top"></div>
+
+		<div class="row mb-4">
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="card text-right">
+					<div class="card-body">
+						<h4 class="card-title mb-3">Payment Channels Breakdown (All MDAs)</h4>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr style="text-align:center;">
+										<th scope="col">#</th>
+										<th scope="col">Channel</th>
+										<th scope="col">Revenue</th>
+										<th scope="col">% of overall Revenue</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Kudi (Nomba)</td>
+										<td style="text-align:right;">₦{{ paymentChannels.kudi | number }}</td>
+										<td style="text-align:right;" >{{ calculatePercentage(paymentChannels.kudi, paymentChannelsSum).toFixed(1)}}%</td>
+									</tr>
+									
+									<tr>
+										<th scope="row">2</th>
+										<td>NIBSS</td>
+										<td style="text-align:right;">₦{{ paymentChannels.nibss | number}}</td>
+										<td style="text-align:right;" >{{ calculatePercentage(paymentChannels.nibss, paymentChannelsSum).toFixed(1) }}%</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Opay</td>
+										<td style="text-align:right;" >₦{{ paymentChannels.opay | number}}</td>
+										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.opay, paymentChannelsSum).toFixed(1) }}%</td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Wallet</td>
+										<td style="text-align:right;">₦{{ paymentChannels.wallet | number}}</td>
+										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.wallet, paymentChannelsSum).toFixed(1) }}%</td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Paydirect</td>
+										<td style="text-align:right;">₦{{ paymentChannels.paydirect | number}}</td>
+										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.paydirect, paymentChannelsSum).toFixed(1) }}%</td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Tech Support </td>
+										<td style="text-align:right;">₦{{ paymentChannels.psirs_customer_service | number}}</td>
+										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.psirs_customer_service, paymentChannelsSum).toFixed(1) }}%</td>
+									</tr>
+									<tr>
+										<th scope="row">7</th>
+										<td>Monnify</td>
+										<td style="text-align:right;">₦{{ paymentChannels.monnify | number}}</td>
+										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.monnify, paymentChannelsSum).toFixed(1) }}%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="card text-right" style="margin-top:2%;">
+
+					<div class="card-body" >
+						<h4 class="card-title mb-3">YTD: PSIRS vs Other MDAs Revenue </h4>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr style="text-align:center;">
+										<th scope="col">#</th>
+										<th scope="col">MDA</th>
+										<th scope="col">Total Revenue</th>
+										<th scope="col">% of overall Revenue</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngIf="filteredMdaAssessmentBreakdowns.length < 1">
+										<th colspan="4" class="text-center">Loading Data...</th>
+									</tr>
+									<tr  *ngIf="filteredMdaAssessmentBreakdowns.length > 1">
+										<th scope="row">1</th>
+										<td>PSIRS</td>
+										<td>₦{{ psirsTotalAmount | number }}</td>
+										<td> {{psirsRevenuePercentage.toFixed(1) }} %</td>
+									</tr>
+									<tr *ngIf="filteredMdaAssessmentBreakdowns.length > 1">
+										<th scope="row">2</th>
+										<td>Other MDAs</td>
+										<td>₦{{ otherMdasTotalAmount | number }}</td>
+										<td> {{mdasRevenuePercentage.toFixed(1) }} %</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 mb-3">
+				<div class="card text-right">
+
+					<div class="card-body">
+						<h4 class="card-title mb-3">YTD: PSIRS Revenue Breakdown </h4>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr style="text-align:right">
+										<th scope="col">#</th>
+										<th scope="col">TaxItem</th>
+										<th scope="col">Total Revenue</th>
+										<th scope="col">% of overall Revenue</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr> <td colspan="4" style="text-align:center"><strong>Automated Assessments </strong> </td></tr>
+									<tr *ngFor="let item of automatedAssessments; let cindex=index;">
+										<th scope="row">{{(cindex+1)}}</th>
+										<td>{{item.title}}</td>
+										<td style="text-align:right;">₦{{ item.amount_aggr | number : '.2-2'}}</td>
+										<td style="text-align:right;">{{ calculatePercentage(item.amount_aggr, psirsTotalAssessments).toFixed()  }}%</td>
+									</tr>
+
+									<tr> <td colspan="4" style="text-align:center"><strong>Manual Assessments </strong> </td></tr>
+									<tr *ngFor="let item of manualAssessments; let i = index;">
+										<th *ngIf="i < 3" scope="row">{{i+1}}</th>
+										<td *ngIf="i < 3" >{{extractTitleFromGenericAssessment(item.rules)}}</td>
+										<td *ngIf="i < 3" style="text-align:right;">₦{{ item.amount_aggr | number :'.2-2' }}</td>
+										<td  *ngIf="i < 3" style="text-align:right;">{{ calculatePercentage(item.amount_aggr, psirsTotalAssessments).toFixed(1)  }}%</td>
+
+										<th *ngIf="i >= 3 && displayAllManualAssessments" scope="row">{{i+1}}</th>
+										<td *ngIf="i >= 3 && displayAllManualAssessments" >{{extractTitleFromGenericAssessment(item.rules)}}</td>
+										<td *ngIf="i >= 3 && displayAllManualAssessments" style="text-align:right;">₦{{ item.amount_aggr | number :'.2-2' }}</td>
+										<td  *ngIf="i >= 3 && displayAllManualAssessments" style="text-align:right;">{{ calculatePercentage(item.amount_aggr, psirsTotalAssessments).toFixed(1)  }}%</td>
+							
+									</tr>
+									<tr> <td colspan="4" (click)="displayAllManualAssessments=!displayAllManualAssessments" style="text-align:center; text-decoration: underline; cursor:pointer;"><strong *ngIf="!displayAllManualAssessments">View All Manual Assessments </strong> <strong *ngIf="displayAllManualAssessments">Compact View </strong> </td></tr>
+									
+									<tr> 
+										<td colspan="2" style="text-align:left;"> <strong>Total</strong> </td>
+										<td style="text-align:right;">₦{{ psirsTotalAssessments | number :'.2-2'}}</td>
+										<td></td>
+									</tr>
+ 
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- end of col-->
+		
+		</div>
+
+
+
+	 
+	</div>
+</div>

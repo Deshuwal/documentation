@@ -1,0 +1,169 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div style="display: flex; justify-content: space-between">
+	<div class="col-lg-6 col-md-6">
+		<div class="form-group float-left">
+			<input
+				#input
+				placeholder="Search"
+				class="form-control form-control-rounded"
+				type="text"
+			/>
+		</div>
+	</div>
+	<div style="text-align: end">
+		<div class="form-group float-left">
+			<button *ngIf="!loading"  (click)="calculateRisk()" class="btn btn-rounded btn-primary">
+				Generate Risk Audit
+			</button>
+			
+			<button *ngIf="loading" class="btn btn-rounded btn-primary">
+				Generating... Please wait
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="row mb-3">
+	<div class="col-md-12 mb-3"></div>
+	<div *ngIf="loading" class="col-md-12 text-center">
+		<div class="spinner spinner-primary mr-3"></div>
+	</div>
+
+	<div
+		class="col-md-12"
+		*ngIf="!loading"
+		[@animate]="{
+			value: '*',
+			params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+		}"
+	>
+		<div class="card o-hidden">
+			<ngx-datatable
+				*ngIf="activities?.length"
+				class="material fullscreen"
+				[columnMode]="'force'"
+				[headerHeight]="50"
+				[footerHeight]="50"
+				[rowHeight]="50"
+				[scrollbarH]="true"
+				[scrollbarV]="true"
+				[virtualization]="false"
+				[externalPaging]="true"
+				[count]="totalCount"
+				[rows]="activities"
+				[offset]="offset"
+				[limit]="perPageCount"
+				(page)="onPageChange($event)"
+			>
+				<ngx-datatable-column name="photo">
+					<ng-template ngx-datatable-header-template> S/N </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.sn }}
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template>Tax Payer </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.company_name }}
+					</ng-template>
+				</ngx-datatable-column>
+
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> TIN</ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.tin }}
+					</ng-template>
+				</ngx-datatable-column>
+
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template>
+						Business Industry</ng-template
+					>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.business_industry }}
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> Address </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.address }}
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> Risk Score </ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						{{ row.last_audit_score || 0 }}
+					</ng-template>
+				</ngx-datatable-column>
+				<ngx-datatable-column>
+					<ng-template ngx-datatable-header-template> Audited</ng-template>
+					<ng-template
+						ngx-datatable-cell-template
+						let-value="value"
+						let-row="row"
+					>
+						<button
+							*ngIf="!isInputDisplayed"
+							type="button"
+							btnClass="btn-primary btn-rounded btn-block mt-3"
+							aria-label="Close button"
+							aria-describedby="modal-title"
+							(click)="displayInput()"
+						>
+							Audited
+						</button>
+						<div *ngIf="isInputDisplayed" style="display: flex">
+							<input
+								style="width: 33.33%"
+								type="date"
+								class="form-control others-amount"
+							/>
+							<input
+								style="margin-left: 2px; width: 33.33%"
+								type="number"
+								class="form-control others-amount"
+							/>
+							<button
+								style="width: 20.33%; margin-left: 2px"
+								type="button"
+								btnClass="btn-primary btn-rounded btn-block mt-3"
+								aria-label="Close button"
+								aria-describedby="modal-title"
+								(click)="submitInput()"
+							>
+								Submit
+							</button>
+						</div>
+					</ng-template>
+				</ngx-datatable-column>
+			</ngx-datatable>
+		</div>
+	</div>
+</div>

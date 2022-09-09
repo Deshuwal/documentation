@@ -1,0 +1,1711 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ConsumptionTaxComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/assessment/consumption-tax/consumption-tax.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-consumption-tax</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./consumption-tax.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./consumption-tax.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#companiesInput$" >companiesInput$</a>
+                            </li>
+                            <li>
+                                <a href="#companiesLoading" >companiesLoading</a>
+                            </li>
+                            <li>
+                                <a href="#config" >config</a>
+                            </li>
+                            <li>
+                                <a href="#foundTIN$" >foundTIN$</a>
+                            </li>
+                            <li>
+                                <a href="#foundTins" >foundTins</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#minLengthTerm" >minLengthTerm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#saving" >saving</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#submitted" >submitted</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#tax_item_id" >tax_item_id</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#taxForm" >taxForm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#taxItem" >taxItem</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#user" >user</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getCompanies" >getCompanies</a>
+                            </li>
+                            <li>
+                                <a href="#getTaxItemInfo" >getTaxItemInfo</a>
+                            </li>
+                            <li>
+                                <a href="#loadTins" >loadTins</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onDropdownClick" >onDropdownClick</a>
+                            </li>
+                            <li>
+                                <a href="#saveAssessment" >saveAssessment</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#taxf" >taxf</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, http: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, toastService: ToastrService, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>, localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, selfAssService: <a href="../injectables/SelfAssessmentService.html" target="_self">SelfAssessmentService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:37</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>selfAssService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SelfAssessmentService.html" target="_self" >SelfAssessmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCompanies"></a>
+                    <span class="name">
+                        <span ><b>getCompanies</b></span>
+                        <a href="#getCompanies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCompanies(term: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:173</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>term</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getTaxItemInfo"></a>
+                    <span class="name">
+                        <span ><b>getTaxItemInfo</b></span>
+                        <a href="#getTaxItemInfo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getTaxItemInfo(params?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="89"
+                            class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:89</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>params</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadTins"></a>
+                    <span class="name">
+                        <span ><b>loadTins</b></span>
+                        <a href="#loadTins"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadTins()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:50</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDropdownClick"></a>
+                    <span class="name">
+                        <span ><b>onDropdownClick</b></span>
+                        <a href="#onDropdownClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDropdownClick()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="187"
+                            class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:187</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveAssessment"></a>
+                    <span class="name">
+                        <span ><b>saveAssessment</b></span>
+                        <a href="#saveAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveAssessment()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="203"
+                            class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:203</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companiesInput$"></a>
+                    <span class="name">
+                        <span ><b>companiesInput$</b></span>
+                        <a href="#companiesInput$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;string&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="129" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:129</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companiesLoading"></a>
+                    <span class="name">
+                        <span ><b>companiesLoading</b></span>
+                        <a href="#companiesLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="128" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:128</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="config"></a>
+                    <span class="name">
+                        <span ><b>config</b></span>
+                        <a href="#config"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    displayKey: &quot;company_name&quot;,
+    search: true,
+    limitTo: 50,
+    moreText: &quot;More&quot;,
+    searchPlaceholder: &quot;Search by TIN.&quot;,
+    noResultsFound: &quot;No results found!&quot;,
+    searchOnKey: &quot;tin&quot;,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:177</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="foundTIN$"></a>
+                    <span class="name">
+                        <span ><b>foundTIN$</b></span>
+                        <a href="#foundTIN$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="127" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:127</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="foundTins"></a>
+                    <span class="name">
+                        <span ><b>foundTins</b></span>
+                        <a href="#foundTins"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:131</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="minLengthTerm"></a>
+                    <span class="name">
+                        <span ><b>minLengthTerm</b></span>
+                        <a href="#minLengthTerm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>3</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="130" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:130</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saving"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>saving</b></span>
+                        <a href="#saving"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitted"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>submitted</b></span>
+                        <a href="#submitted"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tax_item_id"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>tax_item_id</b></span>
+                        <a href="#tax_item_id"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>17</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxForm"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>taxForm</b></span>
+                        <a href="#taxForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItem"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>taxItem</b></span>
+                        <a href="#taxItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="user"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>user</b></span>
+                        <a href="#user"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="taxf"></a>
+                        <span class="name"><b>taxf</b><a href="#taxf"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>taxf()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="199" class="link-to-prism">src/app/views/assessment/consumption-tax/consumption-tax.component.ts:199</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;;
+import { FormBuilder, FormGroup, Validators } from &quot;@angular/forms&quot;;
+import { ActivatedRoute, Router } from &quot;@angular/router&quot;;
+import moment from &quot;moment&quot;;
+import { ToastrService } from &quot;ngx-toastr&quot;;
+import { concat, Observable, of, Subject } from &quot;rxjs&quot;;
+import {
+  catchError,
+  debounceTime,
+  distinctUntilChanged,
+  filter,
+  map,
+  switchMap,
+  tap,
+} from &quot;rxjs/operators&quot;;
+import { SharedAnimations } from &quot;src/app/shared/animations/shared-animations&quot;;
+import { BreadcrumbService } from &quot;src/app/shared/services/breadcrumb.service&quot;;
+import { HttpService } from &quot;src/app/shared/services/http.service&quot;;
+import { LocalStoreService } from &quot;src/app/shared/services/local-store.service&quot;;
+import { SelfAssessmentService } from &quot;src/app/shared/services/self-assessment.service&quot;;
+
+@Component({
+  selector: &quot;app-consumption-tax&quot;,
+  templateUrl: &quot;./consumption-tax.component.html&quot;,
+  styleUrls: [&quot;./consumption-tax.component.scss&quot;],
+  animations: [SharedAnimations],
+})
+export class ConsumptionTaxComponent implements OnInit {
+  private taxItem: any;
+  private tax_item_id &#x3D; 17;
+
+  public user: any;
+
+  public taxForm: FormGroup;
+  public loading &#x3D; false;
+  public submitted &#x3D; false;
+  public saving &#x3D; false;
+
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private toastService: ToastrService,
+    private breadcrumb: BreadcrumbService,
+    private localStore: LocalStoreService,
+    private selfAssService: SelfAssessmentService
+  ) {}
+
+  ngOnInit() {
+    this.user &#x3D; this.localStore.getItem(&quot;user&quot;);
+    this.breadcrumb.setCrumbItem(&quot;consumptionTax&quot;);
+
+    this.taxForm &#x3D; this.fb.group({
+      mda_id: [&quot;&quot;],
+      tax_item_id: [&quot;&quot;],
+      tax_item: [&quot;&quot;],
+      mda: [&quot;&quot;],
+      payer_tin: [&quot;&quot;],
+      payer_name: [&quot;&quot;],
+      created_by: [&quot;&quot;],
+      start_tax_period: [&quot;&quot;, Validators.required],
+      end_tax_period: [&quot;&quot;, Validators.required],
+      account_officer: [&quot;&quot;, Validators.required],
+      account_officer_tin: [
+        &quot;&quot;,
+        Validators.required,
+        // , Validators.pattern(&#x27;[0-9]{10}&#x27;)
+      ],
+      description: [&quot;&quot;, Validators.required],
+      amount: [
+        &quot;&quot;,
+        Validators.required,
+        // Validators.pattern(&#x27;^[1-9]\d*(\.\d+)?$&#x27;)
+      ],
+    });
+
+    this.route.queryParams.subscribe((params) &#x3D;&gt; {
+      if (params.payer_tin &amp;&amp; params.payer_name) {
+        this.getTaxItemInfo(params);
+      } else {
+        this.getTaxItemInfo(params);
+      }
+    });
+
+    this.loadTins();
+  }
+
+  getTaxItemInfo(params?: any) {
+    console.log({ params });
+
+    this.loading &#x3D; true;
+    this.http.doGet(&#x60;tax_items/${this.tax_item_id}&#x60;).subscribe(
+      (res: any) &#x3D;&gt; {
+        this.taxItem &#x3D; res;
+
+        if (!res) {
+          this.toastService.error(&quot;Tax item does not exist.&quot;, &quot;Not Found!&quot;);
+          this.router.navigateByUrl(&quot;assessment/perform&quot;);
+        }
+
+        const profileName &#x3D;
+          this.user.name || &#x60;${this.user.first_name} ${this.user.surname}&#x60;;
+        this.taxForm.patchValue({
+          payer_tin: params.payer_tin ? params.payer_tin : &quot;&quot;,
+          payer_name: params.payer_name ? params.payer_name : &quot;&quot;,
+          tax_item_id: this.taxItem.id,
+          mda: this.taxItem.mda,
+          mda_id: this.taxItem.mda_id,
+          tax_item: this.taxItem.title,
+          account_officer: profileName,
+          account_officer_tin: this.user.tin,
+          created_by: profileName,
+        });
+
+        this.loading &#x3D; false;
+      },
+      (err: any) &#x3D;&gt; {
+        console.log({ err });
+        this.loading &#x3D; false;
+        this.toastService.error(&quot;Retrieving tax item failed.&quot;, &quot;Not Found!&quot;);
+        this.router.navigateByUrl(&quot;assessment/perform&quot;);
+      },
+      () &#x3D;&gt; {}
+    );
+  }
+  foundTIN$: Observable&lt;any&gt;;
+  companiesLoading &#x3D; false;
+  companiesInput$ &#x3D; new Subject&lt;string&gt;();
+  minLengthTerm &#x3D; 3;
+  foundTins &#x3D; [];
+
+  loadTins() {
+    this.foundTIN$ &#x3D; concat(
+      of([]), // default items
+      this.companiesInput$.pipe(
+        filter((res) &#x3D;&gt; {
+          return res !&#x3D;&#x3D; null &amp;&amp; res.length &gt;&#x3D; this.minLengthTerm;
+        }),
+        distinctUntilChanged(),
+        debounceTime(1000),
+        tap(() &#x3D;&gt; (this.companiesLoading &#x3D; true)),
+        switchMap((term) &#x3D;&gt; {
+          return this.getCompanies(term).pipe(
+            map(({ data }) &#x3D;&gt; {
+              const response &#x3D; data.map((data: any) &#x3D;&gt; {
+                if (data.first_name &amp;&amp; data.surname) {
+                  return {
+                    ...data,
+                    payer_name: &#x60;${data.first_name}  ${data.surname}&#x60;,
+                    name: &#x60;${data.first_name}  ${data.surname}&#x60;,
+                  };
+                } else {
+                  return {
+                    ...data,
+                    payer_name: data.name,
+                    name: &#x60;${data.name}&#x60;,
+                  };
+                }
+              });
+
+              this.foundTins &#x3D; response;
+              return response;
+            }),
+            catchError(() &#x3D;&gt; of([])), // empty list on error
+            tap(() &#x3D;&gt; (this.companiesLoading &#x3D; false))
+          );
+        })
+      )
+    );
+  }
+
+  getCompanies(term: string &#x3D; null): Observable&lt;any&gt; {
+    return this.http.doGet(&quot;/users/search_tins?tin&#x3D;&quot; + term);
+  }
+
+  config &#x3D; {
+    displayKey: &quot;company_name&quot;,
+    search: true,
+    limitTo: 50,
+    moreText: &quot;More&quot;,
+    searchPlaceholder: &quot;Search by TIN.&quot;,
+    noResultsFound: &quot;No results found!&quot;,
+    searchOnKey: &quot;tin&quot;,
+  };
+
+  onDropdownClick() {
+    if (this.taxForm.value.payer_tin) {
+      const matched &#x3D; this.foundTins.find(
+        (el) &#x3D;&gt; el.tin &#x3D;&#x3D; this.taxForm.value.payer_tin
+      );
+      console.log({ matched, tin: this.taxForm.value.payer_tin });
+      this.taxForm.patchValue({
+        payer_name: matched.payer_name,
+      });
+    }
+  }
+
+  get taxf() {
+    return this.taxForm.controls;
+  }
+
+  saveAssessment() {
+    this.submitted &#x3D; true;
+    console.log(this.taxForm.value);
+
+    if (this.taxForm.valid) {
+      this.saving &#x3D; true;
+      const user_id &#x3D; this.user.id;
+      const amount &#x3D; this.selfAssService.calculateConsumptionTax(
+        this.taxForm.value.amount
+      );
+      let {
+        mda,
+        tax_item,
+        account_officer_tin,
+        start_tax_period,
+        end_tax_period,
+        description,
+        ...data
+      } &#x3D; this.taxForm.value;
+      const account_officer &#x3D; &#x60;${data.account_officer} (${account_officer_tin})&#x60;;
+      start_tax_period &#x3D; moment(start_tax_period.toString()).format(
+        &quot;MMMM YYYY&quot;
+      );
+      end_tax_period &#x3D; moment(end_tax_period.toString()).format(&quot;MMMM YYYY&quot;);
+      const display &#x3D; JSON.stringify({
+        start_tax_period,
+        end_tax_period,
+        form_amount: this.taxForm.value.amount,
+        mda,
+        amount,
+        tax_item,
+      });
+      const assessment: any &#x3D; Object.assign(
+        {},
+        { ...data, user_id, account_officer, amount, display, description }
+      );
+
+      this.http.doPost(&quot;/assessment/save&quot;, assessment).subscribe(
+        (response: any) &#x3D;&gt; {
+          this.loading &#x3D; true;
+          this.toastService.success(&quot;Assessment Saved. Wait...&quot;, &quot;Successful!&quot;);
+          this.router.navigateByUrl(
+            &#x60;assessment/perform?view&#x3D;${response.data.id}&#x60;
+          );
+        },
+        (err: any) &#x3D;&gt; {
+          this.saving &#x3D; false;
+          this.submitted &#x3D; false;
+          this.toastService.error(
+            &quot;Unexpected error. Please retry.&quot;,
+            &quot;Not Found!&quot;
+          );
+        },
+        () &#x3D;&gt; {
+          this.saving &#x3D; false;
+          this.submitted &#x3D; false;
+        }
+      );
+    }
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div
+  class&#x3D;&quot;&quot;
+  [@animate]&#x3D;&quot;{
+    value: &#x27;*&#x27;,
+    params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+  }&quot;
+&gt;
+  &lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+  &lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+  &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-6 text-center&quot;&gt;
+    &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div *ngIf&#x3D;&quot;!loading&quot; class&#x3D;&quot;&quot;&gt;
+    &lt;div class&#x3D;&quot;card&quot;&gt;
+      &lt;div class&#x3D;&quot;card-body&quot;&gt;
+        &lt;h5 class&#x3D;&quot;card-title&quot;&gt;Fill Consumption Assessment Form Below&lt;/h5&gt;
+
+        &lt;form action&#x3D;&quot;&quot; [formGroup]&#x3D;&quot;taxForm&quot; (ngSubmit)&#x3D;&quot;saveAssessment()&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;mda&quot;&gt;MDA&lt;/label&gt;
+                &lt;input
+                  formControlName&#x3D;&quot;mda&quot;
+                  class&#x3D;&quot;form-control&quot;
+                  type&#x3D;&quot;text&quot;
+                  readonly
+                /&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;tax_item&quot;&gt;Tax Item&lt;/label&gt;
+                &lt;input
+                  formControlName&#x3D;&quot;tax_item&quot;
+                  class&#x3D;&quot;form-control&quot;
+                  type&#x3D;&quot;text&quot;
+                  readonly
+                /&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;payer_tin&quot;&gt;Organization TIN&lt;/label&gt;
+                &lt;ng-select
+                  [items]&#x3D;&quot;foundTIN$ | async&quot;
+                  bindLabel&#x3D;&quot;tin&quot;
+                  bindValue&#x3D;&quot;tin&quot;
+                  [trackByFn]&#x3D;&quot;trackByFn&quot;
+                  labelForId&#x3D;&quot;tin&quot;
+                  [minTermLength]&#x3D;&quot;minLengthTerm&quot;
+                  [loading]&#x3D;&quot;companiesLoading&quot;
+                  placeholder&#x3D;&quot;Search for a user or company by TIN&quot;
+                  typeToSearchText&#x3D;&quot;Please enter {{
+                    minLengthTerm
+                  }} or more characters&quot;
+                  [typeahead]&#x3D;&quot;companiesInput$&quot;
+                  (change)&#x3D;&quot;onDropdownClick(selectedTIN)&quot;
+                  formControlName&#x3D;&quot;payer_tin&quot;
+                &gt;
+                &lt;/ng-select&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;payer_name&quot;&gt;Organization Name&lt;/label&gt;
+                &lt;input
+                  formControlName&#x3D;&quot;payer_name&quot;
+                  class&#x3D;&quot;form-control&quot;
+                  type&#x3D;&quot;text&quot;
+                /&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;account_officer&quot;&gt;Account Officer&#x27;s Name&lt;/label&gt;
+                &lt;input
+                  formControlName&#x3D;&quot;account_officer&quot;
+                  class&#x3D;&quot;form-control&quot;
+                  [ngClass]&#x3D;&quot;{
+                    &#x27;is-invalid&#x27;: submitted &amp;&amp; taxf.account_officer.errors
+                  }&quot;
+                  type&#x3D;&quot;text&quot;
+                /&gt;
+                &lt;div
+                  *ngIf&#x3D;&quot;submitted &amp;&amp; taxf.account_officer.errors&quot;
+                  class&#x3D;&quot;invalid-feedback&quot;
+                &gt;
+                  &lt;div *ngIf&#x3D;&quot;taxf.account_officer.errors.required&quot;&gt;
+                    Account officer name is required.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;account_officer_tin&quot;
+                  &gt;Transaction Period (Start Month and Year)&lt;/label
+                &gt;
+                &lt;div class&#x3D;&quot;input-group&quot;&gt;
+                  &lt;input
+                    type&#x3D;&quot;text&quot;
+                    class&#x3D;&quot;form-control datepicker-only-month-select&quot;
+                    [ngClass]&#x3D;&quot;{
+                      &#x27;is-invalid&#x27;: submitted &amp;&amp; taxf.start_tax_period.errors
+                    }&quot;
+                    ngbDatepicker
+                    #starttaxPeriod&#x3D;&quot;ngbDatepicker&quot;
+                    placeholder&#x3D;&quot;Transaction Period&quot;
+                    formControlName&#x3D;&quot;start_tax_period&quot;
+                    [showWeekdays]&#x3D;&quot;false&quot;
+                    readonly
+                  /&gt;
+                  &lt;div class&#x3D;&quot;input-group-append&quot;&gt;
+                    &lt;button
+                      class&#x3D;&quot;btn btn-secondary btn-rounded&quot;
+                      (click)&#x3D;&quot;starttaxPeriod.toggle()&quot;
+                      type&#x3D;&quot;button&quot;
+                    &gt;
+                      &lt;i class&#x3D;&quot;icon-regular i-Calendar-4&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;account_officer_tin&quot;
+                  &gt;Transaction Period (End Month and Year)&lt;/label
+                &gt;
+                &lt;div class&#x3D;&quot;input-group&quot;&gt;
+                  &lt;input
+                    type&#x3D;&quot;text&quot;
+                    class&#x3D;&quot;form-control datepicker-only-month-select&quot;
+                    [ngClass]&#x3D;&quot;{
+                      &#x27;is-invalid&#x27;: submitted &amp;&amp; taxf.end_tax_period.errors
+                    }&quot;
+                    ngbDatepicker
+                    #endtaxPeriod&#x3D;&quot;ngbDatepicker&quot;
+                    placeholder&#x3D;&quot;Transaction Period&quot;
+                    formControlName&#x3D;&quot;end_tax_period&quot;
+                    [showWeekdays]&#x3D;&quot;false&quot;
+                    readonly
+                  /&gt;
+                  &lt;div class&#x3D;&quot;input-group-append&quot;&gt;
+                    &lt;button
+                      class&#x3D;&quot;btn btn-secondary btn-rounded&quot;
+                      (click)&#x3D;&quot;endtaxPeriod.toggle()&quot;
+                      type&#x3D;&quot;button&quot;
+                    &gt;
+                      &lt;i class&#x3D;&quot;icon-regular i-Calendar-4&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;account_officer_tin&quot;&gt;Account Officer&#x27;s TIN&lt;/label&gt;
+                &lt;input
+                  formControlName&#x3D;&quot;account_officer_tin&quot;
+                  class&#x3D;&quot;form-control&quot;
+                  [ngClass]&#x3D;&quot;{
+                    &#x27;is-invalid&#x27;: submitted &amp;&amp; taxf.account_officer_tin.errors
+                  }&quot;
+                  type&#x3D;&quot;number&quot;
+                /&gt;
+                &lt;div
+                  *ngIf&#x3D;&quot;submitted &amp;&amp; taxf.account_officer_tin.errors&quot;
+                  class&#x3D;&quot;invalid-feedback&quot;
+                &gt;
+                  &lt;div *ngIf&#x3D;&quot;taxf.account_officer_tin.errors.required&quot;&gt;
+                    Account officer TIN is required.
+                  &lt;/div&gt;
+                  &lt;div *ngIf&#x3D;&quot;taxf.account_officer_tin.errors.pattern&quot;&gt;
+                    Enter Valid TIN Number
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;description&quot;&gt;Description&lt;/label&gt;
+                &lt;input
+                  formControlName&#x3D;&quot;description&quot;
+                  class&#x3D;&quot;form-control&quot;
+                  [ngClass]&#x3D;&quot;{
+                    &#x27;is-invalid&#x27;: submitted &amp;&amp; taxf.description.errors
+                  }&quot;
+                  type&#x3D;&quot;text&quot;
+                /&gt;
+                &lt;div
+                  *ngIf&#x3D;&quot;submitted &amp;&amp; taxf.description.errors&quot;
+                  class&#x3D;&quot;invalid-feedback&quot;
+                &gt;
+                  &lt;div *ngIf&#x3D;&quot;taxf.description.errors.required&quot;&gt;
+                    Tax description is required.
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class&#x3D;&quot;col-md-6&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;label for&#x3D;&quot;amount&quot;&gt;Consumable Amount (N)&lt;/label&gt;
+                &lt;input
+                  formControlName&#x3D;&quot;amount&quot;
+                  class&#x3D;&quot;form-control&quot;
+                  [ngClass]&#x3D;&quot;{ &#x27;is-invalid&#x27;: submitted &amp;&amp; taxf.amount.errors }&quot;
+                  type&#x3D;&quot;number&quot;
+                /&gt;
+                &lt;div
+                  *ngIf&#x3D;&quot;submitted &amp;&amp; taxf.amount.errors&quot;
+                  class&#x3D;&quot;invalid-feedback&quot;
+                &gt;
+                  &lt;div *ngIf&#x3D;&quot;taxf.amount.errors.required&quot;&gt;
+                    Consumable Amount is required.
+                  &lt;/div&gt;
+                  &lt;div *ngIf&#x3D;&quot;taxf.amount.errors.pattern&quot;&gt;
+                    Invalid Amount. Enter In Decimals
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+              &lt;div my-3&gt;
+                &lt;btn-loading
+                  type&#x3D;&quot;submit&quot;
+                  btnClass&#x3D;&quot;btn-primary btn-rounded btn-block mt-3&quot;
+                  loadingText&#x3D;&quot;Saving Assessment&quot;
+                  [loading]&#x3D;&quot;saving&quot;
+                &gt;
+                  Generate Assessment
+                &lt;/btn-loading&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./consumption-tax.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div  class=""  [@animate]="{    value: \'*\',    params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }  }">  <app-breadcrumb></app-breadcrumb>  <div class="separator-breadcrumb border-top"></div>  <div *ngIf="loading" class="col-md-6 text-center">    <div class="spinner spinner-primary mr-3"></div>  </div>  <div *ngIf="!loading" class="">    <div class="card">      <div class="card-body">        <h5 class="card-title">Fill Consumption Assessment Form Below</h5>        <form action="" [formGroup]="taxForm" (ngSubmit)="saveAssessment()">          <div class="row">            <div class="col-md-12">              <div class="form-group">                <label for="mda">MDA</label>                <input                  formControlName="mda"                  class="form-control"                  type="text"                  readonly                />              </div>            </div>          </div>          <div class="row">            <div class="col-md-6">              <div class="form-group">                <label for="tax_item">Tax Item</label>                <input                  formControlName="tax_item"                  class="form-control"                  type="text"                  readonly                />              </div>            </div>            <div class="col-md-6">              <div class="form-group">                <label for="payer_tin">Organization TIN</label>                <ng-select                  [items]="foundTIN$ | async"                  bindLabel="tin"                  bindValue="tin"                  [trackByFn]="trackByFn"                  labelForId="tin"                  [minTermLength]="minLengthTerm"                  [loading]="companiesLoading"                  placeholder="Search for a user or company by TIN"                  typeToSearchText="Please enter {{                    minLengthTerm                  }} or more characters"                  [typeahead]="companiesInput$"                  (change)="onDropdownClick(selectedTIN)"                  formControlName="payer_tin"                >                </ng-select>              </div>            </div>            <div class="col-md-6">              <div class="form-group">                <label for="payer_name">Organization Name</label>                <input                  formControlName="payer_name"                  class="form-control"                  type="text"                />              </div>            </div>            <div class="col-md-6">              <div class="form-group">                <label for="account_officer">Account Officer\'s Name</label>                <input                  formControlName="account_officer"                  class="form-control"                  [ngClass]="{                    \'is-invalid\': submitted && taxf.account_officer.errors                  }"                  type="text"                />                <div                  *ngIf="submitted && taxf.account_officer.errors"                  class="invalid-feedback"                >                  <div *ngIf="taxf.account_officer.errors.required">                    Account officer name is required.                  </div>                </div>              </div>            </div>            <div class="col-md-6">              <div class="form-group">                <label for="account_officer_tin"                  >Transaction Period (Start Month and Year)</label                >                <div class="input-group">                  <input                    type="text"                    class="form-control datepicker-only-month-select"                    [ngClass]="{                      \'is-invalid\': submitted && taxf.start_tax_period.errors                    }"                    ngbDatepicker                    #starttaxPeriod="ngbDatepicker"                    placeholder="Transaction Period"                    formControlName="start_tax_period"                    [showWeekdays]="false"                    readonly                  />                  <div class="input-group-append">                    <button                      class="btn btn-secondary btn-rounded"                      (click)="starttaxPeriod.toggle()"                      type="button"                    >                      <i class="icon-regular i-Calendar-4"></i>                    </button>                  </div>                </div>              </div>            </div>            <div class="col-md-6">              <div class="form-group">                <label for="account_officer_tin"                  >Transaction Period (End Month and Year)</label                >                <div class="input-group">                  <input                    type="text"                    class="form-control datepicker-only-month-select"                    [ngClass]="{                      \'is-invalid\': submitted && taxf.end_tax_period.errors                    }"                    ngbDatepicker                    #endtaxPeriod="ngbDatepicker"                    placeholder="Transaction Period"                    formControlName="end_tax_period"                    [showWeekdays]="false"                    readonly                  />                  <div class="input-group-append">                    <button                      class="btn btn-secondary btn-rounded"                      (click)="endtaxPeriod.toggle()"                      type="button"                    >                      <i class="icon-regular i-Calendar-4"></i>                    </button>                  </div>                </div>              </div>            </div>            <div class="col-md-6">              <div class="form-group">                <label for="account_officer_tin">Account Officer\'s TIN</label>                <input                  formControlName="account_officer_tin"                  class="form-control"                  [ngClass]="{                    \'is-invalid\': submitted && taxf.account_officer_tin.errors                  }"                  type="number"                />                <div                  *ngIf="submitted && taxf.account_officer_tin.errors"                  class="invalid-feedback"                >                  <div *ngIf="taxf.account_officer_tin.errors.required">                    Account officer TIN is required.                  </div>                  <div *ngIf="taxf.account_officer_tin.errors.pattern">                    Enter Valid TIN Number                  </div>                </div>              </div>            </div>            <div class="col-md-6">              <div class="form-group">                <label for="description">Description</label>                <input                  formControlName="description"                  class="form-control"                  [ngClass]="{                    \'is-invalid\': submitted && taxf.description.errors                  }"                  type="text"                />                <div                  *ngIf="submitted && taxf.description.errors"                  class="invalid-feedback"                >                  <div *ngIf="taxf.description.errors.required">                    Tax description is required.                  </div>                </div>              </div>            </div>            <div class="col-md-6">              <div class="form-group">                <label for="amount">Consumable Amount (N)</label>                <input                  formControlName="amount"                  class="form-control"                  [ngClass]="{ \'is-invalid\': submitted && taxf.amount.errors }"                  type="number"                />                <div                  *ngIf="submitted && taxf.amount.errors"                  class="invalid-feedback"                >                  <div *ngIf="taxf.amount.errors.required">                    Consumable Amount is required.                  </div>                  <div *ngIf="taxf.amount.errors.pattern">                    Invalid Amount. Enter In Decimals                  </div>                </div>              </div>            </div>            <div class="col-md-12">              <div my-3>                <btn-loading                  type="submit"                  btnClass="btn-primary btn-rounded btn-block mt-3"                  loadingText="Saving Assessment"                  [loading]="saving"                >                  Generate Assessment                </btn-loading>              </div>            </div>          </div>        </form>      </div>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'ConsumptionTaxComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ConsumptionTaxComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

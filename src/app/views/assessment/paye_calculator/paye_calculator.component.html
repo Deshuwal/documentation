@@ -1,0 +1,205 @@
+<div class="col-lg-12 col-md-12">
+  <div class="card mb-4">
+    <div class="card-body p-0">
+      <h5 class="card-title m-0 p-3 text-center">PAYE TAX CALCULATOR</h5>
+
+      <div class="row" style="margin: 2%">
+        <div class="col-md-12">
+          <div class="mb-5">
+            <form
+              [formGroup]="directAssessmentForm"
+              (ngSubmit)="calculatePAYE()"
+            >
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">Monthly Basic Salary</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      formControlName="income_basic_salary"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">Monthly Housing</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      formControlName="income_housing"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax"> Monthly Transport</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      formControlName="income_transport"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax"> National Housing Fund</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      formControlName="deduction_nhf"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">Pension *</label>
+                    <select
+                      class="form-control"
+                      formControlName="deduction_pension"
+                    >
+                      <option value="" defaultValue="Choose an option">
+                        Choose
+                      </option>
+                      <option style="font-weight: bold">Yes</option>
+                      <option style="font-weight: bold">No</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">NHIS *</label>
+                    <select
+                      class="form-control"
+                      formControlName="deduction_nhf"
+                    >
+                      <option defaultValue="Choose an option" hidden>
+                        Choose
+                      </option>
+                      <option style="font-weight: bold">Yes</option>
+                      <option style="font-weight: bold">No</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">Gross Income *</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      formControlName="gross"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">Consolidated Relief Allowance (CRA)</label>
+                    <input
+                      readonly
+                      class="form-control"
+                      formControlName="cra"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">Taxable Income</label>
+                    <input
+                      readonly
+                      class="form-control"
+                      formControlName="taxable_income"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">Annual Tax Payable</label>
+                    <input
+                      readonly
+                      class="form-control"
+                      formControlName="tax_payable"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3">
+                    <label for="tax">Monthly Tax Payable</label>
+                    <input
+                      readonly
+                      class="form-control"
+                      formControlName="tax_payable_monthly"
+                    />
+                  </div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8 row">
+                  <div class="col-md-9 form-group mb-3"></div>
+                  <div class="col-sm-7"></div>
+                </div>
+                <div class="col-sm-1"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

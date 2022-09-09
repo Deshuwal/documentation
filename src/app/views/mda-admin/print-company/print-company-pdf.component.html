@@ -1,0 +1,131 @@
+<!-- <div class="breadcrumb">
+  <h1>Company Profile</h1>
+</div> -->
+<app-breadcrumb></app-breadcrumb>
+<div *ngIf="loading" class="col-md-12 text-center">
+	<div class="spinner spinner-primary mr-3"></div>
+</div>
+
+<div *ngIf="!loading" class="card bg-img" style="padding: 20px 30px">
+	<div style="max-width: 700px" id="pdfTable" #pdfTable>
+		<div class="card-body">
+			<div style="display: flex; justify-content: space-between">
+				<img src="../../../../assets/images/logo.png" style="height: 30px" />
+				<span>Smart Tax</span>
+			</div>
+			<div class="separator-breadcrumb border-top"></div>
+
+			<div>
+				<span style="display: block">Plateau State Internal</span>
+				<span style="display: block">Revenue Service</span>
+				<span style="display: block">Bank Road, Jos</span>
+				<div
+					style="display: inline-block; width: 140px; border: 0.1px solid #000"
+				></div>
+				<div
+					style="font-size: 36px; font-weight: 800"
+					class="card-title text-center"
+				>
+					TAX ENUMERATION
+				</div>
+				<img
+					src="../../../../assets/images/blank.png"
+					class="my-5"
+					style="height: 120px"
+				/>
+				<h2 class="text-center mb-3">
+					Tax Identification Number : {{ company.tin }}
+				</h2>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td style="font-weight: 700">COMPANY NAME</td>
+							<td>
+								{{ company.company_name || "N/A" }}
+							</td>
+							<td style="font-weight: 700">COMPANY TIN NO</td>
+							<td>{{ company.tin }}</td>
+						</tr>
+						<tr>
+							<td style="font-weight: 700">INDUSTRY</td>
+							<td>
+								{{ company.business_industry | uppercase }}
+							</td>
+							<td style="font-weight: 700">REGISTRATION NUMBER</td>
+							<td>
+								{{ company.rc_no | uppercase }}
+							</td>
+						</tr>
+
+						<tr>
+							<td style="font-weight: 700">NUMBER OF EMPLOYEES</td>
+							<td>
+								{{ company.employee_count }}
+							</td>
+							<td style="font-weight: 700">ADDRESS</td>
+							<td>
+								{{ company.address }}
+							</td>
+						</tr>
+
+						<tr>
+							<td style="font-weight: 700">LGA</td>
+							<td>
+								{{ company.lga | uppercase }}
+							</td>
+							<td style="font-weight: 700">STATE</td>
+							<td>
+								{{ company.state }}
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: 700">OFFICE PHONE</td>
+							<td>
+								{{ company.office_number || "N/A" }}
+							</td>
+							<td style="font-weight: 700">EMAIL</td>
+							<td>
+								{{ company.office_email || "N/A" }}
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: 700">WEBSITE</td>
+							<td>
+								{{ company.website || "N/A" }}
+							</td>
+							<td style="font-weight: 700"></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<br />
+				<br />
+				Date Issued:
+				{{ dateIssued }}
+			</div>
+			<div class="separator-breadcrumb border-top"></div>
+			<p class="text-center">
+				Email: info@psirs.gov.ng . Website:https:www.psirs.gov.ng
+			</p>
+			<br /><br />
+			<p class="text-center">Page: 1/1</p>
+		</div>
+	</div>
+	<div style="text-align: end">
+		<button
+			style="position: relative; z-index: 3"
+			class="btn btn-primary"
+			(click)="exportAsPDF('pdfTable')"
+		>
+			Download
+		</button>
+		<button
+			style="margin-left: 5px"
+			type="button"
+			class="btn btn-outline-secondary btn-rounded"
+			(click)="printPDFS('pdfTable')"
+		>
+			Print
+		</button>
+	</div>
+</div>

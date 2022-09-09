@@ -1,0 +1,256 @@
+<!-- <div class="breadcrumb">
+  <h1>Complete your profile</h1>
+</div> -->
+<app-breadcrumb></app-breadcrumb>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <form [formGroup]="formBasic">
+          <div class="row">
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label">Title *</label>
+              <ngx-select-dropdown
+                tabindex="0"
+                [multiple]="false"
+                formControlName="title"
+                [config]="config"
+                [options]="statuses"
+              >
+              </ngx-select-dropdown>
+            </div>
+            <div class="col-md-6 form-group mb-3">
+              <label for="firstName">First name *</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="first_name"
+                id="first_name"
+                placeholder="Enter your first name"
+              />
+            </div>
+
+            <div class="col-md-6 form-group mb-3">
+              <label for="lastName">Last name *</label>
+              <input
+                type="text"
+                class="form-control"
+                id="surname"
+                formControlName="surname"
+                placeholder="Enter your last name"
+              />
+            </div>
+            <div class="col-md-6 form-group mb-3">
+              <label for="exampleInputEmail1">Other Names</label>
+              <input
+                type="email"
+                class="form-control"
+                id="other_names"
+                aria-describedby="emailHelp"
+                placeholder="Enter Other Names"
+                formControlName="other_names"
+              />
+            </div>
+
+            <div class="col-md-6 form-group mb-3">
+              <label for="exampleInputEmail1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+                formControlName="email"
+              />
+            </div>
+
+            <div class="col-md-6 form-group mb-3">
+              <label for="phone">Phone Number *</label>
+              <input
+                class="form-control"
+                id="phone"
+                placeholder="Enter phone"
+                formControlName="phone"
+              />
+            </div>
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label">Gender *</label>
+              <select class="form-control" formControlName="gender">
+                <option value="">Choose Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="col-md-6 form-group mb-3">
+              <label for="exampleInputEmail1">Other Number </label>
+              <input
+                type="email"
+                class="form-control"
+                id="office_number"
+                aria-describedby="emailHelp"
+                placeholder="Enter Office Number"
+                formControlName="office_number"
+              />
+            </div>
+            <div class="col-md-6 form-group mb-3">
+              <label for="picker1">Birth date *</label>
+              <div class="input-group">
+                <input
+                  id="dob"
+                  class="form-control"
+                  placeholder="yyyy-mm-dd"
+                  name="dp"
+                  ngbDatepicker
+                  max="{{ maxDate }}"
+                  #dp="ngbDatepicker"
+                  formControlName="dob"
+                />
+                <div class="input-group-append">
+                  <button
+                    class="btn btn-secondary"
+                    (click)="dp.toggle()"
+                    type="button"
+                  >
+                    <i class="icon-regular i-Calendar-4"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label">Payer Address *</label>
+              <input
+                formControlName="payer_address"
+                type="text"
+                class="form-control"
+                placeholder=""
+                aria-label="phone"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label">Home Town *</label>
+              <input
+                formControlName="home_town"
+                type="text"
+                class="form-control"
+                placeholder=""
+                aria-label="bvn"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label">Nationality *</label>
+
+              <ngx-select-dropdown
+                tabindex="0"
+                [multiple]="false"
+                formControlName="nationality"
+                [config]="config"
+                [options]="countries"
+              >
+              </ngx-select-dropdown>
+            </div>
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label"
+                >State of Origin *</label
+              >
+              <ngx-select-dropdown
+                tabindex="0"
+                [multiple]="false"
+                formControlName="soo"
+                [config]="config"
+                [options]="states"
+              >
+              </ngx-select-dropdown>
+            </div>
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label"
+                >State of Residence *</label
+              >
+              <select
+                class="form-control"
+                formControlName="state"
+                (ngModelChange)="getSelectedState()"
+              >
+                <option value="">Choose State</option>
+                <option *ngFor="let state of states" value="{{ state }}">
+                  {{ state }}
+                </option>
+              </select>
+            </div>
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label"
+                >LGA of Residence *</label
+              >
+              <ngx-select-dropdown
+                tabindex="0"
+                [multiple]="false"
+                formControlName="lga"
+                [config]="config"
+                [options]="lgas"
+              >
+              </ngx-select-dropdown>
+            </div>
+
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label">Marital Status *</label>
+              <select class="form-control" formControlName="marital_status">
+                <option value="">Choose Marital Status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="seperate">Seperate</option>
+                <option value="widow">Widow</option>
+              </select>
+            </div>
+            <div class="col-md-6 form-group mb-3">
+              <label for="exampleInputEmail1">Address * </label>
+              <input
+                type="test"
+                class="form-control"
+                id="address"
+                aria-describedby="emailHelp"
+                placeholder="Enter address"
+                formControlName="address"
+              />
+            </div>
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label">Occupation *</label>
+              <ngx-select-dropdown
+                tabindex="0"
+                [multiple]="false"
+                formControlName="occupation"
+                [config]="config"
+                [options]="occupations"
+              >
+              </ngx-select-dropdown>
+            </div>
+
+            <div class="mb-2 col-md-6 form-group mb-3">
+              <label for="basic-url" class="form-label"
+                >Employment Status *</label
+              >
+              <ngx-select-dropdown
+                tabindex="0"
+                [multiple]="false"
+                formControlName="emp_status"
+                [config]="config"
+                [options]="employement_statuses"
+              >
+              </ngx-select-dropdown>
+            </div>
+            <div class="col-md-12">
+              <btn-loading
+                btnClass="btn-primary btn-rounded"
+                [loading]="loading"
+                (click)="onSubmit()"
+                >Submit</btn-loading
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

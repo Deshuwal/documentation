@@ -1,0 +1,466 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row" *ngIf="editMode">
+  <div class="col-lg-6 col-md-6"></div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3">
+    <div class="form-group float-left">
+      <input
+        id="email"
+        placeholder="Search"
+        [formControl]="searchControl"
+        class="form-control form-control-rounded"
+        type="email"
+      />
+    </div>
+  </div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="card o-hidden">
+      <ngx-datatable
+        *ngIf="assessments?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [scrollbarH]="true"
+        [scrollbarV]="true"
+        [limit]="10"
+        [rows]="filteredItems"
+      >
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Registraton Number
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.id }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Company Name
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.organization_name }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Company TIN </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.organization_tin }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> MDA </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.mda_name }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Tax Item </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            Presumptive Tax
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Date Created
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ parsePhpDate(row.created_at) }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Status </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <span *ngIf="row.status == '1'" class="text-success"
+              >Completed</span
+            >
+
+            <span *ngIf="row.status == '-2'" class="text-danger">Disputed</span>
+
+            <span *ngIf="!row.status" class="text-danger">UNPAID</span>
+
+            <span *ngIf="row.status == '-1'" class="textdanger">Cancelled</span>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template> Bulk ID </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.bulk_assessment_id }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [width]="120">
+          <ng-template ngx-datatable-header-template> Actions </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <button
+              class="btn btn-wide btn-outline-secondary mr-3"
+              (click)="viewAssessment(row)"
+            >
+              View
+            </button>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<ng-template #deleteConfirmModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Delete Tax Item</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p><strong>Are you sure?</strong></p>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('cancel')"
+    >
+      Cancel
+    </button>
+    <button
+      type="button"
+      ngbAutofocus
+      class="btn btn-wide btn-danger btn-rounded"
+      (click)="modal.close('Ok')"
+    >
+      Ok
+    </button>
+  </div>
+</ng-template>
+<ng-template #modalConfirm let-modal>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+    <p class="text-center">Loading Receipt....</p>
+  </div>
+  <div
+    style="max-width: 700px; font-size: 0.4rem"
+    class="p-2"
+    id="pdfAssessment"
+    #pdfAssessment
+    *ngIf="!loading && dynamicSummary && payeeSummary"
+  >
+    <div class="p-2">
+      <!-- <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div> -->
+      <p
+        style="
+          text-align: end;
+          font-size: 1.2rem;
+          color: #000;
+          font-family: serif;
+        "
+      >
+        Bill Reference:
+        {{
+          assessmentForDisplay.billing_ref == null
+            ? "Unconfirmed"
+            : assessmentForDisplay.billing_ref
+        }}
+      </p>
+      <div style="font-size: 0.5rem">
+        <span style="display: block"
+          >Plateau State Internal Revenue Service</span
+        >
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+      </div>
+      <div *ngIf="!['1', '3'].includes(userProfile.role)">
+        <div class="text-center">
+          <img
+            src="../../../../assets/images/logo-.png"
+            class="my-1"
+            style="height: 58px"
+          />
+        </div>
+        <p
+          style="
+            color: green;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+          "
+        >
+          PLATEAU STATE GOVERNMENT
+        </p>
+        <div style="text-align: center">
+          <span
+            style="
+              font-weight: bold;
+              padding: 9px 16px;
+              background-color: green;
+              display: inline-block;
+              font-size: 0.5rem;
+            "
+            class="text-center mb-3 text-white"
+            >TAX RECEIPT</span
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      style="height: 7rem"
+      *ngIf="['1', '3'].includes(userProfile.role)"
+    ></div>
+    <div class="modal-body">
+      <div class="col-md-12">
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>MDA</td>
+              <td>{{ assessmentForDisplay.mda_name }}</td>
+            </tr>
+            <tr>
+              <td>Tax Item</td>
+              <td class="font-weight-bold text-success">PAYE</td>
+            </tr>
+            <tr>
+              <td>Period</td>
+              <td class="font-weight-bold text-success">
+                {{ assessmentForDisplay.period_from }} -
+                {{ assessmentForDisplay.period_to || "Not Available" }}
+              </td>
+            </tr>
+            <tr>
+              <td>Payer Name</td>
+              <td>
+                {{ assessmentForDisplay.name }}
+              </td>
+            </tr>
+            <tr>
+              <td>Payment Channel</td>
+              <td>
+                {{ assessmentForDisplay.payment_channel }}
+              </td>
+            </tr>
+
+            <!-- <tr>
+              <td>PAYE Payable</td>
+              <td>NGN{{ formatNumber(bulkAssessmentTotal) }}</td>
+            </tr> -->
+
+            <tr>
+              <td>TIN</td>
+              <td>
+                {{ assessmentForDisplay.tin }}
+              </td>
+            </tr>
+            <tr>
+              <td>Amount</td>
+              <td>{{ formatNumber(bulkAssessmentTotal) }}</td>
+            </tr>
+            <tr>
+              <td>Billing Ref</td>
+              <td>
+                {{ assessmentForDisplay.billing_ref }}
+              </td>
+            </tr>
+
+            <tr>
+              <td>Date Paid</td>
+              <td>
+                {{
+                  assessmentForDisplay.payment_date == null
+                    ? "N/A"
+                    : parsePhpDate(assessmentForDisplay.payment_date)
+                }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <qrcode
+          style="text-align: right"
+          [qrdata]="myAngularxQrCode"
+          [width]="90"
+          [errorCorrectionLevel]="'M'"
+        ></qrcode>
+        <p style="font-size: 0.7rem">
+          Valid till 31st Dec, {{ assessmentForDisplay.yearOfExpiry }}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      style="position: relative; z-index: 3"
+      class="btn btn-primary"
+      (click)="downloadPDF('pdfAssessment')"
+    >
+      Download
+    </button>
+    <button
+      style="margin-left: 5px"
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="printPDFS('pdfAssessment')"
+    >
+      Print
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('Cross click')"
+    >
+      Cancel
+    </button>
+  </div>
+</ng-template>
+<ng-template #modalPaymentGateways let-modal>
+  <form
+    (ngSubmit)="addGateway(assessmentForDisplay.id)"
+    [formGroup]="gatewayForm"
+  >
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-title">
+        Choose payment gateway of your choice
+      </h4>
+      <button
+        type="button"
+        class="close"
+        aria-label="Close button"
+        aria-describedby="modal-title"
+        (click)="modal.dismiss('Cross click')"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ngx-select-dropdown
+        tabindex="0"
+        formControlName="gateway"
+        [config]="config"
+        [options]="['OPAY']"
+      >
+      </ngx-select-dropdown>
+
+      <br />
+      <button
+        class="btn btn-primary"
+        aria-label="Close button"
+        aria-describedby="Select gateway"
+      >
+        <span>Proceed</span>
+      </button>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #modalBillingRef let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Enter Billing Ref</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-8 row">
+          <div class="col-md-9 form-group mb-3">
+            <label for="tax">Enter billing ref </label>
+
+            <input
+              class="form-control"
+              type="number"
+              placeholder="Amount in NGN"
+              [(ngModel)]="billing_ref"
+            />
+          </div>
+          <div class="col-sm-7"></div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="payWithBillingRef()"
+    >
+      Pay
+    </button>
+  </div>
+</ng-template>

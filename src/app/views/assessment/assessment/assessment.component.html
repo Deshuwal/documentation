@@ -1,0 +1,1531 @@
+<div
+  class=""
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <app-breadcrumb></app-breadcrumb>
+  <div class="separator-breadcrumb border-top"></div>
+
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <form
+    [formGroup]="assessmentForm"
+    (ngSubmit)="
+      nonAutomatedAssessment
+        ? submitNonAutomatedAssessment()
+        : submitAssessment()
+    "
+    *ngIf="!loading"
+  >
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body p-0">
+            <h5 class="card-title m-0 p-3">Select MDA</h5>
+            <div class="row" style="margin: 2%">
+              <div class="col-md-12">
+                <div class="mb-5">
+                  <div class="">
+                    <div>
+                      <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8 row">
+                          <div class="col-md-9 form-group mb-3">
+                            <label for="tax">TIN</label>
+                            <div
+                              *ngIf="
+                                userProfile.role == '1' ||
+                                userProfile.role == '3'
+                              "
+                            >
+                              <ng-select
+                                [items]="foundTIN$ | async"
+                                bindLabel="name"
+                                bindValue="name"
+                                [trackByFn]="trackByFn"
+                                labelForId="tin"
+                                class="payer-tin"
+                                [minTermLength]="minLengthTerm"
+                                [loading]="companiesLoading"
+                                placeholder="Search for a user or company by TIN"
+                                typeToSearchText="Please enter {{
+                                  minLengthTerm
+                                }} or more characters"
+                                [typeahead]="companiesInput$"
+                                (change)="onDropdownClick(selectedTIN)"
+                                formControlName="tin_slug"
+                              >
+                              </ng-select>
+                            </div>
+                            <div
+                              *ngIf="
+                                userProfile.role != '1' &&
+                                userProfile.role != '3'
+                              "
+                            >
+                              <ngx-select-dropdown
+                                tabindex="0"
+                                class="payer-tin"
+                                [multiple]="false"
+                                formControlName="tin_slug"
+                                [config]="config"
+                                [options]="tins"
+                              >
+                              </ngx-select-dropdown>
+                            </div>
+                          </div>
+                          <div class="col-sm-7"></div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div class="mb-5">
+                  <div class="">
+                    <div>
+                      <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8 row">
+                          <div class="col-md-9 form-group mb-3">
+                            <label for="tax">MDA</label>
+                            <ng-select
+                                [items]="mdas"
+                                bindLabel="title"
+                                bindValue="slug"
+                                formControlName="mda_slug"
+                                [trackByFn]="trackByFn"
+                                labelForId="mda"
+                                class="payer-tin"
+                                [minTermLength]="minLengthTerm"
+                                [loading]="companiesLoading"
+                                placeholder="Search for MDA "
+                                typeToSearchText="Please enter {{
+                                  minLengthTerm
+                                }} or more characters"
+                                (change)="loadTaxItems()"
+                                [typeahead]="mdaInput"
+                                (change)="loadTaxItems" 
+                              >
+                              </ng-select>
+
+                           
+
+                            <select
+                              class="form-control"
+                              formControlName="mda_slug"
+                              (ngModelChange)="loadTaxItems()"
+                              *ngIf="isMdaAdminUser"
+                            >
+                              <option value="">Choose MDA</option>
+                              <option
+                                style="font-weight: bold"
+                                *ngFor="let mda of mdas"
+                                [ngValue]="mda.slug"
+                              >
+                                {{ mda.title }}
+                              </option>
+                              
+                            </select>
+
+                            <select
+                              class="form-control"
+                              formControlName="mda_slug"
+                              *ngIf="isMdaAdminUser"
+                            >
+                              
+                              <option
+                                style="font-weight: bold"
+                                *ngFor="let mda of mdas"
+                                [ngValue]="mda.slug"
+                              >
+                                {{ mda.title }}
+                              </option>
+                              
+                            </select>
+                          </div>
+                          <div class="col-sm-7"></div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row"
+      *ngIf="!loading && taxItems.length > 0"
+      [@animate]="{
+        value: '*',
+        params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+      }"
+    >
+      <div class="col-lg-12 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body p-0">
+            <h5 class="card-title m-0 p-3" *ngIf="isMdaAdminUser">
+              Select Tax Item Under {{ selectedMdaData.title }}
+            </h5>
+
+            <div class="row" style="margin: 2%">
+              <div class="col-md-12">
+                <div class="mb-5">
+                  <div class="">
+                    <div>
+                      <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8 row">
+                          <div class="col-md-9 form-group mb-3">
+                            <label for="tax">Select Tax Item</label>
+                            <ng-select
+                            [items]="taxItems"
+                            bindLabel="title"
+                            bindValue="id"
+                            formControlName="tax_item_id"
+                            [trackByFn]="trackByFn"
+                            labelForId="taxitem"
+                            class="payer-tin"
+                            [minTermLength]="minLengthTerm"
+                            [loading]="companiesLoading"
+                            placeholder="Search for MDA "
+                            typeToSearchText="Please enter {{
+                              minLengthTerm
+                            }} or more characters"
+                            (change)="displayItemRules()"  
+                          >
+                          </ng-select>
+
+                            
+
+                          </div>
+                          <div class="col-sm-7"></div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row"
+      *ngIf="!loading && nonAutomatedAssessment"
+      [@animate]="{
+        value: '*',
+        params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+      }"
+    >
+      <div class="col-lg-12 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body p-0">
+            <h5 class="card-title m-0 p-3">Please fill the form below</h5>
+
+            <div class="row" style="margin: 2%">
+              <div class="col-md-12">
+                <div class="mb-5">
+                  <div class="">
+                    <div>
+                      <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8 row">
+                          <div class="col-md-9 form-group mb-3">
+                            <label for="amount">Enter Amount</label>
+                            <input
+                              type="number"
+                              class="form-control others-amount"
+                              formControlName="amount"
+                            />
+                          </div>
+                          <div class="col-md-9 form-group mb-3">
+                            <label for="description">Enter Description</label>
+                            <textarea
+                              class="form-control others-description"
+                              formControlName="description"
+                            ></textarea>
+                          </div>
+                          <div class="col-sm-9 orm-group mb-3">
+                            <button
+                              style="background-color: green; color: white"
+                              class="btn btn-success pd-x-20 form-control"
+                            >
+                              Generate Assessment
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row"
+      *ngIf="
+        !loading &&
+        !fixed_assessment &&
+        selectedItem != null &&
+        !nonAutomatedAssessment
+      "
+      [@animate]="{
+        value: '*',
+        params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+      }"
+    >
+      <div class="col-lg-12 col-md-12">
+        <div class="card mb-4">
+          <div class="card-body p-0">
+            <h5 class="card-title m-0 p-3">Please fill the form below</h5>
+
+            <div class="row" style="margin: 2%">
+              <div class="col-md-12">
+                <div class="mb-5">
+                  <div class="">
+                    <div>
+                      <div
+                        class="row"
+                        *ngFor="
+                          let element of selectedItem.rules.elements;
+                          let i = index
+                        "
+                      >
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8 row">
+                          <div class="col-md-9 form-group mb-3">
+                            <label for="tax">{{ element.label }}</label>
+                            <input
+                              type="{{ element.data_type }}"
+                              *ngIf="element.input_type == 'input'"
+                              class="form-control"
+                              id="email"
+                              [disabled]="element.disabled"
+                              [required]="element.required"
+                              [ngModelOptions]="{ standalone: true }"
+                              [(ngModel)]="selectedItemAnswers[i]"
+                            />
+                            <textarea
+                              *ngIf="element.input_type == 'textarea'"
+                              class="form-control"
+                              [disabled]="element.disabled"
+                              [required]="element.required"
+                              [ngModelOptions]="{ standalone: true }"
+                              [(ngModel)]="selectedItemAnswers[i]"
+                            ></textarea>
+                          </div>
+                          <div class="col-sm-7"></div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-8 row">
+                          <div class="col-md-9 form-group mb-3">
+                            <button
+                              style="background-color: green; color: white"
+                              class="btn btn-primary pd-x-20 form-control submit-assessment"
+                            >
+                              Generate Assessment
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div
+    class="row"
+    *ngIf="!loading && fixed_assessment && direct_assessment_form"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="col-lg-12 col-md-12">
+      <div class="card mb-4">
+        <div class="card-body p-0">
+          <h5 class="card-title m-0 p-3 text-center">
+            Direct Assessment (Annual)
+          </h5>
+
+          <div class="row" style="margin: 2%">
+            <div class="col-md-12">
+              <div class="mb-5">
+                <form
+                  [formGroup]="directAssessmentForm"
+                  (ngSubmit)="submitDirectAssessment()"
+                >
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <label for="tax"
+                          >Trade, Business, Profession, Vocation</label
+                        >
+                        <input
+                          class="form-control"
+                          formControlName="vocation"
+                        />
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <label for="tax">Year of Assessment *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          formControlName="year"
+                        />
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <label for="tax">Gross Income *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          formControlName="gross"
+                        />
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <label for="tax"
+                          >Consolidated Relief Allowance (CRA)</label
+                        >
+                        <input
+                          readonly
+                          class="form-control"
+                          formControlName="cra"
+                        />
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <label for="tax">Taxable Income</label>
+                        <input
+                          readonly
+                          class="form-control"
+                          formControlName="taxable_income"
+                        />
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <label for="tax">Tax Payable</label>
+                        <input
+                          readonly
+                          class="form-control"
+                          formControlName="tax_payable"
+                        />
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="inlineCheckbox1"
+                            value="option1"
+                            formControlName="dev_levy"
+                          />
+                          <label class="form-check-label" for="inlineCheckbox1"
+                            >Development Levy</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <button
+                          style="background-color: green; color: white"
+                          class="form-control btn btn-primary pd-x-20"
+                        >
+                          Generate Assessment
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="row"
+    *ngIf="!loading && fixed_assessment && direct_assessment_form_presumtive"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="col-lg-12 col-md-12">
+      <div class="card mb-4">
+        <div class="card-body p-0">
+          <h5 class="text-center card-title m-0 p-3">DIRECT ASSESSMENT TAX</h5>
+
+          <div class="row" style="margin: 2%">
+            <div class="col-md-12">
+              <div class="mb-5">
+                <form
+                  [formGroup]="directAssessmentPresumptiveForm"
+                  (ngSubmit)="submitDirectAssessmentPresumptive()"
+                >
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <label for="tax"
+                          >Trade, Business, Profession, Vocation *</label
+                        >
+                        <input class="form-control" formControlName="trade" />
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <label for="tax">Enter Amount *</label>
+                        <input
+                          type="number"
+                          class="form-control"
+                          formControlName="amount"
+                        />
+                      </div>
+                      <div class="col-sm-7"></div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 row">
+                      <div class="col-md-9 form-group mb-3">
+                        <button
+                          style="background-color: green; color: white"
+                          class="form-control btn btn-primary pd-x-20"
+                        >
+                          Generate Assessment
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="row"
+    *ngIf="!loading && fixed_assessment && payee_form"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="col-lg-12 col-md-12">
+      <form [formGroup]="payeeForm" (ngSubmit)="submitPayee()">
+        <div class="col-lg-12 col-md-12">
+          <h4>{{ editTitle }}</h4>
+          <p>Fields marked with asterisk are compulsory</p>
+          <div class="card mb-5">
+            <div class="card-body">
+              <div class="row row-xs">
+                <div class="col-md-6">
+                  <label class="payee-heading"
+                    >Salary Component (Monthly)
+                  </label>
+                  <hr />
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Basic Salary *</label><br />
+
+                      <input
+                        formControlName="income_basic_salary"
+                        type="number"
+                        class="form-control"
+                        placeholder=""
+                      />
+                    </div>
+
+                    <div class="col-md-6">
+                      <label>Housing *</label><br />
+
+                      <input
+                        type="number"
+                        formControlName="income_housing"
+                        class="form-control"
+                        placeholder=""
+                      />
+                    </div>
+
+                    <div class="col-md-6" style="margin-top: 10px">
+                      <label>Transport *</label><br />
+
+                      <input
+                        type="number"
+                        formControlName="income_transport"
+                        class="form-control"
+                        placeholder=""
+                      />
+                    </div>
+
+                    <div class="col-md-6" style="margin-top: 10px">
+                      <label>Others </label><br />
+
+                      <input
+                        type="number"
+                        formControlName="income_others"
+                        class="form-control"
+                        placeholder=""
+                      />
+                    </div>
+                    <br />
+                    <div class="col-md-12" style="margin-top: 10px">
+                      <p class="text-center">Period</p>
+                      <div class="row">
+                        <div class="col-md-6" style="margin-top: 10px">
+                          <label>From: *</label>
+
+                          <input
+                            type="date"
+                            formControlName="period_from"
+                            class="form-control"
+                            placeholder="DD-MM-YYY"
+                          />
+                        </div>
+                        <div class="col-md-6" style="margin-top: 10px">
+                          <label>To: *</label><br />
+
+                          <input
+                            type="date"
+                            formControlName="period_to"
+                            class="form-control"
+                            placeholder="DD-MM-YYY"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 mt-2">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          value="option1"
+                          formControlName="dev_levy"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1"
+                          >Development Levy</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="payee-heading">Allowable Deductions</label>
+                  <hr style />
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label>Pension</label><br />
+                      <select
+                        class="form-control"
+                        formControlName="deduction_pension"
+                      >
+                        <option value="">Select option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label>NHF</label><br />
+                      <select
+                        class="form-control"
+                        formControlName="deduction_nhf"
+                      >
+                        <option value="">Select option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6" style="margin-top: 10px">
+                      <label>NHIS</label><br />
+
+                      <input
+                        type="number"
+                        formControlName="deduction_nhis"
+                        class="form-control"
+                        placeholder=""
+                      />
+                    </div>
+
+                    <div class="col-md-6" style="margin-top: 10px">
+                      <label>Life Premium</label><br />
+
+                      <input
+                        type="number"
+                        formControlName="deduction_life_premium"
+                        class="form-control"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12" style="margin-top: 20px">
+                  <label class="payee-heading"
+                    >Voluntary Pension Contributions</label
+                  >
+                  <hr style />
+                  <div class="row">
+                    <div class="col-md-6" style="margin-top: 10px">
+                      <label
+                        >Do you participate in voluntary contribution?</label
+                      ><br />
+
+                      <select
+                        class="form-control"
+                        formControlName="deduction_voluntary_contribution"
+                      >
+                        <option value="">Select answer</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6" style="margin-top: 10px">
+                      <label>If yes, what percentage?</label><br />
+
+                      <input
+                        type="number"
+                        class="form-control"
+                        formControlName="deduction_voluntary_contribution_percentage"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-3"></div>
+          <div class="col-sm-8 row">
+            <div class="col-md-9 form-group mb-3">
+              <button
+                style="background-color: green; color: white"
+                class="btn-primary btn-block pd-x-20 form-control"
+              >
+                Generate Assessment
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div
+  class="row"
+  *ngIf="!loading && revenue_return_assessment"
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <div class="col-lg-12 col-md-12">
+    <div class="card mb-4">
+      <div class="card-body p-0">
+        <h5 class="text-center card-title m-0 p-3">
+          REVENUE RETURN ASSESSMENT TAX
+        </h5>
+
+        <div class="row" style="margin: 2%">
+          <div class="col-md-12">
+            <div class="mb-5">
+              <form
+                [formGroup]="directAssessmentPresumptiveForm"
+                (ngSubmit)="submitDirectAssessmentPresumptive()"
+              >
+                <div class="row">
+                  <div class="col-sm-3"></div>
+                  <div class="col-sm-8 row">
+                    <div class="col-md-9 form-group mb-3">
+                      <label for="tax"
+                        >Trade, Business, Profession, Vocation *</label
+                      >
+                      <input class="form-control" formControlName="trade" />
+                    </div>
+                    <div class="col-sm-7"></div>
+                  </div>
+                  <div class="col-sm-1"></div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-3"></div>
+                  <div class="col-sm-8 row">
+                    <div class="col-md-9 form-group mb-3">
+                      <label for="tax">Enter Amount *</label>
+                      <input class="form-control" formControlName="amount" />
+                    </div>
+                    <div class="col-sm-7"></div>
+                  </div>
+                  <div class="col-sm-1"></div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-3"></div>
+                  <div class="col-sm-8 row">
+                    <div class="col-md-9 form-group mb-3">
+                      <button
+                        style="background-color: green; color: white"
+                        class="form-control btn btn-primary pd-x-20"
+                      >
+                        Generate Assessment
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalConfirm let-modal>
+  <div style="font-size: 0.4rem" id="pdfAssessment" #pdfAssessment>
+    <div *ngIf="!loading && !dynamicSummary" class="card-body">
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+      <p
+        style="
+          text-align: end;
+          font-size: 0.8rem;
+          color: #000;
+          font-family: serif;
+        "
+      >
+        Bill Reference: {{ assessmentForDisplay.billing_ref }}
+      </p>
+
+      <div style="font-size: 0.7rem">
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+      </div>
+
+      <div class="text-center">
+        <img
+          src="../../../../assets/images/logo-.png"
+          class="my-1"
+          style="height: 45px"
+        />
+      </div>
+      <p
+        style="
+          color: green;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+        "
+      >
+        PLATEAU STATE GOVERNMENT
+      </p>
+      <div style="text-align: center">
+        <span
+          style="
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 1rem;
+          "
+          class="text-center mb-3 text-white"
+          >TAX ASSESSMENT</span
+        >
+      </div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td colspan="3" style="font-weight: 700">MDA</td>
+            <td colspan="1">
+              {{ assessmentForDisplay.mda }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">PAYER NAME</td>
+            <td colspan="1" class="payer-name-preview">
+              {{ assessmentForDisplay.payer_name || assessmentForDisplay.name }}
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="3" style="font-weight: 700">PAYER TIN</td>
+            <td colspan="1" class="payer-tin-preview">
+              {{ assessmentForDisplay.payer_tin || assessmentForDisplay.tin }}
+            </td>
+          </tr>
+
+          <tr
+            *ngIf="
+              assessmentForDisplay.period || assessmentForDisplay.period_from
+            "
+          >
+            <td colspan="3" style="font-weight: 700">TAX PERIOD</td>
+            <td colspan="1" class="payment-period-preview">
+              {{
+                assessmentForDisplay.period || assessmentForDisplay.period_from
+              }}
+              <span *ngIf="assessmentForDisplay.period_to">
+                - {{ assessmentForDisplay.period_to }}
+              </span>
+            </td>
+          </tr>
+          <tr *ngIf="assessmentForDisplay.association">
+            <td colspan="3" style="font-weight: 700">Business Association</td>
+            <td colspan="1">{{ assessmentForDisplay.association }}</td>
+          </tr>
+          <tr *ngIf="assessmentForDisplay.business_type">
+            <td colspan="3" style="font-weight: 700">Business Type</td>
+            <td colspan="1">{{ assessmentForDisplay.business_type }}</td>
+          </tr>
+          <tr *ngIf="assessmentForDisplay.business_category">
+            <td colspan="3" style="font-weight: 700">Business Category</td>
+            <td colspan="1">{{ assessmentForDisplay.business_category }}</td>
+          </tr>
+
+          <tr>
+            <td colspan="3" style="font-weight: 700">AMOUNT</td>
+            <td colspan="1" class="amount-preview">
+              {{ assessmentForDisplay.amount }}
+            </td>
+          </tr>
+          <tr *ngIf="assessmentForDisplay.tax_item">
+            <td colspan="3" style="font-weight: 700">TAX ITEM</td>
+            <td colspan="1" class="taxitem-preview">
+              {{ assessmentForDisplay.tax_item }}
+            </td>
+          </tr>
+          <tr *ngIf="assessmentForDisplay && assessmentForDisplay.description">
+            <td colspan="3" style="font-weight: 700">Description</td>
+            <td colspan="1" class="description-preview">
+              {{ assessmentForDisplay.description }}
+            </td>
+          </tr>
+          <tr *ngIf="assessmentForDisplay">
+            <td colspan="3" style="font-weight: 700">Created By</td>
+            <td colspan="1" class="description-preview">
+              {{
+                assessmentForDisplay.created_by == null
+                  ? "N/A"
+                  : assessmentForDisplay.created_by
+              }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">SIGNATURE:</td>
+            <td colspan="1"></td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <br />
+      DATE ISSUED:
+      <span class="date-issued-preview">{{ dateIssued }}</span>
+    </div>
+
+    <div class="modal-body">
+      <div *ngIf="loading" class="col-md-12 text-center">
+        <div class="spinner spinner-primary mr-3"></div>
+      </div>
+
+      <div class="col-md-12" *ngIf="!loading && dynamicSummary && payeeSummary">
+        <div style="display: flex; justify-content: space-between">
+          <img src="../../../../assets/images/logo.png" style="height: 30px" />
+          <span>Smart Tax</span>
+        </div>
+        <p
+          style="
+            text-align: end;
+            font-size: 0.8rem;
+            color: #000;
+            font-family: serif;
+          "
+        >
+          Bill Reference: {{ assessmentForDisplay.billing_ref }}
+        </p>
+
+        <div style="font-size: 0.7rem">
+          <span style="display: block">Plateau State Internal</span>
+          <span style="display: block">Revenue Service</span>
+          <span style="display: block">Bank Road, Jos</span>
+          <div
+            style="
+              display: inline-block;
+              width: 140px;
+              border: 0.1px solid #000;
+            "
+          ></div>
+        </div>
+
+        <div class="text-center">
+          <img
+            src="../../../../assets/images/logo-.png"
+            class="my-1"
+            style="height: 45px"
+          />
+        </div>
+        <p
+          style="
+            color: green;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+          "
+        >
+          PLATEAU STATE GOVERNMENT
+        </p>
+        <div style="text-align: center">
+          <span
+            style="
+              font-weight: bold;
+              padding: 9px 16px;
+              background-color: green;
+              display: inline-block;
+              font-size: 1rem;
+            "
+            class="text-center mb-3 text-white"
+            >TAX ASSESSMENT (PAYE)</span
+          >
+        </div>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>MDA</td>
+              <td>{{ displayPayee.mda }}</td>
+            </tr>
+            <tr>
+              <td>Tax Item</td>
+              <td class="font-weight-bold text-success">
+                {{ displayPayee.tax_item }}
+              </td>
+            </tr>
+            <tr>
+              <td>Tax Period</td>
+              <td class="font-weight-bold text-success">
+                {{ assessmentForDisplay.period_from }} -
+                {{ assessmentForDisplay.period_to || "Not Available" }}
+              </td>
+            </tr>
+            <tr>
+              <td>Gross Income</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.gi) }} NGN
+              </td>
+            </tr>
+            <tr *ngIf="displayPayee.pe">
+              <td>Pension</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.pe) }} NGN
+              </td>
+            </tr>
+            <tr *ngIf="displayPayee.nhs">
+              <td>National Housiing</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.nhs) }} NGN
+              </td>
+            </tr>
+            <tr *ngIf="displayPayee.li">
+              <td>Life Insurance</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.li) }} NGN
+              </td>
+            </tr>
+            <tr *ngIf="displayPayee.nhis">
+              <td>National Health Insurance Scheme</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.nhis) }} NGN
+              </td>
+            </tr>
+            <tr>
+              <td>Consolidated Relief</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.cra) }} NGN
+              </td>
+            </tr>
+            <tr>
+              <td>Deductions</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.deductions) }} NGN
+              </td>
+            </tr>
+            <tr>
+              <td>Taxable Income</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.ti) || "-" }} NGN
+              </td>
+            </tr>
+            <tr>
+              <td>Annual Tax Liabilty</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.paye) }} NGN
+              </td>
+            </tr>
+            <tr>
+              <td>Monthly Tax Liabilty</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.paye / 12) }} NGN
+              </td>
+            </tr>
+            <tr>
+              <td>Development Levy</td>
+              <td class="font-weight-bold">
+                {{ formatNumber(displayPayee.dev_levy) }} NGN
+              </td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td class="font-weight-bold">
+                {{
+                  formatNumber(displayPayee.dev_levy + displayPayee.paye / 12)
+                }}
+                NGN
+              </td>
+            </tr>
+            <tr>
+              <td>TIN</td>
+              <td class="text-danger font-weight-bold">
+                {{ assessmentForDisplay.tin }}
+              </td>
+            </tr>
+            <tr>
+              <td>Billing Ref</td>
+              <td class="text-warning font-weight-bold">
+                {{ assessmentForDisplay.billing_ref }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+        <br />
+        Date Issued:
+        {{ dateIssued }}
+      </div>
+
+      <div
+        class="col-md-12"
+        *ngIf="!loading && dynamicSummary && directAssessmentPresumptiveSummary"
+      >
+        <div>
+          <div style="display: flex; justify-content: space-between">
+            <img
+              src="../../../../assets/images/logo.png"
+              style="height: 30px"
+            />
+            <span>Smart Tax</span>
+          </div>
+          <p
+            style="
+              text-align: end;
+              font-size: 0.8rem;
+              color: #000;
+              font-family: serif;
+            "
+          >
+            Bill Reference:
+            {{ assessmentForDisplay.billing_ref || "Unconfirmed" }}
+          </p>
+
+          <div style="font-size: 0.7rem">
+            <span style="display: block">Plateau State Internal</span>
+            <span style="display: block">Revenue Service</span>
+            <span style="display: block">Bank Road, Jos</span>
+            <div
+              style="
+                display: inline-block;
+                width: 140px;
+                border: 0.1px solid #000;
+              "
+            ></div>
+          </div>
+
+          <div class="text-center">
+            <img
+              src="../../../../assets/images/logo-.png"
+              class="my-1"
+              style="height: 45px"
+            />
+          </div>
+          <p
+            style="
+              color: green;
+              font-size: 1rem;
+              font-weight: bold;
+              text-align: center;
+            "
+          >
+            PLATEAU STATE GOVERNMENT
+          </p>
+          <div style="text-align: center">
+            <span
+              style="
+                font-weight: bold;
+                padding: 9px 16px;
+                background-color: green;
+                display: inline-block;
+                font-size: 1rem;
+              "
+              class="text-center mb-3 text-white"
+            >
+              DIRECT TAX ASSESSMENT (PRESUMPTIVE)
+            </span>
+          </div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td colspan="3" style="font-weight: 700">MDA</td>
+                <td colspan="1">Plateau State Inland Revenue</td>
+              </tr>
+              <tr>
+                <td colspan="3" style="font-weight: 700">PAYER NAME</td>
+                <td colspan="1">
+                  {{
+                    assessmentForDisplay.payer_name || assessmentForDisplay.name
+                  }}
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="3" style="font-weight: 700">PAYER TIN</td>
+                <td colspan="1">
+                  {{
+                    assessmentForDisplay.payer_tin || assessmentForDisplay.tin
+                  }}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" style="font-weight: 700">Tax Item</td>
+                <td colspan="1">Direct Assessment Presumptive</td>
+              </tr>
+              <tr>
+                <td colspan="3" style="font-weight: 700">Total:</td>
+                <td colspan="1">
+                  {{ formatNumber(directPresumptiveTotal) }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" style="font-weight: 700">Signature:</td>
+                <td colspan="1"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div
+        class="col-md-12"
+        *ngIf="!loading && dynamicSummary && directAssessmentSummary"
+      >
+        <div>
+          <div style="display: flex; justify-content: space-between">
+            <img
+              src="../../../../assets/images/logo.png"
+              style="height: 30px"
+            />
+            <span>Smart Tax</span>
+          </div>
+          <p
+            style="
+              text-align: end;
+              font-size: 0.8rem;
+              color: #000;
+              font-family: serif;
+            "
+          >
+            Bill Reference: {{ assessmentForDisplay.billing_ref }}
+          </p>
+
+          <div style="font-size: 0.7rem">
+            <span style="display: block">Plateau State Internal</span>
+            <span style="display: block">Revenue Service</span>
+            <span style="display: block">Bank Road, Jos</span>
+            <div
+              style="
+                display: inline-block;
+                width: 140px;
+                border: 0.1px solid #000;
+              "
+            ></div>
+          </div>
+
+          <div class="text-center">
+            <img
+              src="../../../../assets/images/logo-.png"
+              class="my-1"
+              style="height: 45px"
+            />
+          </div>
+          <p
+            style="
+              color: green;
+              font-size: 1rem;
+              font-weight: bold;
+              text-align: center;
+            "
+          >
+            PLATEAU STATE GOVERNMENT
+          </p>
+          <div style="text-align: center">
+            <span
+              style="
+                font-weight: bold;
+                padding: 9px 16px;
+                background-color: green;
+                display: inline-block;
+                font-size: 1rem;
+              "
+              class="text-center mb-3 text-white"
+            >
+              DIRECT TAX ASSESSMENT</span
+            >
+          </div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td style="font-weight: 700">MDA</td>
+                <td>{{ assessmentForDisplay.mda }}</td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: 700">PAYER NAME</td>
+                <td>
+                  {{
+                    assessmentForDisplay.payer_name || assessmentForDisplay.name
+                  }}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">PAYER TIN</td>
+                <td>
+                  {{
+                    assessmentForDisplay.payer_tin || assessmentForDisplay.tin
+                  }}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">Business</td>
+                <td>
+                  {{ displayPayee.vocation }}
+                </td>
+              </tr>
+              <tr *ngIf="displayPayee.bvn">
+                <td style="font-weight: 700">Business</td>
+                <td>
+                  {{ displayPayee.bvn }}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">Year of Assessment</td>
+                <td>{{ displayPayee.year }}</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">Gross Income</td>
+                <td>{{ formatNumber(displayPayee.gross) }}NGN</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">
+                  Consolidated Relief Allowance (CRA)
+                </td>
+                <td>{{ formatNumber(displayPayee.cra) }}NGN</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">Taxable Income</td>
+                <td>{{ formatNumber(displayPayee.taxable_income) }}NGN</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">Tax Payable</td>
+                <td>{{ formatNumber(displayPayee.tax_payable) }}NGN</td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">Development Levy</td>
+                <td>{{ formatNumber(displayPayee.dev_levy ? 300 : 0) }}NGN</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <div style="text-align: end">
+      <button
+        style="position: relative; z-index: 3"
+        class="btn btn-primary"
+        (click)="exportAsPDF('pdfAssessment')"
+      >
+        Download
+      </button>
+    </div>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="printPDFS('pdfAssessment')"
+    >
+      Print
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="goToPayment()"
+    >
+      Continue
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-roustnded"
+      (click)="closeModal()"
+    >
+      Close
+    </button>
+    <button
+      type="button"
+      ngbAutofocus
+      class="btn btn-danger btn-rounded"
+      (click)="updateAssessment(-2)"
+    >
+      Dispute
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #acceptTerms let-modal>
+  <div class="modal-header">
+    <h4><b>Be Sincere!</b></h4>
+  </div>
+  <div class="modal-body">
+    <div class="text-left">
+      According to Section 102 of the Plateau State Revenue (Consolidation) Law,
+      2020, failure to provide adequate and correct information will attract a
+      penalty of not less than N50,000 or imprisonment for not less than 6
+      months.
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div
+      class="w-100 d-flex flex-row justify-content-between align-items-center"
+    >
+      <div></div>
+      <div>
+        <button
+          type="button"
+          class="btn accept-terms btn-outline-success btn-rounded"
+          (click)="acceptTermsOfUse()"
+        >
+          I Accept
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

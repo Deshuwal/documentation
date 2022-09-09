@@ -1,0 +1,24 @@
+p {
+  margin-bottom: 0.5rem;
+}
+
+table {
+  font-weight: bold;
+}
+
+
+
+.first {
+  width: 15%;
+  display: inline-block;
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+.first
+{
+width: 70%;
+}
+}

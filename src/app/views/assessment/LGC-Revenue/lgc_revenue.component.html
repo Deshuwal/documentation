@@ -1,0 +1,422 @@
+<div
+	class=""
+	[@animate]="{
+		value: '*',
+		params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+	}"
+>
+	<app-breadcrumb></app-breadcrumb>
+	<div class="separator-breadcrumb border-top"></div>
+
+	<div *ngIf="loading" class="col-md-12 text-center">
+		<div class="spinner spinner-primary mr-3"></div>
+	</div>
+
+	<div *ngIf="!loading" class="">
+		<div class="card">
+			<div class="card-body">
+				<h5 *ngIf="activeStage == 0" class="card-title">
+					Local Government Council Revenues
+				</h5>
+				<form action="" [formGroup]="preForm" (ngSubmit)="generateAssessment()">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="payer_tin">Tax Payer TIN</label>
+
+								<div *ngIf="userProfile.role == '1' || userProfile.role == '3'">
+									<ng-select
+										[items]="foundTIN$ | async"
+										bindLabel="name"
+										bindValue="name"
+										[trackByFn]="trackByFn"
+										labelForId="tin"
+										class="payer-tin"
+										[minTermLength]="minLengthTerm"
+										[loading]="companiesLoading"
+										placeholder="Search for a user or company by TIN"
+										typeToSearchText="Please enter at least  {{
+											minLengthTerm
+										}} length"
+										[typeahead]="companiesInput$"
+										(change)="onDropdownClick(selectedTIN)"
+										formControlName="payer_tin"
+									>
+									</ng-select>
+								</div>
+								<div *ngIf="userProfile.role != '1' && userProfile.role != '3'">
+									<ngx-select-dropdown
+										tabindex="0"
+										class="payer-tin"
+										[multiple]="false"
+										formControlName="payer_tin"
+										[config]="config"
+										[options]="tins"
+									>
+									</ngx-select-dropdown>
+								</div>
+							</div>
+							<div *ngIf="submitted && preform.payer_tin.errors">
+								<div
+									*ngIf="preform.payer_tin.errors.required"
+									class="text-danger"
+								>
+									Select Payer Tin
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="payer_name">Tax Payer Name</label>
+								<input
+									formControlName="payer_name"
+									class="form-control"
+									type="text"
+								/>
+							</div>
+							<div *ngIf="submitted && preform.payer_name.errors">
+								<div
+									*ngIf="preform.payer_name.errors.required"
+									class="text-danger"
+								>
+									Select Payer Name
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="account_officer_tin"
+									>Transaction Period (Start Month and Year)</label
+								>
+								<div class="input-group">
+									<input
+										type="text"
+										class="form-control datepicker-only-month-select"
+										[ngClass]="{
+											'is-invalid': submitted && taxf.start_tax_period.errors
+										}"
+										ngbDatepicker
+										#starttaxPeriod="ngbDatepicker"
+										placeholder="Transaction Period"
+										formControlName="start_tax_period"
+										[showWeekdays]="false"
+										readonly
+									/>
+									<div class="input-group-append">
+										<button
+											class="btn btn-secondary btn-rounded"
+											(click)="starttaxPeriod.toggle()"
+											type="button"
+										>
+											<i class="icon-regular i-Calendar-4"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="account_officer_tin"
+									>Transaction Period (End Month and Year)</label
+								>
+								<div class="input-group">
+									<input
+										type="text"
+										class="form-control datepicker-only-month-select"
+										[ngClass]="{
+											'is-invalid': submitted && taxf.end_tax_period.errors
+										}"
+										ngbDatepicker
+										#endtaxPeriod="ngbDatepicker"
+										placeholder="Transaction Period"
+										formControlName="end_tax_period"
+										[showWeekdays]="false"
+										readonly
+									/>
+									<div class="input-group-append">
+										<button
+											class="btn btn-secondary btn-rounded"
+											(click)="endtaxPeriod.toggle()"
+											type="button"
+										>
+											<i class="icon-regular i-Calendar-4"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="business_category">Local Government Council</label>
+								<ngx-select-dropdown
+									tabindex="0"
+									[multiple]="false"
+									formControlName="lgc"
+									[config]="lgcouncileConfig"
+									[options]="lgc"
+									[ngClass]="{
+										'border-danger': submitted && preform.lgc.errors
+									}"
+								>
+								</ngx-select-dropdown>
+
+								<div *ngIf="submitted && preform.lgc.errors">
+									<div *ngIf="preform.lgc.errors.required" class="text-danger">
+										Local Government Council
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="geo_area">Geographical Area</label>
+								<select
+									formControlName="geo_area"
+									class="form-control"
+									style="width: 100%"
+								>
+									<option value="" hidden>Select Geographical Area</option>
+									<option value="urban">Urban</option>
+									<option value="semi">Semi-Urban</option>
+									<option value="rural">Rural</option>
+								</select>
+
+								<div *ngIf="submitted && preform.geo_area.errors">
+									<div
+										*ngIf="preform.geo_area.errors.required"
+										class="text-danger"
+									>
+										Select Geographical Area
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="business_category">Revenue Head</label>
+								<ngx-select-dropdown
+									tabindex="0"
+									[multiple]="false"
+									formControlName="revenue_head"
+									[config]="businessCategoryConfig"
+									[options]="RevenueHead"
+									[ngClass]="{
+										'border-danger': submitted && preform.revenue_head.errors
+									}"
+								>
+								</ngx-select-dropdown>
+
+								<div *ngIf="submitted && preform.revenue_head.errors">
+									<div
+										*ngIf="preform.revenue_head.errors.required"
+										class="text-danger"
+									>
+										Revenue Head
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="business_category"
+									>Revenue Head (Sub-categories)</label
+								>
+								<ngx-select-dropdown
+									tabindex="0"
+									[multiple]="false"
+									formControlName="revenue_head_sub"
+									[config]="businessTypeConfig"
+									[options]="RevenueHeadSUBCat"
+									[ngClass]="{
+										'border-danger':
+											submitted && preform.revenue_head_sub.errors
+									}"
+								>
+								</ngx-select-dropdown>
+
+								<div *ngIf="submitted && preform.revenue_head_sub.errors">
+									<div
+										*ngIf="preform.revenue_head_sub.errors.required"
+										class="text-danger"
+									>
+										Select Revenue Head (Sub-categories)
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-12">
+							<div class="float-right">
+								<btn-loading
+									type="submit"
+									[loading]="loading"
+									btnClass="btn-primary  btn-block mt-3"
+								>
+									Generate Assessment
+								</btn-loading>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<ng-template #modalConfirm let-modal>
+	<div style="font-size: 0.4rem" id="pdfAssessment" #pdfAssessment>
+		<div *ngIf="!loading && !dynamicSummary" class="card-body">
+			<div style="display: flex; justify-content: space-between">
+				<img src="../../../../assets/images/logo.png" style="height: 30px" />
+				<span>Smart Tax</span>
+			</div>
+			<div class="separator-breadcrumb border-top"></div>
+			<p
+				style="
+					text-align: end;
+					font-size: 0.8rem;
+					color: #000;
+					font-family: serif;
+				"
+			>
+				Bill Reference: {{ data.billing_ref }}
+			</p>
+
+			<div style="font-size: 0.7rem">
+				<span style="display: block">Plateau State Internal</span>
+				<span style="display: block">Revenue Service</span>
+				<span style="display: block">Bank Road, Jos</span>
+				<div
+					style="display: inline-block; width: 140px; border: 0.1px solid #000"
+				></div>
+			</div>
+
+			<div class="text-center">
+				<img
+					src="../../../../assets/images/logo-.png"
+					class="my-1"
+					style="height: 45px"
+				/>
+			</div>
+			<p
+				style="
+					color: green;
+					font-size: 1rem;
+					font-weight: bold;
+					text-align: center;
+				"
+			>
+				PLATEAU STATE GOVERNMENT
+			</p>
+			<div style="text-align: center">
+				<span
+					style="
+						font-weight: bold;
+						padding: 9px 16px;
+						background-color: green;
+						display: inline-block;
+						font-size: 1rem;
+					"
+					class="text-center mb-3 text-white"
+					>LGC Revenue</span
+				>
+			</div>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td colspan="3" style="font-weight: 700">
+							Local Government Council
+						</td>
+						<td colspan="1">
+							{{ data.lgc }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="font-weight: 700">PAYER NAME</td>
+						<td colspan="1" class="payer-name-preview">
+							{{ data.payer_name }}
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" style="font-weight: 700">PAYER TIN</td>
+						<td colspan="1" class="payer-tin-preview">
+							{{ data.payer_tin }}
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" style="font-weight: 700">TAX PERIOD</td>
+						<td colspan="1" class="payment-period-preview">
+							{{ parseDate(data.start_tax_period) }} -
+							{{ parseDate(data.end_tax_period) }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="font-weight: 700">Revenue Head</td>
+						<td colspan="1">{{ data.revenue_head }}</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="font-weight: 700">Revenue Head Sub</td>
+						<td colspan="1">{{ data.revenue_head_sub }}</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="font-weight: 700">Area</td>
+						<td colspan="1">{{ data.geo_area }}</td>
+					</tr>
+
+					<tr>
+						<td colspan="3" style="font-weight: 700">Amount</td>
+						<td colspan="1" class="amount-preview">
+							{{ data.amount }}
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" style="font-weight: 700">Created By</td>
+						<td colspan="1" class="amount-preview">
+							{{ data.created_by }}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="modal-footer">
+		<div style="text-align: end">
+			<button
+				style="position: relative; z-index: 3"
+				class="btn btn-primary"
+				(click)="exportAsPDF('pdfAssessment')"
+			>
+				Download
+			</button>
+		</div>
+		<button
+			type="button"
+			class="btn btn-outline-secondary btn-rounded"
+			(click)="printPDFS('pdfAssessment')"
+		>
+			Print
+		</button>
+		<button
+			type="button"
+			class="btn btn-outline-secondary btn-roustnded"
+			(click)="modal.dismiss('Cross click')"
+		>
+			Close
+		</button>
+		<button
+			type="button"
+			ngbAutofocus
+			class="btn btn-danger btn-rounded"
+			(click)="updateAssessment(-2)"
+		>
+			Dispute
+		</button>
+	</div>
+</ng-template>

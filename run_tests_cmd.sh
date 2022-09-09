@@ -1,0 +1,1 @@
+ng e2e --protractor-config='./e2e/protractor.cmd.conf.js'

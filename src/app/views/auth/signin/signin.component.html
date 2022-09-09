@@ -1,0 +1,397 @@
+<div class="download">
+	<!-- <a class="link-primary" href="assets/Plateau State Law.pdf" download
+    >Download Plateau State Tax Law</a
+  > -->
+	<a
+		class="link-primary"
+		(click)="loadTermsOfUse()"
+		style="
+			font-weight: bold;
+			cursor: pointer;
+			margin-left: 2rem;
+			font-size: 1.5rem;
+		"
+		>FAQs</a
+	>
+</div>
+<ng-template #phoneModal let-modal>
+	<div class="card px-3">
+		<div class="modal-header">
+			<button
+				type="button"
+				class="close"
+				aria-label="Close button"
+				aria-describedby="modal-title"
+				(click)="modal.dismiss('Cross click')"
+			>
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="card-body">
+			<div class="modal-header">
+				<div class="card-title text-center text-primary">
+					User(s) with Phone Numbers:
+				</div>
+			</div>
+			<thead>
+				<th class="text-primary">NAME</th>
+				<th class="text-primary">EMAIL</th>
+				<th class="text-primary">LGA</th>
+				<th class="text-primary">Tin</th>
+			</thead>
+			<tbody>
+				<tr *ngFor="let phone of phones">
+					<td style="width: 25%">
+						{{ phone.first_name }} {{ phone.surname }} {{ phone.other_names || "" }}
+					</td>
+					<td style="width: 25%">
+						{{ phone.email | emailAsterisk }}
+					</td>
+					<td style="width: 25%">
+						{{ phone.lga || "N/A" }}
+					</td>
+					<td style="width: 25%">
+						{{ phone.stin || phone.tin }}
+					</td>
+				</tr>
+			</tbody>
+		</div>
+	</div>
+</ng-template>
+<ng-template #coyRegModal let-modal>
+	<div class="card px-3">
+		<div class="card-body">
+			<div class="card-title text-center text-primary">
+				Steps for Company Registration
+			</div>
+			<p>1. Signup as a taxpayer user and get your personal TIN.</p>
+			<p>
+				2. Login to create a company account from within your taxpayer
+				dashboard.
+			</p>
+			<p>3. You can register as many companies as you desire.</p>
+		</div>
+	</div>
+</ng-template>
+
+
+<ng-template #billRefModal let-modal>
+	<div class="card px-3">
+		<div class="modal-header">
+			<button
+				type="button"
+				class="close"
+				aria-label="Close button"
+				aria-describedby="modal-title"
+				(click)="modal.dismiss('Cross click')"
+			>
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div class="card-body">
+			<div class="modal-header">
+				<div class="card-title text-center text-primary">
+					Bill Payment Reference
+				</div>
+			</div>
+			<table class="table row table-responsive table-striped">
+				<tr style="width: 100%">
+					<td style="width: 90%" class="text-primary">Bill Reference</td>
+					<td style="width: 100%">{{ assessment.billing_ref }}</td>
+				</tr>
+				<tr style="width: 100%">
+					<td style="width: 90%" class="text-primary">Amount</td>
+					<td style="width: 100%">N {{ assessment.amount }}</td>
+				</tr>
+				<tr style="width: 100%">
+					<td style="width: 90%" class="text-primary">Created Date</td>
+					<td style="width: 100%">
+						{{ brnType === "BRN" ? parseDate(assessment.created_at) : formatDbDate(assessment.create_time) }}
+					</td>
+				</tr>
+				<tr style="width: 100%">
+					<td style="width: 90%" class="text-primary">Payment Status</td>
+					<td
+						style="width: 100%"
+						[ngStyle]="{ color: assessment.status === '1' ? 'black' : 'red' }"
+					>
+						{{ assessment.status === "1" ? " Paid" : "Incomplete" }}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</ng-template>
+
+<div class="card" style="margin-top:5%; margin-bottom:1%; padding-top:10%; padding-bottom:10%;" *ngIf="verification_mode"  > 
+ 
+<div class="row text-center" style="margin:10px;" >
+ 
+	<form [formGroup]="verificationForm" class="col-md-6 offset-md-3" (ngSubmit)="openCaptcha()" >
+		<h5 style="padding:4%;">Verify Phone Number, TIN, or Billing Ref</h5>
+		<div class="form-group"> 
+			 
+		 
+			<select
+			formControlName="v_type"
+			 
+			class="form-control form-control-rounded" (change)="setVerificationPlaceholder()">
+				<option value="">Select Verification Type..</option>
+				<option value="phone">Verify Phone Number</option>
+				<option value="brn">Verify BRN</option>
+				<option value="tin"> Verify TIN </option>
+			</select>
+		</div>
+
+		<div *ngIf="verification_placeholder.length>1" class="form-group" >
+			
+			<input 
+				formControlName="v_input" 
+				class="form-control form-control-rounded"
+				placeholder="{{verification_placeholder}}"
+			 
+			/>
+			 
+		</div>
+	 
+
+		<btn-loading
+		id="btnLog"
+		btnClass="btn-primary btn-rounded btn-block mt-3"
+		[loadingText]="loadingText"
+		[loading]="loadingBillrEF"
+	>
+		Do Verification
+	</btn-loading>
+
+
+		<div class="mt-3 text-center">
+			<a href="#" class="text-danger" (click)="toggleVerificationMode()"
+				><u>Cancel</u></a
+			>
+		</div>
+	</form>
+
+ 
+ 
+  
+</div>
+</div>
+
+<ng-template #recaptchaModal let-modal>
+	<div class="row">
+		<div class="col-md-9 mx-auto">
+			<div class="card m-3">
+				<div class="modal-header">
+					<button
+						type="button"
+						class="close"
+						aria-label="Close button"
+						aria-describedby="modal-title"
+						(click)="modal.dismiss('Cross click')"
+					>
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="card-body">
+					<recaptcha
+						[size]="'normal'"
+						[hide]="false"
+						(captchaResponse)="onCaptchaResponse($event)"
+					>
+					</recaptcha>
+				</div>
+			</div>
+		</div></div
+></ng-template>
+<div *ngIf="!verification_mode"
+	class="card o-hidden"
+	[@animate]="{
+		value: '*',
+		params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+	}"
+>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="p-4">
+				<div class="auth-logo text-center mb-4">
+					<img
+						style="height: 70px; object-fit: contain"
+						src="assets/images/logo.png"
+						alt=""
+					/>
+				</div>
+				<h1 class="mb-3 text-18">Sign In</h1>
+				<form [formGroup]="signinForm" (ngSubmit)="signin()">
+					<div class="form-group">
+						<label for="email">Phone Number/TIN/NIN</label>
+						<input
+							id="user_tin"
+							class="form-control form-control-rounded"
+							formControlName="user"
+							type="text"
+						/>
+					</div>
+
+					<div class="input-group">
+						<input
+							id="user_password"
+							[type]="fieldTextType ? 'text' : 'password'"
+							class="form-control form-control-rounded"
+							formControlName="password"
+						/>
+						<div class="input-group-append">
+							<span
+								style="
+									border-radius: 0px 13px 13px 0px;
+									background-color: #0063ff14;
+								"
+								(click)="toggleFieldTextType()"
+								class="input-group-text"
+							>
+								<i class="bi bi-eye-fill"></i>
+							</span>
+						</div>
+					</div>
+					<btn-loading
+						id="btnLog"
+						btnClass="btn-primary btn-rounded btn-block mt-3"
+						[loadingText]="loadingText"
+						[loading]="loading"
+					>
+						Sign In
+					</btn-loading>
+				</form>
+
+				<div class="mt-3 text-center">
+					<a href="" class="text-muted" routerLink="/auth/forgot"
+						><u>Forgot Password</u></a
+					>
+				</div>
+			</div>
+		</div>
+		<div
+			class="col-md-6 text-center"
+			style="
+				background-size: cover;
+				background-image: url(./assets/images/photo-long-3.jpg);
+			"
+		>
+			<div class="pr-3 auth-right">
+				<button
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/register/signup"
+					style="opacity: 0.9 !important"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Dont have a TIN? Register here!
+				</button>
+				<!-- <button
+          style="opacity: 0.9 !important"
+          class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+          routerLink="/register/signup/nin"
+        >
+          Sign up with NIN (Faster)
+        </button> -->
+				<button
+					style="opacity: 0.9 !important"
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/register/userwithtin"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Already have a PSIRS issued TIN? Click Here!
+				</button>
+				<button
+					style="opacity: 0.9 !important"
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/register/userwithjtbtin"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Hava a JTB issued TIN? Click Here!
+				</button>
+
+				<button
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/register/userwithnin"
+					style="opacity: 0.9 !important"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+				       Register with NIN (faster)
+				</button>
+				<button
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					(click)="toggleVerificationMode()"
+					style="opacity: 0.9 !important"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+				       Verify Phone/TIN/BRN
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+<ng-template #acceptTerms let-modal>
+	<div class="p-4">
+		<p style="text-align: center">
+			<strong style="text-decoration: underline">FAQs&nbsp;</strong>
+		</p>
+
+		<p>
+			<strong>1. I forgot my password&nbsp;</strong><br />
+			A: &nbsp;click on &ldquo;forgot password&rdquo; then &nbsp;enter phone
+			number and click reset password. You can also retrieve password by using
+			your email or TIN. &nbsp;You will receive another password through the
+			phone number or TIN or email imputed.&nbsp;
+		</p>
+
+		<p>
+			<strong>2. I have forgotten my TIN&nbsp;</strong><br />
+			A: enter your phone number on the &ldquo;verify Phone No.&rdquo; field at
+			the top right corner of the website.&nbsp;
+		</p>
+
+		<p>
+			<strong
+				>3. Can I make payment without coming to the tax office?&nbsp;</strong
+			><br />
+			A: Yes, The BRN generated after assessments can be used to pay online
+			using your debit cards or at any bank closest to you or any accredited
+			Mobile Money Channel.&nbsp;
+		</p>
+
+		<p>
+			<strong>4. What is BRN?&nbsp;</strong><br />
+			A: BRN means Billing Reference Number. This is a unique number generated
+			during assessments to process payments on all payment channels.&nbsp;
+		</p>
+
+		<p>
+			<strong>5. What payment channels are available?&nbsp;</strong><br />
+			A: There are 3 payment channels which are Online channels , Bank Channels
+			and Mobile Money Channels. All you need to do is generate a BRN and use it
+			to process payment using any payment channel of your choice.&nbsp;
+		</p>
+
+		<p>
+			<strong>6. Where is the PSIRS office?&nbsp;</strong><br />
+			A: Our office is located at Revenue House, Number 6, beach road opposite
+			1st bank.
+		</p>
+	</div>
+	<div class="modal-footer">
+		<div
+			class="w-100 d-flex flex-row justify-content-between align-items-center"
+		>
+			<div></div>
+			<div>
+				<button
+					type="button"
+					class="btn accept-terms btn-outline-success btn-rounded"
+					(click)="acceptTermsOfUse()"
+				>
+					ok
+				</button>
+			</div>
+		</div>
+	</div>
+</ng-template>

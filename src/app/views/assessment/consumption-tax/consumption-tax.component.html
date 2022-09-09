@@ -1,0 +1,251 @@
+<div
+  class=""
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <app-breadcrumb></app-breadcrumb>
+  <div class="separator-breadcrumb border-top"></div>
+
+  <div *ngIf="loading" class="col-md-6 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div *ngIf="!loading" class="">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Fill Consumption Assessment Form Below</h5>
+
+        <form action="" [formGroup]="taxForm" (ngSubmit)="saveAssessment()">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="mda">MDA</label>
+                <input
+                  formControlName="mda"
+                  class="form-control"
+                  type="text"
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="tax_item">Tax Item</label>
+                <input
+                  formControlName="tax_item"
+                  class="form-control"
+                  type="text"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="payer_tin">Organization TIN</label>
+                <ng-select
+                  [items]="foundTIN$ | async"
+                  bindLabel="tin"
+                  bindValue="tin"
+                  [trackByFn]="trackByFn"
+                  labelForId="tin"
+                  [minTermLength]="minLengthTerm"
+                  [loading]="companiesLoading"
+                  placeholder="Search for a user or company by TIN"
+                  typeToSearchText="Please enter {{
+                    minLengthTerm
+                  }} or more characters"
+                  [typeahead]="companiesInput$"
+                  (change)="onDropdownClick(selectedTIN)"
+                  formControlName="payer_tin"
+                >
+                </ng-select>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="payer_name">Organization Name</label>
+                <input
+                  formControlName="payer_name"
+                  class="form-control"
+                  type="text"
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="account_officer">Account Officer's Name</label>
+                <input
+                  formControlName="account_officer"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-invalid': submitted && taxf.account_officer.errors
+                  }"
+                  type="text"
+                />
+                <div
+                  *ngIf="submitted && taxf.account_officer.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="taxf.account_officer.errors.required">
+                    Account officer name is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="account_officer_tin"
+                  >Transaction Period (Start Month and Year)</label
+                >
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control datepicker-only-month-select"
+                    [ngClass]="{
+                      'is-invalid': submitted && taxf.start_tax_period.errors
+                    }"
+                    ngbDatepicker
+                    #starttaxPeriod="ngbDatepicker"
+                    placeholder="Transaction Period"
+                    formControlName="start_tax_period"
+                    [showWeekdays]="false"
+                    readonly
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-secondary btn-rounded"
+                      (click)="starttaxPeriod.toggle()"
+                      type="button"
+                    >
+                      <i class="icon-regular i-Calendar-4"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="account_officer_tin"
+                  >Transaction Period (End Month and Year)</label
+                >
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control datepicker-only-month-select"
+                    [ngClass]="{
+                      'is-invalid': submitted && taxf.end_tax_period.errors
+                    }"
+                    ngbDatepicker
+                    #endtaxPeriod="ngbDatepicker"
+                    placeholder="Transaction Period"
+                    formControlName="end_tax_period"
+                    [showWeekdays]="false"
+                    readonly
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-secondary btn-rounded"
+                      (click)="endtaxPeriod.toggle()"
+                      type="button"
+                    >
+                      <i class="icon-regular i-Calendar-4"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="account_officer_tin">Account Officer's TIN</label>
+                <input
+                  formControlName="account_officer_tin"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-invalid': submitted && taxf.account_officer_tin.errors
+                  }"
+                  type="number"
+                />
+                <div
+                  *ngIf="submitted && taxf.account_officer_tin.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="taxf.account_officer_tin.errors.required">
+                    Account officer TIN is required.
+                  </div>
+                  <div *ngIf="taxf.account_officer_tin.errors.pattern">
+                    Enter Valid TIN Number
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="description">Description</label>
+                <input
+                  formControlName="description"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-invalid': submitted && taxf.description.errors
+                  }"
+                  type="text"
+                />
+                <div
+                  *ngIf="submitted && taxf.description.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="taxf.description.errors.required">
+                    Tax description is required.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="amount">Consumable Amount (N)</label>
+                <input
+                  formControlName="amount"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && taxf.amount.errors }"
+                  type="number"
+                />
+                <div
+                  *ngIf="submitted && taxf.amount.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="taxf.amount.errors.required">
+                    Consumable Amount is required.
+                  </div>
+                  <div *ngIf="taxf.amount.errors.pattern">
+                    Invalid Amount. Enter In Decimals
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div my-3>
+                <btn-loading
+                  type="submit"
+                  btnClass="btn-primary btn-rounded btn-block mt-3"
+                  loadingText="Saving Assessment"
+                  [loading]="saving"
+                >
+                  Generate Assessment
+                </btn-loading>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

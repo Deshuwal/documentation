@@ -1,0 +1,121 @@
+p {
+    margin-bottom: 0 !important;
+    padding: 10px;
+  }
+  
+  input {
+    margin-right: 10px !important;
+  }
+  
+  .card-mediaQuery {
+    @media (max-width: 1100px) {
+      overflow-x: scroll;
+    }
+  }
+  
+  table td {
+    border-top: none !important;
+    padding: 0.3rem;
+  }
+  
+  td {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .ng-select .ng-select-container {
+    height: 54px;
+    border: 1px solid #0000;
+  }
+  
+  
+  td {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+  
+  .receipt-button {
+    padding: 4px;
+  }
+  
+  
+  
+  .first {
+    width: 15%;
+    display: inline-block;
+  }
+  
+  
+  
+  @media screen and (max-width: 500px) {
+  
+  .first
+  {
+  width: 70%;
+  }
+  
+  p {
+    margin-bottom: 0 !important;
+    padding: 10px;
+  }
+  
+  input {
+    margin-right: 10px !important;
+  }}
+  
+  .card-mediaQuery {
+    @media (max-width: 1100px) {
+      overflow-x: scroll;
+    }
+  }
+  
+  table td {
+    border-top: none !important;
+    padding: 0.3rem;
+  }
+  
+  td {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .ng-select .ng-select-container {
+    height: 54px;
+    border: 1px solid #0000;
+  }
+  
+  
+  td {
+    font-size: 1rem;
+    padding: 0.3rem;
+  }
+  
+  .receipt-button {
+    padding: 4px;
+  }
+  
+  
+  
+  .first {
+    width: 15%;
+    display: inline-block;
+  }
+  
+  
+  
+  @media screen and (max-width: 500px) {
+  
+  .first
+  {
+  width: 70%;
+  }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .search-brn {
+      width: 100px !important;
+    }
+  }
+  
+  

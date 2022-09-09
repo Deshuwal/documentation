@@ -1,0 +1,210 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row justify-content-between">
+  <div class="col-lg-4 col-md-8 col-sm-12">
+    <div class="form-group">
+      <input
+        #searchBox
+        placeholder="Enter bulk name or ID..."
+        class="form-control"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3"></div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+    <div>Please Wait...</div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="card o-hidden">
+      <ngx-datatable
+        *ngIf="notices?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [scrollbarH]="true"
+        [virtualization]="false"
+        [externalPaging]="true"
+        [count]="totalCount"
+        [rows]="notices"
+        [offset]="offset"
+        [limit]="perPageCount"
+        (page)="nextPageCall($event)"
+      >
+        <ngx-datatable-column [maxWidth]="100">
+          <ng-template ngx-datatable-header-template> S/N </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.sn }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [maxWidth]="250">
+          <ng-template ngx-datatable-header-template>Creator</ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ capitalise(row.creator || "N/A") }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [maxWidth]="150">
+          <ng-template ngx-datatable-header-template> Bulk ID </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.bulk_id || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [maxWidth]="150">
+          <ng-template ngx-datatable-header-template> Bulk Name </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.bulk_name || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [maxWidth]="150">
+          <ng-template ngx-datatable-header-template> Ass. Count </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.bulk_count || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [maxWidth]="150">
+          <ng-template ngx-datatable-header-template> Tax Item </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.tax_item || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [maxWidth]="150">
+          <ng-template ngx-datatable-header-template> Created At </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ timeAgo(row.created_at) || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [maxWidth]="150">
+          <ng-template ngx-datatable-header-template> Status </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <span *ngIf="row.billing_ref !== null" class="text-success"
+              >Confirmed</span
+            >
+            <span *ngIf="row.billing_ref == '-2'" class="text-danger"
+              >Disputed</span
+            >
+            <!-- <span *ngIf="!row.billing_ref" class="text-warning"
+              >Unconfirmed</span
+            > -->
+            <span *ngIf="row.billing_ref == '-1'" class="text-danger"
+              >Cancelled</span
+            >
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [minWidth]="200">
+          <ng-template ngx-datatable-header-template> Action</ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <div *ngIf="!row.demand_notice_ref">
+              <button
+                type="button"
+                class="btn btn-outline-success btn-rounded"
+                (click)="approveBulkNotice(row.bulk_id)"
+              >
+                Generate Notice
+              </button>
+            </div>
+            <div *ngIf="row.demand_notice_ref">N/A</div>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<ng-template #confirmModal let-modal>
+  <div class="modal-header">
+    <h4>Confirm Generate Demand Notice!</h4>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="approving" class="text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+      <div style="font-size: '2rem'">Please Wait...</div>
+    </div>
+    <div *ngIf="!approving" class="text-center">
+      Do you want to generate bulk demand notice?
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div
+      class="w-100 d-flex flex-row justify-content-between align-items-center"
+    >
+      <div>
+        <button
+          [disabled]="approving"
+          type="button"
+          class="btn btn-outline-danger btn-rounded"
+          (click)="cancelBulkNoticeApproval()"
+        >
+          Cancel
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          [disabled]="approving"
+          class="btn btn-outline-success btn-rounded"
+          (click)="confirmBulkNoticeApproval()"
+        >
+          Generate Demand Notice
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,416 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="card" style="padding: 20px 30px">
+	<form [formGroup]="addCompanyForm">
+		<div class="row">
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">User Tin *</label>
+				<input
+					formControlName="tin"
+					type="text"
+					class="form-control"
+					placeholder=""
+					name="tin"
+					aria-label="tin"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.tin.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.tin.errors.required"
+						class="text-danger"
+					>
+						Enter user TIN
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Title *</label>
+				<select class="form-control" formControlName="title">
+					<option value="">Choose Status</option>
+					<option *ngFor="let status of statuses" value="{{ status }}">
+						{{ status }}
+					</option>
+				</select>
+				<div *ngIf="isSubmitted && addCompany.title.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.title.errors.required"
+						class="text-danger"
+					>
+						Select title
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">First Name *</label>
+				<input
+					formControlName="first_name"
+					type="text"
+					class="form-control"
+					placeholder="First Name"
+					name="first_name"
+					aria-label="first_name"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.first_name.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.first_name.errors.required"
+						class="text-danger"
+					>
+						Select first name
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Last Name *</label>
+				<input
+					formControlName="surname"
+					name="surname"
+					type="text"
+					class="form-control"
+					placeholder="Last Name"
+					aria-label="Website"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.surname.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.surname.errors.required"
+						class="text-danger"
+					>
+						Select surname
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Other Names</label>
+				<input
+					formControlName="other_names"
+					type="text"
+					class="form-control"
+					placeholder=""
+					name="other_names"
+					aria-label="other_names"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.other_names.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.other_names.errors.required"
+						class="text-danger"
+					>
+						Select other names
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Home Town *</label>
+				<input
+					formControlName="home_town"
+					type="text"
+					class="form-control"
+					placeholder=""
+					aria-label="bvn"
+					name="home_town"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.home_town.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.home_town.errors.required"
+						class="text-danger"
+					>
+						Select home town
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Phone *</label>
+				<input
+					formControlName="phone"
+					name="phone"
+					type="text"
+					class="form-control"
+					placeholder="Phone"
+					aria-label="phone"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.phone.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.phone.errors.required"
+						class="text-danger"
+					>
+						Select phone
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Nationality *</label>
+				<ngx-select-dropdown
+					tabindex="0"
+					[multiple]="false"
+					formControlName="nationality"
+					[config]="config"
+					name="nationality"
+					[options]="countries"
+				>
+				</ngx-select-dropdown>
+				<div *ngIf="isSubmitted && addCompany.nationality.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.nationality.errors.required"
+						class="text-danger"
+					>
+						Select nationality
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Gender *</label>
+				<select class="form-control" formControlName="gender" name="gender">
+					<option value="">Choose Gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+				</select>
+				<div *ngIf="isSubmitted && addCompany.gender.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.gender.errors.required"
+						class="text-danger"
+					>
+						Select gender
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Marital Status *</label>
+				<select
+					class="form-control"
+					name="marital_status"
+					formControlName="marital_status"
+				>
+					<option value="">Choose Marital Status</option>
+					<option value="single">Single</option>
+					<option value="married">Married</option>
+					<option value="divorced">Divorced</option>
+					<option value="seperate">Seperate</option>
+					<option value="widow">Widow</option>
+				</select>
+				<div *ngIf="isSubmitted && addCompany.marital_status.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.marital_status.errors.required"
+						class="text-danger"
+					>
+						Select marital status
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Employment Status *</label>
+
+				<ngx-select-dropdown
+					tabindex="0"
+					[multiple]="false"
+					formControlName="emp_status"
+					[config]="config"
+					name="emp_status"
+					[options]="employement_statuses"
+				>
+				</ngx-select-dropdown>
+				<div *ngIf="isSubmitted && addCompany.emp_status.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.emp_status.errors.required"
+						class="text-danger"
+					>
+						Select employement status
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 form-group mb-3">
+				<label for="picker1">Birth date *</label>
+				<div class="input-group">
+					<input
+						id="dob"
+						class="form-control"
+						placeholder="YYYY-MM-DD"
+						name="dob"
+						ngbDatepicker
+						#dp="ngbDatepicker"
+						formControlName="dob"
+					/>
+					<div class="input-group-append">
+						<button
+							class="btn btn-secondary"
+							(click)="dp.toggle()"
+							type="button"
+						>
+							<i class="icon-regular i-Calendar-4"></i>
+						</button>
+					</div>
+				</div>
+				<div *ngIf="isSubmitted && addCompany.dob.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.dob.errors.required"
+						class="text-danger"
+					>
+						Select date of birth
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Occupation *</label>
+				<ngx-select-dropdown
+					tabindex="0"
+					[multiple]="false"
+					formControlName="occupation"
+					[config]="config"
+					[options]="occupations"
+					name="occupation"
+				>
+				</ngx-select-dropdown>
+				<div *ngIf="isSubmitted && addCompany.occupation.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.occupation.errors.required"
+						class="text-danger"
+					>
+						Select occupation
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">State of Origin *</label>
+				<select
+					name="soo"
+					class="form-control"
+					formControlName="soo"
+					(ngModelChange)="getSelectedState()"
+				>
+					<option value="">Choose State</option>
+					<option *ngFor="let state of states" value="{{ state }}">
+						{{ state }}
+					</option>
+				</select>
+				<div *ngIf="isSubmitted && addCompany.soo.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.soo.errors.required"
+						class="text-danger"
+					>
+						Select state of Origin
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">LGA of Origin *</label>
+				<ngx-select-dropdown
+					name="lga"
+					tabindex="0"
+					[multiple]="false"
+					formControlName="lga"
+					[config]="config"
+					[options]="lgas"
+				>
+				</ngx-select-dropdown>
+				<div *ngIf="isSubmitted && addCompany.lga.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.lga.errors.required"
+						class="text-danger"
+					>
+						Select lga
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Payer Address *</label>
+				<input
+					formControlName="payer_address"
+					type="text"
+					class="form-control"
+					placeholder=""
+					aria-label="phone"
+					name="payer_address"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.payer_address.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.payer_address.errors.required"
+						class="text-danger"
+					>
+						Select payer address
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">Email Address</label>
+				<input
+					formControlName="email"
+					type="text"
+					class="form-control"
+					placeholder=""
+					name="email"
+					aria-label="email"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.email.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.email.errors.required"
+						class="text-danger"
+					>
+						Select email
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">BVN</label>
+				<input
+					formControlName="bvn"
+					type="text"
+					class="form-control"
+					placeholder=""
+					name="bvn"
+					aria-label="bvn"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.bvn.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.bvn.errors.required"
+						class="text-danger"
+					>
+						Select bvn
+					</div>
+				</div>
+			</div>
+			<div class="mb-2 col-md-6 form-group mb-3">
+				<label for="basic-url" class="form-label">NIN</label>
+				<input
+					type="text"
+					class="form-control"
+					formControlName="nin"
+					placeholder="NIN"
+					aria-label="name"
+					name="nin"
+					aria-describedby="addon-wrapping"
+				/>
+				<div *ngIf="isSubmitted && addCompany.nin.errors">
+					<div
+						*ngIf="isSubmitted && addCompany.nin.errors.required"
+						class="text-danger"
+					>
+						Select NIN
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button
+		type="button"
+		name="saveUser"
+		class="btn btn-outline-dark"
+		(click)="
+			!addCompanyForm.hasError('required', 'password') &&
+				!addCompanyForm.hasError('notSame') &&
+				addUser()
+		"
+	>
+		{{ addUserLoading ? "Migrating user ..." : "Migrate User" }}
+	</button>
+</div>

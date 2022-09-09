@@ -1,0 +1,858 @@
+<div class="breadcrumb">
+  <h1>Assessment</h1>
+  <ul>
+    <li><a href="">Motor License Authority</a></li>
+    <li>Perform Assessment</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div *ngIf="loading" class="col-md-12 text-center">
+  <div class="spinner spinner-primary mr-3"></div>
+</div>
+
+<div
+  class="row"
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <div class="col-lg-8 col-md-12 card" style="padding: 20px">
+    <form [formGroup]="taxItemForm">
+      <h4>Motor License Authority Assessment</h4>
+      <p>Fields marked with asterisk are compulsory</p>
+      <div class="">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Select Tax Payer TIN</label>
+                <div *ngIf="userProfile.role == '1' || userProfile.role == '3'">
+                  <ng-select
+                    [items]="foundTIN$ | async"
+                    bindLabel="name"
+                    bindValue="name"
+                    [trackByFn]="trackByFn"
+                    labelForId="tin"
+                    [minTermLength]="minLengthTerm"
+                    [loading]="companiesLoading"
+                    placeholder="Search for a user or company by TIN"
+                    typeToSearchText="Please enter {{
+                      minLengthTerm
+                    }} or more characters"
+                    [typeahead]="companiesInput$"
+                    (change)="onDropdownClick(selectedTIN)"
+                    formControlName="tin_slug"
+                  >
+                  </ng-select>
+                </div>
+                <div *ngIf="userProfile.role != '1' && userProfile.role != '3'">
+                  <ngx-select-dropdown
+                    tabindex="0"
+                    [multiple]="false"
+                    formControlName="tin_slug"
+                    [config]="config"
+                    [options]="tins"
+                  >
+                  </ngx-select-dropdown>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Select Vehicle Tax Item</label>
+                <select
+                  class="form-control"
+                  formControlName="selectedItem"
+                  (ngModelChange)="itemSelected()"
+                >
+                  <option>Choose Tax Item</option>
+                  <option *ngFor="let item of roadTaxes">
+                    {{ item }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+          
+          <div class="row" *ngIf="showChasisInputForm">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Enter VEH CHASIS NO *</label>
+                <input type="text" class="form-control" formControlName="vehicle_chasis">
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+
+          <div class="row" *ngIf="showChasisInputForm">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Select New Owner TIN</label>
+                <div *ngIf="userProfile.role == '1' || userProfile.role == '3'">
+                  <ng-select
+                    [items]="foundTIN$ | async"
+                    bindLabel="name"
+                    bindValue="name"
+                    [trackByFn]="trackByFn"
+                    labelForId="tin"
+                    [minTermLength]="minLengthTerm"
+                    [loading]="companiesLoading"
+                    placeholder="Search for a user or company by TIN"
+                    typeToSearchText="Please enter {{
+                      minLengthTerm
+                    }} or more characters"
+                    [typeahead]="companiesInput$"
+                    (change)="onNewOwerDropdownClick(selectedTIN)"
+                    formControlName="new_owner_tin"
+                  >
+                  </ng-select>
+                </div>
+                <div *ngIf="userProfile.role != '1' && userProfile.role != '3'">
+                  <ngx-select-dropdown
+                    tabindex="0"
+                    [multiple]="false"
+                    formControlName="tin_slug"
+                    [config]="config"
+                    [options]="tins"
+                  >
+                  </ngx-select-dropdown>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row" *ngIf="showChasisInputForm">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <button 
+                type="submit" 
+                *ngIf="showValidateButton"
+                [disabled]="isSearching"
+                class="btn btn-outline-secondary btn-roustnded pull-right"
+                (click)="validateVehicleRegistration()">                  
+                  {{ isSearching ? "Please Wait..." : "Validate Vehicle Record" }}
+              </button>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+
+          
+          <div class="row" *ngIf="subMenu && subMenu.length > 0">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Vehicle Category</label>
+                
+                <select
+                  class="form-control"
+                  formControlName="selectedCategory"
+                  (ngModelChange)="categorySelected()"
+                >
+                  <option>Choose Category</option>
+                  <option *ngFor="let item of subMenu" value="{{ item.tag }}">
+                    {{ item.label }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+
+          <div class="row" *ngIf="actions && actions.length > 0">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Action</label>
+                <select class="form-control" formControlName="selectedAction">
+                  <option>Choose Fee</option>
+                  <option value="{{ item.tag }}" *ngFor="let item of actions">
+                    {{ item.label }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+          
+          <div *ngIf="showOtherVehicleAssessment">
+            <div class="row" >
+              <div class="col-sm-3"></div>
+              <div class="col-sm-8 row">
+                <div class="col-md-9 form-group mb-3">
+                  <label for="tax">Enter Detail Description</label>
+                  <textarea class="form-control" formControlName="description"></textarea>
+                </div>
+                <div class="col-sm-7"></div>
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+            <div class="row" >
+              <div class="col-sm-3"></div>
+              <div class="col-sm-8 row">
+                <div class="col-md-9 form-group mb-3">
+                  <label for="tax">Enter Amount</label>
+                  <input type="text" class="form-control" formControlName="Oamount">
+                </div>
+                <div class="col-sm-7"></div>
+              </div>
+              <div class="col-sm-1"></div>
+            </div>
+          </div>
+
+          <div class="row" *ngIf="actions && actions.length > 0 || showOtherVehicleAssessment">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax"></label>
+                <button                  
+                  style="background-color: green; color: white"
+                  class="btn btn-success pd-x-20 form-control"
+                  (click)="submitVehicleAssessment()"
+                >
+                  Generate
+                </button>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="row" [@animate]="{ value: '*', params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }}">
+  <div class="col-lg-8 col-md-12 card" style="padding: 20px; margin-top: 20px;" *ngIf="showVehicleRegistrationForm">
+    <form [formGroup]="vehicleRegistrationForm">
+      <h4>Motor License Authority Vehicle Registration</h4>
+      <p>Fields marked with asterisk are compulsory</p>
+      <div class="">
+        <div class="card-body">
+          
+
+          <div class="row" *ngIf="showVehicleRegistrationForm">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Enter VEH CHASIS NO *</label>
+                <input type="text" class="form-control" formControlName="vehicle_chasis">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Enter Gross weight *</label>
+                <input type="number" class="form-control" formControlName="gross_weight">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Enter No .of Sitter capacity *</label>
+                <input type="number" class="form-control" formControlName="seater_capacity">
+              </div>
+            </div>
+            
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Enter Load capacity( Gross – Net ) *</label>
+                <input type="number" class="form-control" formControlName="load_capacity">
+              </div>
+            </div>
+            
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Select Vehicle Type *</label>
+                <select formControlName="vehicle_type" class="form-control">
+                  <option>Select option</option>
+                  <option>Heavy duty</option>
+                  <option>Non Heavy duty</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Select Vehicle Color *</label>
+                <select formControlName="vehicle_color" class="form-control">
+                  <option>Black</option>
+                  <option>White</option>
+                  <option>Red</option>
+                  <option>Gold</option>
+                  <option>Blue</option>
+                  <option>Green</option>
+                  <option>Grey</option>
+                  <option>Silver</option>
+                  <option>Brown</option>
+                  <option>Yellow</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Vehicle Name *</label>
+                <input type="text" class="form-control" formControlName="vehicle_name">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Vehicle Make/Model *</label>
+                <input type="text" class="form-control" formControlName="vehicle_model">
+              </div>
+            </div>
+            
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="tax">Vehicle Engine Capacity *</label>
+                <input type="text" class="form-control" formControlName="engine_capacity">
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="tax">Select Vehicle Usage / License Type (Commercial or Private) *</label>
+                <select formControlName="license_type" class="form-control" id="">
+                  <option [value]="null" disabled>Choose option</option>
+                  <option>Commercial</option>
+                  <option>Private</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="tax">WITH OR WITHOUT PLATE NO? (Enter Plate num if with plate no) *</label>
+                <select (change)="onPlateNumberSelectOptionChange($event)" formControlName="with_or_without_plate" class="form-control">
+                  <option [value]="null" disabled>Choose option</option>
+                  <option value="no">Without Plate Number</option>
+                  <option value="yes">With Plate Number</option>
+                </select>
+                <!-- <input type="text" class="form-control" formControlName="with_or_without_plate"> -->
+              </div>
+            </div>
+            
+            <div class="col-sm-12" *ngIf="showPlateNumberInput">
+              <div class="form-group">
+                <label for="tax">Enter PLATE NO *</label>                
+                <input type="text" class="form-control" formControlName="plate_no" >
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="tax">Select Vehicle Value *</label>
+                <select class="form-control" formControlName="vehicle_value">
+                  <option [value]="null" disabled>Choose option</option>
+                  <option value="Above a Million">Above a Million</option>
+                  <option value="Below a Million">Below a Million</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label for="tax">Select Date of Registration *</label>
+                <input type="date" formControlName="registration_date" class="form-control" id="">
+              </div>
+            </div>
+            
+            <!-- <div class="col-sm-6">
+              <div class="form-group">
+                <label for="tax">Registration Fee*</label>
+                <input type="date" formControlName="registration_date" class="form-control" id="">
+              </div>
+            </div> -->
+            
+            <hr>
+
+            <div class="col-sm-12">
+              <button 
+                type="submit" 
+                class="btn btn-outline-secondary btn-roustnded pull-right"
+                (click)="submitVehicleRegistration()">Save Record</button>
+            </div>
+
+          </div>
+          
+
+          <div class="row" *ngIf="actions && actions.length > 0">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax"></label>
+                <button
+                  style="background-color: green; color: white"
+                  class="btn btn-success pd-x-20 form-control"
+                  (click)="submitVehicleAssessment()"
+                >
+                  Generate
+                </button>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<ng-template #modalConfirm let-modal style="max-width: 800px;">
+  <div *ngIf="!loading && showSubmittedVehicleRegistrationModal">
+    <div class="modal-header">
+      <div id="pdfAssessment" class="modal-body">
+        <div *ngIf="loading" class="col-md-12 text-center">
+          <div class="spinner spinner-primary mr-3"></div>
+        </div>
+  
+        <div class="col-md-12" *ngIf="!loading && !dynamicSummary">
+          <div style="display: flex; justify-content: space-between">
+            <img src="../../../../assets/images/logo.png" style="height: 30px" />
+            <span>Smart Tax</span>
+          </div>
+          <p
+            style="
+              text-align: end;
+              font-size: 0.8rem;
+              color: #000;
+              font-family: serif;
+            "
+          >
+            Bill Reference: {{ assessmentForDisplay.billing_ref }}
+          </p>
+  
+          <div style="font-size: 0.7rem">
+            <span style="display: block">Plateau State Internal</span>
+            <span style="display: block">Revenue Service</span>
+            <span style="display: block">Bank Road, Jos</span>
+            <div
+              style="
+                display: inline-block;
+                width: 140px;
+                border: 0.1px solid #000;
+              "
+            ></div>
+          </div>
+  
+          <div class="text-center">
+            <img
+              src="../../../../assets/images/logo-.png"
+              class="my-1"
+              style="height: 90px"
+            />
+          </div>
+          <p
+            style="
+              color: green;
+              font-size: 1rem;
+              font-weight: bold;
+              text-align: center;
+            "
+          >
+            PLATEAU STATE GOVERNMENT
+          </p>
+          <div style="text-align: center">
+            <span
+              style="
+                font-weight: bold;
+                padding: 9px 16px;
+                background-color: green;
+                display: inline-block;
+                font-size: 1rem;
+              "
+              class="text-center mb-3 text-white"
+              >TAX ASSESSMENT (MLA)</span
+            >
+          </div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>VEHICLE OWNER NAME</td>
+                <td class="font-weight-bold">
+                  {{ vehicleDetails.vehicle_owner }}
+                </td>
+              </tr>
+              <tr>
+                <td>VEHICLE OWNER TIN</td>
+                <td class="font-weight-bold">
+                  {{ vehicleDetails.user_tin }}
+                </td>
+              </tr>
+    
+              <tr>
+                <td>VEHICLE NAME</td>
+                <td class="font-weight-bold">
+                  {{ vehicleDetails.vehicle_name }}
+                </td>
+              </tr>
+    
+              <tr>
+                <td>CHASIS NUMBER</td>
+                <td class="font-weight-bold">{{ vehicleDetails.vehicle_chasis }}</td>
+              </tr>
+              
+              <tr>
+                <td>VEHICLE MODEL</td>
+                <td class="font-weight-bold">{{ vehicleDetails.vehicle_model }}</td>
+              </tr>
+              <tr>
+                <td>VEHICLE COLOUR</td>
+                <td class="font-weight-bold">{{ vehicleDetails.vehicle_color }}</td>
+              </tr>
+              <tr>
+                <td>VEHICLE TYPE</td>
+                <td class="font-weight-bold">{{ vehicleDetails.vehicle_type }}</td>
+              </tr>
+              <tr>
+                <td>VEHICLE ENGINE CAPACITY</td>
+                <td class="font-weight-bold">{{ vehicleDetails.engine_capacity }}</td>
+              </tr>
+              <tr>
+                <td>VEHICLE SITTER CAPACITY</td>
+                <td class="font-weight-bold">{{ vehicleDetails.seater_capacity }}</td>
+              </tr>
+              <tr>
+                <td>VEHICLE LOAD CAPACITY</td>
+                <td class="font-weight-bold">{{ vehicleDetails.load_capacity }}</td>
+              </tr>
+              <tr>
+                <td>VEHICLE GROSS CAPACITY</td>
+                <td class="font-weight-bold">{{ vehicleDetails.gross_weight }}</td>
+              </tr>
+              <tr>
+                <td>VEHICLE LICENSE TYPE</td>
+                <td class="font-weight-bold">{{ vehicleDetails.license_type }}</td>
+              </tr>
+              
+              <tr>
+                <td>PLATE NUMBER</td>
+                <td class="font-weight-bold">{{ vehicleDetails.plate_no ? vehicleDetails.plate_no : "N/A" }}</td>
+              </tr>
+              <tr>
+                <td>Amount</td>
+                <td class="font-weight-bold">
+                  {{ vehicleDetails.amount }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td>Created By</td>
+                <td class="font-weight-bold">
+                  {{ vehicleDetails.registered_by }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+  
+  
+    </div>
+  
+    <div class="modal-footer">
+      <div>
+        <button
+          *ngIf="!showValidateButton"
+          style="position: relative; z-index: 3"
+          class="btn btn-primary"
+          (click)="generateVehicleRenewal()"
+        >
+          Generate Assessment
+        </button>
+        
+        <button
+          style="position: relative; z-index: 3"
+          class="btn btn-primary"
+          *ngIf="showValidateButton"
+          (click)="saveChangeOfOwnership()"
+        >
+          Generate Assessment
+        </button>
+      </div>  
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-roustnded"
+        (click)="closeModal()"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && !showSubmittedVehicleRegistrationModal">
+    <div class="modal-header">
+      <div id="pdfAssessment" class="modal-body">
+        <div *ngIf="loading" class="col-md-12 text-center">
+          <div class="spinner spinner-primary mr-3"></div>
+        </div>
+  
+        <div class="col-md-12" *ngIf="!loading && !dynamicSummary">
+          <div style="display: flex; justify-content: space-between">
+            <img src="../../../../assets/images/logo.png" style="height: 30px" />
+            <span>Smart Tax</span>
+          </div>
+          <p
+            style="
+              text-align: end;
+              font-size: 0.8rem;
+              color: #000;
+              font-family: serif;
+            "
+          >
+            Bill Reference: {{ assessmentForDisplay.billing_ref }}
+          </p>
+  
+          <div style="font-size: 0.7rem">
+            <span style="display: block">Plateau State Internal</span>
+            <span style="display: block">Revenue Service</span>
+            <span style="display: block">Bank Road, Jos</span>
+            <div
+              style="
+                display: inline-block;
+                width: 140px;
+                border: 0.1px solid #000;
+              "
+            ></div>
+          </div>
+  
+          <div class="text-center">
+            <img
+              src="../../../../assets/images/logo-.png"
+              class="my-1"
+              style="height: 90px"
+            />
+          </div>
+          <p
+            style="
+              color: green;
+              font-size: 1rem;
+              font-weight: bold;
+              text-align: center;
+            "
+          >
+            PLATEAU STATE GOVERNMENT
+          </p>
+          <div style="text-align: center">
+            <span
+              style="
+                font-weight: bold;
+                padding: 9px 16px;
+                background-color: green;
+                display: inline-block;
+                font-size: 1rem;
+              "
+              class="text-center mb-3 text-white"
+              >TAX ASSESSMENT (MLA)</span
+            >
+          </div>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>MDA</td>
+                <td>PSIRS</td>
+              </tr>
+              <tr>
+                <td>Tax Item</td>
+                <td class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.tax_item }}
+                </td>
+              </tr>
+              <tr>
+                <td>TIN</td>
+                <td class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.payer_tin }}
+                </td>
+              </tr>
+              <tr>
+                <td>Payer Name</td>
+                <td class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.payer_name }}
+                </td>
+              </tr>
+              <tr>
+                <td>Billing Ref</td>
+                <td class="text-warning font-weight-bold">
+                  {{ assessmentForDisplay.billing_ref }}
+                </td>
+              </tr>
+              <tr>
+                <td>Amount</td>
+                <td class="font-weight-bold">
+                  {{ assessmentForDisplay.amount }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td>Created By</td>
+                <td class="font-weight-bold">
+                  {{ assessmentForDisplay.created_by }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+      <div class="col-md-12" *ngIf="!loading && dynamicSummary && payeeSummary">
+        <div style="overflow-y: scroll; height: 400px">
+          <div class="text text-success">
+            Your information has been received. A mail will be sent to you soon.
+          </div>
+          <table class="table" *ngIf="displayPayee[0].values.length > 0">
+            <thead class="thead-light">
+              <th colspan="2">{{ displayPayee[0].Label }}</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of displayPayee[0].values">
+                <th scope="col">
+                  {{ item.label.toUpperCase().replace("_", " ") }}
+                </th>
+                <th scope="col">{{ item.value }}</th>
+              </tr>
+            </tbody>
+          </table>
+  
+          <table class="table" *ngIf="displayPayee[1].values.length > 0">
+            <thead class="thead-light">
+              <th colspan="2">{{ displayPayee[1].Label }}</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of displayPayee[0].values">
+                <th scope="col">
+                  {{ item.label.toUpperCase().replace("_", " ") }}
+                </th>
+                <th scope="col">{{ item.value }}</th>
+              </tr>
+            </tbody>
+          </table>
+  
+          <table class="table" *ngIf="displayPayee[2].values.length > 0">
+            <thead class="thead-light">
+              <th colspan="2">{{ displayPayee[2].Label }}</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of displayPayee[2].values">
+                <th scope="col">
+                  {{ item.label.toUpperCase().replace("_", " ") }}
+                </th>
+                <th scope="col">{{ item.value }}</th>
+              </tr>
+            </tbody>
+          </table>
+  
+          <table class="table" *ngIf="displayPayee[3].values.length > 0">
+            <thead class="thead-light">
+              <th colspan="2">{{ displayPayee[3].Label }}</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of displayPayee[3].values">
+                <th scope="col">
+                  {{ item.label.toUpperCase().replace("_", " ") }}
+                </th>
+                <th scope="col">{{ item.value }}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <div class="col-md-12">
+          <table class="table">
+            <thead class="thead-light">
+              <th colspan="2">Total</th>
+              <th scope="col">
+                {{ displayPayee[displayPayee.length - 1].total }}
+              </th>
+            </thead>
+          </table>
+        </div>
+      </div>
+  
+      <div
+        class="col-md-12"
+        *ngIf="!loading && dynamicSummary && directAssessmentSummary"
+      >
+        <div style="overflow-y: scroll; height: 400px">
+          <div class="text text-success">
+            Your information has been received. A mail will be sent to you soon.
+          </div>
+          <table class="table" *ngIf="displayPayee.length > 0">
+            <thead class="thead-light">
+              <th colspan="2">Direct Assessment</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of displayPayee">
+                <th scope="col">{{ item.label }}</th>
+                <th scope="col">{{ item.value }}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+        <div class="col-md-12">
+          <table class="table">
+            <thead class="thead-light">
+              <th colspan="2">Total</th>
+              <th scope="col">
+                {{ displayPayee[displayPayee.length - 1].total }}
+              </th>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal-footer">
+      <div>
+        <button
+          style="position: relative; z-index: 3"
+          class="btn btn-primary"
+          (click)="exportAsPDF('pdfAssessment')"
+        >
+          Download
+        </button>
+      </div>
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-rounded"
+        (click)="printPDFS('pdfAssessment')"
+      >
+        Print
+      </button>
+  
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-roustnded"
+        (click)="closeModal()"
+      >
+        Close
+      </button>
+      <button
+        type="button"
+        ngbAutofocus
+        class="btn btn-danger btn-rounded"
+        (click)="updateAssessment(-2)"
+      >
+        Dispute
+      </button>
+    </div>
+  </div>
+  
+</ng-template>
+
+

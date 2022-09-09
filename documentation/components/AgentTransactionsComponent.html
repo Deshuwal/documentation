@@ -1,0 +1,2536 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  AgentTransactionsComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/payments/agent-transactions/agent-transactions.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboard-v2</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./agent-transactions.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./agent-transactions.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#assessmentForDisplay" >assessmentForDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#assessments" >assessments</a>
+                            </li>
+                            <li>
+                                <a href="#directAssessmentSummary" >directAssessmentSummary</a>
+                            </li>
+                            <li>
+                                <a href="#displayPayee" >displayPayee</a>
+                            </li>
+                            <li>
+                                <a href="#dynamicSummary" >dynamicSummary</a>
+                            </li>
+                            <li>
+                                <a href="#editMode" >editMode</a>
+                            </li>
+                            <li>
+                                <a href="#editTitle" >editTitle</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#mdas" >mdas</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#modalContent" >modalContent</a>
+                            </li>
+                            <li>
+                                <a href="#payeeSummary" >payeeSummary</a>
+                            </li>
+                            <li>
+                                <a href="#pendingItem" >pendingItem</a>
+                            </li>
+                            <li>
+                                <a href="#status" >status</a>
+                            </li>
+                            <li>
+                                <a href="#taxItemForm" >taxItemForm</a>
+                            </li>
+                            <li>
+                                <a href="#taxItems" >taxItems</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile" >userProfile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteInvoice" >deleteInvoice</a>
+                            </li>
+                            <li>
+                                <a href="#editTaxItem" >editTaxItem</a>
+                            </li>
+                            <li>
+                                <a href="#formatNumber" >formatNumber</a>
+                            </li>
+                            <li>
+                                <a href="#getPaymentItem" >getPaymentItem</a>
+                            </li>
+                            <li>
+                                <a href="#loadAssessments" >loadAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#loadMdas" >loadMdas</a>
+                            </li>
+                            <li>
+                                <a href="#loadTaxItems" >loadTaxItems</a>
+                            </li>
+                            <li>
+                                <a href="#makePaymentForTaxItem" >makePaymentForTaxItem</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#parsePhpDate" >parsePhpDate</a>
+                            </li>
+                            <li>
+                                <a href="#paymentSucceeded" >paymentSucceeded</a>
+                            </li>
+                            <li>
+                                <a href="#print" >print</a>
+                            </li>
+                            <li>
+                                <a href="#submitTaxItem" >submitTaxItem</a>
+                            </li>
+                            <li>
+                                <a href="#timeAgo" >timeAgo</a>
+                            </li>
+                            <li>
+                                <a href="#viewAssessment" >viewAssessment</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, modalService: NgbModal, toastr: ToastrService, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, assessmentService: <a href="../injectables/AssessmentService.html" target="_self">AssessmentService</a>, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:43</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>assessmentService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AssessmentService.html" target="_self" >AssessmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteInvoice"></a>
+                    <span class="name">
+                        <span ><b>deleteInvoice</b></span>
+                        <a href="#deleteInvoice"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteInvoice(id, modal)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="177"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:177</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>modal</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editTaxItem"></a>
+                    <span class="name">
+                        <span ><b>editTaxItem</b></span>
+                        <a href="#editTaxItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editTaxItem(taxItem: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="337"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:337</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>taxItem</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formatNumber"></a>
+                    <span class="name">
+                        <span ><b>formatNumber</b></span>
+                        <a href="#formatNumber"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>formatNumber(x: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="357"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:357</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>x</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPaymentItem"></a>
+                    <span class="name">
+                        <span ><b>getPaymentItem</b></span>
+                        <a href="#getPaymentItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPaymentItem(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="323"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:323</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadAssessments"></a>
+                    <span class="name">
+                        <span ><b>loadAssessments</b></span>
+                        <a href="#loadAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadAssessments()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="139"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:139</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadMdas"></a>
+                    <span class="name">
+                        <span ><b>loadMdas</b></span>
+                        <a href="#loadMdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadMdas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="163"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:163</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadTaxItems"></a>
+                    <span class="name">
+                        <span ><b>loadTaxItems</b></span>
+                        <a href="#loadTaxItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadTaxItems()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="118"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:118</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="makePaymentForTaxItem"></a>
+                    <span class="name">
+                        <span ><b>makePaymentForTaxItem</b></span>
+                        <a href="#makePaymentForTaxItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>makePaymentForTaxItem(itemId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="276"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:276</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>itemId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parsePhpDate"></a>
+                    <span class="name">
+                        <span ><b>parsePhpDate</b></span>
+                        <a href="#parsePhpDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>parsePhpDate(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="352"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:352</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paymentSucceeded"></a>
+                    <span class="name">
+                        <span ><b>paymentSucceeded</b></span>
+                        <a href="#paymentSucceeded"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>paymentSucceeded()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="298"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:298</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="print"></a>
+                    <span class="name">
+                        <span ><b>print</b></span>
+                        <a href="#print"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>print()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:133</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitTaxItem"></a>
+                    <span class="name">
+                        <span ><b>submitTaxItem</b></span>
+                        <a href="#submitTaxItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitTaxItem()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="timeAgo"></a>
+                    <span class="name">
+                        <span ><b>timeAgo</b></span>
+                        <a href="#timeAgo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>timeAgo(timestamp: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="91"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:91</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>timestamp</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewAssessment"></a>
+                    <span class="name">
+                        <span ><b>viewAssessment</b></span>
+                        <a href="#viewAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>viewAssessment(assessment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="200"
+                            class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:200</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>assessment</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessmentForDisplay"></a>
+                    <span class="name">
+                        <span ><b>assessmentForDisplay</b></span>
+                        <a href="#assessmentForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="194" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:194</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessments"></a>
+                    <span class="name">
+                        <span ><b>assessments</b></span>
+                        <a href="#assessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="directAssessmentSummary"></a>
+                    <span class="name">
+                        <span ><b>directAssessmentSummary</b></span>
+                        <a href="#directAssessmentSummary"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="198" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:198</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayPayee"></a>
+                    <span class="name">
+                        <span ><b>displayPayee</b></span>
+                        <a href="#displayPayee"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="195" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:195</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dynamicSummary"></a>
+                    <span class="name">
+                        <span ><b>dynamicSummary</b></span>
+                        <a href="#dynamicSummary"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="196" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:196</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editMode"></a>
+                    <span class="name">
+                        <span ><b>editMode</b></span>
+                        <a href="#editMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editTitle"></a>
+                    <span class="name">
+                        <span ><b>editTitle</b></span>
+                        <a href="#editTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdas"></a>
+                    <span class="name">
+                        <span ><b>mdas</b></span>
+                        <a href="#mdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modalContent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>modalContent</b></span>
+                        <a href="#modalContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;modalConfirm&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="payeeSummary"></a>
+                    <span class="name">
+                        <span ><b>payeeSummary</b></span>
+                        <a href="#payeeSummary"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="197" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:197</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pendingItem"></a>
+                    <span class="name">
+                        <span ><b>pendingItem</b></span>
+                        <a href="#pendingItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="297" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:297</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="status"></a>
+                    <span class="name">
+                        <span ><b>status</b></span>
+                        <a href="#status"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItemForm"></a>
+                    <span class="name">
+                        <span ><b>taxItemForm</b></span>
+                        <a href="#taxItemForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:28</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItems"></a>
+                    <span class="name">
+                        <span ><b>taxItems</b></span>
+                        <a href="#taxItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <span ><b>userProfile</b></span>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/views/payments/agent-transactions/agent-transactions.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &#x27;@angular/core&#x27;;
+import { echartStyles } from &#x27;src/app/shared/echart-styles&#x27;;
+import { ProductService } from &#x27;src/app/shared/services/product.service&#x27;;
+import { LocalStoreService } from &#x27;src/app/shared/services/local-store.service&#x27;;
+import { NgbModal } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+import { SharedAnimations } from &#x27;src/app/shared/animations/shared-animations&#x27;;
+import { FormGroup, FormBuilder, Validators } from &#x27;@angular/forms&#x27;;
+import { HttpService } from &#x27;src/app/shared/services/http.service&#x27;;
+import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { AssessmentService } from &#x27;src/app/shared/services/assessment.service&#x27;;
+import { Utils } from &#x27;src/app/shared/utils&#x27;;
+
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+
+
+import { Router, RouteConfigLoadStart, ResolveStart, RouteConfigLoadEnd, ResolveEnd } from &#x27;@angular/router&#x27;;
+import { BreadcrumbService } from &#x27;src/app/shared/services/breadcrumb.service&#x27;;
+
+
+@Component({
+	selector: &#x27;app-dashboard-v2&#x27;,
+	templateUrl: &#x27;./agent-transactions.component.html&#x27;,
+	styleUrls: [&#x27;./agent-transactions.component.scss&#x27;],
+	animations: [SharedAnimations]
+})
+export class AgentTransactionsComponent implements OnInit {
+	mdas: any;
+	taxItemForm: FormGroup;
+	editMode: boolean;
+	loading: boolean &#x3D; false;
+	editTitle: string &#x3D; &quot;&quot;;
+	assessments: any;
+	taxItems: any;
+
+
+	@ViewChild(&#x27;modalConfirm&#x27;, { static: false }) private modalContent;
+
+
+	userProfile: any;
+
+
+
+	status: any;
+	constructor(
+		private dl: HttpService,
+		private modalService: NgbModal,
+		private toastr: ToastrService,
+		private fb: FormBuilder,
+		private localStore: LocalStoreService,
+		private route: ActivatedRoute,
+		private assessmentService: AssessmentService,
+		private breadcrumb: BreadcrumbService
+	) { }
+
+	ngOnInit() {
+
+
+		console.log(&quot;testing utils&quot;, Utils.getTimeIntervalPhpTimeStamp((Date.now() / 1000)));
+
+		this.userProfile &#x3D; this.localStore.getItem(&quot;user&quot;);
+
+		this.breadcrumb.setCrumbItem(&#x27;paymentTransactions&#x27;);
+
+		this.route.params.forEach((e: any) &#x3D;&gt; {
+
+			if (e.status) this.status &#x3D; e.status;
+		})
+
+
+		this.route.params.subscribe(params &#x3D;&gt; {
+			this.status &#x3D; params[&#x27;status&#x27;];
+			this.loadAssessments(); // reset and set based on new parameter this time
+		});
+
+		console.log(&quot;param is &quot;, this.status)
+
+
+		//this.loadTaxItems();
+		//this.loadMdas()
+		this.loadAssessments();
+
+		this.taxItemForm &#x3D; this.fb.group({
+			id: [&#x27;&#x27;],
+			title: [&#x27;&#x27;, Validators.required],
+			mda_id: [&#x27;&#x27;, Validators.required],
+			rules: [&#x27;&#x27;]
+		});
+
+	}
+
+	timeAgo(timestamp: number) {
+
+		return Utils.getTimeIntervalPhpTimeStamp(timestamp);
+	}
+
+	submitTaxItem() {
+
+		if (this.taxItemForm.value.mda_id &#x3D;&#x3D; null || parseInt(this.taxItemForm.value.mda_id) &lt; 1) {
+			return;
+		}
+
+		this.loading &#x3D; true;
+
+		console.log(&quot;submitting tax item &quot;, this.taxItemForm.value);
+
+		this.dl.doPost(&quot;/tax_items/save&quot;, this.taxItemForm.value).subscribe((res) &#x3D;&gt; {
+			console.log(&quot;result saving&quot;, res);
+			this.editMode &#x3D; false;
+			this.loading &#x3D; false;
+			this.loadTaxItems();
+		}, error &#x3D;&gt; {
+			this.loading &#x3D; false;
+			console.log(&quot;error saving tax item&quot;, error);
+		})
+
+	}
+
+	loadTaxItems() {
+		this.loading &#x3D; true;
+		this.dl.doGet(&quot;/tax_items/list&quot;)
+			.subscribe(res &#x3D;&gt; {
+				console.log(&quot;fetched taxitems &quot;, res);
+				this.taxItems &#x3D; res;
+				this.loading &#x3D; false;
+			},
+				(err &#x3D;&gt; {
+					this.loading &#x3D; false;
+					console.log(&quot;error fetching tax items&quot;, err)
+				}));
+	}
+
+
+	print() {
+
+		window.print();
+	}
+
+
+	loadAssessments() {
+		this.loading &#x3D; true;
+
+		let url &#x3D; &quot;/payments/get_payment_history/&quot; + this.userProfile.id;
+
+		if (this.status !&#x3D; undefined) {
+			url &#x3D; url + &quot;/&quot; + this.status;
+		}
+
+		this.dl.doGet(url)
+			.subscribe((res: any) &#x3D;&gt; {
+				if (res.length &lt; 1) {
+					this.toastr.info(&#x27;No Transactions yet!&#x27;, &#x27;Empty!&#x27;, { timeOut: 3000 });
+				}
+				console.log(&quot;fetched assessments &quot;, res);
+				this.assessments &#x3D; res;
+				this.loading &#x3D; false;
+			},
+				(err &#x3D;&gt; {
+					this.loading &#x3D; false;
+					console.log(&quot;error fetching tax items&quot;, err)
+				}));
+	}
+
+	loadMdas() {
+		this.loading &#x3D; true;
+		this.dl.doGet(&quot;/mdas/list&quot;)
+			.subscribe(res &#x3D;&gt; {
+				console.log(&quot;fetched mda &quot;, res);
+				this.mdas &#x3D; res;
+				this.loading &#x3D; false;
+			},
+				(err &#x3D;&gt; {
+					this.loading &#x3D; false;
+					console.log(&quot;error fetching mda&quot;, err)
+				}));
+	}
+
+	deleteInvoice(id, modal) {
+		this.loading &#x3D; true;
+		this.modalService.open(modal, { ariaLabelledBy: &#x27;modal-basic-title&#x27;, centered: true })
+			.result.then((result) &#x3D;&gt; {
+				this.dl.doGet(&quot;/tax_items/delete/&quot; + id)
+					.subscribe(res &#x3D;&gt; {
+						this.loading &#x3D; false;
+						this.toastr.success(&#x27;Tax Item Deleted!&#x27;, &#x27;Success!&#x27;, { timeOut: 3000 });
+						this.loadTaxItems();
+					})
+			}, (reason) &#x3D;&gt; {
+				this.loading &#x3D; false;
+			});
+	}
+
+
+
+	assessmentForDisplay: any &#x3D; {};
+	displayPayee: any;
+	dynamicSummary: boolean &#x3D; false;
+	payeeSummary: boolean &#x3D; false;
+	directAssessmentSummary: boolean &#x3D; false;
+
+	viewAssessment(assessment: any) {
+		this.payeeSummary &#x3D; false;
+		this.directAssessmentSummary &#x3D; false;
+
+		console.log(&quot;view assessment &quot;, assessment);
+
+		//if assessment is payee or licence
+		if (assessment.tax_item_id &#x3D;&#x3D; 13) {
+
+			console.log(&quot;displaying paye &quot;, assessment.rules);
+			/* this.displayPayee &#x3D; this.assessmentService.arrangePayeeFormDataForDisplay(JSON.parse(assessment.form_items), null);
+			console.log(&quot;displaying payee &quot;, this.displayPayee);
+			this.dynamicSummary &#x3D; true;
+	
+			this.displayPayee.push({label:&quot;Billing Ref&quot;, value:assessment.billing_ref});
+			this.payeeSummary &#x3D; true;
+		
+			this.modalService.open(this.modalContent, { ariaLabelledBy: &#x27;modal-basic-title&#x27;, centered: true }); 
+			return; */
+
+			try {
+				assessment.rules &#x3D; JSON.parse(assessment.rules);
+			}
+			catch (e) {
+
+			}
+			this.dynamicSummary &#x3D; true;
+			this.payeeSummary &#x3D; true;
+			this.assessmentForDisplay &#x3D; Object.assign({}, assessment);
+			this.assessmentForDisplay.form_items &#x3D; JSON.parse(assessment.form_items);
+
+			this.displayPayee &#x3D; this.assessmentService.arrangePayeeFormDataForDisplay(this.assessmentForDisplay.form_items, (assessment.rules));
+
+			console.log(&quot;rules &quot;, assessment.rules);
+
+			this.assessmentForDisplay.tin &#x3D; this.userProfile.tin;
+
+
+			this.modalService.open(this.modalContent, { ariaLabelledBy: &#x27;modal-basic-title&#x27;, centered: true });
+
+			console.log(&quot;Display Payee&quot;, this.displayPayee);
+			return;
+
+		}
+		else if (assessment.rules.length &lt; 3 &amp;&amp; assessment.tax_item_id &#x3D;&#x3D; 14) {
+
+			this.displayPayee &#x3D; this.assessmentService.arrangeDirectAssessmentFormDataForDisplay(JSON.parse(assessment.form_items));
+			console.log(&quot;displaying direct assessment &quot;, this.displayPayee);
+			this.dynamicSummary &#x3D; true;
+			this.directAssessmentSummary &#x3D; true;
+
+			this.displayPayee.push({ label: &quot;Billing Ref&quot;, value: assessment.billing_ref });
+
+
+			this.modalService.open(this.modalContent, { ariaLabelledBy: &#x27;modal-basic-title&#x27;, centered: true });
+			return;
+		}
+
+
+
+		this.dynamicSummary &#x3D; false;
+		this.assessmentForDisplay.billing_ref &#x3D; assessment.billing_ref;
+		this.assessmentForDisplay.id &#x3D; assessment.id;
+
+		this.assessmentForDisplay.mda &#x3D; assessment.mda;
+		this.assessmentForDisplay.tax_item &#x3D; assessment.display ? JSON.parse(assessment.display).tax_item : assessment.tax_item;
+		this.assessmentForDisplay.tin &#x3D; assessment.tin;
+		this.assessmentForDisplay.amount &#x3D; assessment.amount;
+
+
+
+		this.modalService.open(this.modalContent, { ariaLabelledBy: &#x27;modal-basic-title&#x27;, centered: true });
+
+	}
+
+
+	makePaymentForTaxItem(itemId: number) {
+		console.log(&quot;gotten id &quot;, itemId);
+
+		let item &#x3D; this.getPaymentItem(itemId);
+
+		console.log(&quot;gotten item &quot;, item);
+		let amount &#x3D; 0;
+
+		if (item.mda_id &#x3D;&#x3D; 3 &amp;&amp; item.tax_item_id &#x3D;&#x3D; 13) {
+
+			amount &#x3D; item.rules.tax;
+		}
+
+		let win: any &#x3D; window;
+		this.pendingItem &#x3D; item;
+		win.payWithPaystack(amount, this);
+
+		console.log(&quot;Called paystack&quot;);
+
+	}
+
+	pendingItem: any;
+	paymentSucceeded() {
+
+		console.log(&quot;updating &quot;, this.assessmentForDisplay.id);
+		this.loading &#x3D; true;
+
+		let url: string &#x3D; &quot;assessment/update_assessment/&quot; + this.pendingItem.id;
+		url &#x3D; url + &quot;/1&quot;;
+		console.log(&quot;url is &quot;, url);
+		this.dl.doGet(url).subscribe((res) &#x3D;&gt; {
+
+			this.loading &#x3D; false;
+			this.toastr.success(&quot;Success&quot;, &quot;Payment Successful!&quot;, { timeOut: 10000, closeButton: true, progressBar: true });
+			this.modalService.dismissAll(&quot;dismiss&quot;);
+
+		},
+			err &#x3D;&gt; {
+
+				this.loading &#x3D; false;
+				this.toastr.error(&quot;Failed!&quot;, &quot;Payment Failed&quot;, { timeOut: 10000, closeButton: true, progressBar: true });
+				this.modalService.dismissAll(&quot;dismiss&quot;);
+			}
+		);
+
+	}
+
+	getPaymentItem(id: number) {
+		console.log(&quot;Getting assessment &quot;, id, this.assessments);
+
+		for (let i: number &#x3D; 0; i &lt; this.assessments.length; i++) {
+			let thisId: number &#x3D; parseInt(this.assessments[i].id);
+			console.log(&quot;comparing &quot;, thisId, id);
+			if (thisId &#x3D;&#x3D; id) {
+				return this.assessments[i];
+			}
+		}
+
+		return null;
+	}
+
+	editTaxItem(taxItem: any &#x3D; null) {
+
+		if (taxItem) {
+			this.editTitle &#x3D; &quot;Edit TaxItem&quot;;
+			this.taxItemForm.setValue({ id: taxItem.id, rules: taxItem.rules, title: taxItem.title, mda_id: taxItem.mda_id });
+		}
+		else {
+			this.editTitle &#x3D; &quot;Create TaxItem&quot;;
+			this.taxItemForm.setValue({ title: &#x27;&#x27;, mda_id: &#x27;&#x27;, id: &#x27;&#x27;, rules: &#x27;&#x27; });
+		}
+
+		this.editMode &#x3D; true;
+
+	}
+
+	parsePhpDate(date: string) {
+
+		return Utils.parsePhpDate(date);
+	}
+
+	formatNumber(x: number) {
+
+		return x.toString().replace(/\B(?&#x3D;(\d{3})+(?!\d))/g, &quot;,&quot;);
+	}
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!-- &lt;div class&#x3D;&quot;breadcrumb&quot;&gt;
+  &lt;h1&gt;Payment&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Make Payment&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Pending Billing Refs&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt; --&gt;
+&lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+
+&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;editMode&quot;&gt;
+  &lt;div class&#x3D;&quot;col-lg-6 col-md-6&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;row mb-3&quot;&gt;
+  &lt;div class&#x3D;&quot;col-md-12 mb-3&quot;&gt;&lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+    &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    class&#x3D;&quot;col-md-12&quot;
+    *ngIf&#x3D;&quot;!loading&quot;
+    [@animate]&#x3D;&quot;{
+      value: &#x27;*&#x27;,
+      params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+    }&quot;
+  &gt;
+    &lt;div class&#x3D;&quot;card o-hidden&quot;&gt;
+      &lt;ngx-datatable
+        *ngIf&#x3D;&quot;assessments?.length&quot;
+        style&#x3D;&quot;box-shadow: none&quot;
+        class&#x3D;&quot;material fullscreen&quot;
+        [style.height]&#x3D;&quot;60 * assessments.length + 60 + &#x27;px&#x27;&quot;
+        [columnMode]&#x3D;&quot;&#x27;force&#x27;&quot;
+        [headerHeight]&#x3D;&quot;50&quot;
+        [footerHeight]&#x3D;&quot;0&quot;
+        [rowHeight]&#x3D;&quot;60&quot;
+        [scrollbarH]&#x3D;&quot;true&quot;
+        [rows]&#x3D;&quot;assessments&quot;
+      &gt;
+        &lt;ngx-datatable-column name&#x3D;&quot;photo&quot; [maxWidth]&#x3D;&quot;100&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Ref &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.id }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column name&#x3D;&quot;photo&quot; [maxWidth]&#x3D;&quot;100&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Amount &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.amount }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Type &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            &lt;span *ngIf&#x3D;&quot;row.type &#x3D;&#x3D; &#x27;credit&#x27;&quot; class&#x3D;&quot;text text-success&quot;&gt;
+              Credit
+            &lt;/span&gt;
+            &lt;span *ngIf&#x3D;&quot;row.type &#x3D;&#x3D; &#x27;debit&#x27;&quot; class&#x3D;&quot;text text-success&quot;&gt;
+              Debit
+            &lt;/span&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Details &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ timeAgo(row.created_at) }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+      &lt;/ngx-datatable&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #deleteConfirmModal let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;h4 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;modal-title&quot;&gt;Delete Tax Item&lt;/h4&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;close&quot;
+      aria-label&#x3D;&quot;Close button&quot;
+      aria-describedby&#x3D;&quot;modal-title&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;Cross click&#x27;)&quot;
+    &gt;
+      &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+    &lt;p&gt;&lt;strong&gt;Are you sure?&lt;/strong&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;cancel&#x27;)&quot;
+    &gt;
+      Cancel
+    &lt;/button&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      ngbAutofocus
+      class&#x3D;&quot;btn btn-wide btn-danger btn-rounded&quot;
+      (click)&#x3D;&quot;modal.close(&#x27;Ok&#x27;)&quot;
+    &gt;
+      Ok
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #modalConfirm let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;h4 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;modal-title&quot;&gt;Make Payment For&lt;/h4&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;close&quot;
+      aria-label&#x3D;&quot;Close button&quot;
+      aria-describedby&#x3D;&quot;modal-title&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;Cross click&#x27;)&quot;
+    &gt;
+      &lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;times;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+      &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;col-md-12&quot; *ngIf&#x3D;&quot;!loading &amp;&amp; !dynamicSummary&quot;&gt;
+      &lt;table class&#x3D;&quot;table&quot;&gt;
+        &lt;thead class&#x3D;&quot;&quot;&gt;
+          &lt;tr&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;MDA&lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;{{ assessmentForDisplay.mda }}&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Tax Item&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold text-success&quot;&gt;
+              {{ assessmentForDisplay.tax_item }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Amount&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ assessmentForDisplay.amount }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;TIN&lt;/td&gt;
+            &lt;td class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;
+              {{ assessmentForDisplay.tin }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Billing Ref&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ assessmentForDisplay.billing_ref }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;col-md-12&quot; *ngIf&#x3D;&quot;!loading &amp;&amp; dynamicSummary &amp;&amp; payeeSummary&quot;&gt;
+      &lt;table class&#x3D;&quot;table&quot;&gt;
+        &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+          &lt;tr&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;MDA&lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;{{ displayPayee.mda }}&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Tax Item&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold text-success&quot;&gt;
+              {{ displayPayee.tax_item }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Gross Income&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.gi) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Deductions&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.deductions) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Taxable Income&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.ti) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;PAYE Amount&lt;/td&gt;
+            &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+              {{ formatNumber(displayPayee.paye) }} NGN
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;TIN&lt;/td&gt;
+            &lt;td class&#x3D;&quot;text-danger font-weight-bold&quot;&gt;
+              {{ assessmentForDisplay.tin }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Billing Ref&lt;/td&gt;
+            &lt;td class&#x3D;&quot;text-warning font-weight-bold&quot;&gt;
+              {{ assessmentForDisplay.billing_ref }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Status&lt;/td&gt;
+            &lt;td class&#x3D;&quot;text-warning font-weight-bold&quot;&gt;Completed&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+
+      &lt;!--
+  
+    &lt;div style&#x3D;&quot;overflow-y:scroll; height: 400px; &quot;&gt;
+  
+    &lt;div class&#x3D;&#x27;text text-success&#x27;  &gt;
+             Your information has been received. A mail will be sent to you soon.
+    &lt;/div&gt;
+    &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&#x27;displayPayee[0].values.length &gt; 0&#x27;&gt;
+      &lt;thead class&#x3D;&quot;thead-light&quot; &gt;
+          &lt;th colspan&#x3D;&quot;2&quot;&gt; {{displayPayee[0].Label}} &lt;/th&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;  
+        &lt;tr *ngFor&#x3D;&#x27;let item of displayPayee[0].values&#x27;&gt;
+          &lt;th  scope&#x3D;&quot;col&quot;&gt;{{item.label.toUpperCase().replace(&quot;_&quot;, &quot; &quot;)}}&lt;/th&gt;
+          &lt;th scope&#x3D;&quot;col&quot;&gt;{{item.value}}&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  
+  
+    &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&#x27;displayPayee[1].values.length &gt; 0&#x27;&gt;
+      &lt;thead class&#x3D;&quot;thead-light&quot; &gt;
+          &lt;th colspan&#x3D;&quot;2&quot;&gt; {{displayPayee[1].Label}} &lt;/th&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;  
+        &lt;tr *ngFor&#x3D;&#x27;let item of displayPayee[0].values&#x27;&gt;
+          &lt;th  scope&#x3D;&quot;col&quot;&gt;{{item.label.toUpperCase().replace(&quot;_&quot;, &quot; &quot;)}}&lt;/th&gt;
+          &lt;th scope&#x3D;&quot;col&quot;&gt;{{item.value}}&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  
+  
+    &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&#x27;displayPayee[2].values.length &gt; 0&#x27;&gt;
+      &lt;thead class&#x3D;&quot;thead-light&quot; &gt;
+          &lt;th colspan&#x3D;&quot;2&quot;&gt; {{displayPayee[2].Label}} &lt;/th&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;  
+        &lt;tr *ngFor&#x3D;&#x27;let item of displayPayee[2].values&#x27;&gt;
+          &lt;th  scope&#x3D;&quot;col&quot;&gt;{{item.label.toUpperCase().replace(&quot;_&quot;, &quot; &quot;)}}&lt;/th&gt;
+          &lt;th scope&#x3D;&quot;col&quot;&gt;{{item.value}}&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  
+  
+  
+    &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&#x27;displayPayee[3].values.length &gt; 0&#x27;&gt;
+      &lt;thead class&#x3D;&quot;thead-light&quot; &gt;
+          &lt;th colspan&#x3D;&quot;2&quot;&gt; {{displayPayee[3].Label}} &lt;/th&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;  
+        &lt;tr *ngFor&#x3D;&#x27;let item of displayPayee[3].values&#x27;&gt;
+          &lt;th  scope&#x3D;&quot;col&quot;&gt;{{item.label.toUpperCase().replace(&quot;_&quot;, &quot; &quot;)}}&lt;/th&gt;
+          &lt;th scope&#x3D;&quot;col&quot;&gt;{{item.value}}&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  
+    
+    &lt;/div&gt;
+  
+    &lt;div class&#x3D;&#x27;col-md-12&#x27;&gt;
+      &lt;table class&#x3D;&quot;table&quot;&gt;
+        &lt;thead class&#x3D;&quot;thead-light&quot; &gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt; Total &lt;/th&gt;
+            &lt;th  scope&#x3D;&quot;col&quot;&gt;{{displayPayee[displayPayee.length-1].total}}&lt;/th&gt; 
+        &lt;/thead&gt;
+       
+      &lt;/table&gt;
+    &lt;/div&gt; --&gt;
+    &lt;/div&gt;
+
+    &lt;div
+      class&#x3D;&quot;col-md-12&quot;
+      *ngIf&#x3D;&quot;!loading &amp;&amp; dynamicSummary &amp;&amp; directAssessmentSummary&quot;
+    &gt;
+      &lt;div style&#x3D;&quot;overflow-y: scroll; height: 400px&quot;&gt;
+        &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&quot;displayPayee.length &gt; 0&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;Make Payment For&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let item of displayPayee&quot;&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;{{ item.label }}&lt;/td&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;{{ item.value }}&lt;/td&gt;
+            &lt;/tr&gt;
+
+            &lt;tr&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;Billing Ref&lt;/td&gt;
+              &lt;td scope&#x3D;&quot;col&quot;&gt;
+                {{ displayPayee[displayPayee.length - 1].value }}
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+        &lt;table class&#x3D;&quot;table&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;Total&lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;
+              {{ displayPayee[displayPayee.length - 2].total }}
+            &lt;/th&gt;
+          &lt;/thead&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      *ngIf&#x3D;&quot;status &#x3D;&#x3D; 0&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;cancel&#x27;)&quot;
+    &gt;
+      Pay Now
+    &lt;/button&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;print()&quot;
+    &gt;
+      Print Receipt
+    &lt;/button&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;Cross click&#x27;)&quot;
+    &gt;
+      Cancel
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./agent-transactions.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!-- <div class="breadcrumb">  <h1>Payment</h1>  <ul>    <li><a href="">Make Payment</a></li>    <li>Pending Billing Refs</li>  </ul></div> --><app-breadcrumb></app-breadcrumb><div class="separator-breadcrumb border-top"></div><div class="row" *ngIf="editMode">  <div class="col-lg-6 col-md-6"></div></div><div class="row mb-3">  <div class="col-md-12 mb-3"></div>  <div *ngIf="loading" class="col-md-12 text-center">    <div class="spinner spinner-primary mr-3"></div>  </div>  <div    class="col-md-12"    *ngIf="!loading"    [@animate]="{      value: \'*\',      params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }    }"  >    <div class="card o-hidden">      <ngx-datatable        *ngIf="assessments?.length"        style="box-shadow: none"        class="material fullscreen"        [style.height]="60 * assessments.length + 60 + \'px\'"        [columnMode]="\'force\'"        [headerHeight]="50"        [footerHeight]="0"        [rowHeight]="60"        [scrollbarH]="true"        [rows]="assessments"      >        <ngx-datatable-column name="photo" [maxWidth]="100">          <ng-template ngx-datatable-header-template> Ref </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.id }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column name="photo" [maxWidth]="100">          <ng-template ngx-datatable-header-template> Amount </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.amount }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Type </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            <span *ngIf="row.type == \'credit\'" class="text text-success">              Credit            </span>            <span *ngIf="row.type == \'debit\'" class="text text-success">              Debit            </span>          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Details </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ timeAgo(row.created_at) }}          </ng-template>        </ngx-datatable-column>      </ngx-datatable>    </div>  </div></div><ng-template #deleteConfirmModal let-modal>  <div class="modal-header">    <h4 class="modal-title" id="modal-title">Delete Tax Item</h4>    <button      type="button"      class="close"      aria-label="Close button"      aria-describedby="modal-title"      (click)="modal.dismiss(\'Cross click\')"    >      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="modal-body">    <p><strong>Are you sure?</strong></p>  </div>  <div class="modal-footer">    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="modal.dismiss(\'cancel\')"    >      Cancel    </button>    <button      type="button"      ngbAutofocus      class="btn btn-wide btn-danger btn-rounded"      (click)="modal.close(\'Ok\')"    >      Ok    </button>  </div></ng-template><ng-template #modalConfirm let-modal>  <div class="modal-header">    <h4 class="modal-title" id="modal-title">Make Payment For</h4>    <button      type="button"      class="close"      aria-label="Close button"      aria-describedby="modal-title"      (click)="modal.dismiss(\'Cross click\')"    >      <span aria-hidden="true">&times;</span>    </button>  </div>  <div class="modal-body">    <div *ngIf="loading" class="col-md-12 text-center">      <div class="spinner spinner-primary mr-3"></div>    </div>    <div class="col-md-12" *ngIf="!loading && !dynamicSummary">      <table class="table">        <thead class="">          <tr>            <th scope="col">MDA</th>            <th scope="col">{{ assessmentForDisplay.mda }}</th>          </tr>        </thead>        <tbody>          <tr>            <td>Tax Item</td>            <td class="font-weight-bold text-success">              {{ assessmentForDisplay.tax_item }}            </td>          </tr>          <tr>            <td>Amount</td>            <td class="font-weight-bold">              {{ assessmentForDisplay.amount }} NGN            </td>          </tr>          <tr>            <td>TIN</td>            <td class="text-danger font-weight-bold">              {{ assessmentForDisplay.tin }}            </td>          </tr>          <tr>            <td>Billing Ref</td>            <td class="font-weight-bold">              {{ assessmentForDisplay.billing_ref }}            </td>          </tr>        </tbody>      </table>    </div>    <div class="col-md-12" *ngIf="!loading && dynamicSummary && payeeSummary">      <table class="table">        <thead class="thead-light">          <tr>            <th scope="col">MDA</th>            <th scope="col">{{ displayPayee.mda }}</th>          </tr>        </thead>        <tbody>          <tr>            <td>Tax Item</td>            <td class="font-weight-bold text-success">              {{ displayPayee.tax_item }}            </td>          </tr>          <tr>            <td>Gross Income</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.gi) }} NGN            </td>          </tr>          <tr>            <td>Deductions</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.deductions) }} NGN            </td>          </tr>          <tr>            <td>Taxable Income</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.ti) }} NGN            </td>          </tr>          <tr>            <td>PAYE Amount</td>            <td class="font-weight-bold">              {{ formatNumber(displayPayee.paye) }} NGN            </td>          </tr>          <tr>            <td>TIN</td>            <td class="text-danger font-weight-bold">              {{ assessmentForDisplay.tin }}            </td>          </tr>          <tr>            <td>Billing Ref</td>            <td class="text-warning font-weight-bold">              {{ assessmentForDisplay.billing_ref }}            </td>          </tr>          <tr>            <td>Status</td>            <td class="text-warning font-weight-bold">Completed</td>          </tr>        </tbody>      </table>      <!--      <div style="overflow-y:scroll; height: 400px; ">      <div class=\'text text-success\'  >             Your information has been received. A mail will be sent to you soon.    </div>    <table class="table" *ngIf=\'displayPayee[0].values.length > 0\'>      <thead class="thead-light" >          <th colspan="2"> {{displayPayee[0].Label}} </th>      </thead>      <tbody>          <tr *ngFor=\'let item of displayPayee[0].values\'>          <th  scope="col">{{item.label.toUpperCase().replace("_", " ")}}</th>          <th scope="col">{{item.value}}</th>      </tr>      </tbody>    </table>        <table class="table" *ngIf=\'displayPayee[1].values.length > 0\'>      <thead class="thead-light" >          <th colspan="2"> {{displayPayee[1].Label}} </th>      </thead>      <tbody>          <tr *ngFor=\'let item of displayPayee[0].values\'>          <th  scope="col">{{item.label.toUpperCase().replace("_", " ")}}</th>          <th scope="col">{{item.value}}</th>      </tr>      </tbody>    </table>        <table class="table" *ngIf=\'displayPayee[2].values.length > 0\'>      <thead class="thead-light" >          <th colspan="2"> {{displayPayee[2].Label}} </th>      </thead>      <tbody>          <tr *ngFor=\'let item of displayPayee[2].values\'>          <th  scope="col">{{item.label.toUpperCase().replace("_", " ")}}</th>          <th scope="col">{{item.value}}</th>      </tr>      </tbody>    </table>          <table class="table" *ngIf=\'displayPayee[3].values.length > 0\'>      <thead class="thead-light" >          <th colspan="2"> {{displayPayee[3].Label}} </th>      </thead>      <tbody>          <tr *ngFor=\'let item of displayPayee[3].values\'>          <th  scope="col">{{item.label.toUpperCase().replace("_", " ")}}</th>          <th scope="col">{{item.value}}</th>      </tr>      </tbody>    </table>          </div>      <div class=\'col-md-12\'>      <table class="table">        <thead class="thead-light" >            <th colspan="2"> Total </th>            <th  scope="col">{{displayPayee[displayPayee.length-1].total}}</th>         </thead>             </table>    </div> -->    </div>    <div      class="col-md-12"      *ngIf="!loading && dynamicSummary && directAssessmentSummary"    >      <div style="overflow-y: scroll; height: 400px">        <table class="table" *ngIf="displayPayee.length > 0">          <thead class="thead-light">            <th colspan="2">Make Payment For</th>          </thead>          <tbody>            <tr *ngFor="let item of displayPayee">              <td scope="col">{{ item.label }}</td>              <td scope="col">{{ item.value }}</td>            </tr>            <tr>              <td scope="col">Billing Ref</td>              <td scope="col">                {{ displayPayee[displayPayee.length - 1].value }}              </td>            </tr>          </tbody>        </table>      </div>      <div class="col-md-12">        <table class="table">          <thead class="thead-light">            <th colspan="2">Total</th>            <th scope="col">              {{ displayPayee[displayPayee.length - 2].total }}            </th>          </thead>        </table>      </div>    </div>  </div>  <div class="modal-footer">    <button      type="button"      *ngIf="status == 0"      class="btn btn-outline-secondary btn-rounded"      (click)="modal.dismiss(\'cancel\')"    >      Pay Now    </button>    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="print()"    >      Print Receipt    </button>    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="modal.dismiss(\'Cross click\')"    >      Cancel    </button>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'AgentTransactionsComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'AgentTransactionsComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

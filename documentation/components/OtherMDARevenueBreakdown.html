@@ -1,0 +1,3129 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  OtherMDARevenueBreakdown</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboad-default</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./other-mda-breakdown.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./other-mda-breakdown.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#assessments" >assessments</a>
+                            </li>
+                            <li>
+                                <a href="#automatedAssessments" >automatedAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#BRNField" >BRNField</a>
+                            </li>
+                            <li>
+                                <a href="#companies" >companies</a>
+                            </li>
+                            <li>
+                                <a href="#companiesLoading" >companiesLoading</a>
+                            </li>
+                            <li>
+                                <a href="#companyTINCount" >companyTINCount</a>
+                            </li>
+                            <li>
+                                <a href="#currentMonthRevenue" >currentMonthRevenue</a>
+                            </li>
+                            <li>
+                                <a href="#displayAllManualAssessments" >displayAllManualAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#filteredItems" >filteredItems</a>
+                            </li>
+                            <li>
+                                <a href="#filteredMdaAssessmentBreakdowns" >filteredMdaAssessmentBreakdowns</a>
+                            </li>
+                            <li>
+                                <a href="#flash" >flash</a>
+                            </li>
+                            <li>
+                                <a href="#flash2" >flash2</a>
+                            </li>
+                            <li>
+                                <a href="#from" >from</a>
+                            </li>
+                            <li>
+                                <a href="#IndividualTINCount" >IndividualTINCount</a>
+                            </li>
+                            <li>
+                                <a href="#isAdmin" >isAdmin</a>
+                            </li>
+                            <li>
+                                <a href="#isReset" >isReset</a>
+                            </li>
+                            <li>
+                                <a href="#isSearching" >isSearching</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#manualAssessments" >manualAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#mdaAssessmentBreakdowns" >mdaAssessmentBreakdowns</a>
+                            </li>
+                            <li>
+                                <a href="#mdas" >mdas</a>
+                            </li>
+                            <li>
+                                <a href="#mdasRevenuePercentage" >mdasRevenuePercentage</a>
+                            </li>
+                            <li>
+                                <a href="#nameProfile" >nameProfile</a>
+                            </li>
+                            <li>
+                                <a href="#otherMdasTotalAmount" >otherMdasTotalAmount</a>
+                            </li>
+                            <li>
+                                <a href="#pagination" >pagination</a>
+                            </li>
+                            <li>
+                                <a href="#paymentChannels" >paymentChannels</a>
+                            </li>
+                            <li>
+                                <a href="#paymentChannelsSum" >paymentChannelsSum</a>
+                            </li>
+                            <li>
+                                <a href="#paymentTotal" >paymentTotal</a>
+                            </li>
+                            <li>
+                                <a href="#psirsRevenuePercentage" >psirsRevenuePercentage</a>
+                            </li>
+                            <li>
+                                <a href="#psirsTotalAmount" >psirsTotalAmount</a>
+                            </li>
+                            <li>
+                                <a href="#psirsTotalAssessments" >psirsTotalAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#psirsTotalOtherAssessments" >psirsTotalOtherAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#psirsTotalPAYEAssessments" >psirsTotalPAYEAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#revenueToday" >revenueToday</a>
+                            </li>
+                            <li>
+                                <a href="#searchField" >searchField</a>
+                            </li>
+                            <li>
+                                <a href="#selectedMDA" >selectedMDA</a>
+                            </li>
+                            <li>
+                                <a href="#title" >title</a>
+                            </li>
+                            <li>
+                                <a href="#to" >to</a>
+                            </li>
+                            <li>
+                                <a href="#todayAssessmentsAmount" >todayAssessmentsAmount</a>
+                            </li>
+                            <li>
+                                <a href="#totalAssessments" >totalAssessments</a>
+                            </li>
+                            <li>
+                                <a href="#totalPayments" >totalPayments</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile" >userProfile</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#calculatePercentage" >calculatePercentage</a>
+                            </li>
+                            <li>
+                                <a href="#extractTitleFromGenericAssessment" >extractTitleFromGenericAssessment</a>
+                            </li>
+                            <li>
+                                <a href="#filterByDate" >filterByDate</a>
+                            </li>
+                            <li>
+                                <a href="#filteredMdaBreakdowns" >filteredMdaBreakdowns</a>
+                            </li>
+                            <li>
+                                <a href="#getMDARevenueBreakdown" >getMDARevenueBreakdown</a>
+                            </li>
+                            <li>
+                                <a href="#getPaymentChannelPayments" >getPaymentChannelPayments</a>
+                            </li>
+                            <li>
+                                <a href="#getPSIRSRevenueBreakdown" >getPSIRSRevenueBreakdown</a>
+                            </li>
+                            <li>
+                                <a href="#getPsirsVsOtherMdas" >getPsirsVsOtherMdas</a>
+                            </li>
+                            <li>
+                                <a href="#loadMdas" >loadMdas</a>
+                            </li>
+                            <li>
+                                <a href="#manuallyGroupPsirsPayments" >manuallyGroupPsirsPayments</a>
+                            </li>
+                            <li>
+                                <a href="#matchMdaName" >matchMdaName</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#parseUrl" >parseUrl</a>
+                            </li>
+                            <li>
+                                <a href="#reloadCurrentPage" >reloadCurrentPage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, modalService: NgbModal, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, toastService: ToastrService, negotiator: <a href="../injectables/OldPlatformNegotiatorService.html" target="_self">OldPlatformNegotiatorService</a>, dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>, headTitle: <a href="https://angular.io/api/platform-browser/Title" target="_blank">Title</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:41</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>negotiator</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OldPlatformNegotiatorService.html" target="_self" >OldPlatformNegotiatorService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>headTitle</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/platform-browser/Title" target="_blank" >Title</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="calculatePercentage"></a>
+                    <span class="name">
+                        <span ><b>calculatePercentage</b></span>
+                        <a href="#calculatePercentage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>calculatePercentage(value, total)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>total</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="extractTitleFromGenericAssessment"></a>
+                    <span class="name">
+                        <span ><b>extractTitleFromGenericAssessment</b></span>
+                        <a href="#extractTitleFromGenericAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>extractTitleFromGenericAssessment(rules)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="183"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:183</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>rules</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filterByDate"></a>
+                    <span class="name">
+                        <span ><b>filterByDate</b></span>
+                        <a href="#filterByDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filterByDate(resetPagination: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="274"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:274</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>resetPagination</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredMdaBreakdowns"></a>
+                    <span class="name">
+                        <span ><b>filteredMdaBreakdowns</b></span>
+                        <a href="#filteredMdaBreakdowns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>filteredMdaBreakdowns(mdas: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="245"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:245</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>mdas</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMDARevenueBreakdown"></a>
+                    <span class="name">
+                        <span ><b>getMDARevenueBreakdown</b></span>
+                        <a href="#getMDARevenueBreakdown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMDARevenueBreakdown()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="226"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:226</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPaymentChannelPayments"></a>
+                    <span class="name">
+                        <span ><b>getPaymentChannelPayments</b></span>
+                        <a href="#getPaymentChannelPayments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPaymentChannelPayments()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="145"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:145</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPSIRSRevenueBreakdown"></a>
+                    <span class="name">
+                        <span ><b>getPSIRSRevenueBreakdown</b></span>
+                        <a href="#getPSIRSRevenueBreakdown"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPSIRSRevenueBreakdown()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="164"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:164</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPsirsVsOtherMdas"></a>
+                    <span class="name">
+                        <span ><b>getPsirsVsOtherMdas</b></span>
+                        <a href="#getPsirsVsOtherMdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPsirsVsOtherMdas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="115"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:115</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadMdas"></a>
+                    <span class="name">
+                        <span ><b>loadMdas</b></span>
+                        <a href="#loadMdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadMdas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="manuallyGroupPsirsPayments"></a>
+                    <span class="name">
+                        <span ><b>manuallyGroupPsirsPayments</b></span>
+                        <a href="#manuallyGroupPsirsPayments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>manuallyGroupPsirsPayments(categorizedItems: any[], uncategorized: any[])</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="190"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:190</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categorizedItems</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>uncategorized</td>
+                                    <td>
+                                            <code>any[]</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="matchMdaName"></a>
+                    <span class="name">
+                        <span ><b>matchMdaName</b></span>
+                        <a href="#matchMdaName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>matchMdaName(mda_id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="134"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:134</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>mda_id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parseUrl"></a>
+                    <span class="name">
+                        <span ><b>parseUrl</b></span>
+                        <a href="#parseUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>parseUrl(url)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="100"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:100</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>url</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="reloadCurrentPage"></a>
+                    <span class="name">
+                        <span ><b>reloadCurrentPage</b></span>
+                        <a href="#reloadCurrentPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>reloadCurrentPage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="325"
+                            class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:325</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessments"></a>
+                    <span class="name">
+                        <span ><b>assessments</b></span>
+                        <a href="#assessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="269" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:269</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="automatedAssessments"></a>
+                    <span class="name">
+                        <span ><b>automatedAssessments</b></span>
+                        <a href="#automatedAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="BRNField"></a>
+                    <span class="name">
+                        <span ><b>BRNField</b></span>
+                        <a href="#BRNField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="261" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:261</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companies"></a>
+                    <span class="name">
+                        <span ><b>companies</b></span>
+                        <a href="#companies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companiesLoading"></a>
+                    <span class="name">
+                        <span ><b>companiesLoading</b></span>
+                        <a href="#companiesLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companyTINCount"></a>
+                    <span class="name">
+                        <span ><b>companyTINCount</b></span>
+                        <a href="#companyTINCount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentMonthRevenue"></a>
+                    <span class="name">
+                        <span ><b>currentMonthRevenue</b></span>
+                        <a href="#currentMonthRevenue"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:109</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="displayAllManualAssessments"></a>
+                    <span class="name">
+                        <span ><b>displayAllManualAssessments</b></span>
+                        <a href="#displayAllManualAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredItems"></a>
+                    <span class="name">
+                        <span ><b>filteredItems</b></span>
+                        <a href="#filteredItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="270" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:270</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="filteredMdaAssessmentBreakdowns"></a>
+                    <span class="name">
+                        <span ><b>filteredMdaAssessmentBreakdowns</b></span>
+                        <a href="#filteredMdaAssessmentBreakdowns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:66</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="flash"></a>
+                    <span class="name">
+                        <span ><b>flash</b></span>
+                        <a href="#flash"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:23</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="flash2"></a>
+                    <span class="name">
+                        <span ><b>flash2</b></span>
+                        <a href="#flash2"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="from"></a>
+                    <span class="name">
+                        <span ><b>from</b></span>
+                        <a href="#from"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="267" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:267</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="IndividualTINCount"></a>
+                    <span class="name">
+                        <span ><b>IndividualTINCount</b></span>
+                        <a href="#IndividualTINCount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:37</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isAdmin"></a>
+                    <span class="name">
+                        <span ><b>isAdmin</b></span>
+                        <a href="#isAdmin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" target="_blank" >Boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isReset"></a>
+                    <span class="name">
+                        <span ><b>isReset</b></span>
+                        <a href="#isReset"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="272" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:272</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isSearching"></a>
+                    <span class="name">
+                        <span ><b>isSearching</b></span>
+                        <a href="#isSearching"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="271" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:271</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="manualAssessments"></a>
+                    <span class="name">
+                        <span ><b>manualAssessments</b></span>
+                        <a href="#manualAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdaAssessmentBreakdowns"></a>
+                    <span class="name">
+                        <span ><b>mdaAssessmentBreakdowns</b></span>
+                        <a href="#mdaAssessmentBreakdowns"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdas"></a>
+                    <span class="name">
+                        <span ><b>mdas</b></span>
+                        <a href="#mdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdasRevenuePercentage"></a>
+                    <span class="name">
+                        <span ><b>mdasRevenuePercentage</b></span>
+                        <a href="#mdasRevenuePercentage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:113</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nameProfile"></a>
+                    <span class="name">
+                        <span ><b>nameProfile</b></span>
+                        <a href="#nameProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:54</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="otherMdasTotalAmount"></a>
+                    <span class="name">
+                        <span ><b>otherMdasTotalAmount</b></span>
+                        <a href="#otherMdasTotalAmount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="111" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:111</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pagination"></a>
+                    <span class="name">
+                        <span ><b>pagination</b></span>
+                        <a href="#pagination"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../classes/Page.html" target="_self" >Page</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Page()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="260" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:260</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paymentChannels"></a>
+                    <span class="name">
+                        <span ><b>paymentChannels</b></span>
+                        <a href="#paymentChannels"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paymentChannelsSum"></a>
+                    <span class="name">
+                        <span ><b>paymentChannelsSum</b></span>
+                        <a href="#paymentChannelsSum"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="paymentTotal"></a>
+                    <span class="name">
+                        <span ><b>paymentTotal</b></span>
+                        <a href="#paymentTotal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="266" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:266</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="psirsRevenuePercentage"></a>
+                    <span class="name">
+                        <span ><b>psirsRevenuePercentage</b></span>
+                        <a href="#psirsRevenuePercentage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:112</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="psirsTotalAmount"></a>
+                    <span class="name">
+                        <span ><b>psirsTotalAmount</b></span>
+                        <a href="#psirsTotalAmount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:110</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="psirsTotalAssessments"></a>
+                    <span class="name">
+                        <span ><b>psirsTotalAssessments</b></span>
+                        <a href="#psirsTotalAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="psirsTotalOtherAssessments"></a>
+                    <span class="name">
+                        <span ><b>psirsTotalOtherAssessments</b></span>
+                        <a href="#psirsTotalOtherAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="psirsTotalPAYEAssessments"></a>
+                    <span class="name">
+                        <span ><b>psirsTotalPAYEAssessments</b></span>
+                        <a href="#psirsTotalPAYEAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="revenueToday"></a>
+                    <span class="name">
+                        <span ><b>revenueToday</b></span>
+                        <a href="#revenueToday"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:108</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchField"></a>
+                    <span class="name">
+                        <span ><b>searchField</b></span>
+                        <a href="#searchField"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="262" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:262</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedMDA"></a>
+                    <span class="name">
+                        <span ><b>selectedMDA</b></span>
+                        <a href="#selectedMDA"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="265" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:265</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="title"></a>
+                    <span class="name">
+                        <span ><b>title</b></span>
+                        <a href="#title"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;angular-ngselect-typeahead-app&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="to"></a>
+                    <span class="name">
+                        <span ><b>to</b></span>
+                        <a href="#to"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="268" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:268</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="todayAssessmentsAmount"></a>
+                    <span class="name">
+                        <span ><b>todayAssessmentsAmount</b></span>
+                        <a href="#todayAssessmentsAmount"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="totalAssessments"></a>
+                    <span class="name">
+                        <span ><b>totalAssessments</b></span>
+                        <a href="#totalAssessments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="totalPayments"></a>
+                    <span class="name">
+                        <span ><b>totalPayments</b></span>
+                        <a href="#totalPayments"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <span ><b>userProfile</b></span>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/views/reporting/other_mda_breakdown/other-mda-breakdown.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { parse } from &#x27;querystring&#x27;;
+import { Component, OnInit } from &quot;@angular/core&quot;;
+import { LocalStoreService } from &quot;../../../shared/services/local-store.service&quot;;
+import { Router } from &quot;@angular/router&quot;;
+import { ToastrService } from &quot;ngx-toastr&quot;;
+import { HttpService } from &quot;src/app/shared/services/http.service&quot;;
+import { forkJoin } from &quot;rxjs&quot;;
+import { Title } from &quot;@angular/platform-browser&quot;;
+import { NgbModal } from &quot;@ng-bootstrap/ng-bootstrap&quot;;
+import { FormBuilder } from &quot;@angular/forms&quot;;
+import { BreadcrumbService } from &quot;src/app/shared/services/breadcrumb.service&quot;;
+import { OldPlatformNegotiatorService } from &quot;src/app/shared/services/old_platform_negotiator&quot;;
+import { Page } from &quot;src/app/shared/models/Page&quot;;
+
+@Component({
+	selector: &quot;app-dashboad-default&quot;,
+	templateUrl: &quot;./other-mda-breakdown.html&quot;,
+	styleUrls: [&quot;./other-mda-breakdown.css&quot;],
+})
+export class OtherMDARevenueBreakdown implements OnInit {
+	
+
+	flash:boolean &#x3D; true;
+	flash2:boolean &#x3D; true;
+	// selectedCar: number;
+	isAdmin: Boolean;
+	
+
+	loading &#x3D; false;
+	// addedCompanies: any[] &#x3D; [];
+	companies: any[] &#x3D; [];
+
+	userProfile: any;
+
+	title &#x3D; &quot;angular-ngselect-typeahead-app&quot;;
+	companyTINCount &#x3D; 0;
+	IndividualTINCount &#x3D; 0;
+	// companies$: Observable&lt;any&gt;;
+	companiesLoading &#x3D; false;
+
+	displayAllManualAssessments:boolean &#x3D; false;
+	constructor(
+		private localStore: LocalStoreService,
+		private modalService: NgbModal,
+		private fb: FormBuilder,
+		private router: Router,
+		private toastService: ToastrService,
+		private negotiator: OldPlatformNegotiatorService,
+		private dl: HttpService,
+		private breadcrumb: BreadcrumbService,
+		private headTitle: Title
+	) {}
+
+	nameProfile &#x3D; &quot;&quot;;
+	totalPayments &#x3D; 0;
+	totalAssessments &#x3D; 0;
+	paymentChannels &#x3D; [];
+	paymentChannelsSum &#x3D; 0;
+	psirsTotalAssessments &#x3D; 0;
+	todayAssessmentsAmount&#x3D; 0;
+	psirsTotalPAYEAssessments &#x3D; 0;
+	psirsTotalOtherAssessments &#x3D; 0;
+	automatedAssessments&#x3D;0;
+	manualAssessments&#x3D;0;
+	mdaAssessmentBreakdowns &#x3D; 0;
+	filteredMdaAssessmentBreakdowns &#x3D; [];
+
+	ngOnInit() {
+		this.headTitle.setTitle(&quot;Dashboard&quot;);
+		let title: any &#x3D; undefined;
+
+		let profile &#x3D; JSON.parse(localStorage[&quot;user&quot;]);
+		this.isAdmin &#x3D; [&quot;1&quot;, &quot;3&quot;].includes(profile.role);
+		this.userProfile &#x3D; profile;
+
+		title &#x3D; &#x60;Reporting Dashboard&#x60;;
+		this.breadcrumb.setCrumbItem(&quot;dashboardHome&quot;, title);
+ 
+		this.getPaymentChannelPayments();
+		this.getPSIRSRevenueBreakdown();
+		this.getMDARevenueBreakdown(); 
+		this.loadMdas();
+	}
+
+	mdas:any;
+	loadMdas() {
+		this.loading &#x3D; true;
+		this.dl.doGet(&quot;mdas/list&quot;).subscribe(
+			(res) &#x3D;&gt; {
+				this.mdas &#x3D; res;
+				this.loading &#x3D; false;
+			},
+			(err) &#x3D;&gt; {
+				this.loading &#x3D; false;
+				this.isReset &#x3D; false;
+			}
+		);
+	}
+	 
+	parseUrl(url) { 
+		if(this.userProfile.mda_id &amp;&amp; this.userProfile.role!&#x3D;&#x3D;&#x27;1&#x27; &amp;&amp; parseInt(this.userProfile.mda_id) &gt; 0) {
+			return &#x60;${url}?mda_id&#x3D;${this.userProfile.mda_id}&#x60;
+		}
+		return url;
+	}
+ 
+
+	revenueToday: any
+	currentMonthRevenue: any
+	psirsTotalAmount:number &#x3D;0;
+	otherMdasTotalAmount:number&#x3D;0;
+	psirsRevenuePercentage:number &#x3D; 0;
+	mdasRevenuePercentage:number &#x3D;0;
+
+	getPsirsVsOtherMdas(){
+		let totalMdas:number &#x3D; 0;
+		let totalPSIRS:number &#x3D; 0;
+		this.filteredMdaAssessmentBreakdowns.forEach((mda:any)&#x3D;&gt;{
+			if(mda.mda_name.trim()!&#x3D;&quot;PLATEAU STATE INTERNAL REVENUE SERVICE&quot;){
+				totalMdas+&#x3D;Number(mda.total);
+			}
+			else{
+				totalPSIRS &#x3D; Number(mda.total);
+			}
+		});
+		this.otherMdasTotalAmount &#x3D; totalMdas;
+		let totalPSirsAndMdas:number &#x3D; totalMdas + totalPSIRS; 
+		this.mdasRevenuePercentage &#x3D; totalMdas/totalPSirsAndMdas *100;
+		this.psirsRevenuePercentage &#x3D; totalPSIRS/totalPSirsAndMdas * 100;
+		this.psirsTotalAmount &#x3D; totalPSIRS; 
+	}
+
+
+	matchMdaName(mda_id){
+		let mdaName &#x3D; &quot;&quot;;
+		this.mdas.forEach((mda:any)&#x3D;&gt;{
+			if(mda.id &#x3D;&#x3D; mda_id){
+				mdaName &#x3D; mda.title;
+			}
+		}
+		);
+		return mdaName;
+	}
+
+	getPaymentChannelPayments() {
+		this.loading &#x3D; true;
+		let payment_channels &#x3D; this.parseUrl(&#x27;reports/payment_channels&#x27;);
+		this.dl.doGet(payment_channels).subscribe(
+			(res:any) &#x3D;&gt; {
+				this.paymentChannels &#x3D; res;
+				// console.log(&quot;channels &quot;, res);
+				this.paymentChannelsSum &#x3D; res.kudi + res.opay + res.wallet + res.nibss + res.paydirect + res.psirs_customer_service + res.monnify;
+				// console.log(&quot;channels&quot;, this.paymentChannelsSum);
+				
+				this.loading &#x3D; false; 
+			},
+			(err) &#x3D;&gt; {
+				// console.log(err);
+				this.loading &#x3D; false; 
+			}
+		);
+	}
+
+	getPSIRSRevenueBreakdown() {
+		let psirs_revenue_breakdown &#x3D; this.parseUrl(&#x27;reports/mdas_revenue_breakdown&#x27;);
+		this.loading &#x3D; true;
+		
+		this.dl.doGet(psirs_revenue_breakdown).subscribe(
+			(res:any) &#x3D;&gt; {
+				console.log(&quot;result breakdiwon &quot;, res);
+				this.psirsTotalAssessments &#x3D; res.total;
+				this.automatedAssessments &#x3D; res.categorized;
+				this.manualAssessments&#x3D; res.uncategorized;
+				this.loading &#x3D; false; 
+			},
+			(err) &#x3D;&gt; {
+				// console.log(err);
+				this.loading &#x3D; false; 
+			}
+		);
+	}
+	
+	extractTitleFromGenericAssessment(rules){
+
+		let rulesObj &#x3D; JSON.parse(rules);
+
+		return rulesObj.description;
+	}
+
+	manuallyGroupPsirsPayments(categorizedItems:any[], uncategorized:any[]){
+
+		let key_groupings:string[] &#x3D; [&quot;Vehicle Licence&quot;, &quot;PAYE&quot;, &quot;MLA&quot;, &quot;development levy&quot;, &quot;wht&quot;, &quot;witholding tax&quot;, &quot;direct assessment&quot;, &quot;tax audit&quot;];
+
+		let results:any[] &#x3D; [];
+		results[&#x27;others&#x27;] &#x3D; 0;
+		uncategorized.forEach((item:any) &#x3D;&gt; {
+
+			let groupedFlag&#x3D; false;
+			key_groupings.forEach((group:string) &#x3D;&gt; {
+
+				if(!item.title) item.title&#x3D;&quot;others&quot;;
+				// console.log(&quot;item&quot;, item, &quot;group &quot;, group);
+				if(item.title.toLowerCase().indexOf(group) &gt; -1){
+
+					groupedFlag &#x3D; true;
+					if(results[group] !&#x3D; undefined){
+						results[group] +&#x3D; item.ammount_aggr;
+					}
+					else{ 
+						results[group] &#x3D; item.amount_aggr;
+					}
+				}
+			});
+
+			if(!groupedFlag){
+
+				results[&#x27;others&#x27;]+&#x3D;item.amount_aggr;
+			}
+
+		 });
+
+		 return results;
+
+	}
+
+	getMDARevenueBreakdown() {
+		let mda_revenue_breakdown &#x3D; this.parseUrl(&#x27;reports/mda_revenue_breakdown&#x27;);
+		this.loading &#x3D; true;
+		
+		this.dl.doGet(mda_revenue_breakdown).subscribe(
+			(res:any) &#x3D;&gt; {
+				this.mdaAssessmentBreakdowns &#x3D; res;
+				if(res.length &gt; 0) {
+					this.filteredMdaBreakdowns(res);
+				}
+				this.loading &#x3D; false; 
+			},
+			(err) &#x3D;&gt; {
+				// console.log(err);
+				this.loading &#x3D; false; 
+			}
+		);
+	}
+
+	filteredMdaBreakdowns(mdas: any) {
+		for (let [key, value] of Object.entries(mdas)) {
+			if(value[0].mda_name !&#x3D; null) {
+				value[0].percentage &#x3D; (value[0].total / this.paymentChannelsSum) * 100;
+				this.filteredMdaAssessmentBreakdowns.push(value[0]);
+			}
+		}
+		this.getPsirsVsOtherMdas();
+	}
+
+	calculatePercentage(value, total) {
+		let result &#x3D; (parseInt(value) / parseInt(total)) * 100;
+		return result;
+	}
+
+	pagination: Page &#x3D; new Page();
+	BRNField: string;
+  	searchField: string;
+
+	
+	selectedMDA: any &#x3D; null;
+	paymentTotal: number &#x3D; 0;
+	from: string;
+	to: string;
+	assessments: any;
+	filteredItems: any[] &#x3D; [];
+	isSearching: boolean &#x3D; false;
+	isReset: boolean &#x3D; false;
+
+	filterByDate(resetPagination: boolean &#x3D; false) {
+		if (resetPagination) {
+		  this.pagination.setCurrentPage(0);
+		}
+		this.isSearching &#x3D; true;
+	
+		let period &#x3D; &#x60;&amp;from&#x3D;${this.from}&amp;to&#x3D;${this.to}&#x60;;
+		
+		let psirs_revenue_breakdown &#x3D; this.parseUrl(&#x27;reports/psirs_revenue_breakdown&#x27;);
+		let payment_channels &#x3D; this.parseUrl(&#x27;reports/payment_channels&#x27;);
+		let mda_revenue_breakdown &#x3D; this.parseUrl(&#x27;reports/mda_revenue_breakdown&#x27;);
+		let selected_mda_id &#x3D; this.selectedMDA;
+
+		const requests &#x3D; [
+			this.dl.doGet(&#x60;${psirs_revenue_breakdown}?${period}&amp;page&#x3D;${this.pagination.currentPage}&amp;selected_mda_id&#x3D;${selected_mda_id}&#x60;),
+			this.dl.doGet(&#x60;${payment_channels}?${period}&amp;page&#x3D;${this.pagination.currentPage}&amp;selected_mda_id&#x3D;${selected_mda_id}&#x60;),
+			this.dl.doGet(&#x60;${mda_revenue_breakdown}?${period}&amp;page&#x3D;${this.pagination.currentPage}&amp;selected_mda_id&#x3D;${selected_mda_id}&#x60;),
+		];
+
+		forkJoin(requests).subscribe(
+			(result: any[]) &#x3D;&gt; {
+				// console.log(&quot;Filtered results &quot;, result);
+
+				// Filtered PSIRS Revenue Breakdown
+				this.psirsTotalAssessments &#x3D; result[0].paye + result[0].others;
+				this.psirsTotalPAYEAssessments &#x3D; result[0].paye;
+				this.psirsTotalOtherAssessments &#x3D; result[0].others;
+
+				// Filter Payment Channels
+				this.paymentChannels &#x3D; result[1];
+				// console.log(&quot;channels total &quot;, result[1]);
+				this.paymentChannelsSum &#x3D; result[1].kudi + result[1].opay + result[1].wallet + result[1].nibss + result[1].paydirect;
+
+				// Filter Other MDA vs PSIRS Breakdown
+				if(result[2].length &gt; 0) {
+					this.filteredMdaBreakdowns(result[2]);
+				}
+
+				this.isSearching &#x3D; false;
+				this.isReset &#x3D; true;
+			},
+			(error) &#x3D;&gt; {
+				// log error
+				// console.log({ error });
+				this.isSearching &#x3D; false;
+				this.isReset &#x3D; false;
+			}
+		);
+		
+	}
+
+	reloadCurrentPage() {
+		window.location.reload();
+	}
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">
+&lt;div class&#x3D;&quot;&quot;&gt;
+	&lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+
+	&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+	&lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+		&lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;div *ngIf&#x3D;&quot;!loading&quot;&gt;
+	 
+		&lt;div style&#x3D;&quot;padding: 1rem&quot; class&#x3D;&quot;top-scroll card card-mediaQuery&quot;&gt;
+			&lt;div class&#x3D;&quot;row &quot;&gt;
+				&lt;div class&#x3D;&quot;col-md-3 col-sm-12&quot;&gt;
+					&lt;p&gt;From:&lt;/p&gt;
+					&lt;input class&#x3D;&quot;form-control&quot; type&#x3D;&quot;date&quot; [(ngModel)]&#x3D;&quot;from&quot; required
+					/&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;col-md-3 col-sm-12&quot;&gt;
+					&lt;p&gt;To:&lt;/p&gt;
+					&lt;input class&#x3D;&quot;form-control&quot; type&#x3D;&quot;date&quot; [(ngModel)]&#x3D;&quot;to&quot; required /&gt;	
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;col-md-3 col-sm-12&quot;&gt;
+					&lt;p&gt;Select MDA:&lt;/p&gt;
+					&lt;select class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;selectedMDA&quot;&gt;
+						&lt;option value&#x3D;&quot;&quot;&gt;Choose MDA&lt;/option&gt;
+						&lt;option style&#x3D;&quot;font-weight: bold&quot; *ngFor&#x3D;&quot;let mda of mdas&quot; [ngValue]&#x3D;&quot;mda.id&quot; &gt;
+							{{ mda.title }}
+						&lt;/option&gt;
+					&lt;/select&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;col-md-3 col-sm-12&quot;&gt;
+					&lt;div class&#x3D;&quot;row&quot;&gt;
+						&lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+							&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+							&lt;button
+								class&#x3D;&quot;btn btn-primary btn-block pull-right&quot;
+								(click)&#x3D;&quot;filterByDate()&quot;
+								*ngIf&#x3D;&quot;!isSearching&quot;
+							&gt;
+								Filter Records
+							&lt;/button&gt;
+							&lt;button
+								class&#x3D;&quot;btn btn-primary btn-block pull-right&quot;
+								*ngIf&#x3D;&quot;isSearching&quot;
+								disabled
+							&gt;
+								Filtering...
+							&lt;/button&gt;
+						&lt;/div&gt;
+						&lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+							&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+							&lt;button
+								class&#x3D;&quot;btn btn-outline-info btn-block&quot;
+								*ngIf&#x3D;&quot;isReset&quot;
+								(click)&#x3D;&quot;reloadCurrentPage()&quot;
+							&gt;
+								Reset
+							&lt;/button&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					
+					&lt;!-- &lt;button
+						class&#x3D;&quot;btn btn-default btn-block&quot;
+					&gt;
+						Reset
+					&lt;/button&gt; --&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		
+		&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+		&lt;div class&#x3D;&quot;row mb-4&quot;&gt;
+			&lt;div class&#x3D;&quot;col-lg-12 col-md-12 col-sm-12&quot;&gt;
+				&lt;div class&#x3D;&quot;card &quot;&gt;
+					&lt;div class&#x3D;&quot;card-body text-center&quot;&gt;
+						&lt;h4 class&#x3D;&quot;card-title mb-3&quot;&gt;Payment Channels Breakdown (All MDAs)&lt;/h4&gt;
+						&lt;div class&#x3D;&quot;table-responsive text-right&quot;&gt;
+							&lt;table class&#x3D;&quot;table table-striped table-hover&quot;&gt;
+								&lt;thead&gt;
+									&lt;tr&gt;
+										&lt;th scope&#x3D;&quot;col&quot;&gt;#&lt;/th&gt;
+										&lt;th scope&#x3D;&quot;col&quot; style&#x3D;&quot;text-align:left;&quot;&gt;Channel&lt;/th&gt;
+										&lt;th scope&#x3D;&quot;col&quot;&gt;Revenue&lt;/th&gt;
+										&lt;th scope&#x3D;&quot;col&quot;&gt;% of overall Revenue&lt;/th&gt;
+									&lt;/tr&gt;
+								&lt;/thead&gt;
+								&lt;tbody&gt;
+									&lt;tr&gt;
+										&lt;th scope&#x3D;&quot;row&quot;&gt;1&lt;/th&gt;
+										&lt;td style&#x3D;&quot;text-align:left;&quot;&gt;Kudi (Nomba)&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;₦{{ paymentChannels.kudi | number }}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot; &gt;{{ calculatePercentage(paymentChannels.kudi, paymentChannelsSum).toFixed(1)}}%&lt;/td&gt;
+									&lt;/tr&gt;
+									
+									&lt;tr&gt;
+										&lt;th scope&#x3D;&quot;row&quot;&gt;2&lt;/th&gt;
+										&lt;td style&#x3D;&quot;text-align:left;&quot;&gt;NIBSS&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;₦{{ paymentChannels.nibss | number}}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot; &gt;{{ calculatePercentage(paymentChannels.nibss, paymentChannelsSum).toFixed(1) }}%&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;th scope&#x3D;&quot;row&quot;&gt;3&lt;/th&gt;
+										&lt;td style&#x3D;&quot;text-align:left;&quot;&gt;Opay&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot; &gt;₦{{ paymentChannels.opay | number}}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;{{ calculatePercentage(paymentChannels.opay, paymentChannelsSum).toFixed(1) }}%&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;th scope&#x3D;&quot;row&quot;&gt;4&lt;/th&gt;
+										&lt;td style&#x3D;&quot;text-align:left;&quot;&gt;Wallet&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;₦{{ paymentChannels.wallet | number}}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;{{ calculatePercentage(paymentChannels.wallet, paymentChannelsSum).toFixed(1) }}%&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;th scope&#x3D;&quot;row&quot;&gt;5&lt;/th&gt;
+										&lt;td style&#x3D;&quot;text-align:left;&quot;&gt;Paydirect&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;₦{{ paymentChannels.paydirect | number}}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;{{ calculatePercentage(paymentChannels.paydirect, paymentChannelsSum).toFixed(1) }}%&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;th scope&#x3D;&quot;row&quot;&gt;6&lt;/th&gt;
+										&lt;td style&#x3D;&quot;text-align:left;&quot;&gt;Tech Support &lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;₦{{ paymentChannels.psirs_customer_service | number}}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;{{ calculatePercentage(paymentChannels.psirs_customer_service, paymentChannelsSum).toFixed(1) }}%&lt;/td&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;th scope&#x3D;&quot;row&quot;&gt;6&lt;/th&gt;
+										&lt;td style&#x3D;&quot;text-align:left;&quot;&gt;Monnify &lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;₦{{ paymentChannels.monnify | number}}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;{{ calculatePercentage(paymentChannels.monnify, paymentChannelsSum).toFixed(1) }}%&lt;/td&gt;
+									&lt;/tr&gt;
+								&lt;/tbody&gt;
+							&lt;/table&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class&#x3D;&quot;col-md-12 mb-3 mt-3&quot;&gt;
+				&lt;div class&#x3D;&quot;card text-right&quot;&gt;
+
+					&lt;div class&#x3D;&quot;card-body text-center&quot;&gt;
+						&lt;h4 class&#x3D;&quot;card-title mb-3&quot;&gt;YTD: MDAs Revenue Breakdown &lt;/h4&gt;
+						&lt;div class&#x3D;&quot;table-responsive&quot;&gt;
+							&lt;table class&#x3D;&quot;table table-striped&quot;&gt;
+								&lt;thead&gt;
+									&lt;tr style&#x3D;&quot;text-align:left&quot;&gt;
+										&lt;th scope&#x3D;&quot;col&quot;&gt;#&lt;/th&gt;
+										&lt;th scope&#x3D;&quot;col&quot;&gt;TaxItem&lt;/th&gt;
+										&lt;th scope&#x3D;&quot;col&quot; style&#x3D;&quot;text-align:right&quot;&gt;Total Revenue&lt;/th&gt;
+										&lt;th scope&#x3D;&quot;col&quot; style&#x3D;&quot;text-align:right&quot;&gt;% of overall Revenue&lt;/th&gt;
+									&lt;/tr&gt;
+								&lt;/thead&gt;
+								&lt;tbody&gt;
+									&lt;tr&gt; &lt;td colspan&#x3D;&quot;4&quot; style&#x3D;&quot;text-align:center&quot;&gt;&lt;strong&gt;Automated Assessments &lt;/strong&gt; &lt;/td&gt;&lt;/tr&gt;
+									&lt;tr *ngFor&#x3D;&quot;let item of automatedAssessments; let cindex&#x3D;index;&quot; style&#x3D;&quot;text-align:left&quot;&gt;
+										&lt;th scope&#x3D;&quot;row&quot;&gt;{{(cindex+1)}}&lt;/th&gt;
+										&lt;td&gt;{{item.title}} - {{ matchMdaName(item.mda) }}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;₦{{ item.amount_aggr | number : &#x27;.2-2&#x27;}}&lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;{{ calculatePercentage(item.amount_aggr, psirsTotalAssessments).toFixed()  }}%&lt;/td&gt;
+									&lt;/tr&gt;
+
+									
+									&lt;tr&gt; 
+										&lt;td&gt;&lt;/td&gt;
+										&lt;td colspan&#x3D;&quot;2&quot; style&#x3D;&quot;text-align:center;&quot;&gt; &lt;strong&gt;Total&lt;/strong&gt; &lt;/td&gt;
+										&lt;td style&#x3D;&quot;text-align:right;&quot;&gt;₦{{ psirsTotalAssessments | number :&#x27;.2-2&#x27;}}&lt;/td&gt;
+										&lt;td&gt;&lt;/td&gt;
+									&lt;/tr&gt;
+ 
+								&lt;/tbody&gt;
+							&lt;/table&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+
+
+			&lt;/div&gt;
+			&lt;!-- end of col--&gt;
+		
+		&lt;/div&gt;
+
+
+
+	 
+	&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./other-mda-breakdown.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.capitalize {
+    text-transform: capitalize;
+}
+
+.card-icon-bg .card-body .content {
+    margin: 0, 10px;
+    max-width: 200px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="">	<app-breadcrumb></app-breadcrumb>	<div class="separator-breadcrumb border-top"></div>	<div *ngIf="loading" class="col-md-12 text-center">		<div class="spinner spinner-primary mr-3"></div>	</div>	<div *ngIf="!loading">	 		<div style="padding: 1rem" class="top-scroll card card-mediaQuery">			<div class="row ">				<div class="col-md-3 col-sm-12">					<p>From:</p>					<input class="form-control" type="date" [(ngModel)]="from" required					/>				</div>				<div class="col-md-3 col-sm-12">					<p>To:</p>					<input class="form-control" type="date" [(ngModel)]="to" required />					</div>				<div class="col-md-3 col-sm-12">					<p>Select MDA:</p>					<select class="form-control" [(ngModel)]="selectedMDA">						<option value="">Choose MDA</option>						<option style="font-weight: bold" *ngFor="let mda of mdas" [ngValue]="mda.id" >							{{ mda.title }}						</option>					</select>				</div>				<div class="col-md-3 col-sm-12">					<div class="row">						<div class="col-md-8">							<p>&nbsp;</p>							<button								class="btn btn-primary btn-block pull-right"								(click)="filterByDate()"								*ngIf="!isSearching"							>								Filter Records							</button>							<button								class="btn btn-primary btn-block pull-right"								*ngIf="isSearching"								disabled							>								Filtering...							</button>						</div>						<div class="col-md-4">							<p>&nbsp;</p>							<button								class="btn btn-outline-info btn-block"								*ngIf="isReset"								(click)="reloadCurrentPage()"							>								Reset							</button>						</div>					</div>										<!-- <button						class="btn btn-default btn-block"					>						Reset					</button> -->				</div>			</div>		</div>				<div class="separator-breadcrumb border-top"></div>		<div class="row mb-4">			<div class="col-lg-12 col-md-12 col-sm-12">				<div class="card ">					<div class="card-body text-center">						<h4 class="card-title mb-3">Payment Channels Breakdown (All MDAs)</h4>						<div class="table-responsive text-right">							<table class="table table-striped table-hover">								<thead>									<tr>										<th scope="col">#</th>										<th scope="col" style="text-align:left;">Channel</th>										<th scope="col">Revenue</th>										<th scope="col">% of overall Revenue</th>									</tr>								</thead>								<tbody>									<tr>										<th scope="row">1</th>										<td style="text-align:left;">Kudi (Nomba)</td>										<td style="text-align:right;">₦{{ paymentChannels.kudi | number }}</td>										<td style="text-align:right;" >{{ calculatePercentage(paymentChannels.kudi, paymentChannelsSum).toFixed(1)}}%</td>									</tr>																		<tr>										<th scope="row">2</th>										<td style="text-align:left;">NIBSS</td>										<td style="text-align:right;">₦{{ paymentChannels.nibss | number}}</td>										<td style="text-align:right;" >{{ calculatePercentage(paymentChannels.nibss, paymentChannelsSum).toFixed(1) }}%</td>									</tr>									<tr>										<th scope="row">3</th>										<td style="text-align:left;">Opay</td>										<td style="text-align:right;" >₦{{ paymentChannels.opay | number}}</td>										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.opay, paymentChannelsSum).toFixed(1) }}%</td>									</tr>									<tr>										<th scope="row">4</th>										<td style="text-align:left;">Wallet</td>										<td style="text-align:right;">₦{{ paymentChannels.wallet | number}}</td>										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.wallet, paymentChannelsSum).toFixed(1) }}%</td>									</tr>									<tr>										<th scope="row">5</th>										<td style="text-align:left;">Paydirect</td>										<td style="text-align:right;">₦{{ paymentChannels.paydirect | number}}</td>										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.paydirect, paymentChannelsSum).toFixed(1) }}%</td>									</tr>									<tr>										<th scope="row">6</th>										<td style="text-align:left;">Tech Support </td>										<td style="text-align:right;">₦{{ paymentChannels.psirs_customer_service | number}}</td>										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.psirs_customer_service, paymentChannelsSum).toFixed(1) }}%</td>									</tr>									<tr>										<th scope="row">6</th>										<td style="text-align:left;">Monnify </td>										<td style="text-align:right;">₦{{ paymentChannels.monnify | number}}</td>										<td style="text-align:right;">{{ calculatePercentage(paymentChannels.monnify, paymentChannelsSum).toFixed(1) }}%</td>									</tr>								</tbody>							</table>						</div>					</div>				</div>			</div>			<div class="col-md-12 mb-3 mt-3">				<div class="card text-right">					<div class="card-body text-center">						<h4 class="card-title mb-3">YTD: MDAs Revenue Breakdown </h4>						<div class="table-responsive">							<table class="table table-striped">								<thead>									<tr style="text-align:left">										<th scope="col">#</th>										<th scope="col">TaxItem</th>										<th scope="col" style="text-align:right">Total Revenue</th>										<th scope="col" style="text-align:right">% of overall Revenue</th>									</tr>								</thead>								<tbody>									<tr> <td colspan="4" style="text-align:center"><strong>Automated Assessments </strong> </td></tr>									<tr *ngFor="let item of automatedAssessments; let cindex=index;" style="text-align:left">										<th scope="row">{{(cindex+1)}}</th>										<td>{{item.title}} - {{ matchMdaName(item.mda) }}</td>										<td style="text-align:right;">₦{{ item.amount_aggr | number : \'.2-2\'}}</td>										<td style="text-align:right;">{{ calculatePercentage(item.amount_aggr, psirsTotalAssessments).toFixed()  }}%</td>									</tr>																		<tr> 										<td></td>										<td colspan="2" style="text-align:center;"> <strong>Total</strong> </td>										<td style="text-align:right;">₦{{ psirsTotalAssessments | number :\'.2-2\'}}</td>										<td></td>									</tr> 								</tbody>							</table>						</div>					</div>				</div>			</div>			<!-- end of col-->				</div>	 	</div></div></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'OtherMDARevenueBreakdown'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'OtherMDARevenueBreakdown.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

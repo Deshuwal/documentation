@@ -1,0 +1,115 @@
+<div class="">
+  <!-- <div class="breadcrumb">
+    <h1>
+      Welcome, {{ userProfile.title }} {{ userProfile.first_name }}
+      {{ userProfile.surname }}
+    </h1>
+    <ul>
+      <li><a href="">Bulk MDA Upload</a></li>
+      <li>PSIRS Online Platform</li>
+    </ul>
+  </div> -->
+  <app-breadcrumb></app-breadcrumb>
+
+  <div class="separator-breadcrumb border-top"></div>
+
+<ngb-tabset [justify]="currentJustify">
+  <ngb-tab title="TEST API KEY">
+    <ng-template ngbTabContent>
+      <div class="card" style="width: 100%; height: 50vh">
+        <div class="py-4 px-3 mb-4">
+          <h3 class="text-center">API Configuration - Test Mode</h3>
+        </div>
+        <div style="margin: 0 auto; width: 90%">
+          <form>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-sm-2 col-form-label"
+                >Test Secret Key
+              </label>
+              <div style="max-width: 50.333333%" class="col-sm-10">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  readonly
+                  value="hshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label"
+                >Test Public Key
+              </label>
+              <div style="max-width: 50.333333%" class="col-sm-10">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="staticEmail"
+                  readonly
+                  value="pk_test_15bedf928201219e39027b18fe294ecc3dc98e11"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="LIVE API KEY">
+    <ng-template ngbTabContent>
+      <div class="card" style="width: 100%; height: 50vh">
+        <div class="py-4 px-3 mb-4">
+          <h3 class="text-center">API Configuration - Live Mode</h3>
+        </div>
+        <div style="margin: 0 auto; width: 90%">
+          <form>
+            <div class="form-group row">
+              <label for="inputPassword" class="col-sm-2 col-form-label"
+                >Live Secret Key
+              </label>
+              <div style="max-width: 50.333333%" class="col-sm-10">
+                <input
+                  readonly
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  value="hshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="staticEmail" class="col-sm-2 col-form-label"
+                >Live Public Key
+              </label>
+              <div style="max-width: 50.333333%" class="col-sm-10">
+                <input
+                  readonly
+                  type="text"
+                  class="form-control"
+                  id="staticEmail"
+                  value="pk_test_15bedf928201219e39027b18fe294ecc3dc98e11"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title="WEBHOOKS">
+    <ng-template ngbTabContent>
+      <div class="card" style="width: 100%; height: 50vh">
+        <div class="py-4 px-3 mb-4">
+          <h3 class="text-center">Manage webhooks</h3>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-tab>
+</ngb-tabset>
+
+<div
+  class="btn-group btn-group-toggle"
+  ngbRadioGroup
+  [(ngModel)]="currentJustify"
+></div>
+</div>

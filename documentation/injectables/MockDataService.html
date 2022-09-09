@@ -1,0 +1,927 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >MockDataService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/services/mock-data.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#address" >address</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#banks" >banks</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#companies" >companies</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#company_tags" >company_tags</a>
+                            </li>
+                            <li>
+                                <a href="#industries" >industries</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#names" >names</a>
+                            </li>
+                            <li>
+                                <a href="#occupations" >occupations</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getCompanies" >getCompanies</a>
+                            </li>
+                            <li>
+                                <a href="#getPeople" >getPeople</a>
+                            </li>
+                            <li>
+                                <a href="#getPhone" >getPhone</a>
+                            </li>
+                            <li>
+                                <a href="#getRandom" >getRandom</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(store: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, httpService: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/shared/services/mock-data.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>httpService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCompanies"></a>
+                    <span class="name">
+                        <span ><b>getCompanies</b></span>
+                        <a href="#getCompanies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCompanies(amt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/app/shared/services/mock-data.service.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>amt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPeople"></a>
+                    <span class="name">
+                        <span ><b>getPeople</b></span>
+                        <a href="#getPeople"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPeople(amt: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/app/shared/services/mock-data.service.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>amt</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPhone"></a>
+                    <span class="name">
+                        <span ><b>getPhone</b></span>
+                        <a href="#getPhone"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPhone()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/shared/services/mock-data.service.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRandom"></a>
+                    <span class="name">
+                        <span ><b>getRandom</b></span>
+                        <a href="#getRandom"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRandom(max: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, min: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/shared/services/mock-data.service.ts:52</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>max</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>min</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>0</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="address"></a>
+                    <span class="name">
+                        <span ><b>address</b></span>
+                        <a href="#address"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+
+    &quot;Aro Street&quot;, &quot;Mubarak Avenue&quot;, &quot;Otigi Street&quot;, &quot;HillView&quot;, &quot;KSA&quot;, &quot;Ose&quot;
+]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/shared/services/mock-data.service.ts:30</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="banks"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>banks</b></span>
+                        <a href="#banks"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+
+    &quot;Access Bank&quot;, &quot;UBA&quot;, &quot;Diamond Bank (Access)&quot;, &quot;WEMA&quot;, &quot;Stanbic&quot;, &quot;GTB&quot;, &quot;Union Bank&quot;, &quot;Unity Bank&quot;, &quot;Polaris Bank&quot;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/shared/services/mock-data.service.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companies"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>companies</b></span>
+                        <a href="#companies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&quot;Imagine&quot;, &quot;Innovate &quot;, &quot;Keen&quot;, &quot;light of the world communications&quot;, &quot;Perfection&quot;, &quot;Immaculate&quot;, &quot;Sun&quot;, &quot;Trusted&quot;, &quot;Ibetoo&quot;, &quot;Savannah&quot;, &quot;Joy&quot;, &quot;Jubilant&quot;, &quot;Knowledgeable&quot;, &quot;Learned&quot;, &quot;Clean&quot;, &quot;Ntachi Osa&quot;, &quot;Ventures 234&quot;, &quot;Lucky&quot;, &quot;Phenomenal&quot;, &quot;prominent&quot;, &quot;quick&quot;, &quot;Reassuring&quot;, &quot;Rejoice&quot;, &quot;Resounding&quot;, &quot;Super God&quot;, &quot;Superb&quot;, &quot;Thorough&quot;, &quot;Transforming&quot;, &quot;Truthful&quot;, &quot;Vital&quot;, &quot;wealthy&quot;, &quot;Wealth&quot;, &quot;Wholesome&quot;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/shared/services/mock-data.service.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="company_tags"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>company_tags</b></span>
+                        <a href="#company_tags"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&quot;LTD&quot;, &quot;Inc&quot;, &quot;Ventures&quot;, &quot;Plc&quot;, &quot;Corp&quot;, &quot;Schools&quot;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/shared/services/mock-data.service.ts:24</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="industries"></a>
+                    <span class="name">
+                        <span ><b>industries</b></span>
+                        <a href="#industries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+
+    &quot;Education&quot;, &quot;Construction&quot;, &quot;Technology&quot;, &quot;Engineering&quot;, &quot;Telecommunication&quot;, &quot;Accounting&quot;, &quot;Manufacturing&quot;, &quot;Agriculture&quot;, &quot;Finance&quot;, &quot;Petroleum Industry&quot;, &quot;Advertising&quot;, &quot;Transport&quot;, &quot;Engineering&quot;, &quot;Goods&quot;,&quot;Mining&quot;, &quot;Communication&quot;, &quot;Production&quot;, &quot;Health Care&quot;, &quot;Real Estate&quot;, &quot;Clothing&quot;, &quot;Food&quot;, &quot;Bank&quot;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/shared/services/mock-data.service.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="names"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>names</b></span>
+                        <a href="#names"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[&quot;Shehu&quot;, &quot;Sani&quot;, &quot;Blythe&quot;,  &quot;Happy&quot;, &quot;Ahmed&quot;,  &quot;Ezekiel&quot;,  &quot;Danladi&quot;, &quot;James&quot;, &quot;Okafor&quot;, &quot;Miracle&quot;, &quot;Zazzy&quot;, &quot;Adekunle&quot;, &quot;Adebayo&quot;]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/shared/services/mock-data.service.ts:22</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="occupations"></a>
+                    <span class="name">
+                        <span ><b>occupations</b></span>
+                        <a href="#occupations"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>any[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    &quot;Able Seamen&quot;,  &quot;Account Collector&quot;,  &quot;Accounting Specialist&quot;,  &quot;Adjustment Clerk&quot;,  &quot;Administrative Assistant&quot;,  &quot;Administrative Law Judge&quot;,  &quot;Administrative Service Manager&quot;,  &quot;Admiralty Lawyer&quot;,  &quot;Adult Literacy and Remedial Education Teachers&quot;,  &quot;Advertising Account Executive&quot;,  &quot;Advertising Agency Coordinator&quot;,  &quot;Aeronautical &amp; Aerospace Engineer&quot;,  &quot;Aerospace Engineering Technician&quot;,  &quot;Agricultural Crop Farm Manager&quot;,  &quot;Agricultural Engineer&quot;,  &quot;Agricultural Equipment Operator&quot;,  &quot;Agricultural Inspector&quot;,  &quot;Agricultural Product Sorter&quot;,  &quot;Agricultural Sciences Professor&quot;,  &quot;Agricultural Technician&quot;,  &quot;Air Crew Member&quot;,  &quot;Air Crew Officer&quot;,  &quot;Air Traffic Controller&quot;,  &quot;Aircraft Assembler&quot;,  &quot;Aircraft Body and Bonded Structure Repairer&quot;,  &quot;Aircraft Cargo Handling Supervisor&quot;,  &quot;Aircraft Examiner&quot;,  &quot;Aircraft Launch and Recovery Officer&quot;,  &quot;Aircraft Launch and Recovery Specialist&quot;,  &quot;Aircraft Mechanic&quot;,  &quot;Airfield Operations Specialist&quot;,  &quot;Airline Flight Attendant&quot;,  &quot;Airline Flight Control Administrator&quot;,  &quot;Airline Flight Operations Administrator&quot;,  &quot;Airline Flight Reservations Administrator&quot;,  &quot;Airport Administrator&quot;,  &quot;Airport Design Engineer&quot;,  &quot;Alcohol &amp; Drug Abuse Assistance Coordinator&quot;,  &quot;Alumni Relations Coordinator&quot;,  &quot;Ambulance Drivers&quot;,  &quot;Amusement Park &amp; Recreation Attendants&quot;,  &quot;Anesthesiologist (MD)&quot;,  &quot;Animal Breeder&quot;,  &quot;Animal Control Worker&quot;,  &quot;Animal Husbandry Worker Supervisor&quot;,  &quot;Animal Keepers and Groomers&quot;,  &quot;Animal Kennel Supervisor&quot;,  &quot;Animal Scientist&quot;,  &quot;Animal Trainer&quot;,  &quot;Animation Cartoonist&quot;,  &quot;Answering Service Operator&quot;,  &quot;Anthropology and Archeology Professor&quot;,  &quot;Anti-Terrorism Intelligence Agent&quot;,  &quot;Appeals Referee&quot;,  &quot;Aquaculturist (Fish Farmer)&quot;,  &quot;Aquarium Curator&quot;,  &quot;Architecture Professor&quot;,  &quot;Area Ethnic and Cultural Studies Professor&quot;,  &quot;Armored Assault Vehicle Crew Member&quot;,  &quot;Armored Assault Vehicle Officer&quot;,  &quot;Art Appraiser&quot;,  &quot;Art Director&quot;,  &quot;Art Restorer&quot;,  &quot;Art Therapist&quot;,  &quot;Art,  Drama,  and Music Professor&quot;,  &quot;Artillery and Missile Crew Member&quot;,  &quot;Artillery and Missile Officer&quot;,  &quot;Artists Agent (Manager)&quot;,  &quot;Athletes&#x27; Business Manager&quot;,  &quot;Athletic Coach&quot;,  &quot;Athletic Director&quot;,  &quot;Athletic Trainer&quot;,  &quot;ATM Machine Servicer&quot;,  &quot;Atmospheric and Space Scientist&quot;,  &quot;Audio-Visual Collections Specialist&quot;,  &quot;Audiovisual Production Specialist&quot;,  &quot;Automobile Mechanic&quot;,  &quot;Automotive Body Repairer&quot;,  &quot;Automotive Engineer&quot;,  &quot;Automotive Glass Installer&quot;,  &quot;Avionics Technician&quot;,  &quot;Baggage Porters and Bellhops&quot;,  &quot;Baker (Commercial)&quot;,  &quot;Ballistics Expert&quot;,  &quot;Bank and Branch Managers&quot;,  &quot;Bank Examiner&quot;,  &quot;Bank Teller&quot;,  &quot;Benefits Manager&quot;,  &quot;Bicycle Mechanic&quot;,  &quot;Billing Specialist&quot;,  &quot;Bindery Machine Set-Up Operators&quot;,  &quot;Bindery Machine Tender&quot;,  &quot;Biological Technician&quot;,  &quot;Biology Professor&quot;,  &quot;Biomedical Engineer&quot;,  &quot;Biomedical Equipment Technician&quot;,  &quot;Boat Builder&quot;,  &quot;Book Editor&quot;,  &quot;Border Patrol Agent&quot;,  &quot;Brattice Builder&quot;,  &quot;Bridge and Lock Tenders&quot;,  &quot;Broadcast News Analyst&quot;,  &quot;Broadcast Technician&quot;,  &quot;Broker&#x27;s Floor Representative&quot;,  &quot;Brokerage Clerk&quot;,  &quot;Budget Accountant&quot;,  &quot;Budget Analyst&quot;,  &quot;Building Inspector&quot;,  &quot;Building Maintenance Mechanic&quot;,  &quot;Bulldozer / Grader Operator&quot;,  &quot;Bus and Truck Mechanics&quot;,  &quot;Bus Boy / Bus Girl&quot;,  &quot;Bus Driver (School)&quot;,  &quot;Bus Driver (Transit)&quot;,  &quot;Business Professor&quot;,  &quot;Business Service Specialist&quot;,  &quot;Cabinet Maker&quot;,  &quot;Camp Director&quot;,  &quot;Caption Writer&quot;,  &quot;Cardiologist (MD)&quot;,  &quot;Cardiopulmonary Technologist&quot;,  &quot;Career Counselor&quot;,  &quot;Cargo and Freight Agents&quot;,  &quot;Carpenter&#x27;s Assistant&quot;,  &quot;Carpet Installer&quot;,  &quot;Cartographer (Map Scientist)&quot;,  &quot;Cartographic Technician&quot;,  &quot;Cartoonist (Publications)&quot;,  &quot;Casino Cage Worker&quot;,  &quot;Casino Cashier&quot;,  &quot;Casino Dealer&quot;,  &quot;Casino Floor Person&quot;,  &quot;Casino Manager&quot;,  &quot;Casino Pit Boss&quot;,  &quot;Casino Slot Machine Mechanic&quot;,  &quot;Casino Surveillance Officer&quot;,  &quot;Casting Director&quot;,  &quot;Catering Administrator&quot;,  &quot;Ceiling Tile Installer&quot;,  &quot;Cement Mason&quot;,  &quot;Ceramic Engineer&quot;,  &quot;Certified Public Accountant (CPA)&quot;,  &quot;Chaplain (Prison&quot;,    &quot;Chemical Engineer&quot;,  &quot;Chemical Equipment Operator&quot;,  &quot;Chemical Plant Operator&quot;,  &quot;Chemical Technicians&quot;,  &quot;Chemistry Professor&quot;,  &quot;Chief Financial Officer&quot;,  &quot;Child Care Center Administrator&quot;,  &quot;Child Care Worker&quot;,  &quot;Child Life Specialist&quot;,  &quot;Child Support Investigator&quot;,  &quot;Child Support Services Worker&quot;,  &quot;City Planning Aide&quot;,  &quot;Civil Drafter&quot;,  &quot;Civil Engineer&quot;,  &quot;Civil Engineering Technician&quot;,  &quot;Clergy Member (Religious Leader)&quot;,  &quot;Clinical Dietitian&quot;,  &quot;Clinical Psychologist&quot;,  &quot;Clinical Sociologist&quot;,  &quot;Coatroom and Dressing Room Attendants&quot;,  &quot;College/University Professor&quot;,  &quot;Commercial Designer&quot;,  &quot;Commercial Diver&quot;,  &quot;Commercial Fisherman&quot;,  &quot;Communication Equipment Mechanic&quot;,  &quot;Communications Professor&quot;,  &quot;Community Health Nurse&quot;,  &quot;Community Organization Worker&quot;,  &quot;Community Welfare Worker&quot;,  &quot;Compensation Administrator&quot;,  &quot;Compensation Specialist&quot;,  &quot;Compliance Officer&quot;,  &quot;Computer Aided Design (CAD) Technician&quot;,  &quot;Computer and Information Scientists&quot;,  &quot;Research&quot;,  &quot;Computer and Information Systems Managers&quot;,  &quot;Computer Applications Engineer&quot;,  &quot;Computer Controlled Machine Tool Operators&quot;,  &quot;Computer Customer Support Specialist&quot;,  &quot;Computer Hardware Technician&quot;,  &quot;Computer Operators&quot;,  &quot;Computer Programmer&quot;,  &quot;Computer Science Professor&quot;,  &quot;Computer Security Specialist&quot;,  &quot;Computer Software Engineers&quot;,  &quot;Computer Software Technician&quot;,  &quot;Computer Systems Engineer&quot;,  &quot;Congressional Aide&quot;,  &quot;Conservation Scientist&quot;,  &quot;Construction Driller&quot;,  &quot;Construction Laborer&quot;,  &quot;Construction Manager&quot;,  &quot;Construction Trades Supervisor&quot;,  &quot;Contract Administrator&quot;,  &quot;Contract Specialist&quot;,  &quot;Control Center Specialist (Military)&quot;,  &quot;Controller (Finance)&quot;,  &quot;Cook (Cafeteria)&quot;,  &quot;Cook (Fast Food)&quot;,  &quot;Cook (Private Household)&quot;,  &quot;Cook (Restaurant)&quot;,  &quot;Cook (Short Order)&quot;,  &quot;Copy Writer&quot;,  &quot;Corporation Lawyer&quot;,  &quot;Correction Officer&quot;
+]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/shared/services/mock-data.service.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &quot;@angular/core&quot;;
+import { LocalStoreService } from &quot;./local-store.service&quot;;
+import { Router } from &quot;@angular/router&quot;;
+import { of, throwError } from &quot;rxjs&quot;;
+import { delay } from &quot;rxjs/operators&quot;;
+import { HttpService } from &quot;./http.service&quot;;
+import { parse } from &quot;querystring&quot;;
+import { PayeeCalculator } from &quot;../models/payee_calculator&quot;;
+
+
+@Injectable({
+  providedIn: &quot;root&quot;
+})
+export class MockDataService {
+  
+
+  constructor(private store: LocalStoreService, private httpService:HttpService, private router: Router) {
+    
+  }
+
+   
+  private names:string[] &#x3D; [&quot;Shehu&quot;, &quot;Sani&quot;, &quot;Blythe&quot;,  &quot;Happy&quot;, &quot;Ahmed&quot;,  &quot;Ezekiel&quot;,  &quot;Danladi&quot;, &quot;James&quot;, &quot;Okafor&quot;, &quot;Miracle&quot;, &quot;Zazzy&quot;, &quot;Adekunle&quot;, &quot;Adebayo&quot;];
+
+  private company_tags:string[] &#x3D; [&quot;LTD&quot;, &quot;Inc&quot;, &quot;Ventures&quot;, &quot;Plc&quot;, &quot;Corp&quot;, &quot;Schools&quot;];
+
+  private companies:string[] &#x3D; [&quot;Imagine&quot;, &quot;Innovate &quot;, &quot;Keen&quot;, &quot;light of the world communications&quot;, &quot;Perfection&quot;, &quot;Immaculate&quot;, &quot;Sun&quot;, &quot;Trusted&quot;, &quot;Ibetoo&quot;, &quot;Savannah&quot;, &quot;Joy&quot;, &quot;Jubilant&quot;, &quot;Knowledgeable&quot;, &quot;Learned&quot;, &quot;Clean&quot;, &quot;Ntachi Osa&quot;, &quot;Ventures 234&quot;, &quot;Lucky&quot;, &quot;Phenomenal&quot;, &quot;prominent&quot;, &quot;quick&quot;, &quot;Reassuring&quot;, &quot;Rejoice&quot;, &quot;Resounding&quot;, &quot;Super God&quot;, &quot;Superb&quot;, &quot;Thorough&quot;, &quot;Transforming&quot;, &quot;Truthful&quot;, &quot;Vital&quot;, &quot;wealthy&quot;, &quot;Wealth&quot;, &quot;Wholesome&quot;]; 
+
+  
+
+  address:any[] &#x3D; [
+
+    &quot;Aro Street&quot;, &quot;Mubarak Avenue&quot;, &quot;Otigi Street&quot;, &quot;HillView&quot;, &quot;KSA&quot;, &quot;Ose&quot;
+];
+
+  industries:any[] &#x3D; [
+
+    &quot;Education&quot;, &quot;Construction&quot;, &quot;Technology&quot;, &quot;Engineering&quot;, &quot;Telecommunication&quot;, &quot;Accounting&quot;, &quot;Manufacturing&quot;, &quot;Agriculture&quot;, &quot;Finance&quot;, &quot;Petroleum Industry&quot;, &quot;Advertising&quot;, &quot;Transport&quot;, &quot;Engineering&quot;, &quot;Goods&quot;,&quot;Mining&quot;, &quot;Communication&quot;, &quot;Production&quot;, &quot;Health Care&quot;, &quot;Real Estate&quot;, &quot;Clothing&quot;, &quot;Food&quot;, &quot;Bank&quot;];
+        
+
+occupations:any[] &#x3D; [
+    &quot;Able Seamen&quot;,  &quot;Account Collector&quot;,  &quot;Accounting Specialist&quot;,  &quot;Adjustment Clerk&quot;,  &quot;Administrative Assistant&quot;,  &quot;Administrative Law Judge&quot;,  &quot;Administrative Service Manager&quot;,  &quot;Admiralty Lawyer&quot;,  &quot;Adult Literacy and Remedial Education Teachers&quot;,  &quot;Advertising Account Executive&quot;,  &quot;Advertising Agency Coordinator&quot;,  &quot;Aeronautical &amp; Aerospace Engineer&quot;,  &quot;Aerospace Engineering Technician&quot;,  &quot;Agricultural Crop Farm Manager&quot;,  &quot;Agricultural Engineer&quot;,  &quot;Agricultural Equipment Operator&quot;,  &quot;Agricultural Inspector&quot;,  &quot;Agricultural Product Sorter&quot;,  &quot;Agricultural Sciences Professor&quot;,  &quot;Agricultural Technician&quot;,  &quot;Air Crew Member&quot;,  &quot;Air Crew Officer&quot;,  &quot;Air Traffic Controller&quot;,  &quot;Aircraft Assembler&quot;,  &quot;Aircraft Body and Bonded Structure Repairer&quot;,  &quot;Aircraft Cargo Handling Supervisor&quot;,  &quot;Aircraft Examiner&quot;,  &quot;Aircraft Launch and Recovery Officer&quot;,  &quot;Aircraft Launch and Recovery Specialist&quot;,  &quot;Aircraft Mechanic&quot;,  &quot;Airfield Operations Specialist&quot;,  &quot;Airline Flight Attendant&quot;,  &quot;Airline Flight Control Administrator&quot;,  &quot;Airline Flight Operations Administrator&quot;,  &quot;Airline Flight Reservations Administrator&quot;,  &quot;Airport Administrator&quot;,  &quot;Airport Design Engineer&quot;,  &quot;Alcohol &amp; Drug Abuse Assistance Coordinator&quot;,  &quot;Alumni Relations Coordinator&quot;,  &quot;Ambulance Drivers&quot;,  &quot;Amusement Park &amp; Recreation Attendants&quot;,  &quot;Anesthesiologist (MD)&quot;,  &quot;Animal Breeder&quot;,  &quot;Animal Control Worker&quot;,  &quot;Animal Husbandry Worker Supervisor&quot;,  &quot;Animal Keepers and Groomers&quot;,  &quot;Animal Kennel Supervisor&quot;,  &quot;Animal Scientist&quot;,  &quot;Animal Trainer&quot;,  &quot;Animation Cartoonist&quot;,  &quot;Answering Service Operator&quot;,  &quot;Anthropology and Archeology Professor&quot;,  &quot;Anti-Terrorism Intelligence Agent&quot;,  &quot;Appeals Referee&quot;,  &quot;Aquaculturist (Fish Farmer)&quot;,  &quot;Aquarium Curator&quot;,  &quot;Architecture Professor&quot;,  &quot;Area Ethnic and Cultural Studies Professor&quot;,  &quot;Armored Assault Vehicle Crew Member&quot;,  &quot;Armored Assault Vehicle Officer&quot;,  &quot;Art Appraiser&quot;,  &quot;Art Director&quot;,  &quot;Art Restorer&quot;,  &quot;Art Therapist&quot;,  &quot;Art,  Drama,  and Music Professor&quot;,  &quot;Artillery and Missile Crew Member&quot;,  &quot;Artillery and Missile Officer&quot;,  &quot;Artists Agent (Manager)&quot;,  &quot;Athletes&#x27; Business Manager&quot;,  &quot;Athletic Coach&quot;,  &quot;Athletic Director&quot;,  &quot;Athletic Trainer&quot;,  &quot;ATM Machine Servicer&quot;,  &quot;Atmospheric and Space Scientist&quot;,  &quot;Audio-Visual Collections Specialist&quot;,  &quot;Audiovisual Production Specialist&quot;,  &quot;Automobile Mechanic&quot;,  &quot;Automotive Body Repairer&quot;,  &quot;Automotive Engineer&quot;,  &quot;Automotive Glass Installer&quot;,  &quot;Avionics Technician&quot;,  &quot;Baggage Porters and Bellhops&quot;,  &quot;Baker (Commercial)&quot;,  &quot;Ballistics Expert&quot;,  &quot;Bank and Branch Managers&quot;,  &quot;Bank Examiner&quot;,  &quot;Bank Teller&quot;,  &quot;Benefits Manager&quot;,  &quot;Bicycle Mechanic&quot;,  &quot;Billing Specialist&quot;,  &quot;Bindery Machine Set-Up Operators&quot;,  &quot;Bindery Machine Tender&quot;,  &quot;Biological Technician&quot;,  &quot;Biology Professor&quot;,  &quot;Biomedical Engineer&quot;,  &quot;Biomedical Equipment Technician&quot;,  &quot;Boat Builder&quot;,  &quot;Book Editor&quot;,  &quot;Border Patrol Agent&quot;,  &quot;Brattice Builder&quot;,  &quot;Bridge and Lock Tenders&quot;,  &quot;Broadcast News Analyst&quot;,  &quot;Broadcast Technician&quot;,  &quot;Broker&#x27;s Floor Representative&quot;,  &quot;Brokerage Clerk&quot;,  &quot;Budget Accountant&quot;,  &quot;Budget Analyst&quot;,  &quot;Building Inspector&quot;,  &quot;Building Maintenance Mechanic&quot;,  &quot;Bulldozer / Grader Operator&quot;,  &quot;Bus and Truck Mechanics&quot;,  &quot;Bus Boy / Bus Girl&quot;,  &quot;Bus Driver (School)&quot;,  &quot;Bus Driver (Transit)&quot;,  &quot;Business Professor&quot;,  &quot;Business Service Specialist&quot;,  &quot;Cabinet Maker&quot;,  &quot;Camp Director&quot;,  &quot;Caption Writer&quot;,  &quot;Cardiologist (MD)&quot;,  &quot;Cardiopulmonary Technologist&quot;,  &quot;Career Counselor&quot;,  &quot;Cargo and Freight Agents&quot;,  &quot;Carpenter&#x27;s Assistant&quot;,  &quot;Carpet Installer&quot;,  &quot;Cartographer (Map Scientist)&quot;,  &quot;Cartographic Technician&quot;,  &quot;Cartoonist (Publications)&quot;,  &quot;Casino Cage Worker&quot;,  &quot;Casino Cashier&quot;,  &quot;Casino Dealer&quot;,  &quot;Casino Floor Person&quot;,  &quot;Casino Manager&quot;,  &quot;Casino Pit Boss&quot;,  &quot;Casino Slot Machine Mechanic&quot;,  &quot;Casino Surveillance Officer&quot;,  &quot;Casting Director&quot;,  &quot;Catering Administrator&quot;,  &quot;Ceiling Tile Installer&quot;,  &quot;Cement Mason&quot;,  &quot;Ceramic Engineer&quot;,  &quot;Certified Public Accountant (CPA)&quot;,  &quot;Chaplain (Prison&quot;,    &quot;Chemical Engineer&quot;,  &quot;Chemical Equipment Operator&quot;,  &quot;Chemical Plant Operator&quot;,  &quot;Chemical Technicians&quot;,  &quot;Chemistry Professor&quot;,  &quot;Chief Financial Officer&quot;,  &quot;Child Care Center Administrator&quot;,  &quot;Child Care Worker&quot;,  &quot;Child Life Specialist&quot;,  &quot;Child Support Investigator&quot;,  &quot;Child Support Services Worker&quot;,  &quot;City Planning Aide&quot;,  &quot;Civil Drafter&quot;,  &quot;Civil Engineer&quot;,  &quot;Civil Engineering Technician&quot;,  &quot;Clergy Member (Religious Leader)&quot;,  &quot;Clinical Dietitian&quot;,  &quot;Clinical Psychologist&quot;,  &quot;Clinical Sociologist&quot;,  &quot;Coatroom and Dressing Room Attendants&quot;,  &quot;College/University Professor&quot;,  &quot;Commercial Designer&quot;,  &quot;Commercial Diver&quot;,  &quot;Commercial Fisherman&quot;,  &quot;Communication Equipment Mechanic&quot;,  &quot;Communications Professor&quot;,  &quot;Community Health Nurse&quot;,  &quot;Community Organization Worker&quot;,  &quot;Community Welfare Worker&quot;,  &quot;Compensation Administrator&quot;,  &quot;Compensation Specialist&quot;,  &quot;Compliance Officer&quot;,  &quot;Computer Aided Design (CAD) Technician&quot;,  &quot;Computer and Information Scientists&quot;,  &quot;Research&quot;,  &quot;Computer and Information Systems Managers&quot;,  &quot;Computer Applications Engineer&quot;,  &quot;Computer Controlled Machine Tool Operators&quot;,  &quot;Computer Customer Support Specialist&quot;,  &quot;Computer Hardware Technician&quot;,  &quot;Computer Operators&quot;,  &quot;Computer Programmer&quot;,  &quot;Computer Science Professor&quot;,  &quot;Computer Security Specialist&quot;,  &quot;Computer Software Engineers&quot;,  &quot;Computer Software Technician&quot;,  &quot;Computer Systems Engineer&quot;,  &quot;Congressional Aide&quot;,  &quot;Conservation Scientist&quot;,  &quot;Construction Driller&quot;,  &quot;Construction Laborer&quot;,  &quot;Construction Manager&quot;,  &quot;Construction Trades Supervisor&quot;,  &quot;Contract Administrator&quot;,  &quot;Contract Specialist&quot;,  &quot;Control Center Specialist (Military)&quot;,  &quot;Controller (Finance)&quot;,  &quot;Cook (Cafeteria)&quot;,  &quot;Cook (Fast Food)&quot;,  &quot;Cook (Private Household)&quot;,  &quot;Cook (Restaurant)&quot;,  &quot;Cook (Short Order)&quot;,  &quot;Copy Writer&quot;,  &quot;Corporation Lawyer&quot;,  &quot;Correction Officer&quot;
+];
+
+
+
+private banks:string[] &#x3D; [
+
+    &quot;Access Bank&quot;, &quot;UBA&quot;, &quot;Diamond Bank (Access)&quot;, &quot;WEMA&quot;, &quot;Stanbic&quot;, &quot;GTB&quot;, &quot;Union Bank&quot;, &quot;Unity Bank&quot;, &quot;Polaris Bank&quot;];
+
+
+
+getRandom(max:number, min:number &#x3D; 0){
+
+        return Math.floor(Math.random() * max);
+}
+
+getPeople(amt:number){
+
+    return new Promise((resolve:any, reject:any)&#x3D;&gt;{
+
+        setTimeout(()&#x3D;&gt;{
+        let result:any[] &#x3D; [];
+ 
+        for(let i &#x3D;0; i &lt; amt; i++){
+    
+            let obj:any &#x3D; {};
+            obj.name  &#x3D; this.names[this.getRandom(this.names.length)] + &quot; &quot;+this.names[this.getRandom(this.names.length)];
+            obj.date &#x3D; (Date.now() - this.getRandom((1000 * 60 * 60 * 24 * 30 * 12 * 20), Date.now()))/1000;
+
+            obj.id &#x3D; this.getRandom(99999, 10000);
+            obj.address &#x3D; &quot;No &quot; + (this.getRandom(300, 1) +1) + &quot; &quot; + this.address[this.getRandom(this.address.length)];
+            obj.contact &#x3D; this.getPhone();
+            obj.occupation &#x3D; this.occupations[this.getRandom(this.occupations.length)];
+            obj.income &#x3D; this.getRandom(1000000, 50000);
+            
+            result.push(obj);
+        }
+    
+        resolve(result);
+    }, 10000);
+     
+    
+    }   
+    );
+}
+ 
+
+getPhone(){
+
+    let res:string &#x3D; &quot;+234&quot;;
+
+    for(let i:number &#x3D;0; i &lt; 11; i++){
+
+        res+&#x3D;this.getRandom(9);
+    }
+
+    return res;
+}
+getCompanies(amt:number){
+
+    return new Promise((resolve:any, reject:any)&#x3D;&gt;{
+
+        setTimeout(()&#x3D;&gt;{
+        let result:any[] &#x3D; [];
+ 
+        for(let i &#x3D;0; i &lt; amt; i++){
+    
+            let obj:any &#x3D; {};
+            obj.name  &#x3D; this.companies[this.getRandom(this.companies.length)] + &quot; &quot;+this.company_tags[this.getRandom(this.company_tags.length)];
+            obj.date &#x3D; (Date.now() - this.getRandom((1000 * 60 * 60 * 24 * 30 * 12 * 20), Date.now()))/1000;
+            
+            obj.id &#x3D; this.getRandom(9999999, 1000000);
+            obj.address &#x3D; &quot;No &quot; + this.getRandom(300, 1) + &quot; &quot; + this.address[this.getRandom(this.address.length)];
+            obj.occupation &#x3D; this.industries[this.getRandom(this.industries.length)];
+            obj.income &#x3D; this.getRandom(100000000, 5000000);
+            obj.contact &#x3D; this.getPhone();
+            
+            result.push(obj);
+        }
+    
+        resolve(result);
+    }, 10000);
+     
+    
+    }   
+    );
+}
+
+
+}</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'MockDataService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

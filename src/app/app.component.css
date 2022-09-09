@@ -1,0 +1,22 @@
+.toast-error {
+  background: red !important;
+  color: white;
+}
+
+.datepicker-only-month-select {
+  border: 0 !important;
+}
+
+.datepicker-only-month-select .ngb-dp-months {
+  display: none !important;
+}
+
+.html2canvas-container {
+  width: 3000px;
+  height: 3000px;
+}
+
+html,
+body {
+  height: 794px;
+}

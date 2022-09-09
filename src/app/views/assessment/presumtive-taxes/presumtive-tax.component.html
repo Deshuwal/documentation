@@ -1,0 +1,422 @@
+<div class="breadcrumb">
+  <h1>Assessment</h1>
+  <ul>
+    <li><a href="#">Presumptive Taxes</a></li>
+    <li>Perform Assessment</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div
+  class="row"
+  style="display: flex; justify-content: center"
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <div class="col-lg-8 col-md-12 card" style="padding: 20px">
+    <form [formGroup]="presumtiveTaxItemForm">
+      <div class="text-center">
+        <h2>Presumptive Tax Assessment</h2>
+        <p>Fields marked with asterisk are compulsory</p>
+      </div>
+      <div class="">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tin_slug">TIN</label>
+                <ngx-select-dropdown
+                  tabindex="0"
+                  [multiple]="false"
+                  formControlName="tin_slug"
+                  [config]="config"
+                  [options]="tins"
+                >
+                </ngx-select-dropdown>
+              </div>
+              <div class="col-md-9 form-group mb-3">
+                <label for="business_association">Business Name</label>
+                <input
+                  class="form-control"
+                  formControlName="business_association"
+                />
+              </div>
+              <div class="col-md-9 form-group mb-3">
+                <label for="business_category">Business Type</label>
+                <select
+                  class="form-control"
+                  formControlName="business_category"
+                >
+                  <option>Choose Business Type</option>
+                  <option *ngFor="let item of businessCategories">
+                    {{ item.title }}
+                  </option>
+                </select>
+              </div>
+              <div *ngIf="hideForm" class="col-md-9 form-group mb-3">
+                <label for="business_category">Others Type</label>
+                <input
+                  class="form-control"
+                  formControlName="business_category"
+                />
+              </div>
+              <hr />
+              <div class="col-md-9" style="margin-bottom: 10px">
+                <p class="text-center">Period of Assessment</p>
+                <div class="row">
+                  <div class="col-sm-12" style="margin-top: 10px">
+                    <label>From: *</label>
+                    <input
+                      type="date"
+                      formControlName="period_from"
+                      class="form-control"
+                      placeholder="DD-MM-YYY"
+                    />
+                  </div>
+                  <div class="col-sm-12" style="margin-top: 10px">
+                    <label>To: *</label><br />
+                    <input
+                      type="date"
+                      formControlName="period_to"
+                      class="form-control"
+                      placeholder="DD-MM-YYY"
+                    />
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="col-md-9 form-group mb-3">
+                <label for="amount">Gross Income</label>
+                <input class="form-control" formControlName="amount" />
+              </div>
+              <div class="col-sm-7"></div>
+              <div class="col-md-9 form-group mb-3">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="inlineCheckbox1"
+                    value="option1"
+                    formControlName="dev_levy"
+                  />
+                  <label class="form-check-label" for="inlineCheckbox1"
+                    >Development Levy</label
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax"></label>
+                <button
+                  class="form-control"
+                  (click)="submitPresumtiveAssessment()"
+                >
+                  Generate
+                </button>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<ng-template #modalConfirm let-modal>
+  <div id="pdfAssessment" #pdfAssessment>
+    <div style="padding: 20px 30px">
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+      <p
+        style="
+          text-align: end;
+          font-size: 27px;
+          color: #000;
+          font-family: serif;
+        "
+      >
+        Bill Reference: {{ assessmentForDisplay.billing_ref }}
+      </p>
+
+      <div>
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+      </div>
+
+      <div class="text-center">
+        <img
+          src="../../../../assets/images/logo-.png"
+          class="my-1"
+          style="height: 120px"
+        />
+      </div>
+      <p
+        style="
+          color: green;
+          font-size: 33px;
+          font-weight: bold;
+          text-align: center;
+        "
+      >
+        PLATEAU STATE GOVERNMENT
+      </p>
+      <div style="text-align: center">
+        <span
+          style="
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 25px;
+          "
+          class="text-center mb-3 text-white"
+          >TAX ASSESSMENT (Presumptive)</span
+        >
+      </div>
+      <div class="modal-body">
+        <div *ngIf="loading" class="col-md-12 text-center">
+          <div class="spinner spinner-primary mr-3"></div>
+        </div>
+
+        <div class="col-md-12" *ngIf="!loading && !dynamicSummary">
+          <table class="table">
+            <thead class="">
+              <tr>
+                <th colspan="3" style="font-weight: 700">MDA</th>
+                <th colspan="1" style="font-weight: 700">
+                  {{ assessmentForDisplay.mda }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="3" style="font-weight: 700">PAYER NAME</td>
+                <td colspan="1">
+                  {{
+                    assessmentForDisplay.payer_name || assessmentForDisplay.name
+                  }}
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="3" style="font-weight: 700">PAYER TIN</td>
+                <td colspan="1">
+                  {{
+                    assessmentForDisplay.payer_tin || assessmentForDisplay.tin
+                  }}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">Period of Assessment</td>
+                <td colspan="1" class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.period }}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">Tax Item</td>
+                <td colspan="1" class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.tax_item }}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">Development Levy</td>
+                <td colspan="1" class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.dev_levy|| 300 }}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">Amount</td>
+                <td colspan="1" class="font-weight-bold">
+                  {{ formatNumber(assessmentForDisplay.amount) }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3">Billing Ref</td>
+                <td colspan="1" class="text-warning font-weight-bold">
+                  {{ assessmentForDisplay.billing_ref }}
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3" style="font-weight: 700">Signature:</td>
+                <td colspan="1"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div
+          class="col-md-12"
+          *ngIf="!loading && dynamicSummary && payeeSummary"
+        >
+          <div style="overflow-y: scroll; height: 400px">
+            <div class="text text-success">
+              Your information has been received. A mail will be sent to you
+              soon.
+            </div>
+            <table class="table" *ngIf="displayPayee[0].values.length > 0">
+              <thead class="thead-light">
+                <th colspan="2">{{ displayPayee[0].Label }}</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of displayPayee[0].values">
+                  <th scope="col">
+                    {{ item.label.toUpperCase().replace("_", " ") }}
+                  </th>
+                  <th scope="col">{{ item.value }}</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="table" *ngIf="displayPayee[1].values.length > 0">
+              <thead class="thead-light">
+                <th colspan="2">{{ displayPayee[1].Label }}</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of displayPayee[0].values">
+                  <th scope="col">
+                    {{ item.label.toUpperCase().replace("_", " ") }}
+                  </th>
+                  <th scope="col">{{ item.value }}</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="table" *ngIf="displayPayee[2].values.length > 0">
+              <thead class="thead-light">
+                <th colspan="2">{{ displayPayee[2].Label }}</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of displayPayee[2].values">
+                  <th scope="col">
+                    {{ item.label.toUpperCase().replace("_", " ") }}
+                  </th>
+                  <th scope="col">{{ item.value }}</th>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="table" *ngIf="displayPayee[3].values.length > 0">
+              <thead class="thead-light">
+                <th colspan="2">{{ displayPayee[3].Label }}</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of displayPayee[3].values">
+                  <th scope="col">
+                    {{ item.label.toUpperCase().replace("_", " ") }}
+                  </th>
+                  <th scope="col">{{ item.value }}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-12">
+            <table class="table">
+              <thead class="thead-light">
+                <th colspan="2">Total</th>
+                <th scope="col">
+                  {{ displayPayee[displayPayee.length - 1].total }}
+                </th>
+              </thead>
+            </table>
+          </div>
+        </div>
+
+        <div
+          class="col-md-12"
+          *ngIf="!loading && dynamicSummary && directAssessmentSummary"
+        >
+          <div style="overflow-y: scroll; height: 400px">
+            <div class="text text-success">
+              Your information has been received. A mail will be sent to you
+              soon.
+            </div>
+            <table class="table" *ngIf="displayPayee.length > 0">
+              <thead class="thead-light">
+                <th colspan="2">Direct Assessment</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of displayPayee">
+                  <th scope="col">{{ item.label }}</th>
+                  <th scope="col">{{ item.value }}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="col-md-12">
+            <table class="table">
+              <thead class="thead-light">
+                <th colspan="2">Total</th>
+                <th scope="col">
+                  {{ displayPayee[displayPayee.length - 1].total }}
+                </th>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <div style="text-align: end">
+      <button
+        style="position: relative; z-index: 3"
+        class="btn btn-primary"
+        (click)="downloadPDF('pdfAssessment')"
+      >
+        Download
+      </button>
+    </div>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="goToPayment()"
+    >
+      Continue
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="printPDFS('pdfAssessment')"
+    >
+      Print
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-roustnded"
+      (click)="closeModal()"
+    >
+      Close
+    </button>
+    <button
+      type="button"
+      ngbAutofocus
+      class="btn btn-danger btn-rounded"
+      (click)="updateAssessment(-1)"
+    >
+      Dispute
+    </button>
+  </div>
+</ng-template>

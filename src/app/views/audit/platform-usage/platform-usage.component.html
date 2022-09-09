@@ -1,0 +1,538 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div style="padding: 1rem" class="card card-mediaQuery">
+  <div
+    style="display: flex; justify-content: space-between; align-items: center"
+  >
+    <div class="col-4">
+      <p>&nbsp;</p>
+      <input
+        #input
+        placeholder="Search by Activity, Name or TIN"
+        class="form-control"
+        type="text"
+      />
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-6">
+          <p>From:</p>
+          <input type="date" class="form-control" [(ngModel)]="from" required />
+        </div>
+        <div class="col-6">
+          <p>To:</p>
+          <input type="date" class="form-control" [(ngModel)]="to" required />
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <p>&nbsp;</p>
+      <button class="btn btn-primary" (click)="filterByDate()">Submit</button>
+
+      &nbsp; &nbsp;
+
+      <a csvLink class="btn btn-primary" [data]="filteredItems"
+        >Export to Excel</a
+      >
+    </div>
+  </div>
+  <p>&nbsp;</p>
+</div>
+
+<div
+  class="row"
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <div class="col-lg-12 col-md-12">
+    <div class="row mb-3">
+      <div class="col-md-12 mb-3"></div>
+      <div *ngIf="loading" class="col-md-12 text-center">
+        <div class="spinner spinner-primary mr-3"></div>
+      </div>
+
+      <div
+        class="col-md-12"
+        *ngIf="!loading"
+        [@animate]="{
+          value: '*',
+          params: {
+            y: '120px',
+            opacity: '0',
+            delay: '100ms',
+            duration: '400ms'
+          }
+        }"
+      >
+        <div class="card o-hidden">
+          <ngx-datatable
+            #excelTable
+            *ngIf="platformUsage?.length"
+            style="height: calc(100vh - 270px); box-shadow: none"
+            class="material fullscreen"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="60"
+            [scrollbarH]="true"
+            [limit]="10"
+            [rows]="filteredItems"
+            id="excel-table"
+          >
+            <ngx-datatable-column>
+              <ng-template ngx-datatable-header-template> Name </ng-template>
+              <ng-template
+                ngx-datatable-cell-template
+                let-value="value"
+                let-row="row"
+              >
+                {{ row.user }}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column>
+              <ng-template ngx-datatable-header-template>
+                Activity
+              </ng-template>
+              <ng-template
+                ngx-datatable-cell-template
+                let-value="value"
+                let-row="row"
+              >
+                {{ row.action }}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column>
+              <ng-template ngx-datatable-header-template> Module </ng-template>
+              <ng-template
+                ngx-datatable-cell-template
+                let-value="value"
+                let-row="row"
+              >
+                {{ row.module }}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column>
+              <ng-template ngx-datatable-header-template>
+                Description
+              </ng-template>
+              <ng-template
+                ngx-datatable-cell-template
+                let-value="value"
+                let-row="row"
+              >
+                {{ row.description }}
+              </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column>
+              <ng-template ngx-datatable-header-template>
+                Phone Number
+              </ng-template>
+              <ng-template
+                ngx-datatable-cell-template
+                let-value="value"
+                let-row="row"
+              >
+                {{ row.phone }}
+              </ng-template>
+            </ngx-datatable-column>
+
+            <ngx-datatable-column>
+              <ng-template ngx-datatable-header-template> TIN </ng-template>
+              <ng-template
+                ngx-datatable-cell-template
+                let-value="value"
+                let-row="row"
+              >
+                {{ row.tin || "N/A" }}
+              </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column>
+              <ng-template ngx-datatable-header-template>
+                Date and Time
+              </ng-template>
+              <ng-template
+                ngx-datatable-cell-template
+                let-value="value"
+                let-row="row"
+              >
+                {{ row.created_at }}
+              </ng-template>
+            </ngx-datatable-column>
+          </ngx-datatable>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #modalConfirm let-modal>
+    <div id="pdfPayment" #pdfPayment>
+      <div class="p-3">
+        <div style="display: flex; justify-content: space-between">
+          <img src="../../../../assets/images/logo.png" style="height: 30px" />
+          <span>Smart Tax</span>
+        </div>
+        <div class="separator-breadcrumb border-top"></div>
+        <p
+          style="
+            text-align: end;
+            font-size: 27px;
+            color: #000;
+            font-family: serif;
+          "
+        >
+          Bill Reference: {{ assessmentForDisplay.billing_ref }}
+        </p>
+
+        <div>
+          <span style="display: block">Plateau State Internal</span>
+          <span style="display: block">Revenue Service</span>
+          <span style="display: block">Bank Road, Jos</span>
+          <div
+            style="
+              display: inline-block;
+              width: 140px;
+              border: 0.1px solid #000;
+            "
+          ></div>
+        </div>
+
+        <div class="text-center">
+          <img
+            src="../../../../assets/images/logo-.png"
+            class="my-1"
+            style="height: 120px"
+          />
+        </div>
+        <p
+          style="
+            color: green;
+            font-size: 33px;
+            font-weight: bold;
+            text-align: center;
+          "
+        >
+          PLATEAU STATE GOVERNMENT
+        </p>
+        <div style="text-align: center">
+          <span
+            style="
+              font-weight: bold;
+              padding: 9px 16px;
+              background-color: green;
+              display: inline-block;
+              font-size: 25px;
+            "
+            class="text-center mb-3 text-white"
+            >TAX RECEIPT</span
+          >
+        </div>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="loading" class="col-md-12 text-center">
+          <div class="spinner spinner-primary mr-3"></div>
+        </div>
+
+        <div class="col-md-12" *ngIf="!loading && !dynamicSummary">
+          <table class="table">
+            <tbody>
+              <th>MDA</th>
+              <th>{{ assessmentForDisplay.mda }}</th>
+              <tr>
+                <td>Tax Item</td>
+                <td class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.tax_item }}
+                </td>
+              </tr>
+              <tr>
+                <td>Amount</td>
+                <td class="font-weight-bold">
+                  {{ assessmentForDisplay.amount }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td>PAYER NAME</td>
+                <td class="font-weight-bold">
+                  {{ assessmentForDisplay.payer_name }}
+                </td>
+              </tr>
+              <tr>
+                <td>TIN</td>
+                <td class="font-weight-bold">
+                  {{ assessmentForDisplay.tin }}
+                </td>
+              </tr>
+              <tr>
+                <td>Payment Channel</td>
+                <td class="font-weight-bold">
+                  {{ assessmentForDisplay.payment_channel }}
+                </td>
+              </tr>
+              <tr>
+                <td>Period</td>
+                <td class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.period_from }}-{{
+                    assessmentForDisplay.period_from || "Not Available"
+                  }}
+                </td>
+              </tr>
+              <tr>
+                <td>Billing Ref</td>
+                <td class="font-weight-bold">
+                  {{ assessmentForDisplay.billing_ref }}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight: 700">Created by:</td>
+                <td>
+                  {{
+                    assessmentForDisplay.created_by == null
+                      ? "N/A"
+                      : assessmentForDisplay.created_by
+                  }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div
+          class="col-md-12"
+          *ngIf="!loading && dynamicSummary && payeeSummary"
+        >
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>MDA</th>
+                <th>{{ displayPayee.mda }}</th>
+              </tr>
+
+              <tr>
+                <td>Payment Channel</td>
+                <td class="text-danger font-weight-bold">
+                  {{ displayPayee.payment_channel }}
+                </td>
+              </tr>
+              <tr>
+                <td>Period</td>
+                <td class="font-weight-bold text-success">
+                  {{ displayPayee.tax_item }}
+                </td>
+              </tr>
+              <tr>
+                <td>Period</td>
+                <td class="font-weight-bold text-success">
+                  {{ assessmentForDisplay.period_from }} -
+                  {{ assessmentForDisplay.period_to || "Not Available" }}
+                </td>
+              </tr>
+              <tr>
+                <td>Gross Income</td>
+                <td class="font-weight-bold">
+                  {{ formatNumber(displayPayee.gi) }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td>Deductions</td>
+                <td class="font-weight-bold">
+                  {{ formatNumber(displayPayee.deductions) }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td>Taxable Income</td>
+                <td class="font-weight-bold">
+                  {{ formatNumber(displayPayee.ti) }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td>PAYE Amount</td>
+                <td class="font-weight-bold">
+                  {{ formatNumber(displayPayee.paye) }} NGN
+                </td>
+              </tr>
+              <tr>
+                <td>TIN</td>
+                <td class="text-danger font-weight-bold">
+                  {{ assessmentForDisplay.tin }}
+                </td>
+              </tr>
+
+              <tr>
+                <td>Billing Ref</td>
+                <td class="text-warning font-weight-bold">
+                  {{ assessmentForDisplay.billing_ref }}
+                </td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td class="text-warning font-weight-bold">Completed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div
+          class="col-md-12"
+          *ngIf="!loading && dynamicSummary && directAssessmentSummary"
+        >
+          <div>
+            <div style="display: flex; justify-content: space-between">
+              <img
+                src="../../../../assets/images/logo.png"
+                style="height: 30px"
+              />
+              <span>Smart Tax</span>
+            </div>
+            <div class="separator-breadcrumb border-top"></div>
+            <p
+              style="
+                text-align: end;
+                font-size: 27px;
+                color: #000;
+                font-family: serif;
+              "
+            >
+              Bill Reference: {{ assessmentForDisplay.billing_ref }}
+            </p>
+
+            <div>
+              <span style="display: block">Plateau State Internal</span>
+              <span style="display: block">Revenue Service</span>
+              <span style="display: block">Bank Road, Jos</span>
+              <div
+                style="
+                  display: inline-block;
+                  width: 140px;
+                  border: 0.1px solid #000;
+                "
+              ></div>
+            </div>
+
+            <div class="text-center">
+              <img
+                src="../../../../assets/images/logo-.png"
+                class="my-1"
+                style="height: 120px"
+              />
+            </div>
+            <p
+              style="
+                color: green;
+                font-size: 33px;
+                font-weight: bold;
+                text-align: center;
+              "
+            >
+              PLATEAU STATE GOVERNMENT
+            </p>
+            <div style="text-align: center">
+              <span
+                style="
+                  font-weight: bold;
+                  padding: 9px 16px;
+                  background-color: green;
+                  display: inline-block;
+                  font-size: 25px;
+                "
+                class="text-center mb-3 text-white"
+              >
+                DIRECT TAX ASSESSMENT</span
+              >
+            </div>
+            <table class="table" *ngIf="displayPayee.length > 0">
+              <tbody>
+                <tr>
+                  <td style="font-weight: 700">MDA</td>
+                  <td>{{ assessmentForDisplay.mda }}</td>
+                </tr>
+                <tr>
+                  <td>Payment Channel</td>
+                  <td class="text-danger font-weight-bold">
+                    {{ assessmentForDisplay.payment_channel }}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Period</td>
+                  <td class="font-weight-bold text-success">
+                    {{ assessmentForDisplay.period_from }} -
+                    {{ assessmentForDisplay.period_to || "Not Available" }}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700">TAX ITEM</td>
+                  <td>{{ assessmentForDisplay.tax_item }}</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700">PAYER NAME</td>
+                  <td>
+                    {{
+                      assessmentForDisplay.payer_name ||
+                        assessmentForDisplay.name
+                    }}
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="font-weight: 700">PAYER TIN</td>
+                  <td>
+                    {{
+                      assessmentForDisplay.payer_tin || assessmentForDisplay.tin
+                    }}
+                  </td>
+                </tr>
+                <tr *ngFor="let item of displayPayee">
+                  <td *ngIf="item.label" class="font-weight-bold">
+                    {{ item.label.toUpperCase() }}
+                  </td>
+                  <td *ngIf="item.label">{{ formatNumber(item.value) }}NGN</td>
+                </tr>
+                <tr>
+                  <td class="font-weight-bold">Total</td>
+                  <td class="font-weight-bold">
+                    {{ displayPayee[displayPayee.length - 1].total }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        class="btn btn-outline-secondary btn-rounded"
+        (click)="printPDFs('pdfPayment')"
+        [disabled]="assessmentForDisplay.print_count == 1"
+      >
+        Print
+      </button>
+      <button
+        style="position: relative; z-index: 3"
+        class="btn btn-primary"
+        (click)="downloadPDF('pdfPayment')"
+      >
+        Download
+      </button>
+      <button
+        type="button"
+        *ngIf="status == 0"
+        class="btn btn-outline-secondary btn-rounded"
+        (click)="modal.dismiss('cancel')"
+      >
+        Pay Now
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-rounded"
+        (click)="modal.dismiss('Cross click')"
+      >
+        Cancel
+      </button>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,1243 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  GenerateTccComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/tcc/generate-tcc/generate-tcc.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-generate-tcc</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./generate-tcc.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./generate-tcc.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#btnText" >btnText</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#loadingTCC" >loadingTCC</a>
+                            </li>
+                            <li>
+                                <a href="#submitted" >submitted</a>
+                            </li>
+                            <li>
+                                <a href="#TCCForm" >TCCForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onAddPaymentForm" >onAddPaymentForm</a>
+                            </li>
+                            <li>
+                                <a href="#OnTccSubmit" >OnTccSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#f" >f</a>
+                                </li>
+                                <li>
+                                    <a href="#t" >t</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, toastService: ToastrService, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>, httpService: <a href="../injectables/HttpService.html" target="_self">HttpService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>httpService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="25"
+                            class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:25</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onAddPaymentForm"></a>
+                    <span class="name">
+                        <span ><b>onAddPaymentForm</b></span>
+                        <a href="#onAddPaymentForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onAddPaymentForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="OnTccSubmit"></a>
+                    <span class="name">
+                        <span ><b>OnTccSubmit</b></span>
+                        <a href="#OnTccSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>OnTccSubmit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="btnText"></a>
+                    <span class="name">
+                        <span ><b>btnText</b></span>
+                        <a href="#btnText"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>this.loadingTCC ? &quot;Please wait ...&quot; : &quot;Generate TCC&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="115" class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:115</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadingTCC"></a>
+                    <span class="name">
+                        <span ><b>loadingTCC</b></span>
+                        <a href="#loadingTCC"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:114</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitted"></a>
+                    <span class="name">
+                        <span ><b>submitted</b></span>
+                        <a href="#submitted"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="116" class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:116</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="TCCForm"></a>
+                    <span class="name">
+                        <span ><b>TCCForm</b></span>
+                        <a href="#TCCForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="f"></a>
+                        <span class="name"><b>f</b><a href="#f"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>f()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:94</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="t"></a>
+                        <span class="name"><b>t</b><a href="#t"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>t()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="97" class="link-to-prism">src/app/views/tcc/generate-tcc/generate-tcc.component.ts:97</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;;
+import { FormArray, FormBuilder, FormGroup, Validators } from &quot;@angular/forms&quot;;
+import { HttpService } from &quot;src/app/shared/services/http.service&quot;;
+import { ToastrService } from &quot;ngx-toastr&quot;;
+import { BreadcrumbService } from &quot;src/app/shared/services/breadcrumb.service&quot;;
+import { SharedAnimations } from &quot;src/app/shared/animations/shared-animations&quot;;
+
+@Component({
+	selector: &quot;app-generate-tcc&quot;,
+	templateUrl: &quot;./generate-tcc.component.html&quot;,
+	styleUrls: [&quot;./generate-tcc.component.scss&quot;],
+	animations: [SharedAnimations],
+})
+export class GenerateTccComponent implements OnInit {
+	loading &#x3D; false;
+	TCCForm: FormGroup;
+	constructor(
+		private fb: FormBuilder,
+		private dl: HttpService,
+		private toastService: ToastrService,
+		private breadcrumb: BreadcrumbService,
+		private httpService: HttpService
+	) {}
+
+	ngOnInit() {
+		this.TCCForm &#x3D; this.fb.group({
+			tin: [&quot;&quot;, Validators.required],
+			full_name: [&quot;&quot;, Validators.required],
+			email: [&quot;&quot;],
+			address: [&quot;&quot;, Validators.required],
+			income_source: [&quot;&quot;, Validators.required],
+			expiry_date: [&quot;&quot;, Validators.required],
+			rank: [&quot;&quot;],
+			sector: [&quot;Formal&quot;],
+			payments: new FormArray([]),
+		});
+
+		this.TCCForm.get(&quot;tin&quot;).valueChanges.subscribe((selectedValue) &#x3D;&gt; {
+			const tin &#x3D; this.TCCForm.get(&quot;tin&quot;).value;
+
+			if (String(tin).length &gt; 8) {
+				this.httpService
+					////.doGet(&quot;users/get_user_by_tin/&quot; + tin)
+					.doGet(&quot;users/get_user_or_company_by_tin/&quot; + tin)
+					.subscribe((res: any) &#x3D;&gt; {
+						if (!res.data) {
+							this.TCCForm.patchValue(
+								{ rank: &quot;&quot;, full_name: &quot;&quot;, email: &quot;&quot;, address: &quot;&quot; },
+								{ emitEvent: false }
+							);
+							this.toastService.error(
+								&quot;The user&#x27;s TIN does not exist! Please, try a valid TIN&quot;,
+								&quot;Error&quot;,
+								{ timeOut: 10000, closeButton: true, progressBar: true }
+							);
+							return;
+						}
+						const profile &#x3D; res.data;
+						this.TCCForm.patchValue(
+							{
+								rank: profile.title || profile.title_string,
+								full_name:
+									profile.first_name || profile.other_names || profile.surname
+										? &#x60;${profile.first_name} ${profile.other_names || &quot;&quot;} ${
+												profile.surname
+										  }&#x60;
+										: profile.name || profile.company_name,
+								email: profile.email || profile.office_email,
+								address: profile.address
+									? profile.address
+									: profile.payer_address,
+							},
+							{ emitEvent: false }
+						);
+					});
+			}
+		});
+
+		this.t.push(
+			this.fb.group({
+				year: [&quot;&quot;],
+				tax_payabe: [&quot;&quot;],
+				total_income: [&quot;&quot;],
+				chargeable_income: [&quot;&quot;],
+				tax_paid: [&quot;&quot;],
+				receipt_no: [&quot;&quot;],
+			})
+		);
+
+		this.breadcrumb.setCrumbItem(&quot;Generate Tcc&quot;);
+	}
+
+	// convenience getters for easy access to form fields
+	get f() {
+		return this.TCCForm.controls;
+	}
+	get t() {
+		return this.f.payments as FormArray;
+	}
+
+	onAddPaymentForm() {
+		this.t.push(
+			this.fb.group({
+				year: [&quot;&quot;],
+				tax_payabe: [&quot;&quot;],
+				total_income: [&quot;&quot;],
+				chargeable_income: [&quot;&quot;],
+				tax_paid: [&quot;&quot;],
+				receipt_no: [&quot;&quot;],
+			})
+		);
+	}
+
+	loadingTCC &#x3D; false;
+	btnText &#x3D; this.loadingTCC ? &quot;Please wait ...&quot; : &quot;Generate TCC&quot;;
+	submitted &#x3D; false;
+	OnTccSubmit() {
+		this.loadingTCC &#x3D; true;
+		this.submitted &#x3D; true;
+
+		if (this.TCCForm.valid) {
+			const body &#x3D; {
+				...this.TCCForm.value,
+				payments: JSON.stringify(this.TCCForm.value.payments),
+			};
+
+			this.dl.doPost(&quot;/tcc/add&quot;, body).subscribe(
+				(res) &#x3D;&gt; {
+					this.toastService.success(&quot;TCC application sent for approval&quot;);
+					this.TCCForm.reset();
+					this.t.clear();
+					this.loadingTCC &#x3D; false;
+					this.submitted &#x3D; false;
+				},
+				(err) &#x3D;&gt; {
+					console.log({ err });
+					this.toastService.error(&quot;An error occured!&quot;);
+					this.loadingTCC &#x3D; false;
+					this.submitted &#x3D; false;
+				}
+			);
+		}
+		this.loadingTCC &#x3D; false;
+	}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+
+&lt;div
+	class&#x3D;&quot;&quot;
+	[@animate]&#x3D;&quot;{
+		value: &#x27;*&#x27;,
+		params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+	}&quot;
+&gt;
+	&lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+	&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+	&lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+		&lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+	&lt;/div&gt;
+
+	&lt;form [formGroup]&#x3D;&quot;TCCForm&quot; (ngSubmit)&#x3D;&quot;OnTccSubmit()&quot;&gt;
+		&lt;div class&#x3D;&quot;row&quot;&gt;
+			&lt;div class&#x3D;&quot;col-lg-12 col-md-12&quot;&gt;
+				&lt;div class&#x3D;&quot;card mb-4&quot;&gt;
+					&lt;div class&#x3D;&quot;card-body p-0&quot;&gt;
+						&lt;h2
+							style&#x3D;&quot;color: #7b7baf; font-weight: bold&quot;
+							class&#x3D;&quot;text-center card-title m-0 p-3&quot;
+						&gt;
+							Tax Clearance Certificate Details
+						&lt;/h2&gt;
+						&lt;div class&#x3D;&quot;row&quot; style&#x3D;&quot;margin: 2%&quot;&gt;
+							&lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+								&lt;div class&#x3D;&quot;mb-5&quot;&gt;
+									&lt;div class&#x3D;&quot;&quot;&gt;
+										&lt;div&gt;
+											&lt;div class&#x3D;&quot;row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+													&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+														&lt;label for&#x3D;&quot;tax&quot;&gt;TIN&lt;/label&gt;
+														&lt;input
+															type&#x3D;&quot;number&quot;
+															class&#x3D;&quot;form-control&quot;
+															formControlName&#x3D;&quot;tin&quot;
+														/&gt;
+														&lt;span
+															style&#x3D;&quot;color: red&quot;
+															*ngIf&#x3D;&quot;
+																submitted &amp;&amp;
+																TCCForm.controls.tin.errors?.required
+															&quot;
+															&gt;TIN is required&lt;/span
+														&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;div class&#x3D;&quot;row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+													&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+														&lt;label for&#x3D;&quot;tax&quot;&gt;Sector&lt;/label&gt;
+														&lt;select type&#x3D;&quot;sector&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;sector&quot;&gt;
+															&lt;option value&#x3D;&quot;Formal&quot;&gt;Formal&lt;/option&gt;
+															&lt;option value&#x3D;&quot;InFormal&quot;&gt;InFormal&lt;/option&gt;
+														&lt;/select&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;div class&#x3D;&quot;row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+													&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+														&lt;label for&#x3D;&quot;tax&quot;&gt;Status&lt;/label&gt;
+														&lt;input
+															type&#x3D;&quot;text&quot;
+															class&#x3D;&quot;form-control&quot;
+															formControlName&#x3D;&quot;rank&quot;
+															placeholder&#x3D;&quot;Mr./ Mrs./Miss&quot;
+														/&gt;
+														&lt;span
+															style&#x3D;&quot;color: red&quot;
+															*ngIf&#x3D;&quot;
+																submitted &amp;&amp;
+																TCCForm.controls.rank.errors?.required
+															&quot;
+															&gt;Status is required&lt;/span
+														&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;div class&#x3D;&quot;row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+													&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+														&lt;label for&#x3D;&quot;tax&quot;&gt;Full Name&lt;/label&gt;
+														&lt;input
+															readonly
+															type&#x3D;&quot;text&quot;
+															class&#x3D;&quot;form-control&quot;
+															formControlName&#x3D;&quot;full_name&quot;
+														/&gt;
+														&lt;p&gt;
+															&lt;span
+																style&#x3D;&quot;color: red&quot;
+																*ngIf&#x3D;&quot;
+																	submitted &amp;&amp;
+																	TCCForm.controls.full_name.errors?.required
+																&quot;
+																&gt;Full name is required&lt;/span
+															&gt;
+														&lt;/p&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;div class&#x3D;&quot;row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+													&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+														&lt;label for&#x3D;&quot;tax&quot;&gt;Email Address&lt;/label&gt;
+														&lt;input
+															type&#x3D;&quot;text&quot;
+															class&#x3D;&quot;form-control&quot;
+															formControlName&#x3D;&quot;email&quot;
+														/&gt;
+														&lt;!-- &lt;span
+															style&#x3D;&quot;color: red&quot;
+															*ngIf&#x3D;&quot;
+																submitted &amp;&amp;
+																TCCForm.controls.email.errors?.required
+															&quot;
+															&gt;Email is required&lt;/span
+														&gt; --&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;div class&#x3D;&quot;row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+													&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+														&lt;label for&#x3D;&quot;tax&quot;&gt;Address&lt;/label&gt;
+														&lt;input
+															readonly
+															type&#x3D;&quot;text&quot;
+															formControlName&#x3D;&quot;address&quot;
+															class&#x3D;&quot;form-control&quot;
+														/&gt;
+														&lt;span
+															style&#x3D;&quot;color: red&quot;
+															*ngIf&#x3D;&quot;
+																submitted &amp;&amp;
+																TCCForm.controls.address.errors?.required
+															&quot;
+															&gt;Address is required&lt;/span
+														&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;div class&#x3D;&quot;row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+													&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+														&lt;label for&#x3D;&quot;tax&quot;&gt;Major Sources of income&lt;/label&gt;
+														&lt;input
+															type&#x3D;&quot;text&quot;
+															class&#x3D;&quot;form-control&quot;
+															formControlName&#x3D;&quot;income_source&quot;
+														/&gt;
+														&lt;span
+															style&#x3D;&quot;color: red&quot;
+															*ngIf&#x3D;&quot;
+																submitted &amp;&amp;
+																TCCForm.controls.income_source.errors?.required
+															&quot;
+															&gt;Income source is required&lt;/span
+														&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+
+											&lt;div class&#x3D;&quot;row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+												&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+													&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+														&lt;label for&#x3D;&quot;tax&quot;&gt;Expiry Date&lt;/label&gt;
+														&lt;input
+															type&#x3D;&quot;date&quot;
+															id&#x3D;&quot;dob&quot;
+															class&#x3D;&quot;form-control&quot;
+															placeholder&#x3D;&quot;YYYY-MM-DD&quot;
+															name&#x3D;&quot;dp&quot;
+															ngbDatepicker
+															#dp&#x3D;&quot;ngbDatepicker&quot;
+															formControlName&#x3D;&quot;expiry_date&quot;
+														/&gt;
+														&lt;span
+															style&#x3D;&quot;color: red&quot;
+															*ngIf&#x3D;&quot;
+																submitted &amp;&amp;
+																TCCForm.controls.expiry_date.errors?.required
+															&quot;
+															&gt;Expiry date is required&lt;/span
+														&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+										&lt;h2
+											style&#x3D;&quot;
+												text-align: center;
+												color: #7b7baf;
+												font-weight: bold;
+											&quot;
+										&gt;
+											Payment Details (All fields are required!)
+										&lt;/h2&gt;
+										&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+										&lt;div class&#x3D;&quot;row&quot;&gt;
+											&lt;div
+												style&#x3D;&quot;border-left: 0.8px solid black&quot;
+												class&#x3D;&quot;col-lg-6 col-sm-10&quot;
+												*ngFor&#x3D;&quot;let ticket of t.controls; let i &#x3D; index&quot;
+											&gt;
+												&lt;h4&gt;YEAR{{ i + 1 }}&lt;/h4&gt;
+												&lt;div [formGroup]&#x3D;&quot;ticket&quot;&gt;
+													&lt;div class&#x3D;&quot;row&quot;&gt;
+														&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+														&lt;div class&#x3D;&quot;col-sm-12 row&quot;&gt;
+															&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+																&lt;label for&#x3D;&quot;tax&quot;&gt;Year&lt;/label&gt;
+																&lt;input
+																	type&#x3D;&quot;text&quot;
+																	class&#x3D;&quot;form-control&quot;
+																	formControlName&#x3D;&quot;year&quot;
+																/&gt;
+															&lt;/div&gt;
+															&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;row&quot;&gt;
+														&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+														&lt;div class&#x3D;&quot;col-sm-12 row&quot;&gt;
+															&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+																&lt;label for&#x3D;&quot;tax&quot;&gt;Total Annual Income&lt;/label&gt;
+																&lt;input
+																	type&#x3D;&quot;number&quot;
+																	class&#x3D;&quot;form-control&quot;
+																	formControlName&#x3D;&quot;total_income&quot;
+																/&gt;
+															&lt;/div&gt;
+															&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;row&quot;&gt;
+														&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+														&lt;div class&#x3D;&quot;col-sm-12 row&quot;&gt;
+															&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+																&lt;label for&#x3D;&quot;tax&quot;&gt;Chargeable Income&lt;/label&gt;
+																&lt;input
+																	type&#x3D;&quot;number&quot;
+																	class&#x3D;&quot;form-control&quot;
+																	formControlName&#x3D;&quot;chargeable_income&quot;
+																/&gt;
+															&lt;/div&gt;
+															&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;row&quot;&gt;
+														&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+														&lt;div class&#x3D;&quot;col-sm-12 row&quot;&gt;
+															&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+																&lt;label for&#x3D;&quot;tax&quot;&gt;Tax Payable&lt;/label&gt;
+																&lt;input
+																	type&#x3D;&quot;number&quot;
+																	class&#x3D;&quot;form-control&quot;
+																	formControlName&#x3D;&quot;tax_payabe&quot;
+																/&gt;
+															&lt;/div&gt;
+															&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;row&quot;&gt;
+														&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+														&lt;div class&#x3D;&quot;col-sm-12 row&quot;&gt;
+															&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+																&lt;label for&#x3D;&quot;tax&quot;&gt;Tax Paid&lt;/label&gt;
+																&lt;input
+																	type&#x3D;&quot;number&quot;
+																	class&#x3D;&quot;form-control&quot;
+																	formControlName&#x3D;&quot;tax_paid&quot;
+																/&gt;
+															&lt;/div&gt;
+															&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class&#x3D;&quot;row&quot;&gt;
+														&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+														&lt;div class&#x3D;&quot;col-sm-12 row&quot;&gt;
+															&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+																&lt;label for&#x3D;&quot;tax&quot;&gt;BRN No&lt;/label&gt;
+																&lt;input
+																	type&#x3D;&quot;text&quot;
+																	class&#x3D;&quot;form-control&quot;
+																	formControlName&#x3D;&quot;receipt_no&quot;
+																/&gt;
+															&lt;/div&gt;
+															&lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+											&lt;div
+												style&#x3D;&quot;
+													border-left: 0.8px solid black;
+													display: flex;
+													justify-content: center;
+													align-items: center;
+													flex-direction: column;
+												&quot;
+												class&#x3D;&quot;col-lg-6 col-sm-12&quot;
+											&gt;
+												&lt;p style&#x3D;&quot;font-size: 13px; font-weight: bold&quot;&gt;
+													Add New Payment Details
+												&lt;/p&gt;
+												&lt;div
+													style&#x3D;&quot;
+														display: inline-block;
+														background: #58454f;
+														padding: 5px 37px;
+														border-radius: 2px;
+													&quot;
+													(click)&#x3D;&quot;onAddPaymentForm()&quot;
+												&gt;
+													&lt;img src&#x3D;&quot;../../../../assets/images/add.png&quot; /&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+
+										&lt;div class&#x3D;&quot;row mt-3&quot;&gt;
+											&lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+											&lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+												&lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+													&lt;button
+														style&#x3D;&quot;background-color: green; color: white&quot;
+														type&#x3D;&quot;submit&quot;
+														class&#x3D;&quot;btn pd-x-20 form-control&quot;
+													&gt;
+														Apply for TCC
+													&lt;/button&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/form&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./generate-tcc.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">form {
+  .ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-breadcrumb></app-breadcrumb><div	class=""	[@animate]="{		value: \'*\',		params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }	}">	<app-breadcrumb></app-breadcrumb>	<div class="separator-breadcrumb border-top"></div>	<div *ngIf="loading" class="col-md-12 text-center">		<div class="spinner spinner-primary mr-3"></div>	</div>	<form [formGroup]="TCCForm" (ngSubmit)="OnTccSubmit()">		<div class="row">			<div class="col-lg-12 col-md-12">				<div class="card mb-4">					<div class="card-body p-0">						<h2							style="color: #7b7baf; font-weight: bold"							class="text-center card-title m-0 p-3"						>							Tax Clearance Certificate Details						</h2>						<div class="row" style="margin: 2%">							<div class="col-md-12">								<div class="mb-5">									<div class="">										<div>											<div class="row">												<div class="col-sm-3"></div>												<div class="col-sm-8 row">													<div class="col-md-9 form-group mb-3">														<label for="tax">TIN</label>														<input															type="number"															class="form-control"															formControlName="tin"														/>														<span															style="color: red"															*ngIf="																submitted &&																TCCForm.controls.tin.errors?.required															"															>TIN is required</span														>													</div>													<div class="col-sm-7"></div>												</div>											</div>											<div class="row">												<div class="col-sm-3"></div>												<div class="col-sm-8 row">													<div class="col-md-9 form-group mb-3">														<label for="tax">Sector</label>														<select type="sector" class="form-control" formControlName="sector">															<option value="Formal">Formal</option>															<option value="InFormal">InFormal</option>														</select>													</div>												</div>											</div>											<div class="row">												<div class="col-sm-3"></div>												<div class="col-sm-8 row">													<div class="col-md-9 form-group mb-3">														<label for="tax">Status</label>														<input															type="text"															class="form-control"															formControlName="rank"															placeholder="Mr./ Mrs./Miss"														/>														<span															style="color: red"															*ngIf="																submitted &&																TCCForm.controls.rank.errors?.required															"															>Status is required</span														>													</div>													<div class="col-sm-7"></div>												</div>											</div>											<div class="row">												<div class="col-sm-3"></div>												<div class="col-sm-8 row">													<div class="col-md-9 form-group mb-3">														<label for="tax">Full Name</label>														<input															readonly															type="text"															class="form-control"															formControlName="full_name"														/>														<p>															<span																style="color: red"																*ngIf="																	submitted &&																	TCCForm.controls.full_name.errors?.required																"																>Full name is required</span															>														</p>													</div>													<div class="col-sm-7"></div>												</div>												<div class="col-sm-1"></div>											</div>											<div class="row">												<div class="col-sm-3"></div>												<div class="col-sm-8 row">													<div class="col-md-9 form-group mb-3">														<label for="tax">Email Address</label>														<input															type="text"															class="form-control"															formControlName="email"														/>														<!-- <span															style="color: red"															*ngIf="																submitted &&																TCCForm.controls.email.errors?.required															"															>Email is required</span														> -->													</div>													<div class="col-sm-7"></div>												</div>												<div class="col-sm-1"></div>											</div>											<div class="row">												<div class="col-sm-3"></div>												<div class="col-sm-8 row">													<div class="col-md-9 form-group mb-3">														<label for="tax">Address</label>														<input															readonly															type="text"															formControlName="address"															class="form-control"														/>														<span															style="color: red"															*ngIf="																submitted &&																TCCForm.controls.address.errors?.required															"															>Address is required</span														>													</div>													<div class="col-sm-7"></div>												</div>											</div>											<div class="row">												<div class="col-sm-3"></div>												<div class="col-sm-8 row">													<div class="col-md-9 form-group mb-3">														<label for="tax">Major Sources of income</label>														<input															type="text"															class="form-control"															formControlName="income_source"														/>														<span															style="color: red"															*ngIf="																submitted &&																TCCForm.controls.income_source.errors?.required															"															>Income source is required</span														>													</div>													<div class="col-sm-7"></div>												</div>											</div>											<div class="row">												<div class="col-sm-3"></div>												<div class="col-sm-8 row">													<div class="col-md-9 form-group mb-3">														<label for="tax">Expiry Date</label>														<input															type="date"															id="dob"															class="form-control"															placeholder="YYYY-MM-DD"															name="dp"															ngbDatepicker															#dp="ngbDatepicker"															formControlName="expiry_date"														/>														<span															style="color: red"															*ngIf="																submitted &&																TCCForm.controls.expiry_date.errors?.required															"															>Expiry date is required</span														>													</div>													<div class="col-sm-7"></div>												</div>											</div>										</div>										<h2											style="												text-align: center;												color: #7b7baf;												font-weight: bold;											"										>											Payment Details (All fields are required!)										</h2>										<div class="separator-breadcrumb border-top"></div>										<div class="row">											<div												style="border-left: 0.8px solid black"												class="col-lg-6 col-sm-10"												*ngFor="let ticket of t.controls; let i = index"											>												<h4>YEAR{{ i + 1 }}</h4>												<div [formGroup]="ticket">													<div class="row">														<div class="col-sm-3"></div>														<div class="col-sm-12 row">															<div class="col-md-9 form-group mb-3">																<label for="tax">Year</label>																<input																	type="text"																	class="form-control"																	formControlName="year"																/>															</div>															<div class="col-sm-7"></div>														</div>													</div>													<div class="row">														<div class="col-sm-3"></div>														<div class="col-sm-12 row">															<div class="col-md-9 form-group mb-3">																<label for="tax">Total Annual Income</label>																<input																	type="number"																	class="form-control"																	formControlName="total_income"																/>															</div>															<div class="col-sm-7"></div>														</div>													</div>													<div class="row">														<div class="col-sm-3"></div>														<div class="col-sm-12 row">															<div class="col-md-9 form-group mb-3">																<label for="tax">Chargeable Income</label>																<input																	type="number"																	class="form-control"																	formControlName="chargeable_income"																/>															</div>															<div class="col-sm-7"></div>														</div>													</div>													<div class="row">														<div class="col-sm-3"></div>														<div class="col-sm-12 row">															<div class="col-md-9 form-group mb-3">																<label for="tax">Tax Payable</label>																<input																	type="number"																	class="form-control"																	formControlName="tax_payabe"																/>															</div>															<div class="col-sm-7"></div>														</div>													</div>													<div class="row">														<div class="col-sm-3"></div>														<div class="col-sm-12 row">															<div class="col-md-9 form-group mb-3">																<label for="tax">Tax Paid</label>																<input																	type="number"																	class="form-control"																	formControlName="tax_paid"																/>															</div>															<div class="col-sm-7"></div>														</div>													</div>													<div class="row">														<div class="col-sm-3"></div>														<div class="col-sm-12 row">															<div class="col-md-9 form-group mb-3">																<label for="tax">BRN No</label>																<input																	type="text"																	class="form-control"																	formControlName="receipt_no"																/>															</div>															<div class="col-sm-7"></div>														</div>													</div>												</div>											</div>											<div												style="													border-left: 0.8px solid black;													display: flex;													justify-content: center;													align-items: center;													flex-direction: column;												"												class="col-lg-6 col-sm-12"											>												<p style="font-size: 13px; font-weight: bold">													Add New Payment Details												</p>												<div													style="														display: inline-block;														background: #58454f;														padding: 5px 37px;														border-radius: 2px;													"													(click)="onAddPaymentForm()"												>													<img src="../../../../assets/images/add.png" />												</div>											</div>										</div>										<div class="row mt-3">											<div class="col-sm-3"></div>											<div class="col-sm-8 row">												<div class="col-md-9 form-group mb-3">													<button														style="background-color: green; color: white"														type="submit"														class="btn pd-x-20 form-control"													>														Apply for TCC													</button>												</div>											</div>										</div>									</div>								</div>							</div>						</div>					</div>				</div>			</div>		</div>	</form></div></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'GenerateTccComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'GenerateTccComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

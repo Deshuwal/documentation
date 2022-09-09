@@ -1,0 +1,3217 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  RoadTaxComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/assessment/road-taxes/road-tax.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboard-v2</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./road-tax.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./road-tax.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#action" >action</a>
+                            </li>
+                            <li>
+                                <a href="#actions" >actions</a>
+                            </li>
+                            <li>
+                                <a href="#assessmentForDisplay" >assessmentForDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#companiesInput$" >companiesInput$</a>
+                            </li>
+                            <li>
+                                <a href="#companiesLoading" >companiesLoading</a>
+                            </li>
+                            <li>
+                                <a href="#config" >config</a>
+                            </li>
+                            <li>
+                                <a href="#currentTin" >currentTin</a>
+                            </li>
+                            <li>
+                                <a href="#editMode" >editMode</a>
+                            </li>
+                            <li>
+                                <a href="#editTitle" >editTitle</a>
+                            </li>
+                            <li>
+                                <a href="#foundTIN$" >foundTIN$</a>
+                            </li>
+                            <li>
+                                <a href="#foundTins" >foundTins</a>
+                            </li>
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                <a href="#matchedTIN" >matchedTIN</a>
+                            </li>
+                            <li>
+                                <a href="#mdas" >mdas</a>
+                            </li>
+                            <li>
+                                <a href="#minLengthTerm" >minLengthTerm</a>
+                            </li>
+                            <li>
+                                <a href="#modal" >modal</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#modalContent" >modalContent</a>
+                            </li>
+                            <li>
+                                <a href="#privateVehicleActions" >privateVehicleActions</a>
+                            </li>
+                            <li>
+                                <a href="#roadTaxes" >roadTaxes</a>
+                            </li>
+                            <li>
+                                <a href="#selectedAction" >selectedAction</a>
+                            </li>
+                            <li>
+                                <a href="#selectedItem" >selectedItem</a>
+                            </li>
+                            <li>
+                                <a href="#subMenu" >subMenu</a>
+                            </li>
+                            <li>
+                                <a href="#taxItemForm" >taxItemForm</a>
+                            </li>
+                            <li>
+                                <a href="#taxItems" >taxItems</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile" >userProfile</a>
+                            </li>
+                            <li>
+                                <a href="#vehicleCategories" >vehicleCategories</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#categorySelected" >categorySelected</a>
+                            </li>
+                            <li>
+                                <a href="#closeModal" >closeModal</a>
+                            </li>
+                            <li>
+                                <a href="#exportAsPDF" >exportAsPDF</a>
+                            </li>
+                            <li>
+                                <a href="#getCompanies" >getCompanies</a>
+                            </li>
+                            <li>
+                                <a href="#goToPayment" >goToPayment</a>
+                            </li>
+                            <li>
+                                <a href="#itemSelected" >itemSelected</a>
+                            </li>
+                            <li>
+                                <a href="#loadMdas" >loadMdas</a>
+                            </li>
+                            <li>
+                                <a href="#loadTins" >loadTins</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onDropdownClick" >onDropdownClick</a>
+                            </li>
+                            <li>
+                                <a href="#openConfirmModal" >openConfirmModal</a>
+                            </li>
+                            <li>
+                                <a href="#parsePhpDate" >parsePhpDate</a>
+                            </li>
+                            <li>
+                                <a href="#printPDFS" >printPDFS</a>
+                            </li>
+                            <li>
+                                <a href="#saveAssessment" >saveAssessment</a>
+                            </li>
+                            <li>
+                                <a href="#submitVehicleAssessment" >submitVehicleAssessment</a>
+                            </li>
+                            <li>
+                                <a href="#updateAssessment" >updateAssessment</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, modalService: NgbModal, toastr: ToastrService, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, assessmetnService: <a href="../injectables/AssessmentService.html" target="_self">AssessmentService</a>, localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, toastService: ToastrService, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, printPDF: <a href="../injectables/PrintpdfService.html" target="_self">PrintpdfService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:66</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>assessmetnService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AssessmentService.html" target="_self" >AssessmentService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>printPDF</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PrintpdfService.html" target="_self" >PrintpdfService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="categorySelected"></a>
+                    <span class="name">
+                        <span ><b>categorySelected</b></span>
+                        <a href="#categorySelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>categorySelected()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="299"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:299</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="closeModal"></a>
+                    <span class="name">
+                        <span ><b>closeModal</b></span>
+                        <a href="#closeModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>closeModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="637"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:637</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="exportAsPDF"></a>
+                    <span class="name">
+                        <span ><b>exportAsPDF</b></span>
+                        <a href="#exportAsPDF"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>exportAsPDF(div_id)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="166"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:166</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>div_id</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCompanies"></a>
+                    <span class="name">
+                        <span ><b>getCompanies</b></span>
+                        <a href="#getCompanies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCompanies(term: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="152"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:152</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>term</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>null</code>
+                                    </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goToPayment"></a>
+                    <span class="name">
+                        <span ><b>goToPayment</b></span>
+                        <a href="#goToPayment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goToPayment()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="642"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:642</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="itemSelected"></a>
+                    <span class="name">
+                        <span ><b>itemSelected</b></span>
+                        <a href="#itemSelected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>itemSelected()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="232"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:232</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadMdas"></a>
+                    <span class="name">
+                        <span ><b>loadMdas</b></span>
+                        <a href="#loadMdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadMdas()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadTins"></a>
+                    <span class="name">
+                        <span ><b>loadTins</b></span>
+                        <a href="#loadTins"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadTins()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="93"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:93</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onDropdownClick"></a>
+                    <span class="name">
+                        <span ><b>onDropdownClick</b></span>
+                        <a href="#onDropdownClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onDropdownClick(item)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="157"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:157</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>item</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="openConfirmModal"></a>
+                    <span class="name">
+                        <span ><b>openConfirmModal</b></span>
+                        <a href="#openConfirmModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>openConfirmModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="648"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:648</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parsePhpDate"></a>
+                    <span class="name">
+                        <span ><b>parsePhpDate</b></span>
+                        <a href="#parsePhpDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>parsePhpDate(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="633"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:633</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="printPDFS"></a>
+                    <span class="name">
+                        <span ><b>printPDFS</b></span>
+                        <a href="#printPDFS"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>printPDFS(div)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="170"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:170</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>div</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveAssessment"></a>
+                    <span class="name">
+                        <span ><b>saveAssessment</b></span>
+                        <a href="#saveAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveAssessment(assessment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="503"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:503</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>assessment</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitVehicleAssessment"></a>
+                    <span class="name">
+                        <span ><b>submitVehicleAssessment</b></span>
+                        <a href="#submitVehicleAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitVehicleAssessment()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="538"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:538</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="updateAssessment"></a>
+                    <span class="name">
+                        <span ><b>updateAssessment</b></span>
+                        <a href="#updateAssessment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>updateAssessment(status: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:173</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>status</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="action"></a>
+                    <span class="name">
+                        <span ><b>action</b></span>
+                        <a href="#action"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="296" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:296</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="actions"></a>
+                    <span class="name">
+                        <span ><b>actions</b></span>
+                        <a href="#actions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="298" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:298</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="assessmentForDisplay"></a>
+                    <span class="name">
+                        <span ><b>assessmentForDisplay</b></span>
+                        <a href="#assessmentForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="502" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:502</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companiesInput$"></a>
+                    <span class="name">
+                        <span ><b>companiesInput$</b></span>
+                        <a href="#companiesInput$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;string&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="108" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:108</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="companiesLoading"></a>
+                    <span class="name">
+                        <span ><b>companiesLoading</b></span>
+                        <a href="#companiesLoading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="107" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:107</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="config"></a>
+                    <span class="name">
+                        <span ><b>config</b></span>
+                        <a href="#config"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    displayKey: &quot;company_name&quot;, // if objects array passed which key to be displayed defaults to description
+    search: true,
+    limitTo: 50,
+    moreText: &quot;More&quot;,
+    searchPlaceholder: &quot;Search by TIN.&quot;,
+    noResultsFound: &quot;No results found!&quot;,
+    searchOnKey: &quot;tin&quot;,
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:80</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="currentTin"></a>
+                    <span class="name">
+                        <span ><b>currentTin</b></span>
+                        <a href="#currentTin"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="91" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:91</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editMode"></a>
+                    <span class="name">
+                        <span ><b>editMode</b></span>
+                        <a href="#editMode"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editTitle"></a>
+                    <span class="name">
+                        <span ><b>editTitle</b></span>
+                        <a href="#editTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="foundTIN$"></a>
+                    <span class="name">
+                        <span ><b>foundTIN$</b></span>
+                        <a href="#foundTIN$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;any&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="106" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:106</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="foundTins"></a>
+                    <span class="name">
+                        <span ><b>foundTins</b></span>
+                        <a href="#foundTins"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:110</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="matchedTIN"></a>
+                    <span class="name">
+                        <span ><b>matchedTIN</b></span>
+                        <a href="#matchedTIN"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="156" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:156</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="mdas"></a>
+                    <span class="name">
+                        <span ><b>mdas</b></span>
+                        <a href="#mdas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="minLengthTerm"></a>
+                    <span class="name">
+                        <span ><b>minLengthTerm</b></span>
+                        <a href="#minLengthTerm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>3</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:109</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modal"></a>
+                    <span class="name">
+                        <span ><b>modal</b></span>
+                        <a href="#modal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>NgbModal</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="647" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:647</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modalContent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>modalContent</b></span>
+                        <a href="#modalContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;modalConfirm&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:48</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="privateVehicleActions"></a>
+                    <span class="name">
+                        <span ><b>privateVehicleActions</b></span>
+                        <a href="#privateVehicleActions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    &quot;Vehicle Registration&quot;,
+    &quot;Plate Number Registration&quot;,
+    &quot;Vehicle Licence&quot;,
+    &quot;Registration Book&quot;,
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="218" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:218</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="roadTaxes"></a>
+                    <span class="name">
+                        <span ><b>roadTaxes</b></span>
+                        <a href="#roadTaxes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    &quot;Private Vehicle&quot;,
+    &quot;Out Of Series Number Plates&quot;,
+    &quot;Fancy Number Plates&quot;,
+    &quot;Revalidation of old Number Plates (Private Vehicle)&quot;,
+    &quot;Revalidation of Commercial Vehicle Number Plates&quot;,
+    &quot;Government Fancy Number Plates&quot;,
+    &quot;Government Official Number Plates&quot;,
+    &quot;Motor Cycle&quot;,
+    &quot;Motor Dealers Number Plates&quot;,
+    &quot;Replacement of Missing Number Plates&quot;,
+    &quot;Change of Ownership&quot;,
+    &quot;Driver&#x27;s Licence&quot;,
+    &quot;Roadside Parking Fees&quot;,
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:52</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedAction"></a>
+                    <span class="name">
+                        <span ><b>selectedAction</b></span>
+                        <a href="#selectedAction"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:50</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectedItem"></a>
+                    <span class="name">
+                        <span ><b>selectedItem</b></span>
+                        <a href="#selectedItem"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="subMenu"></a>
+                    <span class="name">
+                        <span ><b>subMenu</b></span>
+                        <a href="#subMenu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="217" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:217</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItemForm"></a>
+                    <span class="name">
+                        <span ><b>taxItemForm</b></span>
+                        <a href="#taxItemForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="taxItems"></a>
+                    <span class="name">
+                        <span ><b>taxItems</b></span>
+                        <a href="#taxItems"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <span ><b>userProfile</b></span>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:90</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="vehicleCategories"></a>
+                    <span class="name">
+                        <span ><b>vehicleCategories</b></span>
+                        <a href="#vehicleCategories"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[
+    { label: &quot;Category A&quot;, tag: &quot;a&quot; },
+    { label: &quot;Category B&quot;, tag: &quot;b&quot; },
+    { label: &quot;Category C&quot;, tag: &quot;c&quot; },
+    { label: &quot;Category D&quot;, tag: &quot;d&quot; },
+  ]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="225" class="link-to-prism">src/app/views/assessment/road-taxes/road-tax.component.ts:225</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &quot;@angular/core&quot;;
+import { echartStyles } from &quot;src/app/shared/echart-styles&quot;;
+import { ProductService } from &quot;src/app/shared/services/product.service&quot;;
+import { LocalStoreService } from &quot;src/app/shared/services/local-store.service&quot;;
+import { NgbModal } from &quot;@ng-bootstrap/ng-bootstrap&quot;;
+import { SharedAnimations } from &quot;src/app/shared/animations/shared-animations&quot;;
+import { FormGroup, FormBuilder, Validators } from &quot;@angular/forms&quot;;
+import {
+  catchError,
+  debounceTime,
+  distinctUntilChanged,
+  switchMap,
+  tap,
+  map,
+  filter,
+} from &quot;rxjs/operators&quot;;
+import { HttpService } from &quot;src/app/shared/services/http.service&quot;;
+import { ToastrService } from &quot;ngx-toastr&quot;;
+import { Utils } from &quot;src/app/shared/utils&quot;;
+import { AssessmentService } from &quot;src/app/shared/services/assessment.service&quot;;
+
+import {
+  Router,
+  RouteConfigLoadStart,
+  ResolveStart,
+  RouteConfigLoadEnd,
+  ResolveEnd,
+} from &quot;@angular/router&quot;;
+import { concat, Observable, of, Subject } from &quot;rxjs&quot;;
+import { PrintpdfService } from &quot;src/app/shared/services/printpdf.service&quot;;
+
+@Component({
+  selector: &quot;app-dashboard-v2&quot;,
+  templateUrl: &quot;./road-tax.component.html&quot;,
+  styleUrls: [&quot;./road-tax.component.scss&quot;],
+  animations: [SharedAnimations],
+})
+export class RoadTaxComponent implements OnInit {
+  mdas: any;
+  taxItemForm: FormGroup;
+  editMode: boolean;
+  loading: boolean &#x3D; false;
+  editTitle: string &#x3D; &quot;&quot;;
+  taxItems: any;
+
+  selectedItem: any;
+
+  @ViewChild(&quot;modalConfirm&quot;, { static: false }) private modalContent;
+
+  selectedAction: any;
+
+  roadTaxes: any &#x3D; [
+    &quot;Private Vehicle&quot;,
+    &quot;Out Of Series Number Plates&quot;,
+    &quot;Fancy Number Plates&quot;,
+    &quot;Revalidation of old Number Plates (Private Vehicle)&quot;,
+    &quot;Revalidation of Commercial Vehicle Number Plates&quot;,
+    &quot;Government Fancy Number Plates&quot;,
+    &quot;Government Official Number Plates&quot;,
+    &quot;Motor Cycle&quot;,
+    &quot;Motor Dealers Number Plates&quot;,
+    &quot;Replacement of Missing Number Plates&quot;,
+    &quot;Change of Ownership&quot;,
+    &quot;Driver&#x27;s Licence&quot;,
+    &quot;Roadside Parking Fees&quot;,
+  ];
+
+  constructor(
+    private dl: HttpService,
+    private modalService: NgbModal,
+    private toastr: ToastrService,
+    private fb: FormBuilder,
+    private assessmetnService: AssessmentService,
+    private localStore: LocalStoreService,
+    private toastService: ToastrService,
+    private router: Router,
+    private printPDF: PrintpdfService
+  ) {}
+
+  config &#x3D; {
+    displayKey: &quot;company_name&quot;, // if objects array passed which key to be displayed defaults to description
+    search: true,
+    limitTo: 50,
+    moreText: &quot;More&quot;,
+    searchPlaceholder: &quot;Search by TIN.&quot;,
+    noResultsFound: &quot;No results found!&quot;,
+    searchOnKey: &quot;tin&quot;,
+  };
+
+  userProfile: any;
+  currentTin: any;
+
+  ngOnInit() {
+    this.loadMdas();
+    this.loadTins();
+    this.userProfile &#x3D; this.localStore.getItem(&quot;user&quot;);
+
+    this.taxItemForm &#x3D; this.fb.group({
+      selectedItem: [],
+      selectedCategory: [],
+      selectedAction: [],
+      tin_slug: [&quot;&quot;],
+    });
+  }
+
+  foundTIN$: Observable&lt;any&gt;;
+  companiesLoading &#x3D; false;
+  companiesInput$ &#x3D; new Subject&lt;string&gt;();
+  minLengthTerm &#x3D; 3;
+  foundTins &#x3D; [];
+
+  loadTins() {
+    this.foundTIN$ &#x3D; concat(
+      of([]), // default items
+      this.companiesInput$.pipe(
+        filter((res) &#x3D;&gt; {
+          return res !&#x3D;&#x3D; null &amp;&amp; res.length &gt;&#x3D; this.minLengthTerm;
+        }),
+        distinctUntilChanged(),
+        debounceTime(1000),
+        tap(() &#x3D;&gt; (this.companiesLoading &#x3D; true)),
+        switchMap((term) &#x3D;&gt; {
+          return this.getCompanies(term).pipe(
+            map(({ data }) &#x3D;&gt; {
+              const response &#x3D; data.map((data: any) &#x3D;&gt; {
+                if (data.first_name &amp;&amp; data.surname) {
+                  return {
+                    ...data,
+                    payer_name: &#x60;${data.first_name}  ${data.surname}&#x60;,
+                    name: &#x60;${data.first_name}  ${data.surname} (${data.tin})&#x60;,
+                  };
+                } else {
+                  return {
+                    ...data,
+                    payer_name: data.name,
+                    name: &#x60;${data.name} (${data.tin})&#x60;,
+                  };
+                }
+              });
+
+              this.foundTins &#x3D; response;
+              return response;
+            }),
+            catchError(() &#x3D;&gt; of([])), // empty list on error
+            tap(() &#x3D;&gt; (this.companiesLoading &#x3D; false))
+          );
+        })
+      )
+    );
+  }
+
+  getCompanies(term: string &#x3D; null): Observable&lt;any&gt; {
+    return this.dl.doGet(&quot;/users/search_tins?tin&#x3D;&quot; + term);
+  }
+
+  matchedTIN: any;
+  onDropdownClick(item) {
+    if (this.taxItemForm.value.tin_slug) {
+      const matches &#x3D; this.taxItemForm.value.tin_slug.match(/\((.*?)\)/);
+      const matched &#x3D; this.foundTins.find((el) &#x3D;&gt; el.tin &#x3D;&#x3D; matches[1]);
+      console.log({ matched });
+      this.matchedTIN &#x3D; matched;
+    }
+  }
+
+  exportAsPDF(div_id) {
+    this.printPDF.downloadAssessment(div_id, &quot;tax-assessment.pdf&quot;);
+  }
+
+  printPDFS(div) {
+    this.printPDF.printPdf(div);
+  }
+  updateAssessment(status: number) {
+    console.log(&quot;updating &quot;, this.assessmentForDisplay.id);
+    this.loading &#x3D; true;
+
+    this.dl
+      .doGet(
+        &quot;assessment/update_assessment/&quot; +
+          this.assessmentForDisplay.id +
+          &quot;/&quot; +
+          status
+      )
+      .subscribe(
+        (res) &#x3D;&gt; {
+          this.loading &#x3D; false;
+          this.toastService.success(&quot;Success&quot;, &quot;Assessment Status Updated!&quot;, {
+            timeOut: 5000,
+            closeButton: true,
+            progressBar: true,
+          });
+          this.modalService.dismissAll(&quot;dismisse&quot;);
+
+          this.router.navigateByUrl(&quot;/dashboard/assessment/history&quot;);
+        },
+        (err) &#x3D;&gt; {
+          this.loading;
+        }
+      );
+  }
+
+  loadMdas() {
+    this.loading &#x3D; true;
+    this.dl.doGet(&quot;/mdas/list&quot;).subscribe(
+      (res) &#x3D;&gt; {
+        console.log(&quot;fetched mda &quot;, res);
+        this.mdas &#x3D; res;
+        this.loading &#x3D; false;
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        console.log(&quot;error fetching mda&quot;, err);
+      }
+    );
+  }
+
+  subMenu: any &#x3D; [];
+  privateVehicleActions: any &#x3D; [
+    &quot;Vehicle Registration&quot;,
+    &quot;Plate Number Registration&quot;,
+    &quot;Vehicle Licence&quot;,
+    &quot;Registration Book&quot;,
+  ];
+
+  vehicleCategories: any &#x3D; [
+    { label: &quot;Category A&quot;, tag: &quot;a&quot; },
+    { label: &quot;Category B&quot;, tag: &quot;b&quot; },
+    { label: &quot;Category C&quot;, tag: &quot;c&quot; },
+    { label: &quot;Category D&quot;, tag: &quot;d&quot; },
+  ];
+
+  itemSelected() {
+    this.subMenu &#x3D; [];
+    this.actions &#x3D; [];
+
+    console.log(&quot;selected item &quot;, this.taxItemForm.value.selectedItem);
+    switch (this.taxItemForm.value.selectedItem) {
+      case this.roadTaxes[0]:
+        this.subMenu &#x3D; this.assessmetnService.priVehicleCategories;
+        break;
+
+      case this.roadTaxes[1]:
+        this.subMenu &#x3D; this.assessmetnService.outOfSeriesNumberPlatesCategories;
+        break;
+
+      case this.roadTaxes[2]:
+        this.subMenu &#x3D; this.assessmetnService.priVehicleCategories;
+        break;
+
+      case this.roadTaxes[3]:
+        this.subMenu &#x3D; this.assessmetnService.priVehicleCategories;
+        break;
+
+      case this.roadTaxes[4]:
+        this.subMenu &#x3D; this.assessmetnService.commercialVehicleCategories;
+        break;
+
+      case this.roadTaxes[5]:
+        this.subMenu &#x3D;
+          this.assessmetnService.governmentFancyNumberPlateCategories;
+        break;
+
+      case this.roadTaxes[6]:
+        this.subMenu &#x3D;
+          this.assessmetnService.governmentOfficialNumberPlateCategories;
+
+        break;
+
+      case this.roadTaxes[7]:
+        this.subMenu &#x3D; this.assessmetnService.motorCycleCategories;
+
+        break;
+
+      case this.roadTaxes[8]:
+        this.subMenu &#x3D; this.assessmetnService.motorDealersPlateCategories;
+        break;
+
+      case this.roadTaxes[9]:
+        this.subMenu &#x3D; this.assessmetnService.missingNumberPlatesCategories;
+        break;
+
+      case this.roadTaxes[10]:
+        this.subMenu &#x3D; this.assessmetnService.changeOfOwnershipCategories;
+        break;
+
+      case this.roadTaxes[11]:
+        this.subMenu &#x3D; this.assessmetnService.driverLicenceCategories;
+        break;
+
+      case this.roadTaxes[12]:
+        this.subMenu &#x3D; this.assessmetnService.roadSideParkingFeesCategories;
+        break;
+    }
+  }
+
+  action: any;
+
+  actions: any &#x3D; [];
+  categorySelected() {
+    let assService &#x3D; this.assessmetnService;
+
+    console.log(this.taxItemForm.value.selectedCategory);
+
+    switch (this.taxItemForm.value.selectedItem) {
+      case this.roadTaxes[0]:
+        console.log(&quot;private&quot;);
+        assService.privateVehicleRules.forEach((rule: any) &#x3D;&gt; {
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+
+        break;
+
+      case this.roadTaxes[1]:
+        console.log(&quot;out of series &quot;);
+        assService.outOfSeriesPlateNumberRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+
+      case this.roadTaxes[2]:
+        console.log(&quot;out of series &quot;);
+        assService.fancyPlateNumberRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+
+      case this.roadTaxes[3]:
+        console.log(&quot;out of series &quot;);
+        assService.revalidationOldNumberPlatePrivateRules.forEach(
+          (rule: any) &#x3D;&gt; {
+            console.log(
+              &quot;rule tag&quot;,
+              rule.tag,
+              &quot; cateogyr &quot;,
+              this.taxItemForm.value.selectedCategory
+            );
+            if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+              this.actions &#x3D; rule.fees;
+            }
+          }
+        );
+        break;
+
+      case this.roadTaxes[4]:
+        console.log(&quot;out of series &quot;);
+        assService.revalidationOldNumberPlateCommercialRules.forEach(
+          (rule: any) &#x3D;&gt; {
+            console.log(
+              &quot;rule tag&quot;,
+              rule.tag,
+              &quot; cateogyr &quot;,
+              this.taxItemForm.value.selectedCategory
+            );
+            if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+              this.actions &#x3D; rule.fees;
+            }
+          }
+        );
+        break;
+
+      case this.roadTaxes[5]:
+        console.log(&quot;out of series &quot;);
+        assService.governmentFancyPlateRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+
+      case this.roadTaxes[6]:
+        console.log(&quot;out of series &quot;);
+        assService.governmentOfficialPlateNumberRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+
+      case this.roadTaxes[7]:
+        console.log(&quot;out of series &quot;);
+        assService.privateMotorCycleRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+
+      case this.roadTaxes[8]:
+        console.log(&quot;out of series &quot;);
+        assService.mortorDealersPlateRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+
+      case this.roadTaxes[9]:
+        console.log(&quot;out of series &quot;);
+        assService.missingPlateNumberRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+
+      case this.roadTaxes[10]:
+        console.log(&quot;out of series &quot;);
+        assService.changeOfOwnershipRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+
+        break;
+
+      case this.roadTaxes[11]:
+        console.log(&quot;out of series &quot;);
+        assService.driverLicenseRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+
+      case this.roadTaxes[12]:
+        console.log(&quot;out of series &quot;);
+        assService.roadSideParkingRules.forEach((rule: any) &#x3D;&gt; {
+          console.log(
+            &quot;rule tag&quot;,
+            rule.tag,
+            &quot; cateogyr &quot;,
+            this.taxItemForm.value.selectedCategory
+          );
+          if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+            this.actions &#x3D; rule.fees;
+          }
+        });
+        break;
+    }
+  }
+
+  assessmentForDisplay: any &#x3D; {};
+  saveAssessment(assessment: any) {
+    this.loading &#x3D; true;
+
+    this.assessmentForDisplay.mda &#x3D; assessment.display.mda;
+    this.assessmentForDisplay.tax_item &#x3D; assessment.display.tax_item;
+    this.assessmentForDisplay.amount &#x3D; assessment.display.amount;
+
+    assessment.rules &#x3D; JSON.stringify(assessment.rules);
+    assessment.form_items &#x3D; JSON.stringify(this.taxItemForm.value);
+    assessment.amount &#x3D; assessment.display.amount;
+    assessment.display &#x3D; JSON.stringify(assessment.display);
+    assessment.payer_name &#x3D; this.matchedTIN.payer_name;
+    assessment.payer_tin &#x3D; this.matchedTIN.tin;
+    assessment.created_by &#x3D; &#x60;${this.userProfile.first_name} ${this.userProfile.surname}&#x60;;
+    console.log({ assessment });
+
+    this.dl.doPost(&quot;/assessment/save&quot;, assessment).subscribe(
+      (res: any) &#x3D;&gt; {
+        if (!res.status)
+          return this.toastr.error(res.reason, &quot;An Error occurred!&quot;);
+        this.loading &#x3D; false;
+        this.assessmentForDisplay.billing_ref &#x3D; res.data.billing_ref;
+        this.assessmentForDisplay.payer_name &#x3D; res.data.payer_name;
+        this.assessmentForDisplay.payer_tin &#x3D; res.data.payer_tin;
+        this.assessmentForDisplay.id &#x3D; res.data.id;
+        console.log(res, &quot; displaying &quot;, this.assessmentForDisplay);
+
+        this.openConfirmModal();
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+      }
+    );
+  }
+
+  submitVehicleAssessment() {
+    let result &#x3D; 0;
+
+    let assService: any &#x3D; this.assessmetnService;
+    let rules: any &#x3D; [];
+
+    switch (this.taxItemForm.value.selectedItem) {
+      case this.roadTaxes[0]:
+        rules &#x3D; assService.privateVehicleRules;
+        break;
+
+      case this.roadTaxes[1]:
+        rules &#x3D; assService.outOfSeriesPlateNumberRules;
+        break;
+
+      case this.roadTaxes[2]:
+        rules &#x3D; assService.fancyPlateNumberRules;
+        break;
+
+      case this.roadTaxes[3]:
+        rules &#x3D; assService.revalidationOldNumberPlatePrivateRules;
+        break;
+
+      case this.roadTaxes[4]:
+        rules &#x3D; assService.revalidationOldNumberPlateCommercialRules;
+        break;
+
+      case this.roadTaxes[6]:
+        rules &#x3D; assService.governmentOfficialPlateNumberRules;
+        break;
+
+      case this.roadTaxes[5]:
+        rules &#x3D; assService.governmentFancyPlateRules;
+        break;
+
+      case this.roadTaxes[7]:
+        rules &#x3D; assService.privateMotorCycleRules;
+        break;
+
+      case this.roadTaxes[8]:
+        rules &#x3D; assService.mortorDealersPlateRules;
+        break;
+
+      case this.roadTaxes[9]:
+        rules &#x3D; assService.revalidationOldNumberPlatePrivateRules;
+        break;
+
+      case this.roadTaxes[10]:
+        rules &#x3D; assService.changeOfOwnershipRules;
+        break;
+
+      case this.roadTaxes[11]:
+        rules &#x3D; assService.driverLicenseRules;
+        break;
+
+      case this.roadTaxes[12]:
+        rules &#x3D; assService.roadSideParkingRules;
+        break;
+    }
+
+    console.log(&quot;gotten rules &quot;, rules);
+    rules.forEach((rule: any) &#x3D;&gt; {
+      if (rule.tag &#x3D;&#x3D; this.taxItemForm.value.selectedCategory) {
+        rule.fees.forEach((fee: any) &#x3D;&gt; {
+          console.log(
+            &quot;checking &quot;,
+            fee.tag,
+            this.taxItemForm.value.selectedAction
+          );
+          if (fee.tag &#x3D;&#x3D; this.taxItemForm.value.selectedAction) {
+            this.selectedAction &#x3D; fee.label;
+            result &#x3D; fee.amount;
+          }
+        });
+      }
+    });
+
+    let assessment: any &#x3D; {
+      mda_id: 3,
+      tax_item_id: 16,
+      user_id: this.userProfile.id,
+      payer_tin: this.userProfile.tin,
+      form_items: this.taxItemForm.value,
+      rules: [],
+      display: {
+        mda: &quot;PSIRS&quot;,
+        tax_item:
+          this.taxItemForm.value.selectedItem + &quot;: &quot; + this.selectedAction,
+        amount: result,
+      },
+    };
+
+    this.saveAssessment(assessment);
+  }
+
+  parsePhpDate(date: string) {
+    return Utils.parsePhpDate(date);
+  }
+
+  closeModal() {
+    this.modalService.dismissAll(&quot;dismissed&quot;);
+    window.location.reload();
+  }
+
+  goToPayment() {
+    this.modalService.dismissAll();
+    this.router.navigateByUrl(&quot;assessment/history&quot;);
+  }
+
+  modal: NgbModal;
+  openConfirmModal() {
+    this.modalService
+      .open(this.modalContent, { ariaLabelledBy: &quot;Assessment Result&quot; })
+      .result.then(
+        (result) &#x3D;&gt; {
+          this.modal &#x3D; result;
+          console.log(result);
+        },
+        (reason) &#x3D;&gt; {
+          console.log(&quot;Err!&quot;, reason);
+        }
+      );
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;breadcrumb&quot;&gt;
+  &lt;h1&gt;Assessment&lt;/h1&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href&#x3D;&quot;&quot;&gt;Road Taxes&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Perform Assessment&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+&lt;div
+  class&#x3D;&quot;row&quot;
+  [@animate]&#x3D;&quot;{
+    value: &#x27;*&#x27;,
+    params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+  }&quot;
+&gt;
+  &lt;div class&#x3D;&quot;col-lg-8 col-md-12 card&quot; style&#x3D;&quot;padding: 20px&quot;&gt;
+    &lt;form [formGroup]&#x3D;&quot;taxItemForm&quot;&gt;
+      &lt;h4&gt;Road Tax Assessment&lt;/h4&gt;
+      &lt;p&gt;Fields marked with asterisk are compulsory&lt;/p&gt;
+      &lt;div class&#x3D;&quot;&quot;&gt;
+        &lt;div class&#x3D;&quot;card-body&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+              &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                &lt;label for&#x3D;&quot;tax&quot;&gt;TIN&lt;/label&gt;
+                &lt;div *ngIf&#x3D;&quot;userProfile.role &#x3D;&#x3D; &#x27;1&#x27; || userProfile.role &#x3D;&#x3D; &#x27;3&#x27;&quot;&gt;
+                  &lt;ng-select
+                    [items]&#x3D;&quot;foundTIN$ | async&quot;
+                    bindLabel&#x3D;&quot;name&quot;
+                    bindValue&#x3D;&quot;name&quot;
+                    [trackByFn]&#x3D;&quot;trackByFn&quot;
+                    labelForId&#x3D;&quot;tin&quot;
+                    [minTermLength]&#x3D;&quot;minLengthTerm&quot;
+                    [loading]&#x3D;&quot;companiesLoading&quot;
+                    placeholder&#x3D;&quot;Search for a user or company by TIN&quot;
+                    typeToSearchText&#x3D;&quot;Please enter {{
+                      minLengthTerm
+                    }} or more characters&quot;
+                    [typeahead]&#x3D;&quot;companiesInput$&quot;
+                    (change)&#x3D;&quot;onDropdownClick(selectedTIN)&quot;
+                    formControlName&#x3D;&quot;tin_slug&quot;
+                  &gt;
+                  &lt;/ng-select&gt;
+                &lt;/div&gt;
+                &lt;div *ngIf&#x3D;&quot;userProfile.role !&#x3D; &#x27;1&#x27; &amp;&amp; userProfile.role !&#x3D; &#x27;3&#x27;&quot;&gt;
+                  &lt;ngx-select-dropdown
+                    tabindex&#x3D;&quot;0&quot;
+                    [multiple]&#x3D;&quot;false&quot;
+                    formControlName&#x3D;&quot;tin_slug&quot;
+                    [config]&#x3D;&quot;config&quot;
+                    [options]&#x3D;&quot;tins&quot;
+                  &gt;
+                  &lt;/ngx-select-dropdown&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+              &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                &lt;label for&#x3D;&quot;tax&quot;&gt;Road Tax Item&lt;/label&gt;
+                &lt;select
+                  class&#x3D;&quot;form-control&quot;
+                  formControlName&#x3D;&quot;selectedItem&quot;
+                  (ngModelChange)&#x3D;&quot;itemSelected()&quot;
+                &gt;
+                  &lt;option&gt;Choose Road Tax&lt;/option&gt;
+                  &lt;option *ngFor&#x3D;&quot;let item of roadTaxes&quot;&gt;
+                    {{ item }}
+                  &lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;subMenu &amp;&amp; subMenu.length &gt; 0&quot;&gt;
+            &lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+              &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                &lt;label for&#x3D;&quot;tax&quot;&gt;Vehicle Category&lt;/label&gt;
+                &lt;select
+                  class&#x3D;&quot;form-control&quot;
+                  formControlName&#x3D;&quot;selectedCategory&quot;
+                  (ngModelChange)&#x3D;&quot;categorySelected()&quot;
+                &gt;
+                  &lt;option&gt;Choose Category&lt;/option&gt;
+                  &lt;option *ngFor&#x3D;&quot;let item of subMenu&quot; value&#x3D;&quot;{{ item.tag }}&quot;&gt;
+                    {{ item.label }}
+                  &lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;actions &amp;&amp; actions.length &gt; 0&quot;&gt;
+            &lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+              &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                &lt;label for&#x3D;&quot;tax&quot;&gt;Action&lt;/label&gt;
+                &lt;select class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;selectedAction&quot;&gt;
+                  &lt;option&gt;Choose Fee&lt;/option&gt;
+                  &lt;option value&#x3D;&quot;{{ item.tag }}&quot; *ngFor&#x3D;&quot;let item of actions&quot;&gt;
+                    {{ item.label }}
+                  &lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;row&quot; *ngIf&#x3D;&quot;actions &amp;&amp; actions.length &gt; 0&quot;&gt;
+            &lt;div class&#x3D;&quot;col-sm-3&quot;&gt;&lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-8 row&quot;&gt;
+              &lt;div class&#x3D;&quot;col-md-9 form-group mb-3&quot;&gt;
+                &lt;label for&#x3D;&quot;tax&quot;&gt;&lt;/label&gt;
+                &lt;button
+                  class&#x3D;&quot;form-control&quot;
+                  (click)&#x3D;&quot;submitVehicleAssessment()&quot;
+                &gt;
+                  Generate
+                &lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;col-sm-7&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;col-sm-1&quot;&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #modalConfirm let-modal&gt;
+  &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+    &lt;div id&#x3D;&quot;pdfAssessment&quot; class&#x3D;&quot;modal-body&quot;&gt;
+      &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+        &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;col-md-12&quot; *ngIf&#x3D;&quot;!loading &amp;&amp; !dynamicSummary&quot;&gt;
+        &lt;div style&#x3D;&quot;display: flex; justify-content: space-between&quot;&gt;
+          &lt;img src&#x3D;&quot;../../../../assets/images/logo.png&quot; style&#x3D;&quot;height: 30px&quot; /&gt;
+          &lt;span&gt;Smart Tax&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p
+          style&#x3D;&quot;
+            text-align: end;
+            font-size: 0.8rem;
+            color: #000;
+            font-family: serif;
+          &quot;
+        &gt;
+          Bill Reference: {{ assessmentForDisplay.billing_ref }}
+        &lt;/p&gt;
+
+        &lt;div style&#x3D;&quot;font-size: 0.7rem&quot;&gt;
+          &lt;span style&#x3D;&quot;display: block&quot;&gt;Plateau State Internal&lt;/span&gt;
+          &lt;span style&#x3D;&quot;display: block&quot;&gt;Revenue Service&lt;/span&gt;
+          &lt;span style&#x3D;&quot;display: block&quot;&gt;Bank Road, Jos&lt;/span&gt;
+          &lt;div
+            style&#x3D;&quot;
+              display: inline-block;
+              width: 140px;
+              border: 0.1px solid #000;
+            &quot;
+          &gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;text-center&quot;&gt;
+          &lt;img
+            src&#x3D;&quot;../../../../assets/images/logo-.png&quot;
+            class&#x3D;&quot;my-1&quot;
+            style&#x3D;&quot;height: 90px&quot;
+          /&gt;
+        &lt;/div&gt;
+        &lt;p
+          style&#x3D;&quot;
+            color: green;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+          &quot;
+        &gt;
+          PLATEAU STATE GOVERNMENT
+        &lt;/p&gt;
+        &lt;div style&#x3D;&quot;text-align: center&quot;&gt;
+          &lt;span
+            style&#x3D;&quot;
+              font-weight: bold;
+              padding: 9px 16px;
+              background-color: green;
+              display: inline-block;
+              font-size: 1rem;
+            &quot;
+            class&#x3D;&quot;text-center mb-3 text-white&quot;
+            &gt;TAX ASSESSMENT (PAYE)&lt;/span
+          &gt;
+        &lt;/div&gt;
+        &lt;table class&#x3D;&quot;table&quot;&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;MDA&lt;/td&gt;
+              &lt;td&gt;PSIRS&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Tax Item&lt;/td&gt;
+              &lt;td class&#x3D;&quot;font-weight-bold text-success&quot;&gt;
+                {{ assessmentForDisplay.tax_item }}
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;TIN&lt;/td&gt;
+              &lt;td class&#x3D;&quot;font-weight-bold text-success&quot;&gt;
+                {{ assessmentForDisplay.payer_tin }}
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Payer Name&lt;/td&gt;
+              &lt;td class&#x3D;&quot;font-weight-bold text-success&quot;&gt;
+                {{ assessmentForDisplay.payer_name }}
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Billing Ref&lt;/td&gt;
+              &lt;td class&#x3D;&quot;text-warning font-weight-bold&quot;&gt;
+                {{ assessmentForDisplay.billing_ref }}
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Amount&lt;/td&gt;
+              &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+                {{ assessmentForDisplay.amount }} NGN
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Created By&lt;/td&gt;
+              &lt;td class&#x3D;&quot;font-weight-bold&quot;&gt;
+                {{ assessmentForDisplay.created_by }} NGN
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;col-md-12&quot; *ngIf&#x3D;&quot;!loading &amp;&amp; dynamicSummary &amp;&amp; payeeSummary&quot;&gt;
+      &lt;div style&#x3D;&quot;overflow-y: scroll; height: 400px&quot;&gt;
+        &lt;div class&#x3D;&quot;text text-success&quot;&gt;
+          Your information has been received. A mail will be sent to you soon.
+        &lt;/div&gt;
+        &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&quot;displayPayee[0].values.length &gt; 0&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;{{ displayPayee[0].Label }}&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let item of displayPayee[0].values&quot;&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;
+                {{ item.label.toUpperCase().replace(&quot;_&quot;, &quot; &quot;) }}
+              &lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;{{ item.value }}&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+
+        &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&quot;displayPayee[1].values.length &gt; 0&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;{{ displayPayee[1].Label }}&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let item of displayPayee[0].values&quot;&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;
+                {{ item.label.toUpperCase().replace(&quot;_&quot;, &quot; &quot;) }}
+              &lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;{{ item.value }}&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+
+        &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&quot;displayPayee[2].values.length &gt; 0&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;{{ displayPayee[2].Label }}&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let item of displayPayee[2].values&quot;&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;
+                {{ item.label.toUpperCase().replace(&quot;_&quot;, &quot; &quot;) }}
+              &lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;{{ item.value }}&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+
+        &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&quot;displayPayee[3].values.length &gt; 0&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;{{ displayPayee[3].Label }}&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let item of displayPayee[3].values&quot;&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;
+                {{ item.label.toUpperCase().replace(&quot;_&quot;, &quot; &quot;) }}
+              &lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;{{ item.value }}&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+        &lt;table class&#x3D;&quot;table&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;Total&lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;
+              {{ displayPayee[displayPayee.length - 1].total }}
+            &lt;/th&gt;
+          &lt;/thead&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div
+      class&#x3D;&quot;col-md-12&quot;
+      *ngIf&#x3D;&quot;!loading &amp;&amp; dynamicSummary &amp;&amp; directAssessmentSummary&quot;
+    &gt;
+      &lt;div style&#x3D;&quot;overflow-y: scroll; height: 400px&quot;&gt;
+        &lt;div class&#x3D;&quot;text text-success&quot;&gt;
+          Your information has been received. A mail will be sent to you soon.
+        &lt;/div&gt;
+        &lt;table class&#x3D;&quot;table&quot; *ngIf&#x3D;&quot;displayPayee.length &gt; 0&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;Direct Assessment&lt;/th&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr *ngFor&#x3D;&quot;let item of displayPayee&quot;&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;{{ item.label }}&lt;/th&gt;
+              &lt;th scope&#x3D;&quot;col&quot;&gt;{{ item.value }}&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
+        &lt;table class&#x3D;&quot;table&quot;&gt;
+          &lt;thead class&#x3D;&quot;thead-light&quot;&gt;
+            &lt;th colspan&#x3D;&quot;2&quot;&gt;Total&lt;/th&gt;
+            &lt;th scope&#x3D;&quot;col&quot;&gt;
+              {{ displayPayee[displayPayee.length - 1].total }}
+            &lt;/th&gt;
+          &lt;/thead&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;div&gt;
+      &lt;button
+        style&#x3D;&quot;position: relative; z-index: 3&quot;
+        class&#x3D;&quot;btn btn-primary&quot;
+        (click)&#x3D;&quot;exportAsPDF(&#x27;pdfAssessment&#x27;)&quot;
+      &gt;
+        Download
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;printPDFS(&#x27;pdfAssessment&#x27;)&quot;
+    &gt;
+      Print
+    &lt;/button&gt;
+
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-roustnded&quot;
+      (click)&#x3D;&quot;closeModal()&quot;
+    &gt;
+      Close
+    &lt;/button&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      ngbAutofocus
+      class&#x3D;&quot;btn btn-danger btn-rounded&quot;
+      (click)&#x3D;&quot;updateAssessment(-2)&quot;
+    &gt;
+      Dispute
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./road-tax.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">hr {
+  margin-bottom: 0px !important;
+}
+
+.payee-heading {
+  font-size: 200%;
+}
+
+.table thead th,
+td {
+  vertical-align: bottom;
+  font-size: 1rem;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="breadcrumb">  <h1>Assessment</h1>  <ul>    <li><a href="">Road Taxes</a></li>    <li>Perform Assessment</li>  </ul></div><div class="separator-breadcrumb border-top"></div><div  class="row"  [@animate]="{    value: \'*\',    params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }  }">  <div class="col-lg-8 col-md-12 card" style="padding: 20px">    <form [formGroup]="taxItemForm">      <h4>Road Tax Assessment</h4>      <p>Fields marked with asterisk are compulsory</p>      <div class="">        <div class="card-body">          <div class="row">            <div class="col-sm-3"></div>            <div class="col-sm-8 row">              <div class="col-md-9 form-group mb-3">                <label for="tax">TIN</label>                <div *ngIf="userProfile.role == \'1\' || userProfile.role == \'3\'">                  <ng-select                    [items]="foundTIN$ | async"                    bindLabel="name"                    bindValue="name"                    [trackByFn]="trackByFn"                    labelForId="tin"                    [minTermLength]="minLengthTerm"                    [loading]="companiesLoading"                    placeholder="Search for a user or company by TIN"                    typeToSearchText="Please enter {{                      minLengthTerm                    }} or more characters"                    [typeahead]="companiesInput$"                    (change)="onDropdownClick(selectedTIN)"                    formControlName="tin_slug"                  >                  </ng-select>                </div>                <div *ngIf="userProfile.role != \'1\' && userProfile.role != \'3\'">                  <ngx-select-dropdown                    tabindex="0"                    [multiple]="false"                    formControlName="tin_slug"                    [config]="config"                    [options]="tins"                  >                  </ngx-select-dropdown>                </div>              </div>            </div>          </div>          <div class="row">            <div class="col-sm-3"></div>            <div class="col-sm-8 row">              <div class="col-md-9 form-group mb-3">                <label for="tax">Road Tax Item</label>                <select                  class="form-control"                  formControlName="selectedItem"                  (ngModelChange)="itemSelected()"                >                  <option>Choose Road Tax</option>                  <option *ngFor="let item of roadTaxes">                    {{ item }}                  </option>                </select>              </div>              <div class="col-sm-7"></div>            </div>            <div class="col-sm-1"></div>          </div>          <div class="row" *ngIf="subMenu && subMenu.length > 0">            <div class="col-sm-3"></div>            <div class="col-sm-8 row">              <div class="col-md-9 form-group mb-3">                <label for="tax">Vehicle Category</label>                <select                  class="form-control"                  formControlName="selectedCategory"                  (ngModelChange)="categorySelected()"                >                  <option>Choose Category</option>                  <option *ngFor="let item of subMenu" value="{{ item.tag }}">                    {{ item.label }}                  </option>                </select>              </div>              <div class="col-sm-7"></div>            </div>            <div class="col-sm-1"></div>          </div>          <div class="row" *ngIf="actions && actions.length > 0">            <div class="col-sm-3"></div>            <div class="col-sm-8 row">              <div class="col-md-9 form-group mb-3">                <label for="tax">Action</label>                <select class="form-control" formControlName="selectedAction">                  <option>Choose Fee</option>                  <option value="{{ item.tag }}" *ngFor="let item of actions">                    {{ item.label }}                  </option>                </select>              </div>              <div class="col-sm-7"></div>            </div>            <div class="col-sm-1"></div>          </div>          <div class="row" *ngIf="actions && actions.length > 0">            <div class="col-sm-3"></div>            <div class="col-sm-8 row">              <div class="col-md-9 form-group mb-3">                <label for="tax"></label>                <button                  class="form-control"                  (click)="submitVehicleAssessment()"                >                  Generate                </button>              </div>              <div class="col-sm-7"></div>            </div>            <div class="col-sm-1"></div>          </div>        </div>      </div>    </form>  </div></div><ng-template #modalConfirm let-modal>  <div class="modal-header">    <div id="pdfAssessment" class="modal-body">      <div *ngIf="loading" class="col-md-12 text-center">        <div class="spinner spinner-primary mr-3"></div>      </div>      <div class="col-md-12" *ngIf="!loading && !dynamicSummary">        <div style="display: flex; justify-content: space-between">          <img src="../../../../assets/images/logo.png" style="height: 30px" />          <span>Smart Tax</span>        </div>        <p          style="            text-align: end;            font-size: 0.8rem;            color: #000;            font-family: serif;          "        >          Bill Reference: {{ assessmentForDisplay.billing_ref }}        </p>        <div style="font-size: 0.7rem">          <span style="display: block">Plateau State Internal</span>          <span style="display: block">Revenue Service</span>          <span style="display: block">Bank Road, Jos</span>          <div            style="              display: inline-block;              width: 140px;              border: 0.1px solid #000;            "          ></div>        </div>        <div class="text-center">          <img            src="../../../../assets/images/logo-.png"            class="my-1"            style="height: 90px"          />        </div>        <p          style="            color: green;            font-size: 1rem;            font-weight: bold;            text-align: center;          "        >          PLATEAU STATE GOVERNMENT        </p>        <div style="text-align: center">          <span            style="              font-weight: bold;              padding: 9px 16px;              background-color: green;              display: inline-block;              font-size: 1rem;            "            class="text-center mb-3 text-white"            >TAX ASSESSMENT (PAYE)</span          >        </div>        <table class="table">          <tbody>            <tr>              <td>MDA</td>              <td>PSIRS</td>            </tr>            <tr>              <td>Tax Item</td>              <td class="font-weight-bold text-success">                {{ assessmentForDisplay.tax_item }}              </td>            </tr>            <tr>              <td>TIN</td>              <td class="font-weight-bold text-success">                {{ assessmentForDisplay.payer_tin }}              </td>            </tr>            <tr>              <td>Payer Name</td>              <td class="font-weight-bold text-success">                {{ assessmentForDisplay.payer_name }}              </td>            </tr>            <tr>              <td>Billing Ref</td>              <td class="text-warning font-weight-bold">                {{ assessmentForDisplay.billing_ref }}              </td>            </tr>            <tr>              <td>Amount</td>              <td class="font-weight-bold">                {{ assessmentForDisplay.amount }} NGN              </td>            </tr>            <tr>              <td>Created By</td>              <td class="font-weight-bold">                {{ assessmentForDisplay.created_by }} NGN              </td>            </tr>          </tbody>        </table>      </div>    </div>    <div class="col-md-12" *ngIf="!loading && dynamicSummary && payeeSummary">      <div style="overflow-y: scroll; height: 400px">        <div class="text text-success">          Your information has been received. A mail will be sent to you soon.        </div>        <table class="table" *ngIf="displayPayee[0].values.length > 0">          <thead class="thead-light">            <th colspan="2">{{ displayPayee[0].Label }}</th>          </thead>          <tbody>            <tr *ngFor="let item of displayPayee[0].values">              <th scope="col">                {{ item.label.toUpperCase().replace("_", " ") }}              </th>              <th scope="col">{{ item.value }}</th>            </tr>          </tbody>        </table>        <table class="table" *ngIf="displayPayee[1].values.length > 0">          <thead class="thead-light">            <th colspan="2">{{ displayPayee[1].Label }}</th>          </thead>          <tbody>            <tr *ngFor="let item of displayPayee[0].values">              <th scope="col">                {{ item.label.toUpperCase().replace("_", " ") }}              </th>              <th scope="col">{{ item.value }}</th>            </tr>          </tbody>        </table>        <table class="table" *ngIf="displayPayee[2].values.length > 0">          <thead class="thead-light">            <th colspan="2">{{ displayPayee[2].Label }}</th>          </thead>          <tbody>            <tr *ngFor="let item of displayPayee[2].values">              <th scope="col">                {{ item.label.toUpperCase().replace("_", " ") }}              </th>              <th scope="col">{{ item.value }}</th>            </tr>          </tbody>        </table>        <table class="table" *ngIf="displayPayee[3].values.length > 0">          <thead class="thead-light">            <th colspan="2">{{ displayPayee[3].Label }}</th>          </thead>          <tbody>            <tr *ngFor="let item of displayPayee[3].values">              <th scope="col">                {{ item.label.toUpperCase().replace("_", " ") }}              </th>              <th scope="col">{{ item.value }}</th>            </tr>          </tbody>        </table>      </div>      <div class="col-md-12">        <table class="table">          <thead class="thead-light">            <th colspan="2">Total</th>            <th scope="col">              {{ displayPayee[displayPayee.length - 1].total }}            </th>          </thead>        </table>      </div>    </div>    <div      class="col-md-12"      *ngIf="!loading && dynamicSummary && directAssessmentSummary"    >      <div style="overflow-y: scroll; height: 400px">        <div class="text text-success">          Your information has been received. A mail will be sent to you soon.        </div>        <table class="table" *ngIf="displayPayee.length > 0">          <thead class="thead-light">            <th colspan="2">Direct Assessment</th>          </thead>          <tbody>            <tr *ngFor="let item of displayPayee">              <th scope="col">{{ item.label }}</th>              <th scope="col">{{ item.value }}</th>            </tr>          </tbody>        </table>      </div>      <div class="col-md-12">        <table class="table">          <thead class="thead-light">            <th colspan="2">Total</th>            <th scope="col">              {{ displayPayee[displayPayee.length - 1].total }}            </th>          </thead>        </table>      </div>    </div>  </div>  <div class="modal-footer">    <div>      <button        style="position: relative; z-index: 3"        class="btn btn-primary"        (click)="exportAsPDF(\'pdfAssessment\')"      >        Download      </button>    </div>    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="printPDFS(\'pdfAssessment\')"    >      Print    </button>    <button      type="button"      class="btn btn-outline-secondary btn-roustnded"      (click)="closeModal()"    >      Close    </button>    <button      type="button"      ngbAutofocus      class="btn btn-danger btn-rounded"      (click)="updateAssessment(-2)"    >      Dispute    </button>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'RoadTaxComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'RoadTaxComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

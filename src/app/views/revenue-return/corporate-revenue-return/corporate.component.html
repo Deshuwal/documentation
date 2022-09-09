@@ -1,0 +1,105 @@
+<div class="">
+  <app-breadcrumb></app-breadcrumb>
+
+  <div class="separator-breadcrumb border-top"></div>
+
+  <div class="row">
+    <div class="col-lg-1"></div>
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+      <br />
+      <span>Processing... Please wait</span>
+    </div>
+
+    <div
+      *ngIf="!loading && !done"
+      class="col-lg-10 col-sm-12"
+      [@animate]="{
+        value: '*',
+        params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+      }"
+    >
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="col-lg-12 col-md-12">
+            <h5 class="card-title m-0 p-3">
+              Upload Corporate Revenue Returns data according to the excel template below
+            </h5>
+
+            <div class="row" style="margin: 2%">
+              <div class="col-md-12">
+                <div class="mb-5">
+                  <div class="">
+                    <div>
+                      <form [formGroup]="corporateRevenueReturnsForm" (ngSubmit)="submit()">
+                        <div class="row">
+                          <!-- <div class="col-sm-3"></div> -->
+                          <div class="col-sm-12">
+                            
+                            <div class="row">                              
+                              <div class="col-md-6 form-group mb-3">
+                                <label for="tax"> Company Name</label>
+                                <input
+                                  formControlName="company_name"
+                                  class="form-control"
+                                  type="text"
+                                  [(ngModel)]="companyName"
+                                  disabled
+                                />
+                              </div>
+                              <div class="col-md-3 form-group mb-3">
+                                <label for="tax">Company Tin</label>
+                                <input
+                                  formControlName="tin_slug"
+                                  class="form-control"
+                                  type="text"
+                                  [(ngModel)]="companyTin"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+
+                            <div class="row">                              
+                              <div class="col-md-6 form-group mb-3">
+                                <label for="tax">Select Annual Returns File (Excel)</label>
+                                <input
+                                  type="file"
+                                  id="input_select"
+                                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                                  class="form-control"
+                                  style="height:42px;border: 2px dashed #ccc;"
+                                  (change)="annualFileChanged($event)"
+                                />
+                              </div>
+
+                              <div class="col-md-3 form-group mb-3">
+                                <br>
+                                <a href="assets/annual-returns-template.xlsx" class="btn btn-success btn-block" style="padding:10px 5px;font-size:13px">
+                                  Download Template
+                                </a>
+                              </div>
+                            </div>
+                            
+                            <div class="row">
+                              <div class="col-md-12 form-group mb-3"></div>
+                              <div class="col-md-9 form-group mb-3">
+                                <button class="btn btn-primary btn-submit btn-block" style="padding:10px 5px;">
+                                  Upload & Process
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

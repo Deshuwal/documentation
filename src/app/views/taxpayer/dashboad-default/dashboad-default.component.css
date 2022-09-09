@@ -1,0 +1,32 @@
+.papitalize {
+    text-transform: capitalize;
+}
+
+.dash-icon{
+  background: #effafd;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.dash-icon i{
+  font-size: 40px;
+}
+
+.card-custom .content{
+  margin: 0px;
+  padding: 10px;
+}
+
+.card-custom .content{
+  min-width: 130px;
+}
+
+.card-custom .content-long{
+  min-width: 260px !important;
+}
+
+.card-custom .content p span{
+  font-size: 10px !important;
+}

@@ -1,0 +1,91 @@
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+
+.download {
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #fff;
+}
+
+@media (max-width: 664px) {
+  .download {
+    left: 35%;
+  }
+}
+
+.search-container {
+  position: absolute;
+  top: 7px;
+  right: 20px;
+  display: flex;
+}
+
+.search-container {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  display: -webkit-box;
+}
+
+@media (max-width: 664px) {
+  .search-container {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+    display: -webkit-box;
+  }
+}
+
+@media (max-width: 400px) {
+  .input-width {
+    width: 85%;
+  }
+}
+
+@media (max-width: 380px) {
+  .input-width {
+    width: 65%;
+  }
+}
+
+.icon-left {
+  position: absolute;
+  top: 21px;
+  right: 230px;
+}
+
+.icon-right {
+  position: absolute;
+  top: 21px;
+  right: 20px;
+}
+
+@media (max-width: 400px) {
+  .icon-right {
+    display: none;
+  }
+  .icon-left {
+    display: none;
+  }
+}

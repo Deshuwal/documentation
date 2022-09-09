@@ -1,0 +1,397 @@
+<div class="breadcrumb">
+  <h1>Assessment</h1>
+  <ul>
+    <li><a href="">Road Taxes</a></li>
+    <li>Perform Assessment</li>
+  </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div
+  class="row"
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <div class="col-lg-8 col-md-12 card" style="padding: 20px">
+    <form [formGroup]="taxItemForm">
+      <h4>Road Tax Assessment</h4>
+      <p>Fields marked with asterisk are compulsory</p>
+      <div class="">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">TIN</label>
+                <div *ngIf="userProfile.role == '1' || userProfile.role == '3'">
+                  <ng-select
+                    [items]="foundTIN$ | async"
+                    bindLabel="name"
+                    bindValue="name"
+                    [trackByFn]="trackByFn"
+                    labelForId="tin"
+                    [minTermLength]="minLengthTerm"
+                    [loading]="companiesLoading"
+                    placeholder="Search for a user or company by TIN"
+                    typeToSearchText="Please enter {{
+                      minLengthTerm
+                    }} or more characters"
+                    [typeahead]="companiesInput$"
+                    (change)="onDropdownClick(selectedTIN)"
+                    formControlName="tin_slug"
+                  >
+                  </ng-select>
+                </div>
+                <div *ngIf="userProfile.role != '1' && userProfile.role != '3'">
+                  <ngx-select-dropdown
+                    tabindex="0"
+                    [multiple]="false"
+                    formControlName="tin_slug"
+                    [config]="config"
+                    [options]="tins"
+                  >
+                  </ngx-select-dropdown>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Road Tax Item</label>
+                <select
+                  class="form-control"
+                  formControlName="selectedItem"
+                  (ngModelChange)="itemSelected()"
+                >
+                  <option>Choose Road Tax</option>
+                  <option *ngFor="let item of roadTaxes">
+                    {{ item }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+
+          <div class="row" *ngIf="subMenu && subMenu.length > 0">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Vehicle Category</label>
+                <select
+                  class="form-control"
+                  formControlName="selectedCategory"
+                  (ngModelChange)="categorySelected()"
+                >
+                  <option>Choose Category</option>
+                  <option *ngFor="let item of subMenu" value="{{ item.tag }}">
+                    {{ item.label }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+
+          <div class="row" *ngIf="actions && actions.length > 0">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax">Action</label>
+                <select class="form-control" formControlName="selectedAction">
+                  <option>Choose Fee</option>
+                  <option value="{{ item.tag }}" *ngFor="let item of actions">
+                    {{ item.label }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+
+          <div class="row" *ngIf="actions && actions.length > 0">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8 row">
+              <div class="col-md-9 form-group mb-3">
+                <label for="tax"></label>
+                <button
+                  class="form-control"
+                  (click)="submitVehicleAssessment()"
+                >
+                  Generate
+                </button>
+              </div>
+              <div class="col-sm-7"></div>
+            </div>
+            <div class="col-sm-1"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<ng-template #modalConfirm let-modal>
+  <div class="modal-header">
+    <div id="pdfAssessment" class="modal-body">
+      <div *ngIf="loading" class="col-md-12 text-center">
+        <div class="spinner spinner-primary mr-3"></div>
+      </div>
+
+      <div class="col-md-12" *ngIf="!loading && !dynamicSummary">
+        <div style="display: flex; justify-content: space-between">
+          <img src="../../../../assets/images/logo.png" style="height: 30px" />
+          <span>Smart Tax</span>
+        </div>
+        <p
+          style="
+            text-align: end;
+            font-size: 0.8rem;
+            color: #000;
+            font-family: serif;
+          "
+        >
+          Bill Reference: {{ assessmentForDisplay.billing_ref }}
+        </p>
+
+        <div style="font-size: 0.7rem">
+          <span style="display: block">Plateau State Internal</span>
+          <span style="display: block">Revenue Service</span>
+          <span style="display: block">Bank Road, Jos</span>
+          <div
+            style="
+              display: inline-block;
+              width: 140px;
+              border: 0.1px solid #000;
+            "
+          ></div>
+        </div>
+
+        <div class="text-center">
+          <img
+            src="../../../../assets/images/logo-.png"
+            class="my-1"
+            style="height: 90px"
+          />
+        </div>
+        <p
+          style="
+            color: green;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+          "
+        >
+          PLATEAU STATE GOVERNMENT
+        </p>
+        <div style="text-align: center">
+          <span
+            style="
+              font-weight: bold;
+              padding: 9px 16px;
+              background-color: green;
+              display: inline-block;
+              font-size: 1rem;
+            "
+            class="text-center mb-3 text-white"
+            >TAX ASSESSMENT (PAYE)</span
+          >
+        </div>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td>MDA</td>
+              <td>PSIRS</td>
+            </tr>
+            <tr>
+              <td>Tax Item</td>
+              <td class="font-weight-bold text-success">
+                {{ assessmentForDisplay.tax_item }}
+              </td>
+            </tr>
+            <tr>
+              <td>TIN</td>
+              <td class="font-weight-bold text-success">
+                {{ assessmentForDisplay.payer_tin }}
+              </td>
+            </tr>
+            <tr>
+              <td>Payer Name</td>
+              <td class="font-weight-bold text-success">
+                {{ assessmentForDisplay.payer_name }}
+              </td>
+            </tr>
+            <tr>
+              <td>Billing Ref</td>
+              <td class="text-warning font-weight-bold">
+                {{ assessmentForDisplay.billing_ref }}
+              </td>
+            </tr>
+            <tr>
+              <td>Amount</td>
+              <td class="font-weight-bold">
+                {{ assessmentForDisplay.amount }} NGN
+              </td>
+            </tr>
+            <tr>
+              <td>Created By</td>
+              <td class="font-weight-bold">
+                {{ assessmentForDisplay.created_by }} NGN
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="col-md-12" *ngIf="!loading && dynamicSummary && payeeSummary">
+      <div style="overflow-y: scroll; height: 400px">
+        <div class="text text-success">
+          Your information has been received. A mail will be sent to you soon.
+        </div>
+        <table class="table" *ngIf="displayPayee[0].values.length > 0">
+          <thead class="thead-light">
+            <th colspan="2">{{ displayPayee[0].Label }}</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of displayPayee[0].values">
+              <th scope="col">
+                {{ item.label.toUpperCase().replace("_", " ") }}
+              </th>
+              <th scope="col">{{ item.value }}</th>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table" *ngIf="displayPayee[1].values.length > 0">
+          <thead class="thead-light">
+            <th colspan="2">{{ displayPayee[1].Label }}</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of displayPayee[0].values">
+              <th scope="col">
+                {{ item.label.toUpperCase().replace("_", " ") }}
+              </th>
+              <th scope="col">{{ item.value }}</th>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table" *ngIf="displayPayee[2].values.length > 0">
+          <thead class="thead-light">
+            <th colspan="2">{{ displayPayee[2].Label }}</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of displayPayee[2].values">
+              <th scope="col">
+                {{ item.label.toUpperCase().replace("_", " ") }}
+              </th>
+              <th scope="col">{{ item.value }}</th>
+            </tr>
+          </tbody>
+        </table>
+
+        <table class="table" *ngIf="displayPayee[3].values.length > 0">
+          <thead class="thead-light">
+            <th colspan="2">{{ displayPayee[3].Label }}</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of displayPayee[3].values">
+              <th scope="col">
+                {{ item.label.toUpperCase().replace("_", " ") }}
+              </th>
+              <th scope="col">{{ item.value }}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12">
+        <table class="table">
+          <thead class="thead-light">
+            <th colspan="2">Total</th>
+            <th scope="col">
+              {{ displayPayee[displayPayee.length - 1].total }}
+            </th>
+          </thead>
+        </table>
+      </div>
+    </div>
+
+    <div
+      class="col-md-12"
+      *ngIf="!loading && dynamicSummary && directAssessmentSummary"
+    >
+      <div style="overflow-y: scroll; height: 400px">
+        <div class="text text-success">
+          Your information has been received. A mail will be sent to you soon.
+        </div>
+        <table class="table" *ngIf="displayPayee.length > 0">
+          <thead class="thead-light">
+            <th colspan="2">Direct Assessment</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of displayPayee">
+              <th scope="col">{{ item.label }}</th>
+              <th scope="col">{{ item.value }}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12">
+        <table class="table">
+          <thead class="thead-light">
+            <th colspan="2">Total</th>
+            <th scope="col">
+              {{ displayPayee[displayPayee.length - 1].total }}
+            </th>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <div>
+      <button
+        style="position: relative; z-index: 3"
+        class="btn btn-primary"
+        (click)="exportAsPDF('pdfAssessment')"
+      >
+        Download
+      </button>
+    </div>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="printPDFS('pdfAssessment')"
+    >
+      Print
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-roustnded"
+      (click)="closeModal()"
+    >
+      Close
+    </button>
+    <button
+      type="button"
+      ngbAutofocus
+      class="btn btn-danger btn-rounded"
+      (click)="updateAssessment(-2)"
+    >
+      Dispute
+    </button>
+  </div>
+</ng-template>

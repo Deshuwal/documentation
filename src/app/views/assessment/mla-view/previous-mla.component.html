@@ -1,0 +1,313 @@
+
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3">
+    <div class="form-group float-left">
+      <input
+        id="email"
+        placeholder="Search"
+        [formControl]="searchControl"
+        class="form-control form-control-rounded"
+        type="email"
+      />
+    </div>
+
+    <a class="btn btn-primary float-right" href="#/assessment/motor-license-authority">
+      New Vehicle Registration
+    </a>
+  </div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="card o-hidden">
+      <ngx-datatable
+        *ngIf="registeredVehicles?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [scrollbarH]="true"
+        [limit]="10"
+        [rows]="registeredVehicles"
+      >
+        <ngx-datatable-column name="photo" [maxWidth]="100">
+          <ng-template ngx-datatable-header-template>
+            Serial Number
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.id }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>  Vehicle Name </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.vehicle_name }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Vehicle Color </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.vehicle_color }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Vehicle Chasis No. </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.vehicle_chasis }}
+          </ng-template>
+        </ngx-datatable-column>
+        
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Vehicle Plate No. </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.plate_no ? row.plate_no : "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Date Registered
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.created_at | date }}
+          </ng-template>
+        </ngx-datatable-column>
+        
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template>
+            Last Updated
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.updated_at }}
+          </ng-template>
+        </ngx-datatable-column>
+        
+        <ngx-datatable-column [width]="120">
+          <ng-template ngx-datatable-header-template> Actions </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <button
+              class="btn btn-wide btn-outline-secondary mr-3"
+              (click)="viewVehicleDetails(row)"
+            >
+              View
+            </button>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalConfirm let-modal>
+  <div
+    style="font-size: 0.4rem"
+    id="assessmentDoc"
+    #assessmentDoc
+    class="modal-body"
+  >
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+    </div>
+    <div *ngIf="!loading && !dynamicSummary" class="card-body">
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div>
+      
+
+      <div style="font-size: 0.7rem">
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+      </div>
+
+      <div class="text-center">
+        <img
+          src="../../../../assets/images/logo-.png"
+          class="my-1"
+          style="height: 45px"
+        />
+      </div>
+      <p
+        style="
+          color: green;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+        "
+      >
+        PLATEAU STATE GOVERNMENT
+      </p>
+      <div style="text-align: center">
+        <span
+          style="
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 1rem;
+          "
+          class="text-center mb-3 text-white"
+          >VEHICLE REGISTRATION</span
+        >
+      </div>
+      <table class="table">
+        <tbody>
+          
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE OWNER NAME</td>
+            <td colspan="1">
+              {{ assessmentForDisplay.vehicle_owner_name }}
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE OWNER TIN</td>
+            <td colspan="1">
+              {{ assessmentForDisplay.user_tin }}
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE NAME</td>
+            <td colspan="1">
+              {{ assessmentForDisplay.vehicle_name }}
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="3" style="font-weight: 700">CHASIS NUMBER</td>
+            <td colspan="1">{{ assessmentForDisplay.vehicle_chasis }}</td>
+          </tr>
+          
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE MODEL</td>
+            <td colspan="1">{{ assessmentForDisplay.vehicle_model }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE COLOUR</td>
+            <td colspan="1">{{ assessmentForDisplay.vehicle_color }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE TYPE</td>
+            <td colspan="1">{{ assessmentForDisplay.vehicle_type }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE ENGINE CAPACITY</td>
+            <td colspan="1">{{ assessmentForDisplay.engine_capacity }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE SITTER CAPACITY</td>
+            <td colspan="1">{{ assessmentForDisplay.seater_capacity }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE LOAD CAPACITY</td>
+            <td colspan="1">{{ assessmentForDisplay.load_capacity }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE GROSS CAPACITY</td>
+            <td colspan="1">{{ assessmentForDisplay.gross_weight }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" style="font-weight: 700">VEHICLE LICENSE TYPE</td>
+            <td colspan="1">{{ assessmentForDisplay.license_type }}</td>
+          </tr>
+          
+          <tr>
+            <td colspan="3" style="font-weight: 700">PLATE NUMBER</td>
+            <td colspan="1">{{ assessmentForDisplay.plate_no ? assessmentForDisplay.plate_no : "N/A" }}</td>
+          </tr>
+          
+          <tr>
+            <td colspan="3" style="font-weight: 700">Date Generated</td>
+            <td colspan="1">
+              {{
+                assessmentForDisplay.created_at == null
+                  ? "N/A"
+                  : assessmentForDisplay.created_at
+              }}
+            </td>
+          </tr>
+          
+          <tr>
+            <td colspan="3" style="font-weight: 700">Signature:</td>
+            <td style="padding-top: 20p" colspan="1"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="print('assessmentDoc')"
+    >
+      Print
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="download('assessmentDoc')"
+    >
+      Download
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('Cross click')"
+    >
+      Cancel
+    </button>
+  </div>
+</ng-template>

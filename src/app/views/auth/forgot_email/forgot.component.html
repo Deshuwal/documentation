@@ -1,0 +1,114 @@
+<div
+	class="card o-hidden"
+	[@animate]="{
+		value: '*',
+		params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+	}"
+>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="p-4">
+				<div class="auth-logo text-center mb-4">
+					<img height="100px" src="assets/images/logo.png" alt="" />
+				</div>
+				<h1 class="mb-3 text-18">Forgot Password</h1>
+				<form action="" [formGroup]="forgotForm">
+					<div *ngIf="stage == 1">
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input
+								formControlName="email"
+								placeholder="Enter registered email."
+								class="form-control form-control-rounded"
+								type="email"
+							/>
+						</div>
+						<btn-loading
+							id="btnLog"
+							btnClass="btn-primary btn-rounded btn-block mt-3"
+							(click)="sendResetRequest()"
+							[loadingText]="loadingText"
+							[loading]="loading"
+						>
+							Reset Password
+						</btn-loading>
+					</div>
+
+					<!-- 
+          <div *ngIf='stage == 2'>
+            <div class="form-group" *ngIf='stage == 2'>
+              <label for="email">Enter verificaiton code sent to {{forgotForm.value.phone}} </label>
+              <input formControlName='code' class="form-control form-control-rounded" type="phoneNumber">
+            </div>
+            <button (click)='submitForgot()' class="btn btn-primary btn-block btn-rounded mt-3">Submit</button>
+
+          </div> 
+          -->
+
+					<!-- 
+          <div *ngIf='stage==3'>
+            <div class="form-group" *ngIf='stage == 3'>
+              <label for="email">Enter new Password </label>
+              <input formControlName='password' class="form-control form-control-rounded" type="password">
+            </div>
+
+            <div class="form-group" *ngIf='stage == 3'>
+              <label for="email">Confirm Password </label>
+              <input formControlName='confirm_password' class="form-control form-control-rounded" type="password">
+            </div> 
+            <btn-loading id="btnLog" btnClass="btn-primary btn-rounded btn-block mt-3"  (click)='submitForgot()' [loadingText]="loadingText" [loading]="loading">
+              Submit
+            </btn-loading>
+          </div> 
+          -->
+				</form>
+				<div class="mt-3 text-center">
+					<a href="" class="text-muted" routerLink="/auth/signin">
+						<u>Sign in</u>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div
+			class="col-md-6 text-center"
+			style="
+				background-size: cover;
+				background-image: url(./assets/images/photo-long-3.jpg);
+			"
+		>
+			<div class="pr-3 auth-right">
+				<button
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/auth/forgot"
+					style="opacity: 0.9 !important"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Reset with phone
+				</button>
+				<!-- <button
+          style="opacity: 0.9 !important"
+          class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+          routerLink="/register/signup/nin"
+        >
+          Sign up with NIN (Faster)
+        </button> -->
+				<button
+					style="opacity: 0.9 !important"
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/auth/forgot_tin"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Reset with TIN
+				</button>
+				<button
+					style="opacity: 0.9 !important"
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/auth/signin"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Sign In
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

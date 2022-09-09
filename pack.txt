@@ -1,0 +1,4 @@
+the package.json indicate the various dependencies of the application
+thus indicate the theme used for the project and all it functionalities
+like for this a gull time is use from themeforest.com which setup the background
+on which this application is served and run

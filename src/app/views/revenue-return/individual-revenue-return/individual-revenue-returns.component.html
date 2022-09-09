@@ -1,0 +1,2162 @@
+<div
+  class=""
+  [@animate]="{
+    value: '*',
+    params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+  }"
+>
+  <app-breadcrumb></app-breadcrumb>
+  <div class="separator-breadcrumb border-top"></div>
+
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div *ngIf="!loading" class="">
+    <div class="card">
+      <div class="card-body">
+        <div *ngIf="activeStage == 0" class="alert alert-info">
+          This form will take about 3 minutes to complete.
+        </div>
+        <form
+          action=""
+          [formGroup]="preForm"
+          (ngSubmit)="goToStage(1, preForm)"
+        >
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="mda">MDA</label>
+                <input
+                  formControlName="mda"
+                  class="form-control"
+                  type="text"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="tax_item">Description</label>
+                <input
+                  formControlName="tax_item"
+                  class="form-control"
+                  type="text"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="payer_tin">Tax Payer Name</label>
+                <input
+                  formControlName="payer_name"
+                  class="form-control"
+                  type="text"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="payer_tin">Tax Payer TIN</label>
+                <input
+                  formControlName="payer_tin"
+                  class="form-control"
+                  type="number"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="payment_year">Enter Transaction Year</label>
+                <input
+                  formControlName="payment_year"
+                  class="form-control"
+                  [readonly]="activeStage != 0"
+                  [ngClass]="{
+                    'is-invalid': submitted && preform.payment_year.errors
+                  }"
+                  type="number"
+                />
+                <div
+                  *ngIf="submitted && preform.payment_year.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="preform.payment_year.errors.required">
+                    Transaction Year is required (Enter 0 if non).
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div *ngIf="activeStage == 0" class="col-md-12">
+              <div class="float-right">
+                <btn-loading
+                  type="submit"
+                  btnClass="btn-primary  btn-block mt-3"
+                >
+                  Continue
+                </btn-loading>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <div *ngIf="activeStage != 0">
+          <hr />
+          <h5 *ngIf="activeStage == 1" class="card-title" style="margin-bottom:10px">
+            PART A: Personal Particulars
+          </h5>
+          <h5 *ngIf="activeStage == 2" class="card-title" style="margin-bottom:10px">
+            PART B: Statement of Income for the Year Ended 31st December from employment
+          </h5>
+          <h5 *ngIf="activeStage == 3" class="card-title"  style="margin-bottom:10px">
+            PART C: Residence Status
+          </h5>
+          <h5 *ngIf="activeStage == 4" class="card-title" style="margin-bottom:10px">
+            PART D: Income from Businesses if any
+          </h5>
+
+          <div class="progress" style="margin-bottom:20px;">
+            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100" [style.width.%]="progressBar">
+              {{progressBar}}% Completion
+            </div>
+          </div>
+
+          <div *ngIf="activeStage == 1 && activeSubA == 0">
+            <form
+              action=""
+              [formGroup]="formA"
+              (ngSubmit)="submitPersonalForm(1)"
+            >
+              <div class="row">
+                <div class="col-md-2">
+                  <div class="form-group">
+                    <label for="title">Title <span class = "required-sign">*</span></label>
+                    <ngx-select-dropdown
+                      formControlName="title"
+                      placeholder="Select Title"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.title.errors
+                      }"
+                      [config]="selectConfig"
+                      [options]="titles"
+                    >
+                    </ngx-select-dropdown>
+                    <div *ngIf="submitted && forma.title.errors">
+                      <div
+                        *ngIf="forma.title.errors.required"
+                        class="text-danger"
+                      >
+                        Title is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="surname">Surname <span class = "required-sign">*</span></label>
+                    <input
+                      formControlName="surname"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.surname.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma.surname.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.employer.surname.errors.required">
+                        Surname is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="first_name">First Name <span class = "required-sign">*</span></label>
+                    <input
+                      formControlName="first_name"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.first_name.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma.first_name.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.employer.first_name.errors.required">
+                        First Name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="middle_name">Middle Name (optional)</label>
+                    <input
+                      formControlName="middle_name"
+                      class="form-control"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma.middle_name.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.employer.middle_name.errors.required">
+                        Middle Name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="dob">Date of Birth <span class = "required-sign">*</span></label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid': submitted && forma.dob.errors
+                        }"
+                        ngbDatepicker
+                        #payerDob="ngbDatepicker"
+                        placeholder="Date of Birth"
+                        formControlName="dob"
+                        readonly
+                      />
+                      <div class="input-group-append">
+                        <button
+                          class="btn btn-secondary"
+                          (click)="payerDob.toggle()"
+                          type="button"
+                        >
+                          <i class="icon-regular i-Calendar-4"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div *ngIf="submitted && forma.dob.errors">
+                      <div *ngIf="forma.dob.errors.ngbDate" class="text-danger">
+                        Valid Date of Birth is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="marital_status">Marital Status <span class = "required-sign">*</span></label>
+                    <select
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.marital_status.errors
+                      }"
+                      formControlName="marital_status"
+                    >
+                      <option value="">Choose Marital Status</option>
+                      <option value="single">Single</option>
+                      <option value="married">Married</option>
+                      <option value="divorced">Divorced</option>
+                      <option value="seperate">Seperate</option>
+                      <option value="widow">Widow</option>
+                    </select>
+                    <div
+                      *ngIf="submitted && forma.marital_status.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.marital_status.errors.required">
+                        Marital status is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Email <span class = "required-sign">*</span></label>
+                    <input
+                      formControlName="email"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.email.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma.email.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.email.errors.required">
+                        Email address is required.
+                      </div>
+                      <div *ngIf="forma.email.errors.email">
+                        Email address is not valid.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="phone">Phone Number <span class = "required-sign">*</span></label>
+                    <input
+                      formControlName="phone"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.phone.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma.phone.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.phone.errors.required">
+                        Phone Number is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="address">Address <span class = "required-sign">*</span></label>
+                    <input
+                      formControlName="address"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.address.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma.address.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.address.errors.required">
+                        Current address is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="nationality">Nationality <span class = "required-sign">*</span></label>
+                    <ngx-select-dropdown
+                      formControlName="nationality"
+                      placeholder="Select Nationality"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.nationality.errors
+                      }"
+                      [config]="searchSelectConfig"
+                      [options]="countries"
+                    >
+                    </ngx-select-dropdown>
+                    <div *ngIf="submitted && forma.nationality.errors">
+                      <div
+                        *ngIf="forma.nationality.errors.required"
+                        class="text-danger"
+                      >
+                        Nationality is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="employer">Employment Status <span class = "required-sign">*</span></label>
+                    <select
+                        class="form-control"
+                        formControlName="employment_status"
+                        [ngClass]="{
+                          'is-invalid': submitted && forma.employment_status.errors
+                        }"
+                      >
+                        <option value="">Select option</option>
+                        <option value="Self Employed">Self Employed</option>
+                        <option value="Employed">Employed</option>
+                        <option value="Non Employed">Non Employed</option>
+                      </select>
+                      <div
+                        *ngIf="submitted && forma.employment_status.errors"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="forma.employment_status.errors.required">
+                          Please Select Employment Status.
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="employer">Name of Employer</label>
+                    <input
+                      formControlName="employer"
+                      class="form-control"
+                      type="text"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.employer.errors
+                      }"
+                    />
+                    <div
+                      *ngIf="submitted && forma.employer.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.employer.errors.required">
+                        Employer name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="employer_address">Company Address</label>
+                    <input
+                      formControlName="employer_address"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma.employer_address.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma.employer_address.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma.employer_address.errors.required">
+                        Employer address is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle text-danger">
+                        If any change in the above circumstances had occurred
+                        during or since the year ended 31st December:
+                      </h6>
+                      <div class="form-group">
+                        <label for="change">Give particulars:</label>
+                        <textarea
+                          formControlName="change"
+                          class="form-control"
+                          type="text"
+                        ></textarea>
+                      </div>
+                      <div class="px-6 mt-5">
+                        <div class="row border">
+                          <div class="col-md-12">
+                            Date of arrival in or departure from Nigeria (For Foreign National)
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                              <label for="arrival_date">Arrival Dtae</label>
+                              <div class="input-group">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  ngbDatepicker
+                                  #ArrivalDate="ngbDatepicker"
+                                  placeholder="Date of Arrival"
+                                  formControlName="arrival_date"
+                                  readonly
+                                />
+                                <div class="input-group-append">
+                                  <button
+                                    class="btn btn-secondary"
+                                    (click)="ArrivalDate.toggle()"
+                                    type="button"
+                                  >
+                                    <i class="icon-regular i-Calendar-4"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                              <label for="departure_date">Departure Dtae</label>
+                              <div class="input-group">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  ngbDatepicker
+                                  #DepartureDate="ngbDatepicker"
+                                  placeholder="Date of Departure"
+                                  formControlName="departure_date"
+                                  readonly
+                                />
+                                <div class="input-group-append">
+                                  <button
+                                    class="btn btn-secondary"
+                                    (click)="DepartureDate.toggle()"
+                                    type="button"
+                                  >
+                                    <i class="icon-regular i-Calendar-4"></i>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mt-5">
+                        <div>
+                          Residence at 1st January {{ nextTxYear }} 
+                          <span class="small text-danger">(Give full address, not a P.O. Box)</span>
+                          <span class = "required-sign">*</span>
+                        </div>
+                        <input
+                          formControlName="residential_address"
+                          class="form-control"
+                          type="text"
+                          [ngClass]="{
+                            'is-invalid': submitted && forma.residential_address.errors
+                          }"
+                        />
+                        <div *ngIf="submitted && forma.residential_address.errors">
+                          <div
+                            *ngIf="forma.residential_address.errors.required"
+                            class="text-danger"
+                          >
+                          Residential Address Is Required.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <!-- <div>
+                    <button class="btn btn-outline-secondary">Previous</button>
+                  </div> -->
+                  <div class="float-right">
+                    <btn-loading type="submit" btnClass="btn-primary mt-3">
+                      Next
+                    </btn-loading>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div *ngIf="activeStage == 1 && activeSubA == 1">
+            <form
+              action=""
+              [formGroup]="formA2"
+              (ngSubmit)="submitPersonalForm(2)"
+            >
+              <h4>Provide Spouse Details (For Married)</h4>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="name">Full Name of Spouse</label>
+                    <input
+                      formControlName="name"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma2.name.errors
+                      }"
+                      type="text"
+                    />
+                    <div *ngIf="submitted && forma2.name.errors">
+                      <div
+                        *ngIf="forma2.name.errors.required"
+                        class="text-danger"
+                      >
+                        Spouse name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid': submitted && forma2.dob.errors
+                        }"
+                        ngbDatepicker
+                        #payerDob="ngbDatepicker"
+                        placeholder="Date of Birth"
+                        formControlName="dob"
+                        readonly
+                      />
+                      <div class="input-group-append">
+                        <button
+                          class="btn btn-secondary"
+                          (click)="payerDob.toggle()"
+                          type="button"
+                        >
+                          <i class="icon-regular i-Calendar-4"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div *ngIf="submitted && forma2.dob.errors">
+                      <div
+                        *ngIf="forma2.dob.errors.ngbDate"
+                        class="text-danger"
+                      >
+                        Spouse date of birth is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="employer">Employment Status</label>
+                    <select
+                        class="form-control"
+                        formControlName="spouse_employment_status"
+                        [ngClass]="{
+                          'is-invalid': submitted && forma2.spouse_employment_status.errors
+                        }"
+                      >
+                        <option value="">Select option</option>
+                        <option value="Self Employed">Self Employed</option>
+                        <option value="Employed">Employed</option>
+                        <option value="Non Employed">Non Employed</option>
+                      </select>
+                      <div
+                        *ngIf="submitted && forma2.spouse_employment_status.errors"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="forma2.spouse_employment_status.errors.required">
+                          Please Select Employment Status.
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="form-group">
+                    <label for="employer">Name of Employer</label>
+                    <input
+                      formControlName="employer"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma2.employer.errors
+                      }"
+                      type="text"
+                    />
+                    <div *ngIf="submitted && forma2.employer.errors">
+                      <div
+                        *ngIf="forma2.employer.errors.required"
+                        class="text-danger"
+                      >
+                        Name of employer is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="employer_address">Company Address</label>
+                    <input
+                      formControlName="employer_address"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && forma2.employer_address.errors
+                      }"
+                      type="text"
+                    />
+                    <div *ngIf="submitted && forma2.employer_address.errors">
+                      <div
+                        *ngIf="forma2.employer_address.errors.required"
+                        class="text-danger"
+                      >
+                        Employer address is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="form-group">
+                    <label for="income">Annual Income</label>
+                    <input
+                      formControlName="income"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma2.income.errors
+                      }"
+                      type="number"
+                    />
+                    <div *ngIf="submitted && forma2.income.errors">
+                      <div
+                        *ngIf="forma2.income.errors.required"
+                        class="text-danger"
+                      >
+                        Spouse Income is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="float-right">
+                    <button type="button" (click)="previous(1)" class="btn btn-outline-primary">Previus</button>
+                    &nbsp;&nbsp;
+                    <btn-loading type="submit" btnClass="btn-primary  btn-block mt-3">Next</btn-loading>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div *ngIf="activeStage == 1 && activeSubA == 2">
+            <h6>Provide Children Details If Any</h6>
+            <div *ngIf="children.length" class="mb-5">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date Of Birth</th>
+                    <th scope="col">Income</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let child of children">
+                    <th scope="row">{{ child.no }}</th>
+                    <td>{{ child.name }}</td>
+                    <td>{{ child.dob }}</td>
+                    <td>{{ child.income }}</td>
+                    <td>
+                      <button
+                        class="btn btn-sm btn-outline-secondary mr-3"
+                        (click)="handleEditChild(child.index)"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        class="btn btn-sm btn-danger"
+                        (click)="handleRemoveChild(child.index)"
+                      >
+                        Remove
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <form action="" [formGroup]="formA3" (ngSubmit)="addChild()">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="name">Full Name of Child</label>
+                    <input
+                      formControlName="name"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma3.name.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma3.name.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma3.name.errors.required">
+                        Name is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid': submitted && forma3.dob.errors
+                        }"
+                        ngbDatepicker
+                        #payerDob="ngbDatepicker"
+                        placeholder="Date of Birth"
+                        formControlName="dob"
+                        readonly
+                      />
+                      <div class="input-group-append">
+                        <button
+                          class="btn btn-secondary"
+                          (click)="payerDob.toggle()"
+                          type="button"
+                        >
+                          <i class="icon-regular i-Calendar-4"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div *ngIf="submitted && forma3.dob.errors">
+                      <div
+                        *ngIf="forma3.dob.errors.ngbDate"
+                        class="text-danger"
+                      >
+                        Valid date is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-10">
+                  <div class="form-group">
+                    <label for="establishment_address"
+                      >Address of Educational Establishment / Workplace</label
+                    >
+                    <input
+                      formControlName="establishment_address"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && forma3.establishment_address.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && forma3.establishment_address.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma3.establishment_address.errors.required">
+                        Address of Educational Establishment / Workplace is
+                        required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-2">
+                  <div class="form-group">
+                    <label for="income">Annual Income</label>
+                    <input
+                      formControlName="income"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && forma3.income.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && forma3.income.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="forma3.income.errors.required">
+                        Income is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class = "row">
+                    <div class="col-6">
+                      <button type="submit" class="btn btn-outline-secondary">
+                        Add Child
+                      </button>
+                    </div>
+
+                    <div class="col-6">
+                      <div class="float-right">
+                        <button type="button" (click)="previous(2)" class="btn btn-outline-primary">Previus</button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn btn-primary" (click)="submitPersonalForm()">
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- FORM B -->
+          <div *ngIf="activeStage == 2">
+            <form
+              action=""
+              [formGroup]="formB"
+              (ngSubmit)="goToStage(3, formB)"
+            >
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <div class="form-group mb-3">
+                    <label for="income_basic_salary">Basic Salary (Annually) <span class = "required-sign">*</span></label>
+                    <input
+                      formControlName="income_basic_salary"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formb.income_basic_salary.errors
+                      }"
+                      type="number" 
+                    />
+                    <div
+                      *ngIf="submitted && formb.income_basic_salary.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.income_basic_salary.errors.required">
+                        Basic Salary is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="income_housing">Housing Allowance</label>
+                    <input
+                      formControlName="income_housing"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.income_housing.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.income_housing.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.income_housing.errors.required">
+                        Housing allowance is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="income_transport">Transport Allowance</label>
+                    <input
+                      formControlName="income_transport"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.income_transport.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.income_transport.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.income_transport.errors.required">
+                        Transport allowance is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="income_all_brought_in_from_outside"
+                      >Income received in or brought into Nigeria from all
+                      sources</label
+                    >
+                    <input
+                      formControlName="income_all_brought_in_from_outside"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted &&
+                          formb.income_all_brought_in_from_outside.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="
+                        submitted &&
+                        formb.income_all_brought_in_from_outside.errors
+                      "
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="
+                          formb.income_all_brought_in_from_outside.errors
+                            .required
+                        "
+                      >
+                        Income received from outside is required (Enter 0 if
+                        non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="income_all_earned_aggregate"
+                      >Aggregate earned income from all sources <span class = "required-sign">*</span></label
+                    >
+                    <input
+                      formControlName="income_all_earned_aggregate"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formb.income_all_earned_aggregate.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="
+                        submitted && formb.income_all_earned_aggregate.errors
+                      "
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="
+                          formb.income_all_earned_aggregate.errors.required
+                        "
+                      >
+                        Aggregate earned income from all sources is required
+                        (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="income_others"
+                      >Income arising from sources not included above.</label
+                    >
+                    <input
+                      formControlName="income_others"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.income_others.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.income_others.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.income_others.errors.required">
+                        Income from other sources is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="earned_dividends"
+                      >Dividends from Nigerian Companies</label
+                    >
+                    <input
+                      formControlName="earned_dividends"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.earned_dividends.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.earned_dividends.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.earned_dividends.errors.required">
+                        Dividends from Nigerian Companies is required (Enter 0
+                        if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="other_dividends">Other Dividends</label>
+                    <input
+                      formControlName="other_dividends"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.other_dividends.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.other_dividends.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.other_dividends.errors.required">
+                        Other Dividends is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="interest">Earned Interest</label>
+                    <input
+                      formControlName="interest"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.interest.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.interest.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.interest.errors.required">
+                        Earned interest is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                  <div class="form-group mb-3">
+                    <label for="deduction_pension">Pension <span class = "required-sign">*</span></label>
+                    <!-- <input
+                      formControlName="deduction_pension"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formb.deduction_pension.errors
+                      }"
+                      type="number"
+                    /> -->
+                    <select
+                        class="form-control"
+                        formControlName="deduction_pension"
+                        [ngClass]="{
+                          'is-invalid': submitted && formb.deduction_pension.errors
+                        }"
+                      >
+                        <option value="">Select option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    <div
+                      *ngIf="submitted && formb.deduction_pension.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.deduction_pension.errors.required">
+                        please Select Pension Option.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="deduction_nhf">NHF  <span class = "required-sign">*</span></label>
+                    <!-- <input
+                      formControlName="deduction_nhf"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.deduction_nhf.errors
+                      }"
+                      type="number"
+                    /> -->
+                    <select
+                        class="form-control"
+                        formControlName="deduction_nhf"
+                        [ngClass]="{
+                          'is-invalid': submitted && formb.deduction_nhf.errors
+                        }"
+                      >
+                        <option value="">Select option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                      </select>
+                    <div
+                      *ngIf="submitted && formb.deduction_nhf.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.deduction_nhf.errors.required">
+                        Please Select NHF Option.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="deduction_nhis">NHIS</label>
+                    <input
+                      formControlName="deduction_nhis"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.deduction_nhis.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.deduction_nhis.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.deduction_nhis.errors.required">
+                        NHIS is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="deduction_life_premium">Life Premium</label>
+                    <input
+                      formControlName="deduction_life_premium"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formb.deduction_life_premium.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.deduction_life_premium.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.deduction_life_premium.errors.required">
+                        Life Premium is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="gratuities">Gratuities</label>
+                    <input
+                      formControlName="gratuities"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.gratuities.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.gratuities.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.gratuities.errors.required">
+                        Gratuities is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="rents">Rents</label>
+                    <input
+                      formControlName="rents"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.rents.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.rents.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.rents.errors.required">
+                        Rents paid is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="deduction_voluntary_contribution"
+                      >Do you participate in voluntary contribution? (Enter
+                      amount)</label
+                    >
+                    <input
+                      formControlName="deduction_voluntary_contribution"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted &&
+                          formb.deduction_voluntary_contribution.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="
+                        submitted &&
+                        formb.deduction_voluntary_contribution.errors
+                      "
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="
+                          formb.deduction_voluntary_contribution.errors.required
+                        "
+                      >
+                        Voluntary contribution is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="deduction_voluntary_contribution_percentage"
+                      >If yes to the above, what percentage?</label
+                    >
+                    <input
+                      formControlName="deduction_voluntary_contribution_percentage"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted &&
+                          formb.deduction_voluntary_contribution_percentage
+                            .errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="
+                        submitted &&
+                        formb.deduction_voluntary_contribution_percentage.errors
+                      "
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="
+                          formb.deduction_voluntary_contribution_percentage
+                            .errors.required
+                        "
+                      >
+                        Voluntary contribution percentage is required (Enter 0
+                        if non).
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="payer_bvn">BVN</label>
+                    <input
+                      formControlName="payer_bvn"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formb.payer_bvn.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formb.payer_bvn.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formb.payer_bvn.errors.required">
+                        BVN is required (Enter 0 if non).
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <div class="d-flex flex-row justify-content-between">
+                      <div></div>
+                      <div>
+                        <button type="button" (click)="previous(3)" class="btn btn-outline-primary">Previus</button>
+                        &nbsp;&nbsp;
+                        <button type="submit" class="btn btn-primary">
+                          Next
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- FORM C -->
+          <div *ngIf="activeStage == 3">
+            <form action="" [formGroup]="formC">
+              <div>
+                <div>
+
+                  <!-- Convert to checkbox -->
+                  <div class="form-group">
+                    <h6 class="text-success">
+                      Mandatory disclosure on accommodation
+                    </h6>
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            formControlName="residence_status"
+                            value="Landlord"
+                            checked
+                          />
+                          <label class="form-check-label"> Landlord </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            formControlName="residence_status"
+                            value="Tenant"
+                          />
+                          <label class="form-check-label"> Tenant </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            formControlName="residence_status"
+                            value="Other"
+                          />
+                          <label class="form-check-label"> Other </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      *ngIf="submitted && formc.residence_status.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.residence_status.errors.required">
+                        Residence Status is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="rent_paid">Annual Rent Paid</label>
+                    <input
+                      formControlName="rent_paid"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formc.rent_paid.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formc.rent_paid.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.rent_paid.errors.required">
+                        Rent paid is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="owner">Name of Landlord/Landlady</label>
+                    <input
+                      formControlName="owner"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formc.owner.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && formc.owner.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.owner.errors.required">
+                        Name of Landlord/Landlady.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="owner_address"
+                      >Address of Landlord/Landlady</label
+                    >
+                    <input
+                      formControlName="owner_address"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formc.owner_address.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && formc.owner_address.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.owner_address.errors.required">
+                        Address of Landlord/Landlady.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="accommodation_type">Accommodation Type <span class = "required-sign">*</span></label>
+                    <input
+                      formControlName="accommodation_type"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                        submitted && formc.accommodation_type.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && formc.accommodation_type.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.accommodation_type.errors.required">
+                        Accommodation Type is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <label for="rental_period_from">Rental Period From <span class = "required-sign">*</span></label>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          [ngClass]="{
+                            'is-invalid': submitted && formc.rental_period_from.errors
+                          }"
+                          ngbDatepicker
+                          #rentPeriodFrom="ngbDatepicker"
+                          placeholder="From Date"
+                          formControlName="rental_period_from"
+                          readonly
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-secondary"
+                            (click)="rentPeriodFrom.toggle()"
+                            type="button"
+                          >
+                            <i class="icon-regular i-Calendar-4"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div *ngIf="submitted && formc.rental_period_from.errors">
+                        <div
+                          *ngIf="formc.rental_period_from.errors.ngbDate"
+                          class="text-danger"
+                        >
+                          Period from is required.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="rental_period_to">Rental Period To <span class = "required-sign">*</span></label>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          [ngClass]="{
+                            'is-invalid': submitted && formc.rental_period_to.errors
+                          }"
+                          ngbDatepicker
+                          #rentPeriodTo="ngbDatepicker"
+                          placeholder="To Date"
+                          formControlName="rental_period_to"
+                          readonly
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-secondary"
+                            (click)="rentPeriodTo.toggle()"
+                            type="button"
+                          >
+                            <i class="icon-regular i-Calendar-4"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div *ngIf="submitted && formc.rental_period_to.errors">
+                        <div
+                          *ngIf="formc.rental_period_to.errors.ngbDate"
+                          class="text-danger"
+                        >
+                        Period to is required.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="rent_paid_by_employer"
+                      >Rent paid by Employer</label
+                    >
+                    <input
+                      formControlName="rent_paid_by_employer"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formc.rent_paid_by_employer.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formc.rent_paid_by_employer.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.rent_paid_by_employer.errors.required">
+                        Rent paid by Employer is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="accommodation_location"
+                      >Location of accommodation <span class = "required-sign">*</span></label
+                    >
+                    <input
+                      formControlName="accommodation_location"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formc.accommodation_location.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && formc.accommodation_location.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.accommodation_location.errors.required">
+                        Location of accommodation is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <h6 class="text-danger">Deductions</h6>
+
+                  <div class="form-group">
+                    <label for="deduction_paye_by_employer">
+                      PAYE paid by employer
+                      <span class="small text-danger"
+                        >If you don’t fill this, we assume your employer didn’t
+                        pay PAYE on your behalf</span
+                      >
+                    </label>
+                    <input
+                      formControlName="deduction_paye_by_employer"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formc.deduction_paye_by_employer.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="
+                        submitted && formc.deduction_paye_by_employer.errors
+                      "
+                      class="invalid-feedback"
+                    >
+                      <div
+                        *ngIf="formc.deduction_paye_by_employer.errors.required"
+                      >
+                        PAYE paid by employer is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="deduction_withholding">Withholding Tax</label>
+                    <input
+                      formControlName="deduction_withholding"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formc.deduction_withholding.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formc.deduction_withholding.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.deduction_withholding.errors.required">
+                        Withholding tax is required.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <div class="my-3">
+
+              <hr />
+              <h5>Domestic Servants</h5>
+
+              <div *ngIf="domesticservants.length" class="mb-5">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Residential Address</th>
+                      <th scope="col">Amount Paid</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let dservant of domesticservants">
+                      <th scope="row">{{ dservant.no }}</th>
+                      <td>{{ dservant.name_of_domestic_staff }}</td>
+                      <td>{{ dservant.address_of_domestic_staff }}</td>
+                      <td>{{ dservant.salary_of_domestic_staff }}</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-outline-secondary mr-3"
+                          (click)="editDomesticServant(dservant.index)"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          class="btn btn-sm btn-danger"
+                          (click)="removeDomesticServant(dservant.index)"
+                        >
+                          Remove
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <form action="" [formGroup]="formC1" (ngSubmit)="addDomesticServant()">
+                <div class="row">
+
+                    <div class="form-group col-md-4">
+                      <label for="name_of_domestic_staff"
+                        >Name</label
+                      >
+                      <input
+                        formControlName="name_of_domestic_staff"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid':
+                            submitted && formc.name_of_domestic_staff.errors
+                        }"
+                        type="text"
+                      />
+                      <div
+                        *ngIf="submitted && formc.name_of_domestic_staff.errors"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="formc.name_of_domestic_staff.errors.required">
+                          Name of Domestic Servants is required.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                      <label for="address_of_domestic_staff"
+                        >Residential Address</label
+                      >
+                      <input
+                        formControlName="address_of_domestic_staff"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid':
+                            submitted && formc.address_of_domestic_staff.errors
+                        }"
+                        type="text"
+                      />
+                      <div
+                        *ngIf="
+                          submitted && formc.address_of_domestic_staff.errors
+                        "
+                        class="invalid-feedback"
+                      >
+                        <div
+                          *ngIf="formc.address_of_domestic_staff.errors.required"
+                        >
+                          Address of Domestic Servants is required.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                      <label for="salary_of_domestic_staff"
+                        >Amount Paid</label
+                      >
+                      <input
+                        formControlName="salary_of_domestic_staff"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid':
+                            submitted && formc.salary_of_domestic_staff.errors
+                        }"
+                        type="number"
+                      />
+                      <div
+                        *ngIf="submitted && formc.salary_of_domestic_staff.errors"
+                        class="invalid-feedback"
+                      >
+                        <div
+                          *ngIf="formc.salary_of_domestic_staff.errors.required"
+                        >
+                          Amount Paid to Domestic Servants is required.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <div class="form-group">
+                        <div class="float-left">
+                          <button type="submit" class="btn btn-outline-primary">
+                            Add Domestic Servant
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+              </form>
+
+              <hr />
+              <h5>Vehicles</h5>
+
+              <div *ngIf="cars.length">
+                <h6>Owned Cars</h6>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Brand</th>
+                      <th scope="col">Model</th>
+                      <th scope="col">Year</th>
+                      <th scope="col">Year of Purchase</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let car of cars">
+                      <th scope="row">{{ car.no }}</th>
+                      <td>{{ car.vehicle_brand }}</td>
+                      <td>{{ car.vehicle_model }}</td>
+                      <td>{{ car.make_year }}</td>
+                      <td>{{ car.purchase_date }}</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-outline-secondary mr-3"
+                          (click)="editCar(car.index)"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          class="btn btn-sm btn-danger"
+                          (click)="removeCar(car.index)"
+                        >
+                          Remove
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <form action="" [formGroup]="formC2" (ngSubmit)="addCar()">
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group mb-3">
+                      <label for="vehicle_brand">Brand</label>
+                      <input
+                        formControlName="vehicle_brand"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid': addingCar && formc2.vehicle_brand.errors
+                        }"
+                        type="text"
+                      />
+                      <div
+                        *ngIf="addingCar && formc2.vehicle_brand.errors"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="formc2.vehicle_brand.errors.required">
+                          Vehicle brand is required.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <label for="vehicle_model">Model</label>
+                      <input
+                        formControlName="vehicle_model"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid': addingCar && formc2.vehicle_model.errors
+                        }"
+                        type="text"
+                      />
+                      <div
+                        *ngIf="addingCar && formc2.vehicle_model.errors"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="formc2.vehicle_model.errors.required">
+                          Vehicle model is required.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group mb-3">
+                      <label for="make_year">Make Year</label>
+                      <input
+                        formControlName="make_year"
+                        class="form-control"
+                        [ngClass]="{
+                          'is-invalid': addingCar && formc2.make_year.errors
+                        }"
+                        type="number"
+                      />
+                      <div
+                        *ngIf="addingCar && formc2.make_year.errors"
+                        class="invalid-feedback"
+                      >
+                        <div *ngIf="formc2.make_year.errors.required">
+                          Vehicle year is required.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <label for="purchase_date">Date of Purchase</label>
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          [ngClass]="{
+                            'is-invalid':
+                            addingCar && formc2.purchase_date.errors
+                          }"
+                          ngbDatepicker
+                          #purchaseDate="ngbDatepicker"
+                          placeholder="Date of Birth"
+                          formControlName="purchase_date"
+                          readonly
+                        />
+                        <div class="input-group-append">
+                          <button
+                            class="btn btn-secondary"
+                            (click)="purchaseDate.toggle()"
+                            type="button"
+                          >
+                            <i class="icon-regular i-Calendar-4"></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div *ngIf="addingCar && formc2.purchase_date.errors">
+                        <div
+                          *ngIf="formc2.purchase_date.errors.ngbDate"
+                          class="text-danger"
+                        >
+                          Valid date is required.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="form-group">
+                      <div class="float-left">
+                        <button type="submit" class="btn btn-outline-primary">
+                          Add Vehicle
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </form>
+
+              <hr>
+              <h4>PART D: Income from Businesses if any</h4>
+
+              <div *ngIf="businesses.length">
+                <h6>Owned Businesses</h6>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Business</th>
+                      <th scope="col">Category</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Revenue</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let business of businesses">
+                      <th scope="row">{{ business.no }}</th>
+                      <td>{{ business.name_of_business }}</td>
+                      <td>{{ business.business_category.description }}</td>
+                      <td>{{ business.business_type.description }}</td>
+                      <td>{{ business.amount_made_from_business }}</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-outline-secondary mr-3"
+                          (click)="editBusiness(business.index)"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          class="btn btn-sm btn-danger"
+                          (click)="removeBusiness(business.index)"
+                        >
+                          Remove
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <form action="" [formGroup]="formD" (ngSubmit)="addBusiness()">
+                <div>  
+                  <div class="form-group">
+                    <label for="name_of_business"
+                      >Business Name</label
+                    >
+                    <input
+                      formControlName="name_of_business"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid':
+                          submitted && formd.name_of_business.errors
+                      }"
+                      type="text"
+                    />
+                    <div
+                      *ngIf="submitted && formd.name_of_business.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formc.name_of_business.errors.required">
+                        Business name is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="business_category">Business Category</label>
+                        <ngx-select-dropdown
+                          *ngIf="activeStage == 3"
+                          tabindex="0"
+                          [multiple]="false"
+                          formControlName="business_category"
+                          [config]="businessCategoryConfig"
+                          [options]="businesscategories"
+                          [ngClass]="{
+                            'border-danger':
+                              submitted && formd.business_category.errors
+                          }"
+                        >
+                        </ngx-select-dropdown>
+                        <input
+                          *ngIf="activeStage != 3"
+                          class="form-control"
+                          type="text"
+                          [value]="formd.value.business_category.description || ''"
+                          readonly
+                        />
+                        <div *ngIf="submitted && formd.business_category.errors">
+                          <div
+                            *ngIf="formd.business_category.errors.required"
+                            class="text-danger"
+                          >
+                            Select Business Category
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="business_type">Business Type</label>
+                        <ngx-select-dropdown
+                          *ngIf="activeStage == 3"
+                          tabindex="0"
+                          [multiple]="false"
+                          formControlName="business_type"
+                          [config]="businessTypeConfig"
+                          [options]="businesstypes"
+                          [ngClass]="{
+                            'border-danger': submitted && formd.business_type.errors
+                          }"
+                        >
+                        </ngx-select-dropdown>
+                        <input
+                          *ngIf="activeStage != 3"
+                          class="form-control"
+                          type="text"
+                          [value]="formd.value.business_type.description || ''"
+                          readonly
+                        />
+                        <div *ngIf="submitted && formd.business_type.errors">
+                          <div
+                            *ngIf="formd.business_type.errors.required"
+                            class="text-danger"
+                          >
+                            Select Business Type
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="amount_made_from_business">Annual Revenue</label>
+                    <input
+                      formControlName="amount_made_from_business"
+                      class="form-control"
+                      [ngClass]="{
+                        'is-invalid': submitted && formd.amount_made_from_business.errors
+                      }"
+                      type="number"
+                    />
+                    <div
+                      *ngIf="submitted && formd.amount_made_from_business.errors"
+                      class="invalid-feedback"
+                    >
+                      <div *ngIf="formd.amount_made_from_business.errors.required">
+                        Vehicle year is required.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <button type="submit" class="btn btn-outline-primary">
+                        Add Business
+                      </button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
+
+            <div class="border-top py-3">
+              <div class="float-right">
+                <button type="button" (click)="previous(4)" class="btn btn-outline-primary">Previus</button>
+                &nbsp;&nbsp;
+                <btn-loading
+                  type="button"
+                  btnClass="btn btn-primary"
+                  [loading]="generating"
+                  loadingText="Saving..."
+                  (click)="generateAssessment()"
+                >
+                  Submit Assessment
+                </btn-loading>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

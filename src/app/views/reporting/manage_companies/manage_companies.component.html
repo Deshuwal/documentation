@@ -1,0 +1,386 @@
+<!-- <div class="breadcrumb">
+  <h1>Manage Companies</h1>
+  <ul>
+    <li>Manage all companies</li>
+  </ul>
+</div> -->
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div style="display: flex; justify-content: space-between">
+  <div>
+    <h4 class="pull-right float-left">Total Companies: {{ total_count | number }}</h4>
+  </div>
+
+  <div>
+    <a  (click)='exportToExcel()' style='color:white' class="btn btn-primary"   
+      >Export Results</a
+    >
+
+    
+   <a id="downloadAnchorElem" style="display:none"></a>
+  </div>
+</div>
+
+<div style="padding: 1rem" class="card card-mediaQuery" *ngIf="!loading">
+  <div
+    style="display: flex; justify-content: space-between; align-items: center"
+  >
+          
+<p>From:</p>
+<input type="date" [(ngModel)]="from" required />
+<p>To:</p>
+<input type="date" [(ngModel)]="to" required />
+
+
+  <input
+    placeholder="Search by Name, Phone or Tin"
+    [(ngModel)]="tinOrPhoneNumberField"
+    class="form-control"
+    type="text"
+    style="width: 40%" 
+  />  
+  <button
+    class="btn btn-primary"
+    (click)="filterRecord()"
+    *ngIf="!searching"
+    style="margin-left: 10px"
+  >
+    Submit
+  </button>
+  <button class="btn btn-primary" *ngIf="searching" style="margin-left: 10px">
+    Please wait...
+  </button>
+
+   
+  </div>
+
+
+
+
+
+
+  
+</div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3"></div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="card o-hidden">
+      <ngx-datatable
+        
+
+
+               
+      class="material"
+      [rows]="assessments"  
+      [headerHeight]="50" 
+      [scrollbarH]="true"
+      [footerHeight]="50"
+      [columnMode]="force"
+      rowHeight="auto"
+      [externalPaging]="true"
+      [count]="pagination.totalItemCount"
+      [offset]="pagination.currentPage"
+      [limit]="pagination.displayPerPageCount"
+      (page)="setPage($event)"
+
+      >
+        <ngx-datatable-column name="photo" [maxWidth]="100">
+          <ng-template ngx-datatable-header-template> S/N </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.sn }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Company Name
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{
+              (row.company_name !== null && row.company_name.trim()) ||
+                capitalise(row.company_name)
+            }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> TIN No. </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.tin }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Phone Number
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.office_number }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Registration Number
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.rc_no || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template>
+            Date Registered
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.created_at | date: "medium" }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [flexGrow]="1" *ngIf="userProfile.role != 5">
+          <ng-template ngx-datatable-header-template> Action </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          ><span>
+           
+            <button
+              class="btn btn-primary text-white btn-rounded"
+              [routerLink]="['/setup/companies', 'preview-company', row.id]"
+              style="color: #000"
+            >
+          
+              View
+            </button>
+            </span>
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="1" *ngIf="userProfile.role != 5">
+          <ng-template ngx-datatable-header-template> Action </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          ><span>
+            <button
+              (click)="openEditCompanyModal(editCompanyModal, row)"
+              class="btn btn-primary padding text-white btn-rounded mb-3 mb-sm-0 mr-0 mr-sm-3"
+            >
+              Edit
+            </button>
+
+            
+            </span>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<ng-template #editCompanyModal let-modal>
+  <div class="modal-header bg-primary">
+    <h4 class="modal-title text-white text-center" id="modal-basic-title">
+      Edit Company
+    </h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div *ngIf="loading" class="col-md-12 text-center" style="margin-top: 5%">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+  <div *ngIf="!loading">
+    <form [formGroup]="editCompanyForm">
+      <div class="modal-body">
+        <div class="mb-2">
+          <label for="company_name" class="form-label">Company Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="company_name"
+            placeholder="Name"
+            aria-label="name"
+            aria-describedby="addon-wrapping"
+            id="company_name"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="tin" class="form-label">Tin no. </label>
+          <input
+            type="text"
+            formControlName="tin"
+            class="form-control"
+            placeholder="TIN (Leave blank if none)"
+            aria-label="tin"
+            aria-describedby="addon-wrapping"
+            required
+            id="tin"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="rc_no" class="form-label">CAC Registration No. *</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Registration No."
+            formControlName="rc_no"
+            aria-label="Registration No."
+            aria-describedby="addon-wrapping"
+            id="rc_no"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="employee_count" class="form-label"
+            >Number of Employees</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            formControlName="employee_count"
+            placeholder="No of Employees"
+            aria-label="No of Employees"
+            aria-describedby="addon-wrapping"
+            id="employee_count"
+          />
+        </div>
+
+        <div class="mb-2">
+          <label for="state" class="form-label">State of Residence</label>
+          <select
+            class="form-control"
+            formControlName="state"
+            (ngModelChange)="getSelectedState()"
+            id="state"
+          >
+            <option value="">Choose State</option>
+            <option *ngFor="let state of states" value="{{ state }}">
+              {{ state }}
+            </option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="lga" class="form-label">LGAof Residence</label>
+          <select formControlName="lga" id="lga" class="form-control">
+            <option value="">Choose LGAs</option>
+            <option *ngFor="let lga of lgas" value="{{ lga }}">
+              {{ lga }}
+            </option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="business_industry" class="form-label"
+            >Business Industry</label
+          >
+          <select
+            formControlName="business_industry"
+            id="business_industry"
+            class="form-control"
+          >
+            <option value="">Choose Industry</option>
+            <option *ngFor="let industry of industries" value="{{ industry }}">
+              {{ industry }}
+            </option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <label for="address" class="form-label">Address *</label>
+          <input
+            formControlName="address"
+            type="text"
+            class="form-control"
+            placeholder="Address"
+            aria-label="Address"
+            aria-describedby="addon-wrapping"
+            id="address"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="email" class="form-label">Email</label>
+          <input
+            formControlName="email"
+            type="text"
+            class="form-control"
+            placeholder="Enter email"
+            aria-label="phone"
+            aria-describedby="addon-wrapping"
+            id="email"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="office_number" class="form-label">Phone</label>
+          <input
+            formControlName="office_number"
+            type="text"
+            class="form-control"
+            placeholder="Phone"
+            aria-label="phone"
+            aria-describedby="addon-wrapping"
+            id="office_number"
+          />
+        </div>
+        <div class="mb-2">
+          <label for="website" class="form-label">Website</label>
+          <input
+            formControlName="website"
+            type="text"
+            class="form-control"
+            placeholder="Website"
+            aria-label="Website"
+            aria-describedby="addon-wrapping"
+            id="website"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="updateCompany(row)"
+    >
+      Update Company
+    </button>
+  </div>
+</ng-template>

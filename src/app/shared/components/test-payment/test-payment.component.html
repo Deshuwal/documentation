@@ -1,0 +1,36 @@
+<div *ngIf="displayThisComponent">
+  <div class="modal-footer">
+  
+    <div style="margin:10px; text-align:center;">
+      <div *ngIf="loading" class="col-md-12 text-center">
+        <div class="spinner spinner-primary mr-3"></div> <br>
+        Making Payment...
+      </div> 
+      VALIDATION RESPONSE: <p> {{result_validation}} </p>
+    </div>
+    
+   </div>
+<div class="modal-footer">
+
+  <br>
+  <button
+    style="position: relative; z-index: 3"
+    class="btn btn-primary"
+    (click)="payWithKudi()"
+  >
+   Test Pay with Kudi
+
+  </button>
+  <button
+    style="margin-left: 5px"
+    type="button"
+    class="btn btn-outline-secondary btn-rounded"
+    (click)="payWithNibss()"
+  > 
+   Test Pay with NIBBS
+  </button>
+  
+ 
+  
+</div>
+</div>

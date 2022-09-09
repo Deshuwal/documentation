@@ -1,0 +1,325 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+<!-- <table
+  style="width: 100%"
+  datatable
+  [dtOptions]="dtOptions"
+  class="row-border hover"
+>
+  <thead>
+    <tr>
+      <th>SN</th>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Role</th>
+      <th>Date Registered</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="persons?.length != 0" [attr.data-index]="i">
+    <tr *ngFor="let person of persons; index as i">
+      <td>{{ i + 1 }}</td>
+      <td>{{ person.first_name + " " + person.surname }}</td>
+      <td>{{ person.phone }}</td>
+      <td>{{ userRole[person.role] }}</td>
+      <td>{{ person.create_date }}</td>
+    </tr>
+  </tbody>
+  <tbody *ngIf="persons?.length == 0">
+    <tr>
+      <td colspan="3" class="no-data-available">No data!</td>
+    </tr>
+  </tbody>
+</table> -->
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="form-group float-left"></div>
+    <div class="float-right">
+      <!--- 
+      <button
+        style="position: relative; z-index: 3"
+        class="btn btn-primary"
+        (click)="downloadUserTable('pdfTable', 'user_table')"
+      >
+        Export to Excel
+      </button> -->
+      <button
+        style="position: relative; z-index: 3"
+        class="btn btn-primary"
+        (click)="openActivateAgentModal()"
+      >
+        Activate an Agent
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3"></div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div id="pdfTable" #pdfTable class="card o-hidden">
+      <ngx-datatable
+        *ngIf="assessments?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [scrollbarH]="true"
+        [virtualization]="false"
+        [rows]="assessments"
+        #table
+      >
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Name </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{
+              (row.first_name !== null &&
+                row.first_name.trim() + " " + row.surname) ||
+                capitalise(row.name)
+            }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Agent Id </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.agent_id }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Account Balance
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ numberWithCommas(row.account_balance) || "N/A" }} NGN
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template>
+            Last Transaction
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ DateFromString(row.last_updated) }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template> Top Up </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <div>
+              <button
+                class="btn btn-block btn-primary text-white"
+                (click)="openFundWalletModal(row)"
+              >
+                Fund Wallet
+              </button>
+              <br />
+            </div>
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template> Deactivate </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            <div>
+              <button
+                class="btn btn-block btn-danger text-white"
+                (click)="openDeactivateAgentModal(row)"
+              >
+                Deactivate Agent
+              </button>
+              <br />
+            </div>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<ng-template #addFundsModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="addTagModalId">Fund Wallet</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10 row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="tax">Agent</label>
+
+          <input
+            class="form-control"
+            type="text"
+            [value]="selectedAgent.name"
+            disabled
+            placeholder="Name of user"
+          />
+        </div>
+
+        <div class="col-md-12 form-group mb-3">
+          <label for="tax">Amount (NGN)</label>
+
+          <input
+            class="form-control"
+            type="number"
+            [(ngModel)]="selectedAgent.new_fund"
+            placeholder="Name of user"
+          />
+        </div>
+        <!-- <div class="col-sm-7"></div> -->
+
+        <!-- <div class="col-sm-7"></div> -->
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      [disabled]="addingTags"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="submitFundWallet()"
+    >
+      {{ addingFunds ? "Please Wait..." : "Continue" }}
+    </button>
+  </div>
+</ng-template>
+<ng-template #activateAgentModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="addTagModalId">Activate an Agent</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10 row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="tax">Enter Agent ID</label>
+
+          <input
+            class="form-control"
+            type="text"
+            [(ngModel)]="selectedAgent.name"
+            placeholder="AGENT-----"
+          />
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      [disabled]="addingTags"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="submitActivateAgent()"
+    >
+      {{ activatingAgent ? "Please Wait..." : "Continue" }}
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #deActivateAgentModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title text-danger" id="addTagModalId">Deactivate Agent</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10 row">
+        <div class="col-md-12 form-group mb-3">
+          <label for="tax">Agent ID</label>
+
+          <input
+            class="form-control"
+            type="text"
+            disabled
+            [(ngModel)]="selectedAgent.name"
+            placeholder="AGENT-----"
+          />
+        </div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      [disabled]="addingTags"
+      class="btn btn-danger"
+      (click)="submitDeactivateAgent()"
+    >
+      {{ deActivatingAgent ? "Please Wait..." : "Continue" }}
+    </button>
+  </div>
+</ng-template>

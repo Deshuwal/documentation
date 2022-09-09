@@ -1,0 +1,125 @@
+<app-breadcrumb></app-breadcrumb>
+<div *ngIf="loading" class="col-md-12 text-center">
+	<div class="spinner spinner-primary mr-3"></div>
+</div>
+
+<div *ngIf="!loading" class="card bg-img" style="padding: 20px 30px">
+	<div style="max-width: 700px" id="pdfTable" #pdfTable>
+		<div class="card-body">
+			<div style="display: flex; justify-content: space-between">
+				<img src="../../../../assets/images/logo.png" style="height: 30px" />
+				<span>Smart Tax</span>
+			</div>
+			<div class="separator-breadcrumb border-top"></div>
+
+			<div>
+				<span style="display: block">Plateau State Internal</span>
+				<span style="display: block">Revenue Service</span>
+				<span style="display: block">Bank Road, Jos</span>
+				<div
+					style="display: inline-block; width: 140px; border: 0.1px solid #000"
+				></div>
+				<div
+					style="font-size: 36px; font-weight: 800"
+					class="card-title text-center"
+				>
+					TAX ENUMERATION
+				</div>
+				<img
+					src="../../../../assets/images/blank.png"
+					class="my-5"
+					style="height: 120px"
+				/>
+				<h2 class="text-center mb-3">
+					Tax Identification Number : {{ user.tin }}
+				</h2>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>FULL Name</th>
+							<th style="font-weight: normal">
+								{{ getUserName(user) }}
+							</th>
+							<th>TIN NO</th>
+							<th style="font-weight: normal">{{ user.tin }}</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="font-weight: 700"><p>Address</p></td>
+							<td colspan="3">
+								<p>{{ user.payer_address || "" }}</p>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: 700">Marital Status</td>
+							<td>
+								{{ user.marital_status | titlecase }}
+							</td>
+							<td style="font-weight: 700">Gender</td>
+							<td>
+								{{ user.gender | titlecase }}
+							</td>
+						</tr>
+
+						<tr>
+							<td style="font-weight: 700">Home Town</td>
+							<td>
+								{{ user.home_town }}
+							</td>
+							<td style="font-weight: 700">Date of Birth</td>
+							<td>
+								{{ user.dob? user.dob.split("T")[0] : "" }}
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: 700">Local Government</td>
+							<td>
+								{{ user.lga | titlecase }}
+							</td>
+							<td style="font-weight: 700">State of Origin</td>
+							<td>
+								{{ user.soo | titlecase }}
+							</td>
+						</tr>
+						<tr>
+							<td style="font-weight: 700">Occupation</td>
+							<td>
+								{{ user.occupation | titlecase }}
+							</td>
+							<td style="font-weight: 700">Phone</td>
+							<td>{{ user.phone || "" }}</td>
+						</tr>
+					</tbody>
+				</table>
+				<br />
+				<br />
+				Date Issued:
+				{{ user.create_date }}
+			</div>
+			<div class="separator-breadcrumb border-top"></div>
+			<p class="text-center">
+				Email: info@psirs.gov.ng . Website:https:www.psirs.gov.ng
+			</p>
+			<br /><br />
+			<p class="text-center">Page: 1/1</p>
+		</div>
+		<div style="text-align: end">
+			<button
+				style="position: relative; z-index: 3"
+				class="btn btn-primary"
+				(click)="exportAsPDF('pdfTable')"
+			>
+				Download
+			</button>
+			<button
+				style="margin-left: 5px"
+				type="button"
+				class="btn btn-outline-secondary btn-rounded"
+				(click)="printPDFS('pdfTable')"
+			>
+				Print
+			</button>
+		</div>
+	</div>
+</div>

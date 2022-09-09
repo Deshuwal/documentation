@@ -1,0 +1,292 @@
+<div *ngIf="loading" class="col-md-12 text-center">
+  <div class="spinner spinner-primary mr-3"></div>
+</div>
+
+<div
+  *ngIf="!loading && taxEnumViewType == 'user'"
+  class="card bg-img"
+  style="padding: 2px; font-size: 0.3rem"
+>
+  <div>
+    <div class="modal-header">
+      <button
+        type="button"
+        class="close"
+        aria-label="Close"
+        (click)="closeModal()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div id="pdfTable" #pdfTable class="card-body">
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+
+      <div style="font-size: 0.7rem">
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+        <div style="font-size: 1.1rem; font-weight: 800" class="text-center">
+          TAX ENUMERATION
+        </div>
+        <img
+          src="../../../../assets/images/blank.png"
+          class="my-1"
+          style="height: 58px"
+        />
+        <h2 style="font-size: 1rem" class="text-center mb-3">
+          Tax Identification Number :
+          {{ taxEnumeration.tin || taxEnumeration.stin }}
+        </h2>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">FULL Name</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ negotiator.getUserFullName() | uppercase }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">TIN NO</td>
+              <td style="font-weight: normal; font-size: 0.7rem">
+                {{ taxEnumeration.tin || taxEnumeration.pltin }}
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">Address</td>
+              <td style="font-weight: normal; font-size: 0.5rem" colspan="3">
+                {{ taxEnumeration.payer_address || "" }}
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                Marital Status
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.marital_status }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">Gender</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.gender }}
+              </td>
+            </tr>
+
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">Home Town</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.home_town }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                Date of Birth
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.dob | date: "dd-MM-yyyy" }}
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                Local Government
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.lga }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                State of Origin
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.soo }}
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">Occupation</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.occupation | uppercase }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">Phone</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.phone || "" }}
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                Mode of Identification
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem"></td>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                Identification No.
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem"></td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <br />
+        Date Created:
+        {{ taxEnumeration.create_date }}
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+      <p class="text-center">
+        Email: info@psirs.gov.ng . Website:https:www.psirs.gov.ng
+      </p>
+    </div>
+  </div>
+  <div style="text-align: end">
+    <button
+      style="position: relative; z-index: 3"
+      class="btn btn-primary"
+      (click)="exportAsPDF('pdfTable')"
+    >
+      Download
+    </button>
+    <button
+      style="position: relative; z-index: 3; margin-left: 10px"
+      class="btn btn-primary"
+      (click)="printPDFS('pdfTable')"
+    >
+      Print
+    </button>
+  </div>
+</div>
+
+<div
+  *ngIf="!loading && taxEnumViewType == 'company'"
+  class="card bg-img"
+  style="padding: 2px; font-size: 0.3rem"
+>
+  <div class="modal-header">
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="closeModal()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="pdfTable" #pdfTable>
+    <div class="card-body">
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+
+      <div style="font-size: 0.7rem">
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+        <div
+          style="font-size: 1rem; font-weight: 800"
+          class="card-title text-center"
+        >
+          TAX ENUMERATION
+        </div>
+        <img src="../../../../assets/images/blank.png" style="height: 90px" />
+        <h2 style="font-size: 1rem" class="text-center mb-3">
+          Tax Identification Number : {{ taxEnumeration.tin }}
+        </h2>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">COMPANY NAME</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.company_name || "N/A" }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                COMPANY TIN NO
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.tin }}
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">INDUSTRY</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.business_industry | uppercase }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                REGISTRATION NUMBER
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.rc_no | uppercase }}
+              </td>
+            </tr>
+
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">
+                NUMBER OF EMPLOYEES
+              </td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.employee_count }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">ADDRESS</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.address }}
+              </td>
+            </tr>
+
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">LGA</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.lga | uppercase }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">STATE</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.state }}
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">OFFICE PHONE</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.office_number || "N/A" }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem">EMAIL</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.office_email || "N/A" }}
+              </td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size: 0.7rem">WEBSITE</td>
+              <td style="font-weight: normal; font-size: 0.5rem">
+                {{ taxEnumeration.website || "N/A" }}
+              </td>
+              <td style="font-weight: bold; font-size: 0.7rem"></td>
+              <td style="font-weight: normal; font-size: 0.5rem"></td>
+            </tr>
+          </tbody>
+        </table>
+        <br />
+        <br />
+        Date Issued:
+        {{ dateIssued }}
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+      <p style="margin-bottom: 0px" class="text-center">
+        Email: info@psirs.gov.ng . Website:https:www.psirs.gov.ng
+      </p>
+    </div>
+  </div>
+  <div style="text-align: end">
+    <button
+      style="position: relative; z-index: 3"
+      class="btn btn-primary"
+      (click)="exportAsPDF('pdfTable')"
+    >
+      Download
+    </button>
+    <button
+      style="position: relative; z-index: 3; margin-left: 10px"
+      class="btn btn-primary"
+      (click)="printPDFS('pdfTable')"
+    >
+      Print
+    </button>
+  </div>
+</div>

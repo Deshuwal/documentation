@@ -1,0 +1,159 @@
+<!-- <div class="breadcrumb">
+  <h1>Assessment</h1>
+  <ul>
+    <li><a href="">Configuration</a></li>
+    <li>TaxItems</li>
+  </ul>
+</div> -->
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+<div style="margin-bottom: 5rem">
+  <a
+  target="_blank"
+  style="margin-left: 10px"
+  class="btn btn-primary float-right"
+  [href]="
+    'https://stagingbackend.psirs.gov.ng/pdf/generate_pdf?bulk_id=' +
+    bulkPayeId +
+    '&companyId=' +
+    companyTin +
+    '&brn=' +
+    billing_ref
+  "
+>
+  Show Payment Receipt
+</a>
+  <a
+    target="_blank"
+    style="margin-left: 10px"
+    class="btn btn-primary float-right"
+    [href]="
+      'https://stagingbackend.psirs.gov.ng/pdf/generate_pdf?bulk_id=' +
+      bulkPayeId +
+      '&companyId=' +
+      companyTin +
+      '&brn=' +
+      billing_ref
+    "
+  >
+    PDF
+  </a>
+  <a
+    style="color: azure; margin-left: 10px"
+    csvLink
+    class="btn btn-primary float-right"
+    [data]="assessmentsCsv"
+    download="bulk-paye.csv"
+    [class.disabled]="assessmentsCsv.length == 0 ? true : false"
+  >
+    CSV</a
+  >
+</div>
+<div class="row mb-3">
+  <div class="col-md-12 mb-3">
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+    </div>
+    <div style="padding: 3rem" *ngIf="!loading" id="customers">
+      <div style="display: flex; justify-content: space-between">
+        <img src="../../../../assets/images/logo.png" style="height: 30px" />
+        <span>Smart Tax</span>
+      </div>
+      <div class="separator-breadcrumb border-top"></div>
+      <div style="margin-bottom: 1rem">
+        <span style="display: block">Plateau State Internal</span>
+        <span style="display: block">Revenue Service</span>
+        <span style="display: block">Bank Road, Jos</span>
+        <div
+          style="display: inline-block; width: 140px; border: 0.1px solid #000"
+        ></div>
+      </div>
+      <div>
+        <p>
+          Company:
+          <span style="font-weight: bold">{{
+            companyDetail.company_name
+          }}</span>
+        </p>
+        <p>
+          TIN: <span style="font-weight: bold"> {{ companyDetail.tin }}</span>
+        </p>
+        <p>
+          Address:
+          <span style="font-weight: bold">{{ companyDetail.address }}</span>
+        </p>
+        <p>
+          Bill Reference Number:
+          <span style="font-weight: bold"> {{ billing_ref }} </span>
+        </p>
+        <p>
+          Summary of PAYE assessment of :
+          <span style="font-weight: bold">{{
+            companyDetail.company_name
+          }}</span>
+          for 2022 assessment year
+        </p>
+      </div>
+      <table style="width: 100%">
+        <tr>
+          <th>S/N</th>
+          <th>Employee</th>
+          <th>Gross</th>
+          <th>NHIS</th>
+          <th>NHF</th>
+          <th>Life Assur.</th>
+          <th>Pension Fund</th>
+          <th>CRA</th>
+          <th>Annual Tax</th>
+          <th>Monthly Tax</th>
+          <th>Dev. Levy</th>
+        </tr>
+        <tr *ngFor="let item of assessmentsCsv; let myIndex = index">
+          <td>{{ myIndex + 1 }}</td>
+          <td>{{ item["individual name"] }}</td>
+          <td>{{ item["Annual Gross Pay"] | number: "1.2-2" }}</td>
+          <td>{{ item["NHIS"] | number: "1.2-2" }}</td>
+          <td>{{ item["NHF"] | number: "1.2-2" }}</td>
+          <td>{{ item["Life Insurance"] | number: "1.2-2" }}</td>
+          <td>{{ item["Pension"] | number: "1.2-2" }}</td>
+          <td>{{ item["CRA"] | number: "1.2-2" }}</td>
+          <td>{{ item["Annual Tax Liability"] | number: "1.2-2" }}</td>
+          <td>{{ item["Monthly Tax Liability"] | number: "1.2-2" }}</td>
+          <td>{{ item["Development Levy"] ? 300 : 0 }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td style="font-weight: bold">TOTAL</td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["Annual Gross Pay"] | number: "1.2-2" }}
+          </td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["NHIS"] | number: "1.2-2" }}
+          </td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["NHF"] | number: "1.2-2" }}
+          </td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["Life Insurance"] | number: "1.2-2" }}
+          </td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["Pension"] | number: "1.2-2" }}
+          </td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["CRA"] | number: "1.2-2" }}
+          </td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["Annual Tax Liability"] | number: "1.2-2" }}
+          </td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["Monthly Tax Liability"] | number: "1.2-2" }}
+          </td>
+          <td style="font-weight: bold">
+            {{ assessmentsCsvTotal["Development Levy"] }}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

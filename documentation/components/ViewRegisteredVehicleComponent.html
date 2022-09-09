@@ -1,0 +1,1565 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>PSIRS documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">PSIRS documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ViewRegisteredVehicleComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/views/assessment/mla-view/previous-mla.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-dashboard-v2</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./previous-mla.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./previous-mla.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#loading" >loading</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#modalContent" >modalContent</a>
+                            </li>
+                            <li>
+                                <a href="#registeredVehicles" >registeredVehicles</a>
+                            </li>
+                            <li>
+                                <a href="#searchControl" >searchControl</a>
+                            </li>
+                            <li>
+                                <a href="#searching" >searching</a>
+                            </li>
+                            <li>
+                                <a href="#status" >status</a>
+                            </li>
+                            <li>
+                                <a href="#userProfile" >userProfile</a>
+                            </li>
+                            <li>
+                                <a href="#vehicleDetailsForDisplay" >vehicleDetailsForDisplay</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#download" >download</a>
+                            </li>
+                            <li>
+                                <a href="#loadRegisteredVehicles" >loadRegisteredVehicles</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#parseDate" >parseDate</a>
+                            </li>
+                            <li>
+                                <a href="#parsePhpDate" >parsePhpDate</a>
+                            </li>
+                            <li>
+                                <a href="#print" >print</a>
+                            </li>
+                            <li>
+                                <a href="#viewVehicleDetails" >viewVehicleDetails</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(dl: <a href="../injectables/HttpService.html" target="_self">HttpService</a>, modalService: NgbModal, toastr: ToastrService, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>, localStore: <a href="../injectables/LocalStoreService.html" target="_self">LocalStoreService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>, printpdfService: <a href="../injectables/PrintpdfService.html" target="_self">PrintpdfService</a>, breadcrumb: <a href="../injectables/BreadcrumbService.html" target="_self">BreadcrumbService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:36</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>dl</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/HttpService.html" target="_self" >HttpService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalService</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbModal</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>localStore</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LocalStoreService.html" target="_self" >LocalStoreService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>printpdfService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PrintpdfService.html" target="_self" >PrintpdfService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>breadcrumb</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BreadcrumbService.html" target="_self" >BreadcrumbService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="download"></a>
+                    <span class="name">
+                        <span ><b>download</b></span>
+                        <a href="#download"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>download(div)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>div</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loadRegisteredVehicles"></a>
+                    <span class="name">
+                        <span ><b>loadRegisteredVehicles</b></span>
+                        <a href="#loadRegisteredVehicles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>loadRegisteredVehicles()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="73"
+                            class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:73</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="48"
+                            class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:48</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parseDate"></a>
+                    <span class="name">
+                        <span ><b>parseDate</b></span>
+                        <a href="#parseDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>parseDate(date)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:126</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="parsePhpDate"></a>
+                    <span class="name">
+                        <span ><b>parsePhpDate</b></span>
+                        <a href="#parsePhpDate"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>parsePhpDate(date: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="122"
+                            class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:122</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>date</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="print"></a>
+                    <span class="name">
+                        <span ><b>print</b></span>
+                        <a href="#print"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>print(div)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>div</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="viewVehicleDetails"></a>
+                    <span class="name">
+                        <span ><b>viewVehicleDetails</b></span>
+                        <a href="#viewVehicleDetails"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>viewVehicleDetails(assessment: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:98</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>assessment</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="loading"></a>
+                    <span class="name">
+                        <span ><b>loading</b></span>
+                        <a href="#loading"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="modalContent"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>modalContent</b></span>
+                        <a href="#modalContent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;modalConfirm&#x27;, {static: false})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:31</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registeredVehicles"></a>
+                    <span class="name">
+                        <span ><b>registeredVehicles</b></span>
+                        <a href="#registeredVehicles"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searchControl"></a>
+                    <span class="name">
+                        <span ><b>searchControl</b></span>
+                        <a href="#searchControl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormControl" target="_blank" >FormControl</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="searching"></a>
+                    <span class="name">
+                        <span ><b>searching</b></span>
+                        <a href="#searching"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="status"></a>
+                    <span class="name">
+                        <span ><b>status</b></span>
+                        <a href="#status"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:36</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userProfile"></a>
+                    <span class="name">
+                        <span ><b>userProfile</b></span>
+                        <a href="#userProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="vehicleDetailsForDisplay"></a>
+                    <span class="name">
+                        <span ><b>vehicleDetailsForDisplay</b></span>
+                        <a href="#vehicleDetailsForDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="96" class="link-to-prism">src/app/views/assessment/mla-view/previous-mla.component.ts:96</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ViewChild } from &quot;@angular/core&quot;;
+import { LocalStoreService } from &quot;src/app/shared/services/local-store.service&quot;;
+import { NgbModal } from &quot;@ng-bootstrap/ng-bootstrap&quot;;
+import { SharedAnimations } from &quot;src/app/shared/animations/shared-animations&quot;;
+import {
+  FormBuilder,
+  FormControl,
+} from &quot;@angular/forms&quot;;
+import { HttpService } from &quot;src/app/shared/services/http.service&quot;;
+import { ToastrService } from &quot;ngx-toastr&quot;;
+import { Utils } from &quot;src/app/shared/utils&quot;;
+
+import { ActivatedRoute } from &quot;@angular/router&quot;;
+
+import { BreadcrumbService } from &quot;src/app/shared/services/breadcrumb.service&quot;;
+import { PrintpdfService } from &quot;src/app/shared/services/printpdf.service&quot;;
+
+@Component({
+  selector: &quot;app-dashboard-v2&quot;,
+  templateUrl: &quot;./previous-mla.component.html&quot;,
+  styleUrls: [&quot;./previous-mla.component.scss&quot;],
+  animations: [SharedAnimations],
+})
+export class ViewRegisteredVehicleComponent implements OnInit {
+  
+  loading: boolean &#x3D; false;
+  registeredVehicles: any;
+
+  searchControl: FormControl &#x3D; new FormControl();
+
+  @ViewChild(&quot;modalConfirm&quot;, { static: false }) private modalContent;
+
+  userProfile: any;
+  searching: boolean &#x3D; false;
+
+  status: any;
+  constructor(
+    private dl: HttpService,
+    private modalService: NgbModal,
+    private toastr: ToastrService,
+    private fb: FormBuilder,
+    private localStore: LocalStoreService,
+    private route: ActivatedRoute,
+    private printpdfService: PrintpdfService,
+    private breadcrumb: BreadcrumbService
+  ) {}
+
+  ngOnInit() {
+    this.userProfile &#x3D; this.localStore.getItem(&quot;user&quot;);
+
+    this.breadcrumb.setCrumbItem(&quot;assessmentHistory&quot;);
+
+    this.route.params.forEach((e: any) &#x3D;&gt; {
+      if (e.status) this.status &#x3D; e.status;
+    });
+
+    this.route.params.subscribe((params) &#x3D;&gt; {
+      this.status &#x3D; params[&quot;status&quot;];
+      this.loadRegisteredVehicles(); // reset and set based on new parameter this time
+    });
+
+    this.loadRegisteredVehicles();
+
+    this.searchControl.valueChanges.subscribe((value: string) &#x3D;&gt; {
+      console.log(&quot;Value changed &quot;, value);
+      this.searching &#x3D; true;
+      setTimeout(() &#x3D;&gt; {
+        this.searching &#x3D; false;
+      }, 1000);
+    });
+  }
+
+  loadRegisteredVehicles() {
+    this.loading &#x3D; true;
+    this.dl.doGet(&#x60;vehicle/list/${this.userProfile.id}&#x60;).subscribe(
+      (res:any) &#x3D;&gt; {
+        console.log(&quot;fetched registeredVehicles &quot;, res.data[11]);
+        this.registeredVehicles &#x3D; res.data;
+        this.loading &#x3D; false;
+      },
+      (err) &#x3D;&gt; {
+        this.loading &#x3D; false;
+        console.log(&quot;error fetching tax items&quot;, err);
+      }
+    );
+  }
+
+  print(div) {
+    this.printpdfService.printNoticeAssMent(div);
+  }
+
+  download(div) {
+    this.printpdfService.downloadAssessment(div);
+  }
+
+  vehicleDetailsForDisplay: any &#x3D; {};
+
+  viewVehicleDetails(assessment: any) {
+    this.vehicleDetailsForDisplay &#x3D; Object.assign({}, assessment);
+    this.vehicleDetailsForDisplay.vehicle_owner_name &#x3D; assessment.vehicle_owner;
+    this.vehicleDetailsForDisplay.user_tin &#x3D; assessment.user_tin;
+    this.vehicleDetailsForDisplay.vehicle_name &#x3D; assessment.vehicle_name;
+    this.vehicleDetailsForDisplay.tin &#x3D; assessment.user_tin || assessment.user_tin;
+    this.vehicleDetailsForDisplay.vehicle_chasis &#x3D; assessment.vehicle_chasis;
+    this.vehicleDetailsForDisplay.vehicle_model &#x3D; assessment.vehicle_model;
+    this.vehicleDetailsForDisplay.vehicle_color &#x3D; assessment.vehicle_color;
+    this.vehicleDetailsForDisplay.vehicle_type &#x3D; assessment.vehicle_type;
+    this.vehicleDetailsForDisplay.engine_capacity &#x3D; assessment.engine_capacity;
+    this.vehicleDetailsForDisplay.seater_capacity &#x3D; assessment.seater_capacity;
+    this.vehicleDetailsForDisplay.load_capacity &#x3D; assessment.load_capacity;
+    this.vehicleDetailsForDisplay.gross_weight &#x3D; assessment.gross_weight;
+    this.vehicleDetailsForDisplay.license_type &#x3D; assessment.license_type;
+    this.vehicleDetailsForDisplay.plate_no &#x3D; assessment.plate_no;
+    this.vehicleDetailsForDisplay.amount &#x3D; assessment.amount;
+    this.modalService.open(this.modalContent, {
+      ariaLabelledBy: &quot;modal-basic-title&quot;,
+      centered: true,
+    });
+  }
+
+
+  parsePhpDate(date: string) {
+    return Utils.parsePhpDate(date);
+  }
+
+  parseDate(date) {
+    return new Date(date * 10000);
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">
+&lt;app-breadcrumb&gt;&lt;/app-breadcrumb&gt;
+
+&lt;div class&#x3D;&quot;separator-breadcrumb border-top&quot;&gt;&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;row mb-3&quot;&gt;
+  &lt;div class&#x3D;&quot;col-md-12 mb-3&quot;&gt;
+    &lt;div class&#x3D;&quot;form-group float-left&quot;&gt;
+      &lt;input
+        id&#x3D;&quot;email&quot;
+        placeholder&#x3D;&quot;Search&quot;
+        [formControl]&#x3D;&quot;searchControl&quot;
+        class&#x3D;&quot;form-control form-control-rounded&quot;
+        type&#x3D;&quot;email&quot;
+      /&gt;
+    &lt;/div&gt;
+
+    &lt;a class&#x3D;&quot;btn btn-primary float-right&quot; href&#x3D;&quot;#/assessment/motor-license-authority&quot;&gt;
+      New Vehicle Registration
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+    &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div
+    class&#x3D;&quot;col-md-12&quot;
+    *ngIf&#x3D;&quot;!loading&quot;
+    [@animate]&#x3D;&quot;{
+      value: &#x27;*&#x27;,
+      params: { y: &#x27;120px&#x27;, opacity: &#x27;0&#x27;, delay: &#x27;100ms&#x27;, duration: &#x27;400ms&#x27; }
+    }&quot;
+  &gt;
+    &lt;div class&#x3D;&quot;card o-hidden&quot;&gt;
+      &lt;ngx-datatable
+        *ngIf&#x3D;&quot;registeredVehicles?.length&quot;
+        style&#x3D;&quot;height: calc(100vh - 270px); box-shadow: none&quot;
+        class&#x3D;&quot;material fullscreen&quot;
+        [columnMode]&#x3D;&quot;&#x27;force&#x27;&quot;
+        [headerHeight]&#x3D;&quot;50&quot;
+        [footerHeight]&#x3D;&quot;50&quot;
+        [rowHeight]&#x3D;&quot;60&quot;
+        [scrollbarH]&#x3D;&quot;true&quot;
+        [limit]&#x3D;&quot;10&quot;
+        [rows]&#x3D;&quot;registeredVehicles&quot;
+      &gt;
+        &lt;ngx-datatable-column name&#x3D;&quot;photo&quot; [maxWidth]&#x3D;&quot;100&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;
+            Serial Number
+          &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.id }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;  Vehicle Name &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.vehicle_name }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Vehicle Color &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.vehicle_color }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Vehicle Chasis No. &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.vehicle_chasis }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Vehicle Plate No. &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.plate_no ? row.plate_no : &quot;N/A&quot; }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+
+        &lt;ngx-datatable-column&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;
+            Date Registered
+          &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.created_at | date }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        
+        &lt;ngx-datatable-column [flexGrow]&#x3D;&quot;1&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt;
+            Last Updated
+          &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            {{ row.updated_at }}
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+        
+        &lt;ngx-datatable-column [width]&#x3D;&quot;120&quot;&gt;
+          &lt;ng-template ngx-datatable-header-template&gt; Actions &lt;/ng-template&gt;
+          &lt;ng-template
+            ngx-datatable-cell-template
+            let-value&#x3D;&quot;value&quot;
+            let-row&#x3D;&quot;row&quot;
+          &gt;
+            &lt;button
+              class&#x3D;&quot;btn btn-wide btn-outline-secondary mr-3&quot;
+              (click)&#x3D;&quot;viewVehicleDetails(row)&quot;
+            &gt;
+              View
+            &lt;/button&gt;
+          &lt;/ng-template&gt;
+        &lt;/ngx-datatable-column&gt;
+      &lt;/ngx-datatable&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ng-template #modalConfirm let-modal&gt;
+  &lt;div
+    style&#x3D;&quot;font-size: 0.4rem&quot;
+    id&#x3D;&quot;assessmentDoc&quot;
+    #assessmentDoc
+    class&#x3D;&quot;modal-body&quot;
+  &gt;
+    &lt;div *ngIf&#x3D;&quot;loading&quot; class&#x3D;&quot;col-md-12 text-center&quot;&gt;
+      &lt;div class&#x3D;&quot;spinner spinner-primary mr-3&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div *ngIf&#x3D;&quot;!loading &amp;&amp; !dynamicSummary&quot; class&#x3D;&quot;card-body&quot;&gt;
+      &lt;div style&#x3D;&quot;display: flex; justify-content: space-between&quot;&gt;
+        &lt;img src&#x3D;&quot;../../../../assets/images/logo.png&quot; style&#x3D;&quot;height: 30px&quot; /&gt;
+        &lt;span&gt;Smart Tax&lt;/span&gt;
+      &lt;/div&gt;
+      
+
+      &lt;div style&#x3D;&quot;font-size: 0.7rem&quot;&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Plateau State Internal&lt;/span&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Revenue Service&lt;/span&gt;
+        &lt;span style&#x3D;&quot;display: block&quot;&gt;Bank Road, Jos&lt;/span&gt;
+        &lt;div
+          style&#x3D;&quot;display: inline-block; width: 140px; border: 0.1px solid #000&quot;
+        &gt;&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class&#x3D;&quot;text-center&quot;&gt;
+        &lt;img
+          src&#x3D;&quot;../../../../assets/images/logo-.png&quot;
+          class&#x3D;&quot;my-1&quot;
+          style&#x3D;&quot;height: 45px&quot;
+        /&gt;
+      &lt;/div&gt;
+      &lt;p
+        style&#x3D;&quot;
+          color: green;
+          font-size: 1rem;
+          font-weight: bold;
+          text-align: center;
+        &quot;
+      &gt;
+        PLATEAU STATE GOVERNMENT
+      &lt;/p&gt;
+      &lt;div style&#x3D;&quot;text-align: center&quot;&gt;
+        &lt;span
+          style&#x3D;&quot;
+            font-weight: bold;
+            padding: 9px 16px;
+            background-color: green;
+            display: inline-block;
+            font-size: 1rem;
+          &quot;
+          class&#x3D;&quot;text-center mb-3 text-white&quot;
+          &gt;VEHICLE REGISTRATION&lt;/span
+        &gt;
+      &lt;/div&gt;
+      &lt;table class&#x3D;&quot;table&quot;&gt;
+        &lt;tbody&gt;
+          
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE OWNER NAME&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{ assessmentForDisplay.vehicle_owner_name }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE OWNER TIN&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{ assessmentForDisplay.user_tin }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE NAME&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{ assessmentForDisplay.vehicle_name }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;CHASIS NUMBER&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.vehicle_chasis }}&lt;/td&gt;
+          &lt;/tr&gt;
+          
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE MODEL&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.vehicle_model }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE COLOUR&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.vehicle_color }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE TYPE&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.vehicle_type }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE ENGINE CAPACITY&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.engine_capacity }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE SITTER CAPACITY&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.seater_capacity }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE LOAD CAPACITY&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.load_capacity }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE GROSS CAPACITY&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.gross_weight }}&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;VEHICLE LICENSE TYPE&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.license_type }}&lt;/td&gt;
+          &lt;/tr&gt;
+          
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;PLATE NUMBER&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;{{ assessmentForDisplay.plate_no ? assessmentForDisplay.plate_no : &quot;N/A&quot; }}&lt;/td&gt;
+          &lt;/tr&gt;
+          
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Date Generated&lt;/td&gt;
+            &lt;td colspan&#x3D;&quot;1&quot;&gt;
+              {{
+                assessmentForDisplay.created_at &#x3D;&#x3D; null
+                  ? &quot;N/A&quot;
+                  : assessmentForDisplay.created_at
+              }}
+            &lt;/td&gt;
+          &lt;/tr&gt;
+          
+          &lt;tr&gt;
+            &lt;td colspan&#x3D;&quot;3&quot; style&#x3D;&quot;font-weight: 700&quot;&gt;Signature:&lt;/td&gt;
+            &lt;td style&#x3D;&quot;padding-top: 20p&quot; colspan&#x3D;&quot;1&quot;&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;print(&#x27;assessmentDoc&#x27;)&quot;
+    &gt;
+      Print
+    &lt;/button&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;download(&#x27;assessmentDoc&#x27;)&quot;
+    &gt;
+      Download
+    &lt;/button&gt;
+    &lt;button
+      type&#x3D;&quot;button&quot;
+      class&#x3D;&quot;btn btn-outline-secondary btn-rounded&quot;
+      (click)&#x3D;&quot;modal.dismiss(&#x27;Cross click&#x27;)&quot;
+    &gt;
+      Cancel
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./previous-mla.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">td {
+  font-size: 0.7rem;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-breadcrumb></app-breadcrumb><div class="separator-breadcrumb border-top"></div><div class="row mb-3">  <div class="col-md-12 mb-3">    <div class="form-group float-left">      <input        id="email"        placeholder="Search"        [formControl]="searchControl"        class="form-control form-control-rounded"        type="email"      />    </div>    <a class="btn btn-primary float-right" href="#/assessment/motor-license-authority">      New Vehicle Registration    </a>  </div>  <div *ngIf="loading" class="col-md-12 text-center">    <div class="spinner spinner-primary mr-3"></div>  </div>  <div    class="col-md-12"    *ngIf="!loading"    [@animate]="{      value: \'*\',      params: { y: \'120px\', opacity: \'0\', delay: \'100ms\', duration: \'400ms\' }    }"  >    <div class="card o-hidden">      <ngx-datatable        *ngIf="registeredVehicles?.length"        style="height: calc(100vh - 270px); box-shadow: none"        class="material fullscreen"        [columnMode]="\'force\'"        [headerHeight]="50"        [footerHeight]="50"        [rowHeight]="60"        [scrollbarH]="true"        [limit]="10"        [rows]="registeredVehicles"      >        <ngx-datatable-column name="photo" [maxWidth]="100">          <ng-template ngx-datatable-header-template>            Serial Number          </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.id }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template>  Vehicle Name </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.vehicle_name }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Vehicle Color </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.vehicle_color }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Vehicle Chasis No. </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.vehicle_chasis }}          </ng-template>        </ngx-datatable-column>                <ngx-datatable-column>          <ng-template ngx-datatable-header-template> Vehicle Plate No. </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.plate_no ? row.plate_no : "N/A" }}          </ng-template>        </ngx-datatable-column>        <ngx-datatable-column>          <ng-template ngx-datatable-header-template>            Date Registered          </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.created_at | date }}          </ng-template>        </ngx-datatable-column>                <ngx-datatable-column [flexGrow]="1">          <ng-template ngx-datatable-header-template>            Last Updated          </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            {{ row.updated_at }}          </ng-template>        </ngx-datatable-column>                <ngx-datatable-column [width]="120">          <ng-template ngx-datatable-header-template> Actions </ng-template>          <ng-template            ngx-datatable-cell-template            let-value="value"            let-row="row"          >            <button              class="btn btn-wide btn-outline-secondary mr-3"              (click)="viewVehicleDetails(row)"            >              View            </button>          </ng-template>        </ngx-datatable-column>      </ngx-datatable>    </div>  </div></div><ng-template #modalConfirm let-modal>  <div    style="font-size: 0.4rem"    id="assessmentDoc"    #assessmentDoc    class="modal-body"  >    <div *ngIf="loading" class="col-md-12 text-center">      <div class="spinner spinner-primary mr-3"></div>    </div>    <div *ngIf="!loading && !dynamicSummary" class="card-body">      <div style="display: flex; justify-content: space-between">        <img src="../../../../assets/images/logo.png" style="height: 30px" />        <span>Smart Tax</span>      </div>            <div style="font-size: 0.7rem">        <span style="display: block">Plateau State Internal</span>        <span style="display: block">Revenue Service</span>        <span style="display: block">Bank Road, Jos</span>        <div          style="display: inline-block; width: 140px; border: 0.1px solid #000"        ></div>      </div>      <div class="text-center">        <img          src="../../../../assets/images/logo-.png"          class="my-1"          style="height: 45px"        />      </div>      <p        style="          color: green;          font-size: 1rem;          font-weight: bold;          text-align: center;        "      >        PLATEAU STATE GOVERNMENT      </p>      <div style="text-align: center">        <span          style="            font-weight: bold;            padding: 9px 16px;            background-color: green;            display: inline-block;            font-size: 1rem;          "          class="text-center mb-3 text-white"          >VEHICLE REGISTRATION</span        >      </div>      <table class="table">        <tbody>                    <tr>            <td colspan="3" style="font-weight: 700">VEHICLE OWNER NAME</td>            <td colspan="1">              {{ assessmentForDisplay.vehicle_owner_name }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE OWNER TIN</td>            <td colspan="1">              {{ assessmentForDisplay.user_tin }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE NAME</td>            <td colspan="1">              {{ assessmentForDisplay.vehicle_name }}            </td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">CHASIS NUMBER</td>            <td colspan="1">{{ assessmentForDisplay.vehicle_chasis }}</td>          </tr>                    <tr>            <td colspan="3" style="font-weight: 700">VEHICLE MODEL</td>            <td colspan="1">{{ assessmentForDisplay.vehicle_model }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE COLOUR</td>            <td colspan="1">{{ assessmentForDisplay.vehicle_color }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE TYPE</td>            <td colspan="1">{{ assessmentForDisplay.vehicle_type }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE ENGINE CAPACITY</td>            <td colspan="1">{{ assessmentForDisplay.engine_capacity }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE SITTER CAPACITY</td>            <td colspan="1">{{ assessmentForDisplay.seater_capacity }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE LOAD CAPACITY</td>            <td colspan="1">{{ assessmentForDisplay.load_capacity }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE GROSS CAPACITY</td>            <td colspan="1">{{ assessmentForDisplay.gross_weight }}</td>          </tr>          <tr>            <td colspan="3" style="font-weight: 700">VEHICLE LICENSE TYPE</td>            <td colspan="1">{{ assessmentForDisplay.license_type }}</td>          </tr>                    <tr>            <td colspan="3" style="font-weight: 700">PLATE NUMBER</td>            <td colspan="1">{{ assessmentForDisplay.plate_no ? assessmentForDisplay.plate_no : "N/A" }}</td>          </tr>                    <tr>            <td colspan="3" style="font-weight: 700">Date Generated</td>            <td colspan="1">              {{                assessmentForDisplay.created_at == null                  ? "N/A"                  : assessmentForDisplay.created_at              }}            </td>          </tr>                    <tr>            <td colspan="3" style="font-weight: 700">Signature:</td>            <td style="padding-top: 20p" colspan="1"></td>          </tr>        </tbody>      </table>    </div>  </div>  <div class="modal-footer">    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="print(\'assessmentDoc\')"    >      Print    </button>    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="download(\'assessmentDoc\')"    >      Download    </button>    <button      type="button"      class="btn btn-outline-secondary btn-rounded"      (click)="modal.dismiss(\'Cross click\')"    >      Cancel    </button>  </div></ng-template></div>'
+    var COMPONENTS = [{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'ActivityComponent', 'selector': 'app-activity'},{'name': 'AdminLayoutSidebarCompactComponent', 'selector': 'app-admin-layout-sidebar-compact'},{'name': 'AdminLayoutSidebarLargeComponent', 'selector': 'app-admin-layout-sidebar-large'},{'name': 'AgentTransactionsComponent', 'selector': 'app-dashboard-v2'},{'name': 'AnalysisComponent', 'selector': 'analysis'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuditedListComponent', 'selector': 'app-audited-list'},{'name': 'AuditTargetComponent', 'selector': 'app-dashboard-v2'},{'name': 'AuthLayoutComponent', 'selector': 'app-auth-layout'},{'name': 'BlankLayoutComponent', 'selector': 'app-blank-layout'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'BtnLoadingComponent', 'selector': 'btn-loading'},{'name': 'BulkDemandNoticeComponent', 'selector': 'app-bulk-demand-notice'},{'name': 'BusinessIndustryComponent', 'selector': 'app-dashboard-v2'},{'name': 'CalendarComponent', 'selector': 'app-calendar'},{'name': 'CalendarFormDialogComponent', 'selector': 'app-calendar-form-dialog'},{'name': 'ChangeUserPassword', 'selector': 'app-dashboard-v2'},{'name': 'CofigurationsComponent', 'selector': 'app-cofigurations'},{'name': 'CompleteProfileComponent', 'selector': 'app-complete-profile'},{'name': 'ConsumptionTaxComponent', 'selector': 'app-consumption-tax'},{'name': 'CorporateRevenueReturnComponent', 'selector': 'app-dashboad-default'},{'name': 'CreateDataCategoryCardComponent', 'selector': 'create-data-category-card'},{'name': 'CustomizerComponent', 'selector': 'app-customizer'},{'name': 'DashboadDefaultComponent', 'selector': 'app-dashboad-default'},{'name': 'DatatableScrollComponent', 'selector': 'datatable-scroll'},{'name': 'DemandNoticeComponent', 'selector': 'app-dashboard-v2'},{'name': 'EmploymentStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'EntertainmentTaxComponent', 'selector': 'app-entertainment-tax'},{'name': 'FeatherIconComponent', 'selector': 'feather-icon'},{'name': 'FixedTaxItemsComponent', 'selector': 'app-dashboard-v2'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'ForgotComponent', 'selector': 'app-forgot'},{'name': 'ForgotEmailComponent', 'selector': 'app-forgot'},{'name': 'ForgotTINComponent', 'selector': 'app-forgot'},{'name': 'GenderComponent', 'selector': 'app-dashboard-v2'},{'name': 'GenerateTccComponent', 'selector': 'app-generate-tcc'},{'name': 'HeaderSidebarCompactComponent', 'selector': 'app-header-sidebar-compact'},{'name': 'HeaderSidebarLargeComponent', 'selector': 'app-header-sidebar-large'},{'name': 'ImportAssociationComponent', 'selector': 'app-import-association'},{'name': 'ImportCacComponent', 'selector': 'app-import-cac'},{'name': 'ImportCustomComponent', 'selector': 'app-import-custom'},{'name': 'ImportOthersComponent', 'selector': 'app-import-others'},{'name': 'ImportPlasmidaComponent', 'selector': 'app-import-plasmida'},{'name': 'ImportYellowPagesComponent', 'selector': 'app-import-yellow-pages'},{'name': 'IndividualRevenueReturnsComponent', 'selector': 'app-individual-revenue-returns'},{'name': 'InsightComponent', 'selector': 'app-insight'},{'name': 'LgcRevenueComponent', 'selector': 'app-personal-income-tax'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_companiesComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'Manage_usersComponent', 'selector': 'app-dashboard-v2'},{'name': 'ManageBusinessIndustriesComponent', 'selector': 'app-dashboard-v2'},{'name': 'MaritalStatusComponent', 'selector': 'app-dashboard-v2'},{'name': 'MdaBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'MdaComponent', 'selector': 'app-dashboard-v2'},{'name': 'MDASBreakdown', 'selector': 'app-dashboad-default'},{'name': 'MigrateCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'MigrateUserComponent', 'selector': 'app-dashboard-v2'},{'name': 'ModifyAssessmentComponent', 'selector': 'app-dashboad-default'},{'name': 'MotorLicenseAuthority', 'selector': 'app-dashboard-v2'},{'name': 'NotFoundComponent', 'selector': 'app-not-found'},{'name': 'OccupationComponent', 'selector': 'app-dashboard-v2'},{'name': 'OtherMDARevenueBreakdown', 'selector': 'app-dashboad-default'},{'name': 'PasswordComponent', 'selector': 'app-password'},{'name': 'Paye_calculatorComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PAYEBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeComponent', 'selector': 'app-dashboad-default'},{'name': 'PayeReceiptComponent', 'selector': 'paye-receipt'},{'name': 'PaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentDownloadComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentLgcRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PaymentReceiptComponent', 'selector': 'app-payment-receipt'},{'name': 'PersonalIncomeTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PlatformUsageComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveBulkPaymentHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'PresumptiveComponent', 'selector': 'app-dashboad-default'},{'name': 'PresumptiveTaxComponent', 'selector': 'app-personal-income-tax'},{'name': 'PresumtiveTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenueComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousLGCRevenuePaymentsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousRevenueReturnCorporateComponent', 'selector': 'app-previous-revenue-return-corporate'},{'name': 'PreviousRevenueReturnsComponent', 'selector': 'app-dashboard-v2'},{'name': 'PreviousTccComponent', 'selector': 'app-previous-tcc'},{'name': 'PrintCompanyPDF', 'selector': 'app-root'},{'name': 'PrintTccComponent', 'selector': 'app-print-tcc'},{'name': 'PrintUserPDF', 'selector': 'app-root'},{'name': 'PsirsBreakdown', 'selector': 'app-dashboad-default'},{'name': 'RecaptchaComponent', 'selector': 'app-recaptcha'},{'name': 'RegisterCompanyBulkComponent', 'selector': 'register-company-bulk'},{'name': 'RegisterCompanyComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterComponent', 'selector': 'app-dashboard-v2'},{'name': 'RegisterUserBulkComponent', 'selector': 'app-register-user-bulk'},{'name': 'RegisterVendorComponent', 'selector': 'app-dashboard-v2'},{'name': 'ReportComponent', 'selector': 'app-dashboad-default'},{'name': 'RoadTaxComponent', 'selector': 'app-dashboard-v2'},{'name': 'RulesBulkComponent', 'selector': 'app-dashboad-default'},{'name': 'SearchComponent', 'selector': 'app-search'},{'name': 'SearchIconComponent', 'selector': 'search-icon'},{'name': 'SidebarCompactComponent', 'selector': 'app-sidebar-compact'},{'name': 'SidebarLargeComponent', 'selector': 'app-sidebar-large'},{'name': 'SigninComponent', 'selector': 'app-signin'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'SignupwtComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtJTBComponent', 'selector': 'app-signupwt'},{'name': 'SignupwtNINComponent', 'selector': 'app-signupwt'},{'name': 'TaxEnumerationCardComponent', 'selector': 'tax-enumeration-card'},{'name': 'TaxItemComponent', 'selector': 'app-dashboard-v2'},{'name': 'TestPaymentComponent', 'selector': 'test-payment'},{'name': 'TINHistoryComponent', 'selector': 'app-dashboard-v2'},{'name': 'TitlesComponent', 'selector': 'app-dashboard-v2'},{'name': 'UpdateComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualBulkAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualPresumptiveTaxAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewIndividualRevenuReturnAssessmentComponent', 'selector': 'app-dashboard-v2'},{'name': 'ViewRegisteredVehicleComponent', 'selector': 'app-dashboard-v2'},{'name': 'WalletComponent', 'selector': 'app-dashboad-default'},{'name': 'WizardComponent', 'selector': 'form-wizard'},{'name': 'WizardStepComponent', 'selector': 'wizard-step'}];
+    var DIRECTIVES = [{'name': 'AppDropdownDirective', 'selector': '[appDropdown]'},{'name': 'ConfirmEqualValidatorDirective', 'selector': '[valueEqualTo]'},{'name': 'DropdownAnchorDirective', 'selector': '[appDropdownToggle]'},{'name': 'DropdownLinkDirective', 'selector': '[appDropdownLink]'},{'name': 'FullScreenWindowDirective', 'selector': '[fullScreenWindow]'},{'name': 'HighlightjsDirective', 'selector': '[highlight]'},{'name': 'ScrollToDirective', 'selector': '[scrollTo]'},{'name': 'SidebarContainerDirective', 'selector': '[appSidebarContainer]'},{'name': 'SidebarContentDirective', 'selector': '[appSidebarContent]'},{'name': 'SidebarDirective', 'selector': '[appSidebar]'},{'name': 'SidebarTogglerDirective', 'selector': '[appSidebarToggler]'}];
+    var ACTUAL_COMPONENT = {'name': 'ViewRegisteredVehicleComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ViewRegisteredVehicleComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,113 @@
+<div class="">
+  <!-- <div class="breadcrumb">
+        <h1>Welcome, {{userProfile.title}} {{userProfile.first_name}} {{userProfile.surname}}</h1>
+        <ul>
+            <li><a href="">Wallet</a></li>
+            <li>Fund Wallet</li>
+        </ul>
+    </div> -->
+  <app-breadcrumb></app-breadcrumb>
+
+  <div class="separator-breadcrumb border-top"></div>
+
+  <div class="row">
+    <div class="col-lg-3"></div>
+
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+      <br />
+      <span>Processing</span>
+    </div>
+
+    <div
+      *ngIf="!loading"
+      class="col-lg-6 col-sm-12"
+      [@animate]="{
+        value: '*',
+        params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+      }"
+    >
+      <div class="card mb-4 text-center">
+        <div class="card-body">
+          <div class="col-lg-12 col-md-12 text-center">
+
+            <h5 class="card-title m-0 p-3">Wallet ID: AGENT-{{userProfile.id}}</h5>
+            <h5 class="card-title m-0 p-3">Current Balance:</h5>
+            <p
+              class="text text-center"
+              style="font-size: 400%; width: 100%; text-align: center"
+            >
+              {{ format_number(wallet) }} NGN
+            </p>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalConfirm let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Fund your Wallet</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-8 row">
+        <div class="col-md-9 form-group mb-3">
+          <label for="tax">Enter amount (NGN) </label>
+
+          <input
+            class="form-control"
+            type="number"
+            placeholder="Amount in NGN"
+            [(ngModel)]="fund_amount"
+          />
+        </div>
+        <div class="col-sm-7"></div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-8 row">
+        <div class="col-md-9 form-group mb-3">
+          <label for="tax">Select Payment Method</label>
+          <select
+            class="form-control"
+            placeholder="Payment Method"
+            [(ngModel)]="payment_method"
+          >
+            <option selected value=" selected">Choose payment method</option>
+            <option value="debit_card">Debit Card</option>
+          </select>
+        </div>
+        <div class="col-sm-7"></div>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="makeDeposit()"
+    >
+      Continue
+    </button>
+  </div>
+</ng-template>

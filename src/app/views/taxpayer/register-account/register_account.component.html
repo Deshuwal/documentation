@@ -1,0 +1,336 @@
+<!-- <div class="breadcrumb">
+  <h1>Vendor</h1>
+  <ul>
+    <li><a href="">Register User</a></li>
+  </ul>
+  breadcrumb dependency injection
+</div> -->
+<app-breadcrumb></app-breadcrumb>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6">
+    <div class="form-group float-left">
+      <input
+        #input
+        placeholder="Search"
+        class="form-control form-control-rounded"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="row mb-3">
+  <div class="col-md-12 mb-3"></div>
+  <div *ngIf="loading" class="col-md-12 text-center">
+    <div class="spinner spinner-primary mr-3"></div>
+  </div>
+
+  <div
+    class="col-md-12"
+    *ngIf="!loading"
+    [@animate]="{
+      value: '*',
+      params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+    }"
+  >
+    <div class="card o-hidden">
+      <ngx-datatable
+        *ngIf="assessments?.length"
+        style="height: calc(100vh - 270px); box-shadow: none"
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="60"
+        [limit]="10"
+        [rows]="assessments"
+      >
+        <ngx-datatable-column name="photo" [maxWidth]="100">
+          <ng-template ngx-datatable-header-template> S/N </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.sn }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> Name </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{
+              (row.name !== null && row.name.trim()) ||
+                capitalise(row.first_name + " " + row.surname)
+            }}
+          </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template> TIN No. </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.tin }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Phone Number
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.phone }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column>
+          <ng-template ngx-datatable-header-template>
+            Registration Area
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.area || "N/A" }}
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column [flexGrow]="1">
+          <ng-template ngx-datatable-header-template>
+            Date Registered
+          </ng-template>
+          <ng-template
+            ngx-datatable-cell-template
+            let-value="value"
+            let-row="row"
+          >
+            {{ row.create_date }}
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+
+<ng-template #deleteConfirmModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Delete Tax Item</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p><strong>Are you sure?</strong></p>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('cancel')"
+    >
+      Cancel
+    </button>
+    <button
+      type="button"
+      ngbAutofocus
+      class="btn btn-wide btn-danger btn-rounded"
+      (click)="modal.close('Ok')"
+    >
+      Ok
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #modalConfirm let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-title">Make Payment For</h4>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close button"
+      aria-describedby="modal-title"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+    </div>
+
+    <div class="col-md-12" *ngIf="!loading && !dynamicSummary">
+      <table class="table">
+        <thead class="">
+          <tr>
+            <th scope="col">MDA</th>
+            <th scope="col">{{ assessmentForDisplay.mda }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tax Item</td>
+            <td class="font-weight-bold text-success">
+              {{ assessmentForDisplay.tax_item }}
+            </td>
+          </tr>
+          <tr>
+            <td>Amount</td>
+            <td class="font-weight-bold">
+              {{ assessmentForDisplay.amount }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td>TIN</td>
+            <td class="text-danger font-weight-bold">
+              {{ assessmentForDisplay.tin }}
+            </td>
+          </tr>
+          <tr>
+            <td>Billing Ref</td>
+            <td class="font-weight-bold">
+              {{ assessmentForDisplay.billing_ref }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-md-12" *ngIf="!loading && dynamicSummary && payeeSummary">
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">MDA</th>
+            <th scope="col">{{ displayPayee.mda }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tax Item</td>
+            <td class="font-weight-bold text-success">
+              {{ displayPayee.tax_item }}
+            </td>
+          </tr>
+          <tr>
+            <td>Gross Income</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.gi) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td>Deductions</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.deductions) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td>Taxable Income</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.ti) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td>PAYE Amount</td>
+            <td class="font-weight-bold">
+              {{ formatNumber(displayPayee.paye) }} NGN
+            </td>
+          </tr>
+          <tr>
+            <td>TIN</td>
+            <td class="text-danger font-weight-bold">
+              {{ assessmentForDisplay.tin }}
+            </td>
+          </tr>
+          <tr>
+            <td>Billing Ref</td>
+            <td class="text-warning font-weight-bold">
+              {{ assessmentForDisplay.billing_ref }}
+            </td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td class="text-warning font-weight-bold">Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div
+      class="col-md-12"
+      *ngIf="!loading && dynamicSummary && directAssessmentSummary"
+    >
+      <div style="overflow-y: scroll; height: 400px">
+        <table class="table" *ngIf="displayPayee.length > 0">
+          <thead class="thead-light">
+            <th colspan="2">Make Payment For</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of displayPayee">
+              <td scope="col">{{ item.label }}</td>
+              <td scope="col">{{ item.value }}</td>
+            </tr>
+
+            <tr>
+              <td scope="col">Billing Ref</td>
+              <td scope="col">
+                {{ displayPayee[displayPayee.length - 1].value }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-12">
+        <table class="table">
+          <thead class="thead-light">
+            <th colspan="2">Total</th>
+            <th scope="col">
+              {{ displayPayee[displayPayee.length - 2].total }}
+            </th>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      *ngIf="status == 0"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('cancel')"
+    >
+      Pay Now
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="print()"
+    >
+      Print Receipt
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-secondary btn-rounded"
+      (click)="modal.dismiss('Cross click')"
+    >
+      Cancel
+    </button>
+  </div>
+</ng-template>

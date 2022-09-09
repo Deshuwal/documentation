@@ -1,0 +1,103 @@
+<div
+	class="card o-hidden"
+	[@animate]="{
+		value: '*',
+		params: { y: '120px', opacity: '0', delay: '100ms', duration: '400ms' }
+	}"
+>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="p-4">
+				<div class="auth-logo text-center mb-4">
+					<img height="100px" src="assets/images/logo.png" alt="" />
+				</div>
+				<h1 class="mb-3 text-18">Forgot Password</h1>
+				<form action="" [formGroup]="forgotForm">
+					<div *ngIf="stage == 1">
+						<div class="form-group">
+							<label for="email">Phone Number</label>
+							<input
+								formControlName="phone"
+								placeholder="Enter registered phone number."
+								class="form-control form-control-rounded"
+								type="phoneNumber"
+							/>
+						</div>
+						<btn-loading
+							id="btnLog"
+							btnClass="btn-primary btn-rounded btn-block mt-3"
+							(click)="sendResetRequest()"
+							[loadingText]="loadingText"
+							[loading]="loading"
+						>
+							Reset Password
+						</btn-loading>
+					</div>
+				</form>
+				<div class="mt-3 text-center">
+					<a href="" class="text-muted" routerLink="/auth/signin">
+						<u>Sign in</u>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div
+			class="col-md-6 text-center"
+			style="
+				background-size: cover;
+				background-image: url(./assets/images/photo-long-3.jpg);
+			"
+		>
+			<div class="pr-3 auth-right">
+				<button
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/auth/forgot_email"
+					style="opacity: 0.9 !important"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Reset with email
+				</button>
+				<!-- <button
+          style="opacity: 0.9 !important"
+          class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+          routerLink="/register/signup/nin"
+        >
+          Sign up with NIN (Faster)
+        </button> -->
+				<button
+					style="opacity: 0.9 !important"
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/auth/forgot_tin"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Reset with TIN
+				</button>
+				<button
+					style="opacity: 0.9 !important"
+					class="btn btn-rounded btn-outline-primary btn-outline-email btn-block"
+					routerLink="/auth/signin"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Sign In
+				</button>
+			</div>
+		</div>
+		<!-- <div
+			class="col-md-6 text-center"
+			style="
+				background-size: cover;
+				background-image: url(./assets/images/photo-long-3.jpg);
+			"
+		>
+			<div class="pr-3 auth-right">
+				<button
+					class="btn btn-outline-primary btn-outline-email btn-block btn-icon-text btn-rounded"
+					routerLink="/auth/signin"
+				>
+					<i class="i-Mail-with-At-Sign"></i>
+					Sign In
+				</button>
+			</div>
+		</div> -->
+	</div>
+</div>

@@ -1,0 +1,442 @@
+<head>
+	<title>Nested Title</title>
+	<meta name="description" content="Nested component" />
+</head>
+<div class="">
+	<app-breadcrumb></app-breadcrumb>
+	<div class="separator-breadcrumb border-top"></div>
+
+	<div class="row">
+		<!-- ICON BG -->
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="card card-icon-bg card-custom card-icon-bg-primary o-hidden mb-4" style="height: 150px">
+				<div class="card-body text-center">
+					<div class="dash-icon"><i class="i-Money-2"></i></div>
+					<div class="content">
+						<p class="text-muted mt-2 mb-0">Payments</p>
+					</div>
+				</div>
+				<p class="text-primary text-center text-15 mb-2">
+					{{ totalPayments | configureCurrency }}
+				</p>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="card card-icon-bg card-custom card-icon-bg-primary o-hidden mb-4" style="height: 150px">
+				<div class="card-body text-center">
+					<div class="dash-icon"><i class="i-Financial"></i></div>
+					<div class="content">
+						<p class="text-muted mt-2 mb-0">
+							{{ isAdmin ? "Total Individual TINs" : "Behavior Rating" }}
+						</p>
+					</div>
+				</div>
+				<p class="text-primary text-center text-15 mb-2">
+					{{ isAdmin ? IndividualTINCount : 0 }}
+				</p>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="card card-icon-bg card-custom card-icon-bg-primary o-hidden mb-4" style="height: 150px">
+				<div class="card-body text-center">
+					<div class="dash-icon"><i class="i-Monitor-2"></i></div>
+					<div class="content">
+						<p class="text-muted mt-2 mb-0">Assessments</p>
+					</div>
+				</div>
+				<p class="text-primary text-center text-15 mb-2">
+					{{ totalAssessments }}
+				</p>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<div class="card card-icon-bg card-custom card-icon-bg-primary o-hidden mb-4" style="height: 150px">
+				<div class="card-body text-center">
+					<div class="dash-icon"><i class="i-Building"></i></div>
+					<div class="content">
+						<p class="text-muted mt-2 mb-0">
+							{{ isAdmin ? "Total Corporate TIN" : "Next Due Payment" }}
+						</p>
+					</div>
+				</div>
+				<p class="text-primary text-center text-15 mb-2">
+					{{ isAdmin && companyTINCount }}
+				</p>
+			</div>
+		</div>
+
+		<div [hidden]="mdaDataVisible" class="col-lg-6 col-md-6 col-sm-6">
+			<div class="card card-icon-bg card-custom card-icon-bg-primary o-hidden mb-4" style="height: 150px">
+				<div class="card-body text-center">
+					<div class="dash-icon"><i class="i-Money-2"></i></div>
+					<div class="content content-long">
+						<p class="text-muted mt-2 mb-0">Paid TIN Count <span>({{mdaAdminTitle}})</span></p>
+					</div>
+				</div>
+				<p class="text-primary text-center text-15 mb-2">
+					{{ MdaPaymentCount }}
+				</p>
+			</div>
+		</div>
+
+		<div [hidden]="mdaDataVisible" class="col-lg-6 col-md-6 col-sm-6">
+			<div class="card card-icon-bg card-custom card-icon-bg-primary o-hidden mb-4" style="height: 150px">
+				<div class="card-body text-center">
+					<div class="dash-icon"><i class="i-Monitor-2"></i></div>
+					<div class="content content-long">
+						<p class="text-muted mt-2 mb-0">Assessed TIN Count <span>({{mdaAdminTitle}})</span></p>
+					</div>
+				</div>
+				<p class="text-primary text-center text-15 mb-2">
+					{{ MdaAssessmentCount }}
+				</p>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div class="row">
+		<!-- <div *ngIf="loading" class="col-md-12 text-center">
+      <div class="spinner spinner-primary mr-3"></div>
+    </div> -->
+		<div class="col-lg-5 col-sm-12" *ngIf="!loading">
+			<div class="card mb-4">
+				<div class="card-body">
+					<div *ngIf="
+							userProfile.occupation &&
+							userProfile.gender &&
+							userProfile.emp_status &&
+							userProfile.payer_address
+						" class="card-title">
+						Your Profile
+					</div>
+					<div style="display: flex">
+						<div style="cursor: pointer" routerLink="/taxpayer/complete-profile" *ngIf="
+								!(
+									userProfile.bvn ||
+									(userProfile.occupation &&
+										userProfile.gender &&
+										userProfile.emp_status &&
+										userProfile.payer_address)
+								)
+							" class="card-title text-danger">
+							Incomplete Profile!
+						</div>
+					</div>
+					<table class="table row table-responsive table-striped">
+						<tr>
+							<td>Name</td>
+							<td class="capitalize">
+								{{ this.nameProfile }}
+							</td>
+						</tr>
+						<tr>
+							<td>TIN</td>
+							<td>{{ userProfile.tin }}</td>
+						</tr>
+						<tr>
+							<td>Occupation</td>
+							<td class="capitalize">{{ userProfile.occupation }}</td>
+						</tr>
+
+						<tr>
+							<td>Phone Number</td>
+							<td>{{ userProfile.phone }}</td>
+						</tr>
+
+						<tr>
+							<td>Gender</td>
+							<td class="capitalize">{{ userProfile.gender | titlecase }}</td>
+						</tr>
+
+						<tr>
+							<td>Employment Status</td>
+							<td class="capitalize">{{ userProfile.emp_status }}</td>
+						</tr>
+
+						<tr>
+							<td>Address</td>
+							<td>{{ userProfile.payer_address }}</td>
+						</tr>
+					</table>
+					<button class="btn btn-primary text-white" (click)="open(viewTaxEnumeration, userProfile, 'user')">
+						View Tax Enumeration
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 col-sm-12" *ngIf="!loading">
+			<div class="row">
+				<div style="width: 100%; padding: 15px; padding-top: 0px">
+					<ng-select [items]="companies$ | async" bindLabel="company_name" bindValue="id"
+						[trackByFn]="trackByFn" [minTermLength]="minLengthTerm" [loading]="companiesLoading"
+						placeholder="Search and add a company" typeToSearchText="Please enter {{
+							minLengthTerm
+						}} or more characters" [typeahead]="companiesInput$" [(ngModel)]="selectedMovie"
+						(change)="onDropdownClick(selectedMovie)">
+					</ng-select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div (click)="open(viewCompany, company.id)" class="col-lg-6 col-sm-12 mb-2"
+					*ngFor="let company of companies">
+					<div class="card">
+						<div style="justify-content: space-around" class="bg-primary d-flex align-items-center px-2">
+							<p style="font-size: 13px" class="card-title text-white text-center my-2">
+								{{ company.company_name }}
+							</p>
+							<div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+									class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+									<path
+										d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+								</svg>
+							</div>
+						</div>
+						<div style="justify-content: space-evenly" class="m-2 d-flex align-items-center">
+							<p class="card-primary text-bold">TIN: {{ company.tin }}</p>
+							<div style="margin-top: -15px">
+								<svg width="30" height="30" viewBox="0 0 40 40" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M39.3341 10C39.3338 10 39.3336 10 39.3333 10H29.3333V0.666667C29.3336 0.298667 29.0354 0.000250157 28.6674 1.57096e-07C28.6672 1.57096e-07 28.6669 1.57096e-07 28.6667 1.57096e-07H11.3333C10.9653 -0.000249843 10.6669 0.297917 10.6667 0.665917C10.6667 0.666167 10.6667 0.666417 10.6667 0.666667V10H0.666667C0.298667 9.99975 0.000250157 10.2979 1.57096e-07 10.6659C1.57096e-07 10.6662 1.57096e-07 10.6664 1.57096e-07 10.6667V34.6667C-0.000249843 35.0347 0.297917 35.3331 0.665917 35.3333C0.666167 35.3333 0.666417 35.3333 0.666667 35.3333H2.06025C2.02158 35.5535 2.00142 35.7765 2 36V39.3333C1.99975 39.7013 2.29792 39.9998 2.66592 40C2.66617 40 2.66642 40 2.66667 40H37.3333C37.7013 40.0003 37.9998 39.7021 38 39.3341C38 39.3338 38 39.3336 38 39.3333V36C37.9987 35.7765 37.9785 35.5535 37.9398 35.3333H39.3333C39.7013 35.3336 39.9998 35.0354 40 34.6674C40 34.6672 40 34.6669 40 34.6667V10.6667C40.0003 10.2987 39.7021 10.0002 39.3341 10ZM28.6667 28.6667C28.6667 29.4031 28.0698 30 27.3333 30C26.5969 30 26 29.4031 26 28.6667C26 27.9303 26.5969 27.3333 27.3333 27.3333C28.0693 27.3343 28.6658 27.9307 28.6667 28.6667ZM12.6667 27.3333C13.4031 27.3333 14 27.9303 14 28.6667C14 29.4031 13.4031 30 12.6667 30C11.9303 30 11.3333 29.4031 11.3333 28.6667C11.3343 27.9307 11.9307 27.3343 12.6667 27.3333ZM8.66667 38.6667H3.33333V36C3.33333 34.5273 4.52725 33.3333 6 33.3333C7.47275 33.3333 8.66667 34.5273 8.66667 36V38.6667ZM4.66667 30.6667C4.66667 29.9303 5.26358 29.3333 6 29.3333C6.73642 29.3333 7.33333 29.9303 7.33333 30.6667C7.33333 31.4031 6.73642 32 6 32C5.264 31.9991 4.66758 31.4027 4.66667 30.6667ZM8.76767 33.1188C8.51625 32.8763 8.23433 32.6676 7.929 32.498C8.94583 31.4327 8.90658 29.7447 7.84125 28.7278C6.77592 27.7108 5.08792 27.7502 4.071 28.8155C3.08742 29.8459 3.08742 31.4675 4.071 32.4979C3.43467 32.8511 2.906 33.3702 2.54117 33.9999H1.33333V11.3333H10.6667V26.9213C9.75117 27.9486 9.78208 29.5079 10.7377 30.498C9.73767 31.0511 9.02108 32.0044 8.76767 33.1188ZM15.3333 38.6667H10V34C10 32.5273 11.1939 31.3333 12.6667 31.3333C14.1394 31.3333 15.3333 32.5273 15.3333 34V38.6667ZM23.3333 38.6667H16.6667V34C16.6667 32.1591 18.1591 30.6667 20 30.6667C21.8409 30.6667 23.3333 32.1591 23.3333 34V38.6667ZM18 27.3333C18 26.2288 18.8954 25.3333 20 25.3333C21.1046 25.3333 22 26.2288 22 27.3333C22 28.4379 21.1046 29.3333 20 29.3333C18.8959 29.3322 18.0012 28.4374 18 27.3333ZM24.0602 31.7079C23.6137 30.9209 22.9496 30.2797 22.1474 29.8612C23.5555 28.6753 23.7355 26.5723 22.5496 25.1643C21.3636 23.7562 19.2607 23.5762 17.8526 24.7621C16.4445 25.9481 16.2645 28.051 17.4504 29.4591C17.5728 29.6043 17.7073 29.7388 17.8526 29.8612C17.0504 30.2797 16.3862 30.9209 15.9398 31.7079C15.5893 31.2079 15.1297 30.7942 14.5957 30.498C15.6178 29.4524 15.5988 27.7762 14.5531 26.7541C13.8798 26.0959 12.9078 25.8449 12 26.0947V1.33333H28V26.0947C27.7828 26.0347 27.5587 26.0029 27.3333 26C25.8645 25.9961 24.6706 27.1837 24.6667 28.6526C24.6648 29.3399 24.9293 30.0013 25.4043 30.498C24.8703 30.7942 24.4107 31.2079 24.0602 31.7079ZM30 36V38.6667H24.6667V34C24.6667 32.5273 25.8606 31.3333 27.3333 31.3333C28.8061 31.3333 30 32.5273 30 34V36ZM36.6667 38.6667H31.3333V36C31.3333 34.5273 32.5273 33.3333 34 33.3333C35.4728 33.3333 36.6667 34.5273 36.6667 36V38.6667ZM32.6667 30.6667C32.6667 29.9303 33.2636 29.3333 34 29.3333C34.7364 29.3333 35.3333 29.9303 35.3333 30.6667C35.3333 31.4031 34.7364 32 34 32C33.264 31.9991 32.6676 31.4027 32.6667 30.6667ZM38.6667 34H37.4588C37.094 33.3703 36.5653 32.8512 35.929 32.498C36.9458 31.4327 36.9066 29.7447 35.8413 28.7278C34.7759 27.7109 33.0879 27.7502 32.071 28.8155C31.0874 29.8459 31.0874 31.4675 32.071 32.4979C31.7657 32.6675 31.4837 32.8762 31.2323 33.1187C30.979 32.0043 30.2623 31.051 29.2623 30.4979C30.2179 29.5078 30.2489 27.9485 29.3334 26.9212V11.3333H38.6668V34H38.6667Z"
+										fill="#58454F" fill-opacity="0.95" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-5">
+				<div class="col-lg-6 col-sm-12 text-center">
+					<div class="row">
+						<div class="col-sm-6 mb-5">
+							<p style="font-size: 13px; font-weight: bold">Link Company</p>
+							<span style="
+									display: inline-block;
+									background: #58454f;
+									padding: 5px 7px;
+									border-radius: 2px;
+								" (click)="open(linkCompany)">
+								<img src="../../../../assets/images/add.png" />
+							</span>
+						</div>
+						<div class="col-sm-6 mb-5">
+							<p style="font-size: 13px; font-weight: bold">Register Company</p>
+							<span style="
+									display: inline-block;
+									background: #58454f;
+									padding: 5px 7px;
+									border-radius: 2px;
+								" (click)="open(content)">
+								<img src="../../../../assets/images/add.png" />
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<ng-template #viewTaxEnumeration let-modal>
+		<tax-enumeration-card [loading]="false" [taxEnumeration]="taxEnumView" [taxEnumViewType]="taxEnumViewType">
+		</tax-enumeration-card>
+	</ng-template>
+	<ng-template #viewCompany let-modal>
+		<div class="card px-3">
+			<div class="modal-header">
+				<button type="button" class="close" aria-label="Close button" aria-describedby="modal-title"
+					(click)="modal.dismiss('Cross click')">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div style="padding: 1rem !important" class="card-body">
+				<table class="table row table-responsive table-striped">
+					<div class="modal-header">
+						<div class="card-title text-center text-primary">
+							COMPANY DETAILS
+						</div>
+					</div>
+					<tr>
+						<td class="text-primary">Name</td>
+						<td>{{ viewedCompany.company_name || "" }}</td>
+					</tr>
+					<tr>
+						<td class="text-primary">TIN No.</td>
+						<td>{{ viewedCompany.tin || "" }}</td>
+					</tr>
+					<tr>
+						<td class="text-primary">CAC Registration No.</td>
+						<td>{{ viewedCompany.rc_no || "" }}</td>
+					</tr>
+
+					<tr>
+						<td class="text-primary">Number of Employees</td>
+						<td>{{ viewedCompany.employee_count || "" }}</td>
+					</tr>
+					<tr>
+						<td class="text-primary">Industry</td>
+						<td>{{ viewedCompany.business_industry || "" }}</td>
+					</tr>
+
+					<tr>
+						<td class="text-primary">State</td>
+						<td>{{ viewedCompany.state || "" }}</td>
+					</tr>
+					<tr>
+						<td class="text-primary">LGA</td>
+						<td>{{ viewedCompany.lga || "" }}</td>
+					</tr>
+					<tr>
+						<td class="text-primary">Address</td>
+						<td>{{ viewedCompany.address || "" }}</td>
+					</tr>
+					<tr>
+						<td class="text-primary">Phone</td>
+						<td>{{ viewedCompany.office_number || "" }}</td>
+					</tr>
+					<tr>
+						<td class="text-primary">Website</td>
+						<td>{{ viewedCompany.website || "" }}</td>
+					</tr>
+				</table>
+				<button class="btn btn-primary text-white" (click)="open(viewTaxEnumeration, viewedCompany, 'company')">
+					View Tax Enumeration
+				</button>
+
+				<button class="btn btn-danger text-white float-right" (click)="unlinkCompany(viewedCompany.id)">
+					<span *ngIf="!loading">Unlink Company </span>
+
+					<span *ngIf="loading">Unlinking Company... </span>
+				</button>
+			</div>
+		</div>
+	</ng-template>
+	<ng-template #content let-modal>
+		<div class="modal-header bg-primary">
+			<h4 class="modal-title text-white text-center" id="modal-basic-title">
+				Add Company
+			</h4>
+			<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		<div *ngIf="loading" class="col-md-12 text-center" style="margin-top: 5%">
+			<div class="spinner spinner-primary mr-3"></div>
+		</div>
+		<div *ngIf="!loading">
+			<form [formGroup]="addCompanyForm">
+				<div class="modal-body">
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">Name</label>
+						<input type="text" class="form-control" formControlName="company_name" placeholder="Name"
+							aria-label="name" aria-describedby="addon-wrapping" />
+					</div>
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">CAC Registration No.</label>
+						<input type="text" class="form-control" placeholder="Registration No." formControlName="rc_no"
+							aria-label="Registration No." aria-describedby="addon-wrapping" />
+					</div>
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">Number of Employees</label>
+						<input type="text" class="form-control" formControlName="employee_count"
+							placeholder="No of Employees" aria-label="No of Employees"
+							aria-describedby="addon-wrapping" />
+					</div>
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">State of Business Location</label>
+						<select class="form-control" formControlName="state" (ngModelChange)="getSelectedState()">
+							<option value="">Choose State</option>
+							<option *ngFor="let state of states" value="{{ state }}">
+								{{ state }}
+							</option>
+						</select>
+					</div>
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">LGA</label>
+						<ngx-select-dropdown tabindex="0" [multiple]="false" formControlName="lga" [config]="config"
+							[options]="lgas">
+						</ngx-select-dropdown>
+					</div>
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">Business Industry</label>
+						<ngx-select-dropdown tabindex="0" [multiple]="false" formControlName="business_industry"
+							[config]="config" [options]="industries">
+						</ngx-select-dropdown>
+					</div>
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">Address *</label>
+						<input formControlName="address" type="text" class="form-control" placeholder="Address"
+							aria-label="Address" aria-describedby="addon-wrapping" />
+					</div>
+
+					<div class="mb-2">
+						<label for="tax">Sector</label>
+						<select type="sector" class="form-control" formControlName="sector">
+							<option value="Formal">Formal</option>
+							<option value="InFormal">InFormal</option>
+						</select>
+					</div>
+
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">Email</label>
+						<input formControlName="email" type="text" class="form-control" placeholder="Enter email"
+							aria-label="phone" aria-describedby="addon-wrapping" />
+					</div>
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">Phone</label>
+						<input formControlName="office_number" type="text" class="form-control" placeholder="Phone"
+							aria-label="phone" aria-describedby="addon-wrapping" />
+					</div>
+					<div class="mb-2">
+						<label for="basic-url" class="form-label">Website</label>
+						<input formControlName="website" type="text" class="form-control" placeholder="Website"
+							aria-label="Website" aria-describedby="addon-wrapping" />
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-outline-dark" (click)="addCompany()">
+				Save
+			</button>
+		</div>
+	</ng-template>
+	<ng-template #linkCompany let-modal>
+		<form [formGroup]="linkCompanyForm" (ngSubmit)="linkExistingCompany()">
+			<div class="modal-header bg-primary">
+				<h4 class="modal-title text-white text-center" id="modal-basic-title">
+					Link Existing Company
+				</h4>
+				<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div>
+				<div class="modal-body">
+					<div class="form-group mb-2">
+						<label for="basic-url" class="form-label">TIN</label>
+						<input type="text" formControlName="tin" class="form-control" placeholder="TIN"
+							[ngClass]="{ 'is-invalid': submitted && linkfval.tin.errors }" />
+						<div *ngIf="submitted && linkfval.tin.errors" class="invalid-feedback">
+							<div *ngIf="linkfval.tin.errors.required">TIN is required.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<btn-loading type="submit" btnClass="btn-primary mt-3" [loadingText]="linkingCompanyText"
+					[loading]="linking">
+					Link Company
+				</btn-loading>
+			</div>
+		</form>
+	</ng-template>
+</div>

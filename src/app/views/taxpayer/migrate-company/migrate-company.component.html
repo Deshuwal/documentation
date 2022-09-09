@@ -1,0 +1,157 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="card" style="padding: 20px 30px">
+  <form [formGroup]="addCompanyForm">
+    <div class="row">
+      <div class="mb-2 col-md-12 form-group mb-3">
+        <label for="basic-url" class="form-label"> Company TIN *</label>
+        <input
+          formControlName="tin"
+          type="text"
+          class="form-control"
+          placeholder="Enter TIN of Company"
+          name="company_name"
+          aria-label="company_name"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+      
+      <div class="mb-2 col-md-12 form-group mb-3">
+        <label for="basic-url" class="form-label">Name of Company *</label>
+        <input
+          formControlName="company_name"
+          type="text"
+          class="form-control"
+          placeholder="Enter Name of Company"
+          name="company_name"
+          aria-label="company_name"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+      <div class="mb-2 col-md-4 form-group mb-3">
+        <label for="basic-url" class="form-label">CAC Registration No.</label>
+        <input
+          formControlName="rc_no"
+          name="rc_no"
+          type="text"
+          class="form-control"
+          placeholder="Enter CAC Registration Number"
+          aria-label="CAC Registration No"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+
+      <div class="mb-2 col-md-4 form-group mb-3">
+        <label for="basic-url" class="form-label">Number of Employees *</label>
+        <input
+          formControlName="employee_count"
+          type="number"
+          class="form-control"
+          placeholder="Enter number of employees"
+          aria-label="employee_count"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+
+      <div class="mb-2 col-md-4 form-group mb-3">
+        <label for="basic-url" class="form-label">Business Industry *</label>
+          <ngx-select-dropdown
+            tabindex="0"
+            [multiple]="false"
+            formControlName="business_industry"
+            [config]="config"
+            [options]="industries"
+          >
+          </ngx-select-dropdown>
+      </div>
+      
+      <div class="mb-2 col-md-6 form-group mb-3">
+        <label for="basic-url" class="form-label">State of Business Location *</label>
+        <select
+          class="form-control"
+          formControlName="state"
+          (ngModelChange)="getSelectedState()"
+        >
+          <option value="">Choose State</option>
+          <option *ngFor="let state of states" value="{{ state }}">
+            {{ state }}
+          </option>
+        </select>
+      </div>
+      <div class="mb-2 col-md-6 form-group mb-3">
+        <label for="basic-url" class="form-label">LGA *</label>
+        <ngx-select-dropdown
+          tabindex="0"
+          [multiple]="false"
+          formControlName="lga"
+          [config]="config"
+          [options]="lgas"
+        >
+        </ngx-select-dropdown>
+      </div>
+      <div class="mb-2 col-md-12 form-group mb-3">
+        <label for="basic-url" class="form-label">Address *</label>
+        <input
+          formControlName="address"
+          type="text"
+          class="form-control"
+          placeholder="Enter company address"
+          aria-label="address"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+
+
+      <div class="mb-2 col-md-6 form-group mb-3">
+        <label for="office_number" class="form-label">Phone *</label>
+        <input
+          formControlName="office_number"
+          name="phone"
+          type="text"
+          class="form-control"
+          placeholder="Enter Phone"
+          aria-label="phone"
+          aria-describedby="addon-wrapping"
+        />
+      </div>
+
+      <div class="mb-2 col-md-6 form-group mb-3">
+        <label for="basic-url" class="form-label">Email Address *</label>
+        <input
+          formControlName="email"
+          type="text"
+          class="form-control"
+          placeholder="Enter email address"
+          aria-label="email"
+          aria-describedby="addon-wrapping"
+        />
+        <span style="color: red" *ngIf="errMsg.email">
+          {{ errMsg.email }}
+        </span>
+      </div>
+      
+      <div class="mb-2 col-md-12 form-group mb-3">
+        <div class="mb-2">
+          <label for="basic-url" class="form-label">Website</label>
+          <input
+            formControlName="website"
+            type="text"
+            class="form-control"
+            placeholder="Website"
+            aria-label="Website"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="addCompany()"
+  >
+    {{ addUserLoading ? "Migrate Company ..." : "Migrate Company" }}
+  </button>
+</div>

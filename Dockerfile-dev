@@ -1,0 +1,23 @@
+FROM node:14
+
+RUN apt-get update
+RUN apt-get install wget
+RUN apt-get install dpkg
+RUN apt-get install -y libappindicator1 fonts-liberation libasound2 libatk-bridge2.0-0 libatspi2.0-0 libdrm2 libgbm1 libgtk-3-0 libnspr4 libnss3 libxkbcommon0 xdg-utils
+RUN apt-get install -f
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN dpkg -i google-chrome*.deb
+
+WORKDIR /usr/src/app/projectmarsfrontend
+
+COPY package*.json ./
+RUN pwd
+RUN ls
+#RUN npm install dotenv
+RUN npm install -g @angular/cli @angular-devkit/build-angular && npm install
+# RUN npm install -g ts-node
+# RUN npm i compression-webpack-plugin brotli-webpack-plugin --save-dev 
+
+EXPOSE 4201 
+CMD cd /usr/src/app/projectmarsfrontend && chmod +x run_tests_cmd.sh  && chmod +x save_last_run.sh && ./run_tests_cmd.sh && ./save_last_run.sh
+
